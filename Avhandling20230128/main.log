@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.8.9)  28 JAN 2023 12:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.8.9)  28 JAN 2023 15:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**main.tex\
+**main
 (./main.tex
 LaTeX2e <2020-02-02> patch level 5
 L3 programming layer <2020-08-07> (./phduio.cls
@@ -2448,69 +2448,69 @@ Package cleveref Info: loaded `english' language definitions on input line 238.
 [7]
 Underfull \vbox (badness 6078) has occurred while \output is active []
 
-Package cleveref Info: loaded `english' language definitions on input line 254.
+Package cleveref Info: loaded `english' language definitions on input line 255.
 
  [8]
-Package cleveref Info: loaded `english' language definitions on input line 272.
+Package cleveref Info: loaded `english' language definitions on input line 273.
 
 
 [9]
-Package cleveref Info: loaded `english' language definitions on input line 295.
+Package cleveref Info: loaded `english' language definitions on input line 296.
 
  [10]
-Package cleveref Info: loaded `english' language definitions on input line 322.
+Package cleveref Info: loaded `english' language definitions on input line 321.
 
  [11]
 Package cleveref Info: loaded `english' language definitions on input line 348.
 
  [12]
-Package cleveref Info: loaded `english' language definitions on input line 375.
+Package cleveref Info: loaded `english' language definitions on input line 374.
 
  [13]
-Package cleveref Info: loaded `english' language definitions on input line 389.
+Package cleveref Info: loaded `english' language definitions on input line 390.
 
  [14]
-Package cleveref Info: loaded `english' language definitions on input line 403.
+Package cleveref Info: loaded `english' language definitions on input line 404.
 
  [15]
-Package cleveref Info: loaded `english' language definitions on input line 428.
+Package cleveref Info: loaded `english' language definitions on input line 429.
 
  [16]
-Package cleveref Info: loaded `english' language definitions on input line 449.
+Package cleveref Info: loaded `english' language definitions on input line 450.
 
  [17]
-Package cleveref Info: loaded `english' language definitions on input line 474.
+Package cleveref Info: loaded `english' language definitions on input line 475.
 
  [18]
-Package cleveref Info: loaded `english' language definitions on input line 495.
+Package cleveref Info: loaded `english' language definitions on input line 496.
 
  [19]
-Package cleveref Info: loaded `english' language definitions on input line 520.
+Package cleveref Info: loaded `english' language definitions on input line 521.
 
  [20]
-Package cleveref Info: loaded `english' language definitions on input line 533.
+Package cleveref Info: loaded `english' language definitions on input line 534.
 
  [21]
-Package cleveref Info: loaded `english' language definitions on input line 533.
+Package cleveref Info: loaded `english' language definitions on input line 534.
 
  [22]
-Underfull \hbox (badness 2726) in paragraph at lines 533--533
+Underfull \hbox (badness 2726) in paragraph at lines 534--534
 []\T1/lmr/m/n/10 (+20) Morin, U. ^^P  Sull'unirazionalità dell'ipersuperficie a
 l-ge-brica di
  []
 
 LaTeX Font Info:    Trying to load font information for T1+fvm on input line 53
-3.
+4.
 (c:/texlive/2020/texmf-dist/tex/latex/bera/t1fvm.fd
 File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
 )
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 533.
+(Font)              scaled to size 8.99994pt on input line 534.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `fvm' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-Package cleveref Info: loaded `english' language definitions on input line 533.
+Package cleveref Info: loaded `english' language definitions on input line 534.
 
  [23])
 Package cleveref Info: loaded `english' language definitions on input line 64.
@@ -2643,7 +2643,7 @@ Package cleveref Info: loaded `english' language definitions on input line 102.
 Overfull \vbox (12.0pt too high) has occurred while \output is active []
 
  [44]
-Package cleveref Info: loaded `english' language definitions on input line 160.
+Package cleveref Info: loaded `english' language definitions on input line 155.
 
 
 [45]
@@ -2674,27 +2674,27 @@ Package cleveref Info: loaded `english' language definitions on input line 219.
 
 
 [47]
-Package cleveref Info: loaded `english' language definitions on input line 236.
+Package cleveref Info: loaded `english' language definitions on input line 234.
 
 
 Overfull \vbox (12.0pt too high) has occurred while \output is active []
 
  [48]
-Package cleveref Info: loaded `english' language definitions on input line 292.
+Package cleveref Info: loaded `english' language definitions on input line 287.
 
 
 [49]
-Package cleveref Info: loaded `english' language definitions on input line 312.
+Package cleveref Info: loaded `english' language definitions on input line 308.
 
 
 Overfull \vbox (12.0pt too high) has occurred while \output is active []
 
  [50]
-Package cleveref Info: loaded `english' language definitions on input line 334.
+Package cleveref Info: loaded `english' language definitions on input line 330.
 
 
 [51]
-Package cleveref Info: loaded `english' language definitions on input line 369.
+Package cleveref Info: loaded `english' language definitions on input line 366.
 
 
 Overfull \vbox (12.0pt too high) has occurred while \output is active []
@@ -2711,20 +2711,20 @@ m/it/10 Z[] \OMS/lmsy/m/n/10 ^^B \OML/lmm/m/it/10 ^^T\OT1/lmr/m/n/10 (\OML/lmm/
 m/it/10 P[]\OT1/lmr/m/n/10 ))\OML/lmm/m/it/10 =\OT1/lmr/m/n/10 2$ 
  []
 
-Package cleveref Info: loaded `english' language definitions on input line 409.
+Package cleveref Info: loaded `english' language definitions on input line 400.
 
 [53]
-Package cleveref Info: loaded `english' language definitions on input line 450.
+Package cleveref Info: loaded `english' language definitions on input line 447.
 
 
 Overfull \vbox (12.0pt too high) has occurred while \output is active []
 
  [54]
-Package cleveref Info: loaded `english' language definitions on input line 487.
+Package cleveref Info: loaded `english' language definitions on input line 481.
 
 
 [55]
-Package cleveref Info: loaded `english' language definitions on input line 519.
+Package cleveref Info: loaded `english' language definitions on input line 515.
 
 
 Overfull \vbox (12.0pt too high) has occurred while \output is active []
@@ -2732,39 +2732,31 @@ Overfull \vbox (12.0pt too high) has occurred while \output is active []
  [56]
 Package hyperref Info: bookmark level for unknown claim defaults to 0 on input 
 line 551.
-Package cleveref Info: loaded `english' language definitions on input line 562.
+Package cleveref Info: loaded `english' language definitions on input line 554.
 
 
 [57]
-Package cleveref Info: loaded `english' language definitions on input line 605.
+Package cleveref Info: loaded `english' language definitions on input line 601.
 
 
 Overfull \vbox (12.0pt too high) has occurred while \output is active []
 
  [58]
-Package cleveref Info: loaded `english' language definitions on input line 649.
+Package cleveref Info: loaded `english' language definitions on input line 647.
 
 
 [59]
-Package cleveref Info: loaded `english' language definitions on input line 690.
+Package cleveref Info: loaded `english' language definitions on input line 680.
 
 
 Overfull \vbox (12.0pt too high) has occurred while \output is active []
 
  [60]
-Package cleveref Info: loaded `english' language definitions on input line 718.
+Package cleveref Info: loaded `english' language definitions on input line 715.
 
 
 [61]
-
-LaTeX Warning: Reference `prop:DiagonalNotInBaseChange' on page 1 undefined on 
-input line 731.
-
-
-LaTeX Warning: Reference `lem:K'UniversallyTrivia' on page 1 undefined on input
- line 731.
-
-Package cleveref Info: loaded `english' language definitions on input line 737.
+Package cleveref Info: loaded `english' language definitions on input line 736.
 
 
 Overfull \vbox (12.0pt too high) has occurred while \output is active []
@@ -3186,7 +3178,7 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
-LaTeX Warning: There were undefined references.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
@@ -3194,12 +3186,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  47454 strings out of 480893
- 927388 string characters out of 5911973
- 1833205 words of memory out of 5000000
- 60753 multiletter control sequences out of 15000+600000
- 713721 words of font info for 313 fonts, out of 8000000 for 9000
+ 927343 string characters out of 5911973
+ 1833204 words of memory out of 5000000
+ 60751 multiletter control sequences out of 15000+600000
+ 713810 words of font info for 314 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,18n,88p,1529b,3455s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,18n,88p,1524b,3455s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{c:/texlive/2020/te
 xmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{c:/texlive/2020/texmf-dist/fonts/enc
 /dvips/lm/lm-mathit.enc}{c:/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-rm.en
@@ -3231,10 +3223,10 @@ live/2020/texmf-dist/fonts/type1/public/rsfs/rsfs7.pfb><c:/texlive/2020/texmf-d
 ist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1
 /urw/helvetic/uhvr8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/helvetic/u
 hvro8a.pfb>
-Output written on main.pdf (160 pages, 1089448 bytes).
+Output written on main.pdf (160 pages, 1089336 bytes).
 PDF statistics:
- 3066 PDF objects out of 3580 (max. 8388607)
- 2824 compressed objects within 29 object streams
+ 3068 PDF objects out of 3580 (max. 8388607)
+ 2826 compressed objects within 29 object streams
  1028 named destinations out of 1200 (max. 500000)
  49700 words of extra memory for PDF output out of 51595 (max. 10000000)
 
