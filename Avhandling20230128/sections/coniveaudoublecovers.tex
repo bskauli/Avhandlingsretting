@@ -26,7 +26,7 @@ Another good source of examples in birational geometry is double covers of proje
 The purpose of this paper is to prove that for smooth Fano double covers of sufficently low degree and smooth Fano scheme of lines, coniveau 1 and strong coniveau 1 coincide. Our main tool will be the cylinder map from the Fano scheme of lines in $X$, and especially the results in \cref{pap:linesondoublecovers}. We first recall some important facts about double covers, the coniveau filtrations and Lefschetz pencils. Then we use a Lefschetz pencil argument, analogous to the one used by Voisin in \cite[Theorem 1.13]{VoisinConiveauThreefolds}, to prove that the vanishing cohomology of double covers has strong coniveau 1. Finally, we use a specialization argument, similar to the one used by Shimada in \cite[Theorem 2-ii]{ShimadaHypersurfaces}, to check that the nonvanishing cohomology also has strong coniveau 1. It is this final specialization argument for which we need the degree to be sufficiently low. Our main result is
 \begin{theorem}[{c.f. \cref{cor:Coincides}}]
    \label{thm:IntroductionCoincides}
-    If $X$ is a smooth complex double cover of degree $d$ and dimension $n \geq 3$, with $F(X)$ smooth of expected dimension, and $d \leq \frac{n}{2}+1$, then $\widetilde{N}^1H^k(X,\Z) = H^k(X,\Z)$ for all $k$. In particular $\widetilde{N}^1H^k(X,\Z) = N^1H^k(X,\Z)$.
+    If $X$ is a smooth complex double cover of $\P^n$ of degree $d$ with $n \geq 3$ and $F(X)$ smooth of expected dimension, and $d \leq \frac{n}{2}+1$, then $\widetilde{N}^1H^k(X,\Z) = H^k(X,\Z)$ for all $k$. In particular $\widetilde{N}^1H^k(X,\Z) = N^1H^k(X,\Z)$.
 \end{theorem}
 
  Additionally, we show that in dimension 4, we can construct double covers such that the specialization argument works for all Fano double cover fourfolds, so we can prove
@@ -38,7 +38,7 @@ The purpose of this paper is to prove that for smooth Fano double covers of suff
 
 
 \subsection*{Acknowledgements}
-I wish to thank my advisor John Christian Ottem for many conversations and patience in answering my questions. I am also grateful to prof. Voisin for answering my questions about \cite{VoisinConiveauThreefolds} This material is partly based upon work supported by the Swedish Research Council under grant no. 2016-06596 while in residence at Institut Mittag-Leffler in Djursholm, Sweden during the fall of 2021.
+I wish to thank my advisor John Christian Ottem for many conversations and patience in answering my questions. I am also grateful to Prof.\ Voisin for answering my questions about \cite{VoisinConiveauThreefolds} This material is partly based upon work supported by the Swedish Research Council under grant no. 2016-06596 while in residence at Institut Mittag-Leffler in Djursholm, Sweden during the fall of 2021.
 
 
 \section{Preliminaries}
@@ -52,7 +52,7 @@ We will work over the complex numbers throughout, and all cohomology is Betti co
 	\end{equation}
 Then $X$ is a \emph{double cover of $\P^n$ of degree $d$} with covering map $\restr{p}{X} \from X \to \P^n$.
 \end{definition}
-Here we use the coordinates $x_i$ on $\P^n$. As in \cref{pap:linesondoublecovers}, we define $y_0$ as the generator of $H^0(\sO(1) \otimes p^* \sO_{\P^n}(-d))$ and $y_1$ as a generator of the cokernel of the map $H^0(\sO(1) \otimes p^* \sO_{\P^n}(-d)) \otimes H^0(p^* \sO_{\P^n}(d)) \to H^0(\sO(1))$. To guide the intuition, it is useful to think of the $y_i$ as coordinates on the fibers of $P \to P^n$. Also note that in \eqref{eq:DoubleCoverGeneral} $f(x_0,\dots,x_n)$ is a homogeneous polynomial of degree $2d$. Finally, we will simply write $p \from X \to \P^n$ for the restriction of $p \from P \to \P^n$ when no confusion is likely to arise.
+Here we use the coordinates $x_i$ on $\P^n$. As in \cref{pap:linesondoublecovers}, we define $y_0$ as the generator of $H^0(\sO(1) \otimes p^* \sO_{\P^n}(-d))$ and $y_1$ as a generator of the cokernel of the map $H^0(\sO(1) \otimes p^* \sO_{\P^n}(-d)) \otimes H^0(p^* \sO_{\P^n}(d)) \to H^0(\sO(1))$. To guide the intuition, it is useful to think of the $y_i$ as coordinates on the fibers of $P \to \P^n$. Also note that in \eqref{eq:DoubleCoverGeneral} $f(x_0,\dots,x_n)$ is a homogeneous polynomial of degree $2d$. Finally, we will simply write $p \from X \to \P^n$ for the restriction of $p \from P \to \P^n$ when no confusion is likely to arise.
 
 We call the divisor $B \subset \P^n$ defined by $f(x_0,\dots,x_n) = 0$ the \emph{branch divisor} of the double cover.
 
@@ -188,7 +188,7 @@ Recall that a Lefschetz pencil $\set{X_t}_{t \in \P^1}$ of hypersurfaces in a va
 
 \begin{lemma}
   \label{lem:SingularityEquivalenceFullDoubleCover}
-  Let $p \from X \to \P^n$ be a double cover with branch locus $B \subset \P^n$, $X$ has an ordinary double point singularity at $x \in X$, if and only if $p(x) \in B$, and $p(x)$ is an ordinary node singularity.
+  Let $p \from X \to \P^n$ be a double cover with branch locus $B \subset \P^n$, $X$ has an ordinary double point singularity at $x \in X$, if and only if $p(z) \in B$, and $p(x)$ is an ordinary node singularity.
 \end{lemma}
 \begin{proof}
 Recall that a singular point is a double point singularity if the corresponding Hessian matrix is invertible. $X$ is completely contained in the locus where $y_1 \neq 0$, so we will assume that $y_1 = 1$. After possibly changing coordintes, we may further assume that any singular point satisfies $x_0 \neq 0$ and is therefore contained in an affine chart with coordinates $x_1,\dots,x_n,y_0$. We will therefore work in this affine chart.

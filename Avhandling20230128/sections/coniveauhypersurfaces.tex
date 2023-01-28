@@ -6,17 +6,17 @@
 
 \label{pap:coniveauhypersurfaces}
         \begin{abstract}
-          Our goal is to provide some details on the constructions used in Voisin's proof that the cylinder map is surjective for all Fano complete intersections. This is used to prove that the first levels of the coniveau filtration and the strong coniveau filtration coincide on Fano complete intersections  (\cite[Theorem 1.13]{VoisinConiveauThreefolds}). We also find an example suggesting that the construction outlined in the proof of \cite{VoisinConiveauThreefolds} is insufficient to prove this statement. Finally, using a different construction, we give a detailed proof that the first levels of he two coniveau filtrations are equal on all Fano hypersurfaces of dimension 4.
+          Our goal is to provide some details on the constructions used in Voisin's proof that the cylinder map is surjective for all Fano complete intersections. This is used to prove that the first levels of the coniveau filtration and the strong coniveau filtration coincide on Fano complete intersections  (\cite[Theorem 1.13]{VoisinConiveauThreefolds}). We also find an example suggesting that the construction outlined in the proof of \cite{VoisinConiveauThreefolds} is insufficient to prove this statement. Finally, using a different construction, we give a detailed proof that the first levels of the two coniveau filtrations are equal on all Fano hypersurfaces of dimension 4.
         \end{abstract}
 	
 \section{Introduction}
 Let $X \subset \P^{n+1}$ be a smooth complex hypersurface, with smooth Fano scheme of lines $F(X)$. There is a \emph{cylinder map} 
 \[\Gamma_* \from H_{k-2}(F(X),\Z) \to H_k(X,\Z) = H^{2n-k}(X,\Z), \]
-induced by the universal family of lines on $X$. Let $p \from U \to F(X)$ is the universal family of lines, with map $q \from U \to X$. Then we define 
+induced by the universal family of lines on $X$. Let $p \from U \to F(X)$ be the universal family of lines, with map $q \from U \to X$. Then we define 
 \[ \Gamma_* = q_* \circ p^* \from H_{k-2}(F(X),\Z) \to H_k(X,\Z) = H^{2n-k}(X,\Z).\]
 Intuitively, we can think of the map as
 \[H_{k-2}(F(X),\Z) \ni [Z] \mapsto \left[\bigcup_{z \in Z} l_z\right] \in H_k(X,\Z), \]
-where $l_z$ is the line in $X$ corresponding to $z \in Z \subset F(X)$. In \cite{ShimadaHypersurfaces}, Shimada proves that when $X$ a smooth hypersurface  in $\P^{n+1}$ of degree $d \leq \frac{n}{2}+2$ with smooth Fano scheme of lines $F(X)$, then the cylinder map is surjective.
+where $l_z$ is the line in $X$ corresponding to $z \in Z \subset F(X)$. In \cite{ShimadaHypersurfaces}, Shimada proves that when $X$ is a smooth hypersurface  in $\P^{n+1}$ of degree $d \leq \frac{n}{2}+2$ with smooth Fano scheme of lines $F(X)$, then the cylinder map is surjective.
 
 Recall that on a smooth complex variety $X$ of dimension $n$ there are two coniveau filtrations on $H^k(X,\Z)$. We let $N^1H^k(X,\Z)$ and $\widetilde{N}^1H^k(X,\Z)$ denote the first levels of the coniveau filtration and the strong coniveau filtrations, respectively. For the relevant definitions, see \cref{pap:coniveaudoublecovers}. In \cite[Proposition 2.4]{BenoistOttemConiveau}, Benoist and Ottem prove that the quotient group $N^1H^k(X,\Z) / \widetilde{N}^1H^k(X,\Z)$ is a stable birational invariant. Hence, studying the difference between these two filtrations is interesting from the perspective of birational geometry.
 
@@ -55,7 +55,7 @@ On Fano hypersurfaces, the first level of the coniveau filtration is simple, and
 for any $k$.
 \end{proposition}
 
-The strategy used in \cite{VoisinConiveauThreefolds} to prove \cref{thm:VoisinConiveau} is proving that the cylinder map is surjective on $H^n(X,\Z)$. Here we will use the same strategy to prove the following theorem, which also applies to the other cohomology groups of $X$.
+The strategy used in \cite{VoisinConiveauThreefolds} to prove \cref{thm:VoisinConiveau} is to show that the cylinder map is surjective on $H^n(X,\Z)$. Here we will use the same strategy to prove the following theorem, which also applies to the other cohomology groups of $X$.
 \begin{theorem}
 \label{thm:ConiveauIntroduction}
   Let $X \subset \P^{n+1}$ be a smooth complex hypersurface of degree $d$. Assume that $F(X)$ is smooth of expected dimension and that either
@@ -65,7 +65,7 @@ The strategy used in \cite{VoisinConiveauThreefolds} to prove \cref{thm:VoisinCo
   \end{enumerate}
 Then $\widetilde{N}^1H^k(X,\Z) = N^1H^k(X,\Z) = H^k(X,\Z)$ for all $k$.
 \end{theorem}
-Compared to \cref{thm:VoisinOnHypersurfaces}, this applies to all cohomology groups. More importantly, it unfortunately only applies to Fano hypersurfaces of sufficiently low degree. A second goal of this paper is to explain the why the bounds in \cref{thm:VoisinOnHypersurfaces} and \cref{thm:ConiveauIntroduction} differ.
+Compared to \cref{thm:VoisinOnHypersurfaces}, this applies to all cohomology groups. More importantly, it unfortunately only applies to Fano hypersurfaces of sufficiently low degree. A second goal of this paper is to explain why the bounds in \cref{thm:VoisinOnHypersurfaces} and \cref{thm:ConiveauIntroduction} differ.
 
 It turns out that it is easy to understand the strong coniveau filtration on the cohomology groups $H^k(X,\Z)$, with $k \leq n$. The main step to prove \cref{thm:ConiveauIntroduction} is therefore studying the cohomology groups $H^k(X,\Z)$, with $k \geq n$. We do this using the same strategy as in Voisin's proof of \cref{thm:VoisinConiveau}. The basic idea is to prove that the cylinder map is surjective onto $H^k(X,\Z)$. The cohomology $H^k(X,\Z)$ can be split into the vanishing and nonvanishing cohomology. The vanishing cohomology only lies in $H^k(X,\Z)$ and is therefore covered by Voisin's result. We will therefore focus on proving that the cylinder map is surjective onto the nonvanishing cohomology.
 
@@ -259,7 +259,7 @@ Let $\mathscr{X}$ be the parameter space of hypersurfaces of this form, and let 
 	
 	Let $p_{\mathscr{X}} \from \mathcal{C} \times \mathscr{X}^\circ \to \mathscr{X}$ be the projection, and define the incidence correspondence
 	\[J^\circ \coloneqq \set{(l,X) \in \mathcal{C} \times \mathscr{X}^\circ \vert F(X) \text{ is not smooth of expected dimension at } l}.\]
-Any $X$ in $\mathscr{X}^\circ \setminus p_{\mathscr{X}}(J^\circ)$ satisfies the conditions of the theorem. So it will suffice to prove that $\dim J^\circ < \dim \mathscr{X}^\circ$. We will prove this by proving that all fibers of $J^\circ \to \mathcal{C}$ have codimension greater than $\dim \mathcal{C} = k-1$.
+Any $X$ in $\mathscr{X}^\circ \setminus p_{\mathscr{X}}(J^\circ)$ satisfies the conditions of the proposition. So it will suffice to prove that $\dim J^\circ < \dim \mathscr{X}^\circ$. We will prove this by proving that all fibers of $J^\circ \to \mathcal{C}$ have codimension greater than $\dim \mathcal{C} = k-1$.
 
 For a point $(l,X) \in {\mathcal{C}} \times \mathscr{X}^\circ$, write $X$ on the form \eqref{eq:LinearSpaceForm}. Then by \cref{lem:KollarSmoothness}, $F(X)$ is not smooth of expected dimension at $l$ if and only if
 	\begin{equation}

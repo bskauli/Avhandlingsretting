@@ -71,7 +71,7 @@ In this section, we recall the obstruction to the existence of a decomposition o
 \begin{definition}[{\cite[Definition 3.1]{PavicSchreieder}}]
   \label{def:BigPhiMap}
   Let $R$ be a discrete valuation ring, and let $\mathcal{X} \to \Spec R$ be a strictly semi-stable $R$-scheme with special fiber $Y$. Let $Y_i$ with $i \in I$ be the irreducible components of $Y$, and let $\iota \from Y \to \mathcal{X}$ and $\iota_i \from Y_i \to \mathcal{X}$ be the natural embeddings. We define $\Phi_{\mathcal{X},Y_i} \from \CH_1(Y) \to \CH_0(Y_i)$ to be the composition
-\[ \Phi_{\mathcal{X},Y_i} \from \CH_1(Y) \xrightarrow{\iota_*} \CH_1(\mathcal{X}) \xrightarrow{\iota^*} \CH(Y_i), \]
+\[ \Phi_{\mathcal{X},Y_i} \from \CH_1(Y) \xrightarrow{\iota_*} \CH_1(\mathcal{X}) \xrightarrow{\iota_i^*} \CH_0(Y_i), \]
 and we denote by $\Phi_{\mathcal{X}}$ the direct sum
 \[ \Phi_{\mathcal{X}} \coloneqq \sum_{i \in I}  \Phi_{\mathcal{X},Y_i}  \from \CH_1(Y) \to  \bigoplus_{i \in I}\CH_0(Y_i).\]
 \end{definition}
@@ -728,7 +728,7 @@ Finally, since the map $\widetilde{W} \to W'$ is an isomorphism outside the sing
 
 Combining this, we see that pairing $\alpha$ with the left hand side of \eqref{eq:WTildeEquality} we get a nonzero result, whereas pairing $\alpha$ with the right hand side gives $0$. This proves that an equality as in \eqref{eq:WTildeEquality} cannot hold, and we are done.
 \end{proof}
-Also over fields of positive characteristic, we have $\ip{2w, \alpha} = 0$.Also over fields of positive characteristic, we have $\ip{2w, \alpha} = 0$. This is the only point on which this proof and the proof of \cref{lem:NoDoD} differs, hence \cref{prop:DiagonalNotInBaseChange} also holds over fields positive characteristic different from $2$. Since the only other additional condition of the characteristic of the ground field is the proof of \cref{lem:K'UniversallyTrivia}, which does not go through in characteristic $3$, one can prove the main result, \cref{thm:GenericFiberNoDecomposition}, over algebraically closed ground fields of characteristic different from $2$ and $3$.
+Also over fields of positive characteristic, we have $\ip{2w, \alpha} = 0$. Also over fields of positive characteristic, we have $\ip{2w, \alpha} = 0$. This is the only point on which this proof and the proof of \cref{lem:NoDoD} differs, hence \cref{prop:DiagonalNotInBaseChangeImage} also holds over fields positive characteristic different from $2$. Since the only other additional condition of the characteristic of the ground field is the proof of \cref{lem:K'UniversallyTrivial}, which does not go through in characteristic $3$, one can prove the main result, \cref{thm:GenericFiberNoDecomposition}, over algebraically closed ground fields of characteristic different from $2$ and $3$.
 
 Combining \cref{thm:BigPhiSurjective} and \cref{prop:DiagonalNotInBaseChangeImage} we obtain our main theorem.
 \begin{theorem}
