@@ -41,7 +41,7 @@ In contrast to the linear case, admitting such a parametrization is a very restr
 There are also many interesting notions of being ``close to'' parametrizable by affine space. Contributing to the study of how these notions relate to each other, and how one can prove the nonexistence of such a parametrization, is an overarching goal of this thesis. As we will see, tools from many branches of mathematics can be applied to rationality questions. Algebraic tools are of course crucial to any work in algebraic geometry, but since we will primarily work over the complex numbers, we will also draw on ideas from topology and differential geometry.
 
 \section{The Rationality Hierarchy}
-To formalize the discussion above, we introduce some basic concepts from birational geometry. Let $X$ and $Y$ be varieties over a field $k$. A rational map $f \from X \ratmap Y$ is a morphism $f \from U \to Y$, where $U \subset X$ is an open set. The rational map $f \from X \ratmap Y$ is a birational map, written $f \from X \birat Y$, if there is a rational map $g \from Y \ratmap X$, such that both $g \circ f$ and $f \circ g$ are the identity map on an open set where both maps are defined.
+To formalize the discussion above, we introduce some basic concepts from birational geometry. Let $X$ and $Y$ be varieties over a field $k$. A rational map $f \from X \ratmap Y$ is a morphism $f \from U \to Y$, where $U \subset X$ is a nonempty open set. The rational map $f \from X \ratmap Y$ is a birational map, written $f \from X \birat Y$, if there is a rational map $g \from Y \ratmap X$, such that both $g \circ f$ and $f \circ g$ are the identity map on an open set where both maps are defined.
 
 We call a variety rational if it is parametrizable in the following sense.
 \begin{definition}
@@ -63,7 +63,7 @@ Recall that a rational map $f \from X \ratmap Y$ is \emph{dominant} if its image
 Starting from these two classical properties, a hierarchy of rationality properties has been studied, each capturing different notions of when a variety $X$ is close to being rational. We collect and motivate three important such properties here.
 \begin{definition}
 	\label{def:StablyRational}
-	A variety $X$ is \emph{stably rational} if $X \times \P^m$ is rational for some $m$. Equivalently, there exists a purely transcendental extension $k(X)[t_1,\dots,t_m]$ of $k(X)$, such that this extension is a purely transcendental extension of $k$.
+	A variety $X$ is \emph{stably rational} if $X \times \P^m$ is rational for some $m$. Equivalently, there exists a purely transcendental extension $k(X)(t_1,\dots,t_m)$ of $k(X)$, such that this extension is a purely transcendental extension of $k$.
 \end{definition}
 Stable rationality traces its roots back to the following question by Zariski.
 \begin{question}[Zariski problem]
@@ -148,7 +148,7 @@ Shortly after the work of Iskovskikh-Manin and of Clemens-Griffiths appeared, Ar
 \end{theorem}
 We will soon see that this invariant proves that $X$ has no decomposition of the diagonal, and is therefore also not retract rational. Although these concepts were not introduced at the time of \cite{ArtinMumford}, \cref{thm:ArtinMumfordIntroduction} also proves that retract rationality is a stronger property than unirationality.
 
-Regarding the relation between rationality and stable rationality, Beauville, Colliot-Thélène, Sansuc and Swinnerton-Dyer answered \cref{que:Zariski} negatively over $\C$. In the paper \cite{BCTSSD} they find a smooth, irrational, complex threefold $X$ such that $X \times \P^3$ is stably rational. In fact, Shepherd-Barron proves in \cite{Shepherd-Barron} that also $X \times \P^2$ is rational. As far as the author is aware, this is essentially the only known example of an irrational, but stably rational, complex variety.
+Regarding the relation between rationality and stable rationality, Beauville, Colliot-Thélène, Sansuc and Swinnerton-Dyer answered \cref{que:Zariski} negatively over $\C$. In the paper \cite{BCTSSD} they find a smooth, irrational, complex threefold $X$ such that $X \times \P^3$ is rational. In fact, Shepherd-Barron proves in \cite{Shepherd-Barron} that also $X \times \P^2$ is rational. As far as the author is aware, this is essentially the only known example of an irrational, but stably rational, complex variety.
 
 These examples prove that most of the implications in \cref{prop:RationalityHierarchy} are not equivalences. The following two questions remain.
 \begin{question}
