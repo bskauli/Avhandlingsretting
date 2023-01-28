@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.8.9)  28 JAN 2023 12:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.8.9)  28 JAN 2023 12:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**main
+**main.tex\
 (./main.tex
 LaTeX2e <2020-02-02> patch level 5
 L3 programming layer <2020-08-07> (./phduio.cls
@@ -2872,7 +2872,7 @@ Package cleveref Info: loaded `english' language definitions on input line 210.
 Package cleveref Info: loaded `english' language definitions on input line 239.
 
  [82]
-Package cleveref Info: loaded `english' language definitions on input line 275.
+Package cleveref Info: loaded `english' language definitions on input line 274.
 
  [83]
 Package cleveref Info: loaded `english' language definitions on input line 313.
@@ -3188,12 +3188,6 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package biblatex Warning: Please rerun LaTeX.
-
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
@@ -3201,11 +3195,11 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 Here is how much of TeX's memory you used:
  47454 strings out of 480893
  927388 string characters out of 5911973
- 1833160 words of memory out of 5000000
+ 1833205 words of memory out of 5000000
  60753 multiletter control sequences out of 15000+600000
  713721 words of font info for 313 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,18n,88p,1524b,3455s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 69i,18n,88p,1529b,3455s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{c:/texlive/2020/te
 xmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{c:/texlive/2020/texmf-dist/fonts/enc
 /dvips/lm/lm-mathit.enc}{c:/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-rm.en
@@ -3237,7 +3231,7 @@ live/2020/texmf-dist/fonts/type1/public/rsfs/rsfs7.pfb><c:/texlive/2020/texmf-d
 ist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1
 /urw/helvetic/uhvr8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/helvetic/u
 hvro8a.pfb>
-Output written on main.pdf (160 pages, 1089338 bytes).
+Output written on main.pdf (160 pages, 1089448 bytes).
 PDF statistics:
  3066 PDF objects out of 3580 (max. 8388607)
  2824 compressed objects within 29 object streams
