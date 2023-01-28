@@ -1,220 +1,220 @@
 [0] Config.pm:304> INFO - This is Biber 2.14
 [1] Config.pm:307> INFO - Logfile is 'main.blg'
-[85] biber-MSWIN64:322> INFO - === 
-[143] Biber.pm:415> INFO - Reading 'main.bcf'
-[311] Biber.pm:943> INFO - Found 0 citekeys in bib section 0
-[312] Biber.pm:943> INFO - Found 0 citekeys in bib section 1
-[313] Biber.pm:943> INFO - Found 0 citekeys in bib section 0
-[322] Biber.pm:943> INFO - Found 51 citekeys in bib section 2
-[324] Biber.pm:943> INFO - Found 0 citekeys in bib section 0
-[331] Biber.pm:943> INFO - Found 19 citekeys in bib section 3
-[332] Biber.pm:943> INFO - Found 0 citekeys in bib section 0
-[334] Biber.pm:943> INFO - Found 10 citekeys in bib section 4
-[335] Biber.pm:943> INFO - Found 0 citekeys in bib section 0
-[336] Biber.pm:943> INFO - Found 10 citekeys in bib section 5
-[336] Biber.pm:943> INFO - Found 0 citekeys in bib section 0
-[338] Biber.pm:943> INFO - Found 15 citekeys in bib section 6
-[338] Biber.pm:943> INFO - Found 0 citekeys in bib section 0
-[339] Biber.pm:943> INFO - Found 5 citekeys in bib section 7
-[340] Biber.pm:943> INFO - Found 0 citekeys in bib section 0
-[342] Biber.pm:943> INFO - Found 9 citekeys in bib section 8
-[342] Biber.pm:943> INFO - Found 0 citekeys in bib section 0
-[344] Biber.pm:943> INFO - Found 13 citekeys in bib section 9
-[344] Biber.pm:943> INFO - Found 0 citekeys in bib section 0
-[345] Biber.pm:943> INFO - Found 5 citekeys in bib section 10
-[346] Biber.pm:943> INFO - Found 0 citekeys in bib section 0
-[346] Biber.pm:943> INFO - Found 0 citekeys in bib section 11
-[347] Biber.pm:943> INFO - Found 0 citekeys in bib section 0
-[472] Biber.pm:4256> INFO - Processing section 2
-[473] Utils.pm:75> INFO - Globbing data source 'bibliographies/introduction.bib'
-[502] Utils.pm:91> INFO - Globbed data source 'bibliographies/introduction.bib' to bibliographies/introduction.bib
-[502] Utils.pm:75> INFO - Globbing data source 'bibliographies/23diagonal.bib'
-[506] Utils.pm:91> INFO - Globbed data source 'bibliographies/23diagonal.bib' to bibliographies/23diagonal.bib
-[506] Utils.pm:75> INFO - Globbing data source 'bibliographies/unirationality.bib'
-[510] Utils.pm:91> INFO - Globbed data source 'bibliographies/unirationality.bib' to bibliographies/unirationality.bib
-[510] Utils.pm:75> INFO - Globbing data source 'bibliographies/integralhodge.bib'
-[514] Utils.pm:91> INFO - Globbed data source 'bibliographies/integralhodge.bib' to bibliographies/integralhodge.bib
-[515] Utils.pm:75> INFO - Globbing data source 'bibliographies/griffiths.bib'
-[518] Utils.pm:91> INFO - Globbed data source 'bibliographies/griffiths.bib' to bibliographies/griffiths.bib
-[519] Utils.pm:75> INFO - Globbing data source 'bibliographies/coniveau.bib'
-[523] Utils.pm:91> INFO - Globbed data source 'bibliographies/coniveau.bib' to bibliographies/coniveau.bib
-[540] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/introduction.bib' for section 2
-[586] bibtex.pm:1653> INFO - LaTeX decoding ...
-[739] bibtex.pm:1471> INFO - Found BibTeX data source 'bibliographies/introduction.bib'
-[1113] UCollate.pm:68> INFO - Overriding locale 'nb_NO' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1113] UCollate.pm:68> INFO - Overriding locale 'nb_NO' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1114] Biber.pm:4084> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'nb_NO'
-[1189] Biber.pm:4256> INFO - Processing section 3
-[1190] Utils.pm:75> INFO - Globbing data source 'bibliographies/introduction.bib'
-[1195] Utils.pm:91> INFO - Globbed data source 'bibliographies/introduction.bib' to bibliographies/introduction.bib
-[1196] Utils.pm:75> INFO - Globbing data source 'bibliographies/23diagonal.bib'
-[1200] Utils.pm:91> INFO - Globbed data source 'bibliographies/23diagonal.bib' to bibliographies/23diagonal.bib
-[1200] Utils.pm:75> INFO - Globbing data source 'bibliographies/unirationality.bib'
-[1204] Utils.pm:91> INFO - Globbed data source 'bibliographies/unirationality.bib' to bibliographies/unirationality.bib
-[1205] Utils.pm:75> INFO - Globbing data source 'bibliographies/integralhodge.bib'
-[1209] Utils.pm:91> INFO - Globbed data source 'bibliographies/integralhodge.bib' to bibliographies/integralhodge.bib
-[1209] Utils.pm:75> INFO - Globbing data source 'bibliographies/griffiths.bib'
-[1213] Utils.pm:91> INFO - Globbed data source 'bibliographies/griffiths.bib' to bibliographies/griffiths.bib
-[1214] Utils.pm:75> INFO - Globbing data source 'bibliographies/coniveau.bib'
-[1220] Utils.pm:91> INFO - Globbed data source 'bibliographies/coniveau.bib' to bibliographies/coniveau.bib
-[1221] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/introduction.bib' for section 3
-[1276] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/23diagonal.bib' for section 3
-[1601] bibtex.pm:1653> INFO - LaTeX decoding ...
-[1639] bibtex.pm:1471> INFO - Found BibTeX data source 'bibliographies/23diagonal.bib'
-[1717] UCollate.pm:68> INFO - Overriding locale 'nb_NO' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1717] UCollate.pm:68> INFO - Overriding locale 'nb_NO' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1718] Biber.pm:4084> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'nb_NO'
-[1760] Biber.pm:4256> INFO - Processing section 4
-[1760] Utils.pm:75> INFO - Globbing data source 'bibliographies/introduction.bib'
-[1764] Utils.pm:91> INFO - Globbed data source 'bibliographies/introduction.bib' to bibliographies/introduction.bib
-[1764] Utils.pm:75> INFO - Globbing data source 'bibliographies/23diagonal.bib'
-[1768] Utils.pm:91> INFO - Globbed data source 'bibliographies/23diagonal.bib' to bibliographies/23diagonal.bib
-[1768] Utils.pm:75> INFO - Globbing data source 'bibliographies/unirationality.bib'
-[1772] Utils.pm:91> INFO - Globbed data source 'bibliographies/unirationality.bib' to bibliographies/unirationality.bib
-[1772] Utils.pm:75> INFO - Globbing data source 'bibliographies/integralhodge.bib'
-[1776] Utils.pm:91> INFO - Globbed data source 'bibliographies/integralhodge.bib' to bibliographies/integralhodge.bib
-[1776] Utils.pm:75> INFO - Globbing data source 'bibliographies/griffiths.bib'
-[1780] Utils.pm:91> INFO - Globbed data source 'bibliographies/griffiths.bib' to bibliographies/griffiths.bib
-[1780] Utils.pm:75> INFO - Globbing data source 'bibliographies/coniveau.bib'
-[1785] Utils.pm:91> INFO - Globbed data source 'bibliographies/coniveau.bib' to bibliographies/coniveau.bib
-[1785] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/introduction.bib' for section 4
-[1832] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/23diagonal.bib' for section 4
-[1888] UCollate.pm:68> INFO - Overriding locale 'nb_NO' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1889] UCollate.pm:68> INFO - Overriding locale 'nb_NO' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1890] Biber.pm:4084> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'nb_NO'
-[1905] Biber.pm:4256> INFO - Processing section 5
-[1906] Utils.pm:75> INFO - Globbing data source 'bibliographies/introduction.bib'
-[1913] Utils.pm:91> INFO - Globbed data source 'bibliographies/introduction.bib' to bibliographies/introduction.bib
-[1913] Utils.pm:75> INFO - Globbing data source 'bibliographies/23diagonal.bib'
-[1918] Utils.pm:91> INFO - Globbed data source 'bibliographies/23diagonal.bib' to bibliographies/23diagonal.bib
-[1919] Utils.pm:75> INFO - Globbing data source 'bibliographies/unirationality.bib'
-[1924] Utils.pm:91> INFO - Globbed data source 'bibliographies/unirationality.bib' to bibliographies/unirationality.bib
-[1924] Utils.pm:75> INFO - Globbing data source 'bibliographies/integralhodge.bib'
-[1928] Utils.pm:91> INFO - Globbed data source 'bibliographies/integralhodge.bib' to bibliographies/integralhodge.bib
-[1929] Utils.pm:75> INFO - Globbing data source 'bibliographies/griffiths.bib'
-[1932] Utils.pm:91> INFO - Globbed data source 'bibliographies/griffiths.bib' to bibliographies/griffiths.bib
-[1933] Utils.pm:75> INFO - Globbing data source 'bibliographies/coniveau.bib'
-[1936] Utils.pm:91> INFO - Globbed data source 'bibliographies/coniveau.bib' to bibliographies/coniveau.bib
-[1937] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/introduction.bib' for section 5
-[1976] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/23diagonal.bib' for section 5
-[1989] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/unirationality.bib' for section 5
-[2013] bibtex.pm:1653> INFO - LaTeX decoding ...
-[2033] bibtex.pm:1471> INFO - Found BibTeX data source 'bibliographies/unirationality.bib'
-[2081] UCollate.pm:68> INFO - Overriding locale 'nb_NO' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[2081] UCollate.pm:68> INFO - Overriding locale 'nb_NO' defaults 'variable = shifted' with 'variable = non-ignorable'
-[2082] Biber.pm:4084> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'nb_NO'
-[2098] Biber.pm:4256> INFO - Processing section 6
-[2099] Utils.pm:75> INFO - Globbing data source 'bibliographies/introduction.bib'
-[2105] Utils.pm:91> INFO - Globbed data source 'bibliographies/introduction.bib' to bibliographies/introduction.bib
-[2105] Utils.pm:75> INFO - Globbing data source 'bibliographies/23diagonal.bib'
-[2111] Utils.pm:91> INFO - Globbed data source 'bibliographies/23diagonal.bib' to bibliographies/23diagonal.bib
-[2112] Utils.pm:75> INFO - Globbing data source 'bibliographies/unirationality.bib'
-[2117] Utils.pm:91> INFO - Globbed data source 'bibliographies/unirationality.bib' to bibliographies/unirationality.bib
-[2118] Utils.pm:75> INFO - Globbing data source 'bibliographies/integralhodge.bib'
-[2122] Utils.pm:91> INFO - Globbed data source 'bibliographies/integralhodge.bib' to bibliographies/integralhodge.bib
-[2122] Utils.pm:75> INFO - Globbing data source 'bibliographies/griffiths.bib'
-[2126] Utils.pm:91> INFO - Globbed data source 'bibliographies/griffiths.bib' to bibliographies/griffiths.bib
-[2127] Utils.pm:75> INFO - Globbing data source 'bibliographies/coniveau.bib'
-[2131] Utils.pm:91> INFO - Globbed data source 'bibliographies/coniveau.bib' to bibliographies/coniveau.bib
-[2131] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/introduction.bib' for section 6
-[2170] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/23diagonal.bib' for section 6
-[2184] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/unirationality.bib' for section 6
-[2196] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/integralhodge.bib' for section 6
-[2233] bibtex.pm:1653> INFO - LaTeX decoding ...
-[2306] bibtex.pm:1471> INFO - Found BibTeX data source 'bibliographies/integralhodge.bib'
-[2382] UCollate.pm:68> INFO - Overriding locale 'nb_NO' defaults 'variable = shifted' with 'variable = non-ignorable'
-[2383] UCollate.pm:68> INFO - Overriding locale 'nb_NO' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[2384] Biber.pm:4084> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'nb_NO'
-[2406] Biber.pm:4256> INFO - Processing section 7
-[2407] Utils.pm:75> INFO - Globbing data source 'bibliographies/introduction.bib'
-[2414] Utils.pm:91> INFO - Globbed data source 'bibliographies/introduction.bib' to bibliographies/introduction.bib
-[2415] Utils.pm:75> INFO - Globbing data source 'bibliographies/23diagonal.bib'
-[2423] Utils.pm:91> INFO - Globbed data source 'bibliographies/23diagonal.bib' to bibliographies/23diagonal.bib
-[2424] Utils.pm:75> INFO - Globbing data source 'bibliographies/unirationality.bib'
-[2429] Utils.pm:91> INFO - Globbed data source 'bibliographies/unirationality.bib' to bibliographies/unirationality.bib
-[2430] Utils.pm:75> INFO - Globbing data source 'bibliographies/integralhodge.bib'
-[2434] Utils.pm:91> INFO - Globbed data source 'bibliographies/integralhodge.bib' to bibliographies/integralhodge.bib
-[2435] Utils.pm:75> INFO - Globbing data source 'bibliographies/griffiths.bib'
-[2439] Utils.pm:91> INFO - Globbed data source 'bibliographies/griffiths.bib' to bibliographies/griffiths.bib
-[2440] Utils.pm:75> INFO - Globbing data source 'bibliographies/coniveau.bib'
-[2443] Utils.pm:91> INFO - Globbed data source 'bibliographies/coniveau.bib' to bibliographies/coniveau.bib
-[2444] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/introduction.bib' for section 7
-[2459] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/23diagonal.bib' for section 7
-[2471] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/unirationality.bib' for section 7
-[2484] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/integralhodge.bib' for section 7
-[2496] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/griffiths.bib' for section 7
-[2522] bibtex.pm:1653> INFO - LaTeX decoding ...
-[2541] bibtex.pm:1471> INFO - Found BibTeX data source 'bibliographies/griffiths.bib'
-[2546] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/coniveau.bib' for section 7
-[2574] bibtex.pm:1653> INFO - LaTeX decoding ...
-[2605] bibtex.pm:1471> INFO - Found BibTeX data source 'bibliographies/coniveau.bib'
+[122] biber-MSWIN32:322> INFO - === 
+[152] Biber.pm:415> INFO - Reading 'main.bcf'
+[374] Biber.pm:943> INFO - Found 0 citekeys in bib section 0
+[374] Biber.pm:943> INFO - Found 0 citekeys in bib section 1
+[376] Biber.pm:943> INFO - Found 0 citekeys in bib section 0
+[389] Biber.pm:943> INFO - Found 51 citekeys in bib section 2
+[389] Biber.pm:943> INFO - Found 0 citekeys in bib section 0
+[396] Biber.pm:943> INFO - Found 19 citekeys in bib section 3
+[397] Biber.pm:943> INFO - Found 0 citekeys in bib section 0
+[401] Biber.pm:943> INFO - Found 10 citekeys in bib section 4
+[401] Biber.pm:943> INFO - Found 0 citekeys in bib section 0
+[403] Biber.pm:943> INFO - Found 10 citekeys in bib section 5
+[404] Biber.pm:943> INFO - Found 0 citekeys in bib section 0
+[406] Biber.pm:943> INFO - Found 15 citekeys in bib section 6
+[406] Biber.pm:943> INFO - Found 0 citekeys in bib section 0
+[407] Biber.pm:943> INFO - Found 5 citekeys in bib section 7
+[408] Biber.pm:943> INFO - Found 0 citekeys in bib section 0
+[409] Biber.pm:943> INFO - Found 9 citekeys in bib section 8
+[409] Biber.pm:943> INFO - Found 0 citekeys in bib section 0
+[412] Biber.pm:943> INFO - Found 13 citekeys in bib section 9
+[412] Biber.pm:943> INFO - Found 0 citekeys in bib section 0
+[414] Biber.pm:943> INFO - Found 5 citekeys in bib section 10
+[415] Biber.pm:943> INFO - Found 0 citekeys in bib section 0
+[416] Biber.pm:943> INFO - Found 0 citekeys in bib section 11
+[417] Biber.pm:943> INFO - Found 0 citekeys in bib section 0
+[567] Biber.pm:4256> INFO - Processing section 2
+[568] Utils.pm:75> INFO - Globbing data source 'bibliographies/introduction.bib'
+[586] Utils.pm:91> INFO - Globbed data source 'bibliographies/introduction.bib' to bibliographies/introduction.bib
+[586] Utils.pm:75> INFO - Globbing data source 'bibliographies/23diagonal.bib'
+[588] Utils.pm:91> INFO - Globbed data source 'bibliographies/23diagonal.bib' to bibliographies/23diagonal.bib
+[588] Utils.pm:75> INFO - Globbing data source 'bibliographies/unirationality.bib'
+[590] Utils.pm:91> INFO - Globbed data source 'bibliographies/unirationality.bib' to bibliographies/unirationality.bib
+[591] Utils.pm:75> INFO - Globbing data source 'bibliographies/integralhodge.bib'
+[593] Utils.pm:91> INFO - Globbed data source 'bibliographies/integralhodge.bib' to bibliographies/integralhodge.bib
+[594] Utils.pm:75> INFO - Globbing data source 'bibliographies/griffiths.bib'
+[595] Utils.pm:91> INFO - Globbed data source 'bibliographies/griffiths.bib' to bibliographies/griffiths.bib
+[595] Utils.pm:75> INFO - Globbing data source 'bibliographies/coniveau.bib'
+[596] Utils.pm:91> INFO - Globbed data source 'bibliographies/coniveau.bib' to bibliographies/coniveau.bib
+[615] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/introduction.bib' for section 2
+[638] bibtex.pm:1653> INFO - LaTeX decoding ...
+[846] bibtex.pm:1471> INFO - Found BibTeX data source 'bibliographies/introduction.bib'
+[1297] UCollate.pm:68> INFO - Overriding locale 'nb_NO' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1298] UCollate.pm:68> INFO - Overriding locale 'nb_NO' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1299] Biber.pm:4084> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'nb_NO'
+[1410] Biber.pm:4256> INFO - Processing section 3
+[1411] Utils.pm:75> INFO - Globbing data source 'bibliographies/introduction.bib'
+[1412] Utils.pm:91> INFO - Globbed data source 'bibliographies/introduction.bib' to bibliographies/introduction.bib
+[1413] Utils.pm:75> INFO - Globbing data source 'bibliographies/23diagonal.bib'
+[1415] Utils.pm:91> INFO - Globbed data source 'bibliographies/23diagonal.bib' to bibliographies/23diagonal.bib
+[1415] Utils.pm:75> INFO - Globbing data source 'bibliographies/unirationality.bib'
+[1416] Utils.pm:91> INFO - Globbed data source 'bibliographies/unirationality.bib' to bibliographies/unirationality.bib
+[1417] Utils.pm:75> INFO - Globbing data source 'bibliographies/integralhodge.bib'
+[1419] Utils.pm:91> INFO - Globbed data source 'bibliographies/integralhodge.bib' to bibliographies/integralhodge.bib
+[1419] Utils.pm:75> INFO - Globbing data source 'bibliographies/griffiths.bib'
+[1420] Utils.pm:91> INFO - Globbed data source 'bibliographies/griffiths.bib' to bibliographies/griffiths.bib
+[1421] Utils.pm:75> INFO - Globbing data source 'bibliographies/coniveau.bib'
+[1421] Utils.pm:91> INFO - Globbed data source 'bibliographies/coniveau.bib' to bibliographies/coniveau.bib
+[1422] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/introduction.bib' for section 3
+[1495] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/23diagonal.bib' for section 3
+[1503] bibtex.pm:1653> INFO - LaTeX decoding ...
+[1563] bibtex.pm:1471> INFO - Found BibTeX data source 'bibliographies/23diagonal.bib'
+[1672] UCollate.pm:68> INFO - Overriding locale 'nb_NO' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1673] UCollate.pm:68> INFO - Overriding locale 'nb_NO' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1674] Biber.pm:4084> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'nb_NO'
+[1715] Biber.pm:4256> INFO - Processing section 4
+[1715] Utils.pm:75> INFO - Globbing data source 'bibliographies/introduction.bib'
+[1717] Utils.pm:91> INFO - Globbed data source 'bibliographies/introduction.bib' to bibliographies/introduction.bib
+[1718] Utils.pm:75> INFO - Globbing data source 'bibliographies/23diagonal.bib'
+[1719] Utils.pm:91> INFO - Globbed data source 'bibliographies/23diagonal.bib' to bibliographies/23diagonal.bib
+[1720] Utils.pm:75> INFO - Globbing data source 'bibliographies/unirationality.bib'
+[1721] Utils.pm:91> INFO - Globbed data source 'bibliographies/unirationality.bib' to bibliographies/unirationality.bib
+[1722] Utils.pm:75> INFO - Globbing data source 'bibliographies/integralhodge.bib'
+[1723] Utils.pm:91> INFO - Globbed data source 'bibliographies/integralhodge.bib' to bibliographies/integralhodge.bib
+[1723] Utils.pm:75> INFO - Globbing data source 'bibliographies/griffiths.bib'
+[1724] Utils.pm:91> INFO - Globbed data source 'bibliographies/griffiths.bib' to bibliographies/griffiths.bib
+[1725] Utils.pm:75> INFO - Globbing data source 'bibliographies/coniveau.bib'
+[1726] Utils.pm:91> INFO - Globbed data source 'bibliographies/coniveau.bib' to bibliographies/coniveau.bib
+[1726] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/introduction.bib' for section 4
+[1780] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/23diagonal.bib' for section 4
+[1835] UCollate.pm:68> INFO - Overriding locale 'nb_NO' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1835] UCollate.pm:68> INFO - Overriding locale 'nb_NO' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1837] Biber.pm:4084> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'nb_NO'
+[1862] Biber.pm:4256> INFO - Processing section 5
+[1863] Utils.pm:75> INFO - Globbing data source 'bibliographies/introduction.bib'
+[1865] Utils.pm:91> INFO - Globbed data source 'bibliographies/introduction.bib' to bibliographies/introduction.bib
+[1867] Utils.pm:75> INFO - Globbing data source 'bibliographies/23diagonal.bib'
+[1869] Utils.pm:91> INFO - Globbed data source 'bibliographies/23diagonal.bib' to bibliographies/23diagonal.bib
+[1870] Utils.pm:75> INFO - Globbing data source 'bibliographies/unirationality.bib'
+[1872] Utils.pm:91> INFO - Globbed data source 'bibliographies/unirationality.bib' to bibliographies/unirationality.bib
+[1873] Utils.pm:75> INFO - Globbing data source 'bibliographies/integralhodge.bib'
+[1873] Utils.pm:91> INFO - Globbed data source 'bibliographies/integralhodge.bib' to bibliographies/integralhodge.bib
+[1874] Utils.pm:75> INFO - Globbing data source 'bibliographies/griffiths.bib'
+[1875] Utils.pm:91> INFO - Globbed data source 'bibliographies/griffiths.bib' to bibliographies/griffiths.bib
+[1875] Utils.pm:75> INFO - Globbing data source 'bibliographies/coniveau.bib'
+[1876] Utils.pm:91> INFO - Globbed data source 'bibliographies/coniveau.bib' to bibliographies/coniveau.bib
+[1877] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/introduction.bib' for section 5
+[1925] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/23diagonal.bib' for section 5
+[1931] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/unirationality.bib' for section 5
+[1942] bibtex.pm:1653> INFO - LaTeX decoding ...
+[1971] bibtex.pm:1471> INFO - Found BibTeX data source 'bibliographies/unirationality.bib'
+[2027] UCollate.pm:68> INFO - Overriding locale 'nb_NO' defaults 'variable = shifted' with 'variable = non-ignorable'
+[2027] UCollate.pm:68> INFO - Overriding locale 'nb_NO' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[2028] Biber.pm:4084> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'nb_NO'
+[2047] Biber.pm:4256> INFO - Processing section 6
+[2047] Utils.pm:75> INFO - Globbing data source 'bibliographies/introduction.bib'
+[2048] Utils.pm:91> INFO - Globbed data source 'bibliographies/introduction.bib' to bibliographies/introduction.bib
+[2049] Utils.pm:75> INFO - Globbing data source 'bibliographies/23diagonal.bib'
+[2050] Utils.pm:91> INFO - Globbed data source 'bibliographies/23diagonal.bib' to bibliographies/23diagonal.bib
+[2051] Utils.pm:75> INFO - Globbing data source 'bibliographies/unirationality.bib'
+[2052] Utils.pm:91> INFO - Globbed data source 'bibliographies/unirationality.bib' to bibliographies/unirationality.bib
+[2054] Utils.pm:75> INFO - Globbing data source 'bibliographies/integralhodge.bib'
+[2054] Utils.pm:91> INFO - Globbed data source 'bibliographies/integralhodge.bib' to bibliographies/integralhodge.bib
+[2055] Utils.pm:75> INFO - Globbing data source 'bibliographies/griffiths.bib'
+[2056] Utils.pm:91> INFO - Globbed data source 'bibliographies/griffiths.bib' to bibliographies/griffiths.bib
+[2056] Utils.pm:75> INFO - Globbing data source 'bibliographies/coniveau.bib'
+[2057] Utils.pm:91> INFO - Globbed data source 'bibliographies/coniveau.bib' to bibliographies/coniveau.bib
+[2057] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/introduction.bib' for section 6
+[2096] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/23diagonal.bib' for section 6
+[2102] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/unirationality.bib' for section 6
+[2105] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/integralhodge.bib' for section 6
+[2117] bibtex.pm:1653> INFO - LaTeX decoding ...
+[2220] bibtex.pm:1471> INFO - Found BibTeX data source 'bibliographies/integralhodge.bib'
+[2310] UCollate.pm:68> INFO - Overriding locale 'nb_NO' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[2310] UCollate.pm:68> INFO - Overriding locale 'nb_NO' defaults 'variable = shifted' with 'variable = non-ignorable'
+[2311] Biber.pm:4084> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'nb_NO'
+[2346] Biber.pm:4256> INFO - Processing section 7
+[2346] Utils.pm:75> INFO - Globbing data source 'bibliographies/introduction.bib'
+[2347] Utils.pm:91> INFO - Globbed data source 'bibliographies/introduction.bib' to bibliographies/introduction.bib
+[2349] Utils.pm:75> INFO - Globbing data source 'bibliographies/23diagonal.bib'
+[2350] Utils.pm:91> INFO - Globbed data source 'bibliographies/23diagonal.bib' to bibliographies/23diagonal.bib
+[2350] Utils.pm:75> INFO - Globbing data source 'bibliographies/unirationality.bib'
+[2352] Utils.pm:91> INFO - Globbed data source 'bibliographies/unirationality.bib' to bibliographies/unirationality.bib
+[2354] Utils.pm:75> INFO - Globbing data source 'bibliographies/integralhodge.bib'
+[2355] Utils.pm:91> INFO - Globbed data source 'bibliographies/integralhodge.bib' to bibliographies/integralhodge.bib
+[2355] Utils.pm:75> INFO - Globbing data source 'bibliographies/griffiths.bib'
+[2356] Utils.pm:91> INFO - Globbed data source 'bibliographies/griffiths.bib' to bibliographies/griffiths.bib
+[2356] Utils.pm:75> INFO - Globbing data source 'bibliographies/coniveau.bib'
+[2357] Utils.pm:91> INFO - Globbed data source 'bibliographies/coniveau.bib' to bibliographies/coniveau.bib
+[2358] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/introduction.bib' for section 7
+[2369] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/23diagonal.bib' for section 7
+[2372] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/unirationality.bib' for section 7
+[2376] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/integralhodge.bib' for section 7
+[2379] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/griffiths.bib' for section 7
+[2386] bibtex.pm:1653> INFO - LaTeX decoding ...
+[2413] bibtex.pm:1471> INFO - Found BibTeX data source 'bibliographies/griffiths.bib'
+[2418] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/coniveau.bib' for section 7
+[2423] bibtex.pm:1653> INFO - LaTeX decoding ...
+[2475] bibtex.pm:1471> INFO - Found BibTeX data source 'bibliographies/coniveau.bib'
+[2519] UCollate.pm:68> INFO - Overriding locale 'nb_NO' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[2519] UCollate.pm:68> INFO - Overriding locale 'nb_NO' defaults 'variable = shifted' with 'variable = non-ignorable'
+[2521] Biber.pm:4084> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'nb_NO'
+[2531] Biber.pm:4256> INFO - Processing section 8
+[2531] Utils.pm:75> INFO - Globbing data source 'bibliographies/introduction.bib'
+[2532] Utils.pm:91> INFO - Globbed data source 'bibliographies/introduction.bib' to bibliographies/introduction.bib
+[2533] Utils.pm:75> INFO - Globbing data source 'bibliographies/23diagonal.bib'
+[2534] Utils.pm:91> INFO - Globbed data source 'bibliographies/23diagonal.bib' to bibliographies/23diagonal.bib
+[2534] Utils.pm:75> INFO - Globbing data source 'bibliographies/unirationality.bib'
+[2535] Utils.pm:91> INFO - Globbed data source 'bibliographies/unirationality.bib' to bibliographies/unirationality.bib
+[2535] Utils.pm:75> INFO - Globbing data source 'bibliographies/integralhodge.bib'
+[2537] Utils.pm:91> INFO - Globbed data source 'bibliographies/integralhodge.bib' to bibliographies/integralhodge.bib
+[2538] Utils.pm:75> INFO - Globbing data source 'bibliographies/griffiths.bib'
+[2539] Utils.pm:91> INFO - Globbed data source 'bibliographies/griffiths.bib' to bibliographies/griffiths.bib
+[2540] Utils.pm:75> INFO - Globbing data source 'bibliographies/coniveau.bib'
+[2541] Utils.pm:91> INFO - Globbed data source 'bibliographies/coniveau.bib' to bibliographies/coniveau.bib
+[2542] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/introduction.bib' for section 8
+[2566] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/23diagonal.bib' for section 8
+[2571] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/unirationality.bib' for section 8
+[2575] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/integralhodge.bib' for section 8
+[2579] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/griffiths.bib' for section 8
+[2642] UCollate.pm:68> INFO - Overriding locale 'nb_NO' defaults 'normalization = NFD' with 'normalization = prenormalized'
 [2642] UCollate.pm:68> INFO - Overriding locale 'nb_NO' defaults 'variable = shifted' with 'variable = non-ignorable'
-[2643] UCollate.pm:68> INFO - Overriding locale 'nb_NO' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[2643] Biber.pm:4084> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'nb_NO'
-[2650] Biber.pm:4256> INFO - Processing section 8
-[2651] Utils.pm:75> INFO - Globbing data source 'bibliographies/introduction.bib'
-[2658] Utils.pm:91> INFO - Globbed data source 'bibliographies/introduction.bib' to bibliographies/introduction.bib
-[2659] Utils.pm:75> INFO - Globbing data source 'bibliographies/23diagonal.bib'
-[2665] Utils.pm:91> INFO - Globbed data source 'bibliographies/23diagonal.bib' to bibliographies/23diagonal.bib
+[2644] Biber.pm:4084> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'nb_NO'
+[2661] Biber.pm:4256> INFO - Processing section 9
+[2662] Utils.pm:75> INFO - Globbing data source 'bibliographies/introduction.bib'
+[2662] Utils.pm:91> INFO - Globbed data source 'bibliographies/introduction.bib' to bibliographies/introduction.bib
+[2664] Utils.pm:75> INFO - Globbing data source 'bibliographies/23diagonal.bib'
+[2666] Utils.pm:91> INFO - Globbed data source 'bibliographies/23diagonal.bib' to bibliographies/23diagonal.bib
 [2666] Utils.pm:75> INFO - Globbing data source 'bibliographies/unirationality.bib'
-[2673] Utils.pm:91> INFO - Globbed data source 'bibliographies/unirationality.bib' to bibliographies/unirationality.bib
-[2674] Utils.pm:75> INFO - Globbing data source 'bibliographies/integralhodge.bib'
-[2677] Utils.pm:91> INFO - Globbed data source 'bibliographies/integralhodge.bib' to bibliographies/integralhodge.bib
-[2678] Utils.pm:75> INFO - Globbing data source 'bibliographies/griffiths.bib'
-[2681] Utils.pm:91> INFO - Globbed data source 'bibliographies/griffiths.bib' to bibliographies/griffiths.bib
-[2682] Utils.pm:75> INFO - Globbing data source 'bibliographies/coniveau.bib'
-[2685] Utils.pm:91> INFO - Globbed data source 'bibliographies/coniveau.bib' to bibliographies/coniveau.bib
-[2686] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/introduction.bib' for section 8
-[2713] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/23diagonal.bib' for section 8
-[2726] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/unirationality.bib' for section 8
-[2738] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/integralhodge.bib' for section 8
-[2751] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/griffiths.bib' for section 8
-[2811] UCollate.pm:68> INFO - Overriding locale 'nb_NO' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[2811] UCollate.pm:68> INFO - Overriding locale 'nb_NO' defaults 'variable = shifted' with 'variable = non-ignorable'
-[2812] Biber.pm:4084> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'nb_NO'
-[2825] Biber.pm:4256> INFO - Processing section 9
-[2826] Utils.pm:75> INFO - Globbing data source 'bibliographies/introduction.bib'
-[2829] Utils.pm:91> INFO - Globbed data source 'bibliographies/introduction.bib' to bibliographies/introduction.bib
-[2829] Utils.pm:75> INFO - Globbing data source 'bibliographies/23diagonal.bib'
-[2833] Utils.pm:91> INFO - Globbed data source 'bibliographies/23diagonal.bib' to bibliographies/23diagonal.bib
-[2833] Utils.pm:75> INFO - Globbing data source 'bibliographies/unirationality.bib'
-[2837] Utils.pm:91> INFO - Globbed data source 'bibliographies/unirationality.bib' to bibliographies/unirationality.bib
-[2837] Utils.pm:75> INFO - Globbing data source 'bibliographies/integralhodge.bib'
-[2841] Utils.pm:91> INFO - Globbed data source 'bibliographies/integralhodge.bib' to bibliographies/integralhodge.bib
-[2842] Utils.pm:75> INFO - Globbing data source 'bibliographies/griffiths.bib'
-[2845] Utils.pm:91> INFO - Globbed data source 'bibliographies/griffiths.bib' to bibliographies/griffiths.bib
-[2846] Utils.pm:75> INFO - Globbing data source 'bibliographies/coniveau.bib'
-[2849] Utils.pm:91> INFO - Globbed data source 'bibliographies/coniveau.bib' to bibliographies/coniveau.bib
-[2850] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/introduction.bib' for section 9
-[2893] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/23diagonal.bib' for section 9
-[2903] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/unirationality.bib' for section 9
-[2913] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/integralhodge.bib' for section 9
-[2923] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/griffiths.bib' for section 9
-[2938] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/coniveau.bib' for section 9
-[2991] UCollate.pm:68> INFO - Overriding locale 'nb_NO' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[2992] UCollate.pm:68> INFO - Overriding locale 'nb_NO' defaults 'variable = shifted' with 'variable = non-ignorable'
-[2992] Biber.pm:4084> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'nb_NO'
-[3017] Biber.pm:4256> INFO - Processing section 10
-[3018] Utils.pm:75> INFO - Globbing data source 'bibliographies/introduction.bib'
-[3021] Utils.pm:91> INFO - Globbed data source 'bibliographies/introduction.bib' to bibliographies/introduction.bib
-[3022] Utils.pm:75> INFO - Globbing data source 'bibliographies/23diagonal.bib'
-[3026] Utils.pm:91> INFO - Globbed data source 'bibliographies/23diagonal.bib' to bibliographies/23diagonal.bib
-[3027] Utils.pm:75> INFO - Globbing data source 'bibliographies/unirationality.bib'
-[3034] Utils.pm:91> INFO - Globbed data source 'bibliographies/unirationality.bib' to bibliographies/unirationality.bib
-[3034] Utils.pm:75> INFO - Globbing data source 'bibliographies/integralhodge.bib'
-[3037] Utils.pm:91> INFO - Globbed data source 'bibliographies/integralhodge.bib' to bibliographies/integralhodge.bib
-[3038] Utils.pm:75> INFO - Globbing data source 'bibliographies/griffiths.bib'
-[3042] Utils.pm:91> INFO - Globbed data source 'bibliographies/griffiths.bib' to bibliographies/griffiths.bib
-[3043] Utils.pm:75> INFO - Globbing data source 'bibliographies/coniveau.bib'
-[3046] Utils.pm:91> INFO - Globbed data source 'bibliographies/coniveau.bib' to bibliographies/coniveau.bib
-[3046] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/introduction.bib' for section 10
-[3074] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/23diagonal.bib' for section 10
-[3084] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/unirationality.bib' for section 10
-[3095] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/integralhodge.bib' for section 10
-[3110] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/griffiths.bib' for section 10
-[3123] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/coniveau.bib' for section 10
-[3155] UCollate.pm:68> INFO - Overriding locale 'nb_NO' defaults 'variable = shifted' with 'variable = non-ignorable'
-[3156] UCollate.pm:68> INFO - Overriding locale 'nb_NO' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[3157] Biber.pm:4084> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'nb_NO'
-[3164] bbl.pm:652> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[3300] bbl.pm:755> INFO - Output to main.bbl
+[2667] Utils.pm:91> INFO - Globbed data source 'bibliographies/unirationality.bib' to bibliographies/unirationality.bib
+[2667] Utils.pm:75> INFO - Globbing data source 'bibliographies/integralhodge.bib'
+[2669] Utils.pm:91> INFO - Globbed data source 'bibliographies/integralhodge.bib' to bibliographies/integralhodge.bib
+[2669] Utils.pm:75> INFO - Globbing data source 'bibliographies/griffiths.bib'
+[2671] Utils.pm:91> INFO - Globbed data source 'bibliographies/griffiths.bib' to bibliographies/griffiths.bib
+[2671] Utils.pm:75> INFO - Globbing data source 'bibliographies/coniveau.bib'
+[2672] Utils.pm:91> INFO - Globbed data source 'bibliographies/coniveau.bib' to bibliographies/coniveau.bib
+[2672] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/introduction.bib' for section 9
+[2720] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/23diagonal.bib' for section 9
+[2724] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/unirationality.bib' for section 9
+[2730] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/integralhodge.bib' for section 9
+[2735] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/griffiths.bib' for section 9
+[2749] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/coniveau.bib' for section 9
+[2815] UCollate.pm:68> INFO - Overriding locale 'nb_NO' defaults 'variable = shifted' with 'variable = non-ignorable'
+[2816] UCollate.pm:68> INFO - Overriding locale 'nb_NO' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[2817] Biber.pm:4084> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'nb_NO'
+[2844] Biber.pm:4256> INFO - Processing section 10
+[2844] Utils.pm:75> INFO - Globbing data source 'bibliographies/introduction.bib'
+[2845] Utils.pm:91> INFO - Globbed data source 'bibliographies/introduction.bib' to bibliographies/introduction.bib
+[2846] Utils.pm:75> INFO - Globbing data source 'bibliographies/23diagonal.bib'
+[2847] Utils.pm:91> INFO - Globbed data source 'bibliographies/23diagonal.bib' to bibliographies/23diagonal.bib
+[2848] Utils.pm:75> INFO - Globbing data source 'bibliographies/unirationality.bib'
+[2850] Utils.pm:91> INFO - Globbed data source 'bibliographies/unirationality.bib' to bibliographies/unirationality.bib
+[2850] Utils.pm:75> INFO - Globbing data source 'bibliographies/integralhodge.bib'
+[2852] Utils.pm:91> INFO - Globbed data source 'bibliographies/integralhodge.bib' to bibliographies/integralhodge.bib
+[2852] Utils.pm:75> INFO - Globbing data source 'bibliographies/griffiths.bib'
+[2853] Utils.pm:91> INFO - Globbed data source 'bibliographies/griffiths.bib' to bibliographies/griffiths.bib
+[2854] Utils.pm:75> INFO - Globbing data source 'bibliographies/coniveau.bib'
+[2854] Utils.pm:91> INFO - Globbed data source 'bibliographies/coniveau.bib' to bibliographies/coniveau.bib
+[2855] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/introduction.bib' for section 10
+[2879] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/23diagonal.bib' for section 10
+[2883] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/unirationality.bib' for section 10
+[2888] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/integralhodge.bib' for section 10
+[2891] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/griffiths.bib' for section 10
+[2895] Biber.pm:4455> INFO - Looking for bibtex format file 'bibliographies/coniveau.bib' for section 10
+[2926] UCollate.pm:68> INFO - Overriding locale 'nb_NO' defaults 'variable = shifted' with 'variable = non-ignorable'
+[2926] UCollate.pm:68> INFO - Overriding locale 'nb_NO' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[2928] Biber.pm:4084> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'nb_NO'
+[2939] bbl.pm:652> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[3042] bbl.pm:755> INFO - Output to main.bbl
