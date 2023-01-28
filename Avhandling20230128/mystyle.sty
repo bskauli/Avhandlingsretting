@@ -1,0 +1,206 @@
+% \NeedsTeXFormat{LaTeX2e}
+
+% \ProvidesPackage{mystyle}
+
+% \usepackage[utf8]{inputenx}
+% \usepackage[T1]{fontenc}
+
+% %% Fonts and typography
+% \usepackage{lmodern}           % Latin Modern
+% \renewcommand{\sfdefault}{phv}     % Helvetica
+% \usepackage[scaled]{beramono}  % Bera Mono (Bitstream Vera Sans Mono)
+% \usepackage[final]{microtype}  % Improved typography
+% \usepackage{siunitx}           % Typesetting units
+% \usepackage{listings}          % Typesetting code
+% \lstset{basicstyle = \ttfamily, frame = tb}
+\usepackage[shortlabels]{enumitem}
+
+% \usepackage{amssymb}    % Extra symbols
+% \usepackage{amsthm}     % Theorem-like environments
+% \usepackage{thmtools}   % Theorem-like environments, extends amsthm
+\usepackage{mathtools}  % Fonts and environments for mathematical formulae
+% \usepackage{mathrsfs}   % Script font with \mathscr{}
+% \usepackage{dsfont}     % Double stroke font with \mathds{}
+% \usepackage{cancel}     % Cancel terms with \cancel, \bcancel or \xcancel
+% \usepackage{stmaryrd}   % Brackets
+
+% \usepackage{xspace}         % Clever space
+% \usepackage[top=3.5cm,bottom=4cm]{geometry}
+
+
+% \usepackage[backend = biber, style = alphabetic]{biblatex}
+
+% \usepackage{varioref}
+% \usepackage{hyperref}
+% \usepackage[nameinlink, capitalize, noabbrev]{cleveref}
+
+
+% \usepackage{tikz-cd}
+% \usepackage{enumitem}
+% \usepackage{showlabels}
+
+% \declaretheorem[style = plain, numberwithin = section]{theorem}
+% \declaretheorem[style = plain,      sibling = theorem]{corollary}
+% \declaretheorem[style = plain,      sibling = theorem]{lemma}
+% \declaretheorem[style = plain,      sibling = theorem]{proposition}
+% \declaretheorem[style = plain,      sibling = theorem]{observation}
+% \declaretheorem[style = plain,      sibling = theorem]{conjecture}
+% \declaretheorem[style = definition, sibling = theorem]{definition}
+% \declaretheorem[style = definition, sibling = theorem]{example}
+% \declaretheorem[style = definition, sibling = theorem]{notation}
+% \declaretheorem[style = remark,     sibling = theorem]{remark}
+%\declaretheorem[style = remark,     sibling = theorem]{claim}
+% \declaretheorem[style = remark,     sibling = theorem]{question}
+% \crefname{observation}{Observation}{Observations}
+% \Crefname{observation}{Observation}{Observations}
+% \crefname{conjecture}{Conjecture}{Conjectures}
+% \Crefname{conjecture}{Conjecture}{Conjectures}
+% \crefname{notation}{Notation}{Notations}
+% \Crefname{notation}{Notation}{Notations}
+%\Crefname{claim}{Claim}{Claims}
+% \Crefname{question}{Question}{Questions}
+
+\newcommand{\CY}{Calabi--\kern-0.37exYau\xspace}
+
+
+% \renewcommand{\qedsymbol}{\(\blacksquare\)}
+% \newcommand{\ie}{\leavevmode\unskip, i.e.,\xspace}
+% \newcommand{\eg}{\leavevmode\unskip, e.g.,\xspace}
+
+\newcommand{\N}{\mathbb{N}}    % Natural numbers
+\newcommand{\Z}{\mathbb{Z}}    % Integers
+\newcommand{\Q}{\mathbb{Q}}    % Rational numbers
+\newcommand{\R}{\mathbb{R}}    % Real numbers
+\newcommand{\C}{\mathbb{C}}    % Complex numbers
+\newcommand{\F}{\mathbb{F}}    % Finite fields
+\newcommand{\A}{\mathbb{A}}    % Affine space
+\renewcommand{\P}{\mathbb{P}}  % Projective space
+
+\DeclarePairedDelimiter{\p}{\lparen}{\rparen}          % Parenthesis
+\DeclarePairedDelimiter{\set}{\lbrace}{\rbrace}        % Set
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}          % Absolute value
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}         % Norm
+\DeclarePairedDelimiter{\ip}{\langle}{\rangle}         % Inner product, ideal
+\DeclarePairedDelimiter{\sqb}{\lbrack}{\rbrack}        % Square brackets
+\DeclarePairedDelimiter{\ssqb}{\llbracket}{\rrbracket} % Double brackets
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}         % Ceiling
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}      % Floor
+
+\newcommand{\closure}[1]{\overline{#1}}
+\newcommand{\conj}[1]{\overline{#1}}
+\newcommand{\boundary}{\partial}
+\newcommand{\from}{\colon}
+\newcommand{\pidl}{\mathfrak{p}}
+\newcommand{\midl}{\mathfrak{m}}
+\newcommand{\sO}{\mathscr{O}}
+\newcommand{\sE}{\mathscr{E}}
+\newcommand{\sF}{\mathscr{F}}
+\newcommand{\sI}{\mathscr{I}}
+\newcommand{\sU}{\mathscr{U}}
+\newcommand{\sL}{\mathscr{L}}
+\newcommand{\sN}{\mathscr{N}}
+\newcommand{\sT}{\mathscr{T}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\sS}{\mathcal{S}}
+\newcommand{\sQ}{\mathcal{Q}}
+\newcommand{\sP}{\mathcal{P}}
+\newcommand{\sD}{\mathcal{D}}
+\newcommand\restr[2]{{% we make the whole thing an ordinary symbol
+  \left.\kern-\nulldelimiterspace % automatically resize the bar with \right
+  #1 % the function
+  \vphantom{\big|} % pretend it's a little taller at normal size
+  \right|_{#2} % this is the delimiter
+}}
+\newcommand{\x}{\mathbf{x}}
+
+\newcommand{\isom}{\xrightarrow{\sim}}
+\newcommand{\incl}{\hookrightarrow}
+\newcommand{\insec}{\cdot}
+\newcommand{\NE}{\overline{\text{NE}}}
+\newcommand{\Hilb}[2]{\text{Hilb}_{#1} (#2)}
+\newcommand{\Bl}[1]{\text{Bl}_{#1}}
+\newcommand{\union}{\cup}
+\newcommand{\Union}{\bigcup}
+\renewcommand{\div}{\text{div}}
+
+
+\newcommand{\product}{\Pi}
+\DeclareMathOperator{\Nef}{Nef}
+\DeclareMathOperator{\Pic}{Pic}
+\DeclareMathOperator{\PGL}{PGL}
+\DeclareMathOperator{\CH}{CH}
+\DeclareMathOperator{\Sym}{Sym}
+\DeclareMathOperator{\Gr}{Gr}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\chr}{char}
+\DeclareMathOperator{\trdeg}{trdeg}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\Br}{Br}
+\DeclareMathOperator{\Griff}{Griff}
+\DeclareMathOperator{\Mor}{Mor}
+\DeclareMathOperator{\im}{im}
+
+\makeatletter
+\newcommand*{\da@rightarrow}{\mathchar"0\hexnumber@\symAMSa 4B }
+\newcommand*{\da@leftarrow}{\mathchar"0\hexnumber@\symAMSa 4C }
+\newcommand*{\xdashrightarrow}[2][]{%
+	\mathrel{%
+		\mathpalette{\da@xarrow{#1}{#2}{}\da@rightarrow{\,}{}}{}%
+	}%
+}
+\newcommand{\xdashleftarrow}[2][]{%
+	\mathrel{%
+		\mathpalette{\da@xarrow{#1}{#2}\da@leftarrow{}{}{\,}}{}%
+	}%
+}
+\newcommand*{\da@xarrow}[7]{%
+	% #1: below
+	% #2: above
+	% #3: arrow left
+	% #4: arrow right
+	% #5: space left 
+	% #6: space right
+	% #7: math style 
+	\sbox0{$\ifx#7\scriptstyle\scriptscriptstyle\else\scriptstyle\fi#5#1#6\m@th$}%
+	\sbox2{$\ifx#7\scriptstyle\scriptscriptstyle\else\scriptstyle\fi#5#2#6\m@th$}%
+	\sbox4{$#7\dabar@\m@th$}%
+	\dimen@=\wd0 %
+	\ifdim\wd2 >\dimen@
+	\dimen@=\wd2 %   
+	\fi
+	\count@=2 %
+	\def\da@bars{\dabar@\dabar@}%
+	\@whiledim\count@\wd4<\dimen@\do{%
+		\advance\count@\@ne
+		\expandafter\def\expandafter\da@bars\expandafter{%
+			\da@bars
+			\dabar@ 
+		}%
+	}%  
+	\mathrel{#3}%
+	\mathrel{%   
+		\mathop{\da@bars}\limits
+		\ifx\\#1\\%
+		\else
+		_{\copy0}%
+		\fi
+		\ifx\\#2\\%
+		\else
+		^{\copy2}%
+		\fi
+	}%   
+	\mathrel{#4}%
+}
+\makeatother
+
+
+\newcommand{\birat}{\xdashrightarrow[]{\sim}}
+\newcommand{\ratmap}{\dashrightarrow}
+
+
+% \usepackage{titlesec}
+% \titleformat*{\section}{\large\bfseries}
+% \titleformat*{\subsection}{\bfseries}
+% \titleformat*{\subsubsection}{\small\bfseries}
+

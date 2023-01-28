@@ -1,0 +1,424 @@
+\title{A (2,3)-Intersection Fourfold with no Decomposition of the Diagonal}
+\author{Bjørn Skauli}
+\metadata
+{
+    To appear in \emph{manuscripta mathematica},
+    \doi{10.1007/s00229-022-01386-y}.
+    
+    This version has slight typographical changes from the published one.
+}
+\maketitle
+\label{pap:23diagonal}
+\startcontents[chapters]
+%\printcontents[chapters]{}{1}{\section*{\contentsname}}
+
+\begin{abstract}
+We apply the specialization technique based on the decomposition of the diagonal to the intersection of a quadric and cubic hypersurface in $\P^6$. We find an explicit example defined over $\Q$ that is smooth, and does not admit a decomposition of the diagonal, and is therefore not retract rational. The proof uses the specialization of Nicaise and Ottem (\cite{NicaiseOttem}), who proved that the very general complete intersection of this type is stably irrational using the motivic volume.
+\end{abstract}
+
+\section{Introduction}
+Determining which varieties are rational is a central problem in birational geometry. Castelnuovo's criterion for rationality gives a satisfying answer for surfaces over the complex numbers, but in higher dimensions, or over other fields, the rationality problem has proven to be harder. Nevertheless, studying rationality, various other weaker notions of rationality, and the relation between them, has been an active and fruitful area of research.
+
+Here we will primarily consider stable rationality and retract rationality. Recall that a variety $X$ is \emph{stably rational} if $X \times \P^n$ is rational for some $n$ and $X$ is \emph{retract rational} if the identity map on $X$ factors rationally through a projective space. In particular, if $X \times Y$ is rational for a variety $Y$, then $X$ is retract rational, so any stably rational variety is retract rational. The question of whether retract rationality implies stable rationality is a major open question. 
+
+A recent breakthrough in studying retract rationality is the specialization technique introduced by Voisin in \cite{VoisinDoubleQuartic}. This technique is based on the decomposition of the diagonal. The technique has then been developed further by Colliot-Thélène and Pirutka \cite{ColliotThelenePirutka} to allow for more general specializations, in particular to positive characteristic. Further work by Schreieder in \cite{SchreiederQuadric} allowed specializing to varieties with singularities, without constructing explicit resolutions.
+
+Some of the varieties proven to be non retract rational using the specialization technique based on the decomposition of diagonal are general double solids (\cite{VoisinDoubleQuartic}), general quartic hypersurfaces (\cite{ColliotThelenePirutka}), general quadric surface bundles over rational surfaces (\cite{HPTActa}), general hypersurfaces in projective space of sufficiently high degree (\cite{Tot16},\cite{SchreiederHypersurface}) and  complete intersections in projective space of sufficiently high degree \cite{ChatzistamatiouLevine}.
+
+Using specialization to positive characteristic to prove irrationality of hypersurfaces of sufficiently high degree already appears in Koll\'ar \cite{KollarHypersurfaces}, but there one specializes to a variety that is not ruled, rather than to a variety that merely has no decomposition of the diagonal. In \cite{Tot16}, Totaro combines the specialization to positive characteristic with the decomposition of the diagonal technique to obtain better bounds on the degree. The specialization technique of Koll\'ar is generalized to complete intersections in the PhD-thesis of Braune \cite{BraunePhD}.
+
+The goal of this paper is to prove retract irrationality for a specific complete intersection. We will use techniques from \cite{SchreiederQuadric} and \cite{SchreiederHypersurface} to find an example of a smooth $(2,3)$-complete intersection in $\P^6$ with integer coefficients that is not retract rational. From this it follows that also the very general such complete intersection is not retract rational. One motivation for studying this particular case is that the very general complete intersection of this type is known to be stably irrational over $\C$. Using a different degeneration technique introduced by Nicaise and Shinder in \cite{NicaiseShinderMotivic}, based on the motivic volume, Nicaise and Ottem in \cite{NicaiseOttem} prove that the very general complete intersection of a cubic and a quadric in $\P^6$ is stably irrational. However, it remained open if the very general $(2,3)$-complete intersection is retract rational or admits a decomposition of the diagonal. In contrast, all other complete intersection fourfolds which are known to be not stably rational, are also known to be not retract rational.
+
+In \cite{NicaiseOttem} stable irrationality of many other varieties was proven. The retract rationality of a different variety whose stable irrationality was proven in \cite{NicaiseOttem} was studied in \cite{PavicSchreieder}. There Pavic and Schreieder prove retract irrationality of the quartic fivefold. To achieve this, Pavic and Schreieder use a more subtle specialization technique than the one used in this paper.
+
+The main idea we will use is to find a $(2,3)$-complete intersection defined over $\Q$ and specialize to a $(2,3)$-complete intersection defined over positive characteristic, which does not admit a decomposition of the diagonal.
+ 
+Additionally, the example we find will give rise to an example in positive characteristic of a $(2,3)$-complete intersection fourfold that is not retract rational. The fact that the examples are given by simple explicit equations is also a nice complement to Nicaise and Ottem's results, which concern the very general complete intersection, and therefore does not give examples defined over $\Q$.
+
+ 
+In this paper, we will prove the following results:
+\begin{theorem}
+	\label{thm:intro}
+	Let $K=\Q$ or $K=\F_p(t)$ with $p \geq 3$. In the first case let $p \geq 3$, $q \geq 11$ be distinct primes and set $u=p,v=q$, and in the second case let $u=t,v=(t-1)$. Let $X \subset \P^6_K$ be the complete intersection defined by the following two equations:
+	\begin{equation}
+		\label{eq:quadricIntro}
+		\ u \left(\sum_{i=0}^6 x_i^2 \right) + v(x_3x_6-x_4x_5)=0
+	\end{equation}
+	
+	\begin{align}
+			 u \left(\sum_{i=0}^6 x_i^3 \right) + v(x_0^2x_5 &+ x_1^2x_4 + x_2^2x_6 \nonumber \\ &x_3(x_5^2+x_4^2+x_3^2 -2x_3(x_6 + x_5 + x_4)))=0.
+	\end{align}
+Then $X$ is a smooth complete intersection such that the base change to $\overline{K}$ does not admit a decomposition of the diagonal. It is therefore not geometrically retract rational.
+\end{theorem}
+
+The unifying property of the two choices for $K$ is that varieties over $K$ can be specialized to varieties over $\F_p$. Using specialization techniques to prove irrationality of varieties defined over such fields goes back to \cite{KollarHypersurfaces}, and was used together with the decomposition of the diagonal in \cite{Tot16} and \cite{SchreiederHypersurface}.
+
+The structure of the paper is as follows: In \cref{sec:Prelim} we collect the important definitions and results we will use to prove \cref{thm:intro}. Then in \cref{sec:Example} we will prove that the complete intersection in \cref{thm:intro} does not admit a decomposition of the diagonal. To do this we specialize the complete intersection to the union of two components, such that one component is birational to the quadric bundle found in \cite{HPTActa}, which does not admit a decomposition of the diagonal. This is the same specialization as the one used in \cite{NicaiseOttem}.
+
+\subsection{Acknowledgements}
+I wish to thank my advisor John Christian Ottem for suggesting the topic and for helpful advice throughout the writing process. I also wish to thank Stefan Schreieder for an enlightening conversation at the Mittag-Leffler institute. This material is partly based upon work supported by the Swedish Research Council under grant no. 2016-06596 while the author was in residence at Institut Mittag-Leffler in Djursholm, Sweden during the fall of 2021. I am also indebted to the referee for their careful reading and suggestions for improving the paper.
+
+\section{Rationality and Specialization}
+\label{sec:Prelim}
+\subsection{Unramified Cohomology}
+Unramified cohomology groups of a variety are subgroups of the \'etale cohomology groups of the function field. If $X$ is a scheme and $F$ a sheaf on the small \'etale site on $X$, we denote the $i$-th \'etale cohomology group by $H^i(X,F)$. If $R$ is a ring, we will use $H^i(R,F)$ as a shorthand for $H^i(\Spec R,F)$.
+
+We refer to \cite{SchreiederCyclesAndRationality} for an introduction to unramified cohomology. Following \cite{SchreiederCyclesAndRationality} and \cite{Mer08}, we define unramified cohomology using only geometric valuations. For a positive integer $m$ invertible in the field $k$, we write $\mu_m$ for the sheaf of $m$-th roots of unity.
+
+
+\begin{definition}{{\cite[Definition 4.1]{SchreiederCyclesAndRationality}}}
+	Let $K/k$ be a finitely generated field extension. A \emph{geometric valuation} $\nu$ on $K$ over $k$ is a discrete valuation on $K$ over $k$ such that the transcendence degree of $\kappa_\nu$, the residue field of the corresponding DVR, over $k$ is given by
+	\[\trdeg_k(\kappa_\nu) = \trdeg(K)-1.\]
+\end{definition}
+
+\begin{definition}{{\cite[Definition 4.3]{SchreiederCyclesAndRationality}}}
+  Let $K/k$ be a finitely generated field extension and let $m$ be a positive integer that is invertible in $k$. We define the unramified cohomology of $K$ over $k$ with coefficients in $\mu_m^{\otimes j}$ as the subgroup
+  \[H_{nr}^i(K/k,\mu_m^{\otimes j}) \subset H^i(K,\mu_m^{\otimes j}) \]
+consisting of all elements $\alpha \in H^i(K,\mu_m^{\otimes j})$ such that $\partial_\nu (\alpha) = 0$ for any geometric valuation $\nu$ on $K$ over $k$.
+\end{definition}
+
+% Unramified cohomology has the following functorial properties. If $K'/K$ is a field extension over a field $k$, the corresponding pullback maps on \'etale cohomology restrict to a pullback map on unramified cohomology. If $K'/K$ is a finite extension, the pushforward in \'etale cohomology gives a pushforward on unramified cohomology groups. Furthermore, one can restrict unramified cohomology classes to \'etale cohomology classes on scheme points in the smooth locus of a variety $X$, and if $X$ is smooth, the resulting class is itself unramified. For a class $\alpha \in H_{nr}^i(K/k,\mu_m^{\otimes j})$ and a closed point $z$, we will write $\restr{\alpha}{z}$ for the restriction.
+
+Unramified cohomology has the following functoriality properties.
+\begin{proposition}{{\cite[Proposition 4.7]{SchreiederCyclesAndRationality}}}
+	Let $K'/K/k$ be finitely generated field extensions, let $f \from \Spec K' \to \Spec K$ be the natural morphism, and let $m$ be an integer that is invertible in $k$.
+	\begin{enumerate}[i)]
+		\item Then $f^* \from H^i(K,\mu_m^{\otimes j}) \to H^i(K',\mu_m^{\otimes j})$ induces a pullback map
+		\[f^* \from H_{nr}^i(K/k,\mu_m^{\otimes j}) \to H_{nr}^i(K'/k,\mu_m^{\otimes j}) \]
+		\item If $f$ is finite, then $f_* \from H^i(K',\mu_m^{\otimes j}) \to H^i(K,\mu_m^{\otimes j})$ induces a pushforward map
+		\[f_* \from H_{nr}^i(K'/k,\mu_m^{\otimes j}) \to H_{nr}^i(K/k,\mu_m^{\otimes j})\]
+		with $f_* \circ f^* = deg(f) \cdot \id.$
+	\end{enumerate}
+\end{proposition}
+
+%We can define restrictions of unramified cohomology classes to scheme. To do this, we need the so-called injectivity and codimension 1 purity properties for \'etale cohomology, which are consequences of Bloch-Ogus' proof of the Gersten conjecture (\cite{BO74}). See \cite[Theorem 3.6]{SchreiederCyclesAndRationality} or \cite[Theorems 3.81. and 3.8.2]{CT95}.
+
+% \todo{Drop these since used in incorrect argument}
+% \begin{theorem}
+%   \label{thm:EtaleLocGlob}
+%   Let $X$ be a variety over a field $k$ and let $m$ be a positive integer that is invertible in $k$. Let $x$ be a point in the smooth locus of $X$. Then the following holds:
+%   \begin{enumerate}[i)]
+%   \item The natural morphism
+%     \begin{equation}
+%       \label{eq:3.7}
+%           H^i(\sO_{X,x},\mu_m^{\otimes j}) \to H^i(k(X),\mu_m^{\otimes j})
+%     \end{equation}
+%     is injective
+%   \item A class $\alpha \in H^i(k(X),\mu_m^{\otimes j} )$ lies in the image of \eqref{eq:3.7} if and only if $\alpha$ has trivial residue along each prime divisor on $X$ that passes through $x$.
+%   \end{enumerate}
+% \end{theorem}
+
+We can aslo define the restriction of an unramified cohomology class.
+% The definition here is stated slightly more generally than \cite[Proposition 4.8]{SchreiederCyclesAndRationality} but with the same proof.
+
+\begin{proposition}{{\cite[Proposition 4.8]{SchreiederCyclesAndRationality}}}
+	\label{prop:UnramifiedRestriction}
+  Let $X$ be a smooth variety over a field $k$, and let $m$ be a positive integer that is invertible in $k$. Let $\alpha \in H_{nr}^i(k(X)/k, \mu_m^{\otimes j})$.
+  \begin{enumerate}[i)]
+  \item
+   Let $x \in X$ be any scheme point. Then there is a well-defined restriction
+    \[\restr{\alpha}{x} \in H^i(\kappa(x),\mu_m^{\otimes j}). \]
+  \item
+    If $X$ is also proper over $k$, then $\restr{\alpha}{x} \in H^i(\kappa(x),\mu_m^{\otimes j})$ is unramified over $k$.
+  \end{enumerate}
+\end{proposition}
+
+
+\subsection{The Merkurjev Pairing}
+Following \cite{SchreiederHypersurface}, we will use the Merkurjev pairing introduced in \cite[Section 2.4]{Mer08} to detect whether a smooth variety has a decomposition of the diagonal.
+
+\begin{proposition}
+	\label{prop:MerkurjevPairing}
+	Let $X$ be a smooth proper variety over a field $K$ (not necessarily algebraically closed), and let $m$ be an integer invertible in $K$. Then there is a bilinear pairing:
+	\[CH_0(X) \times H_{nr}^i(K(X)/K,\mu_m^{\otimes j}) \to H^i(K,\mu_m^{\otimes j})\]
+	which we will write as $(z,\alpha) \to \langle z,\alpha \rangle$. For a closed point $z$ the pairing is given by:
+	\[\langle z,\alpha \rangle = (f_z)_*(\restr{\alpha}{z}) \in H^i(K,\mu_m^{\otimes j})\]
+	for $f_z \from \Spec \kappa(z) \to \Spec K$ the structure morphism.
+\end{proposition}
+
+\subsection{Alterations}
+The Merkurjev pairing is defined on smooth varieties, and since resolution of singularities is still unknown in positive characteristic, we will need to use alterations:
+
+Let $Y$ be a variety over an algebraically closed field $k$. An \emph{alteration} of $Y$ is a proper generically finite surjective morphism $Y' \to Y$, where $Y'$ is a regular variety over $k$. By de Jong \cite{deJ96}, alterations exist in any characteristic and by work of Gabber the degree of the alteration can be chosen to be coprime to any prime not dividing the characteristic of the field. In fact, Temkin proves that one can choose the degree to be a power of the characteristic \cite[Theorem 1.2.5]{Tem17}(or degree 1 if $\chr(k)=0$).
+
+
+
+\subsection{Decomposition of the Diagonal}
+The decomposition of the diagonal technique was introduced in \cite{BSCorrespondences}, and its use in answering questions of retract rationality was developed by among others \cite{VoisinDoubleQuartic}, \cite{ColliotThelenePirutka} \cite{Tot16}, \cite{SchreiederHypersurface}, \cite{SchreiederTorsionOrders}.
+
+\begin{definition}
+We say a scheme of pure dimension $n$ over a field $k$ admits a \emph{decomposition of the diagonal} if we have an equality:
+\[\Delta_X = X \times z  + Z_X \in CH_n(X \times X) \]
+where $Z_X$ is a cycle supported on $D \times X$ for some divisor $D \subset X$ and $z \in Z_0(X)$ is a zero-cycle on $X$.
+\end{definition}
+
+There is a natural isomorphism
+\[\varinjlim_{\emptyset \neq U \subset X} CH_n(X \times_k U) \simeq CH_0(X_{k(X)})\]
+where we write $X_{k(X)}$ for the base change of $X$ to its function field $k(X)$. Using this, we can also think of a decomposition of the diagonal as an equality:
+\[[\delta_X] = [z_{k(X)}] \in CH_0(X_{k(X)})\]
+where we write $\delta_X$ for the zero-cycle on $X_{k(X)}$ induced by the diagonal.
+
+The following lemma relates decompositions of the diagonal to retract rationality:
+\begin{lemma}{{\textrm{(See \eg \cite[Lemma 2.4]{SchreiederHypersurface})}}}
+	A variety $X$ over a field $k$ that is retract rational admits a decomposition of the diagonal.
+\end{lemma}
+
+\subsection{The Specialization Method}
+The following result is the key ingredient in using specialization to prove that a variety is not retract rational.
+
+\begin{proposition}{{\cite[Corollary 8.3]{SchreiederCyclesAndRationality}}}
+  \label{prop:ZSpecialization}
+  Let $R$ be a discrete valuation ring with fraction field $K$ and algebraically closed residue field $k$. Let $\pi \from \mathscr{X} \to \Spec R$ be a proper flat $R$-scheme with connected fibers and denote by $X = \mathscr{X} \times \overline{K}$ and $Y = \mathscr{X} \times k$ the geometric generic fiber and geometric special fiber of $\pi$. Assume that $X$ admits a decomposition of the diagonal and the special fiber $Y$ is pure-dimensional, then $Y$ admits a decomposition of the diagonal as well.
+\end{proposition}
+
+\section{A Non Retract Rational (2,3)-Complete Intersection}
+\label{sec:Example}
+We will apply the specialization technique to find a quadric and a cubic fivefold, defined over $\Q$, such that their intersection is a smooth non retract rational variety. Using the specialization from \cite{NicaiseOttem}, the complete intersection specializes to a variety birational to the variety constructed in \cite{HPTActa}, which has a nontrivial unramified cohomology class. From this it will follow that the original complete intersection is not retract rational.
+
+Let $R = \Z$ or $R=\F_p[t]$ for $p \geq 3$, with field of fractions $K$. If $R=\Z$ we pick any two distinct primes $p \geq 3$, $q \geq 11$ and set $u=p,v=q$, in the other case we set $u=t,v=(t-1)$. We will consider the complete intersection $\mathscr{X} \coloneqq \mathscr{Q} \cap \mathscr{C} \subset \P_{R}^6$, where $\mathscr{Q}$ and $\mathscr{C}$ are the following hypersurfaces:
+\begin{equation}
+  \label{eq:quadric}
+   \mathscr{Q} =V\left(  u \left(\sum_{i=0}^6 x_i^2 \right) + v(x_3x_6-x_4x_5) \right)  \subset \P_{R}^6
+\end{equation}
+
+\begin{equation}
+  \label{eq:cubic}
+  \begin{split}
+  \mathscr{C} = &V\left( u \left(\sum_{i=0}^6 x_i^3 \right) + v(x_0^2x_5 + x_1^2x_4 + x_2^2x_6 + x_3(x_5^2+x_4^2+x_3^2 -2x_3(x_6 + x_5 + x_4))) \right) \\ &\subset \P_{R}^6
+  \end{split}
+\end{equation}
+
+\begin{lemma}
+  Let $\mathscr{X}$ be as above, and let $X$ be the generic fiber of $\mathscr{X} \to \Spec R$, then $X$ is a smooth complete intersection in $\P_{K}^6$.
+\end{lemma}
+\begin{proof}
+  Consider the scheme $\mathscr{X} \to \Spec R$.  If $R=\Z$, the fiber over $(q)$ is the intersection of the Fermat quartic and the Fermat cubic in $\P_{\F_q }^6$, which is smooth. If $R=\F_p[t]$ we look at the fiber over the ideal $(t-1)$ and apply the same argument.
+\end{proof}
+\begin{remark}
+\label{rmk:Characteristics}
+  The assumption that the prime $q \geq 11$ is to ensure that the intersection of the Fermat quadric and Fermat cubic is smooth in characteristic $q$.
+\end{remark}
+
+
+Let $\mathfrak{p}$ be the ideal $(p)$ or $(t)$ depending on if $R$ is $\Z$ or $\F_p[t]$, respectively. Let $\mathscr{X} \to \Spec R_{\mathfrak{p}}$ be defined by the two equations \eqref{eq:quadric} and \eqref{eq:cubic}. The fiber $X_p$ above the closed point $\Spec \F_p$ is the complete intersection in $\P^6_{\F_p}$ of the two hypersurfaces:
+\begin{equation}
+  \label{eq:Qquadric}
+  Q_p = V(x_3x_6-x_4x_5)
+\end{equation}
+\begin{equation}
+  \label{eq:Qqubic}
+  C_p = V \left(x_0^2x_5 + x_1^2x_4 + x_2^2x_6 + x_3(x_5^2+x_4^2+x_3^2 -2(x_3x_6 + x_3x_5 + x_3x_4)) \right).
+\end{equation}
+We will prove that the base change of $X_p$ to $\overline{\F_p}$ does not have a decomposition of the diagonal. Then, from \cref{prop:ZSpecialization}, it will follow that $X$ is not geometrically retract rational over $\overline{\Q}$.
+
+The hypersurface $Q_p$ is the cone over a quadric surface $\P_{\F_p}^1 \times \P_{\F_p}^1$ embedded in the $\P_{\F_p}^3 \subset \P_{\F_p}^6$ that has coordinates $x_3,x_4,x_5,x_6$. It is singular along the plane $V(x_3,x_4,x_5,x_6)$, which is the vertex of the cone.
+
+The complete intersection $X_p = Q_p \cap C_p$ is also singular along the plane $V(x_3,x_4,x_5,x_6)$. Additionally, one can compute that it is singular along four curves: The plane conics defined by
+\begin{gather*}
+  x_1=x_5=x_6=x_3-x_4=x_0^2 + x_2^2 -4x_3^2=0, \\
+  x_0=x_4=x_6=x_3 - x_5=x_1^2 + x_2^2 -4 x_3^2=0,
+\end{gather*}
+and the plane cubics defined by
+\begin{gather*}
+  x_1=x_2=x_3=x_5=x_4^3+x_0^2x_6=0,\\
+  x_0=x_2=x_3=x_4=x_5^3+x_1^2x_6=0.
+\end{gather*}
+
+To check that $X_p$ does not admit a decomposition of the diagonal, we will construct a less singular birational model $X_1$.
+
+It is straightforward to check the following:
+\begin{lemma}
+	The blowup of $Q_p$ in the vertex plane $V(x_3,x_4,x_5,x_6)$ is a map 
+	\[\rho \from P \coloneqq \P_{\P_{\F_p}^1 \times \P_{\F_p}^1}(\sO^{\oplus 3} \oplus \sO(1,1)) \to Q_p \subset \P_{\F_p}^6\]
+	defined by the base-point-free linear system $\abs{\sO_P(1)}$.
+\end{lemma}
+We fix $\set{U,V,W,y_0z_0T,y_0z_1T,y_1z_0T,y_1z_1T}$ as the basis of $H^0(\sO_P(1))$ that induces $\rho$, where $y_i$ and $z_i$ are coordinate functions on $\P^1 \times \P^1$.
+
+Let $F$ be the following polynomial:
+\begin{equation}
+\begin{aligned}
+  \label{eq:X1}
+  F(y_0,y_1,z_0,z_1,U,V,W,T)&=y_0z_1U^2 + y_1z_0 V^2 + y_1z_1W^2 \\
+   &+ y_0z_0 \biggl(y_1^2z_0^2 + y_0^2z_1^2 + y_0^2z_0^2 \\
+   &-2(y_0y_1z_0z_1 + y_0y_1z_0^2 + y_0^2z_0z_1) \biggr)T^2,
+\end{aligned}
+\end{equation}
+ which we regard as a section of $\abs{\sO_P(2) \otimes p^*(\sO_{\P_{\F_p}^1 \times \P_{\F_p}^1}(1,1))}$.
+\begin{lemma}
+\label{lem:XpBlowup}
+  With notation as above, the strict transform $X_1$ of $X_p$ in $P$ is defined by $F(y_0,y_1,z_0,z_1,U,V,W,T) = 0$. Furthermore, the exceptional divisor $E$ of the restriction of $\rho$ to $X_1$, $\rho_{X_1} \from X_1 \to X_p$ is defined by $F(y_0,y_1,z_0,z_1,U,V,W,T) = T = 0$.
+\end{lemma}
+\begin{proof}
+  A straightforward computation shows that $\rho^{-1}(X_p)$ is defined by \[TF(y_0,y_1,z_0,z_1,U,V,W,T)=0\]
+  which we recognize as having two components. The component defined by $T=0$ is the exceptional divisor and the other component is the strict transform of $X_p$.
+\end{proof}
+
+To apply the specialization method in \cref{prop:ZSpecialization} with special fiber $X_p$, we must prove that the geometric special fiber $\overline{X}_p$ does not admit a decomposition of the diagonal. We will prove this by studying $X_1$. Following the method developed in \cite{SchreiederHypersurface}, the first step is to check that the singular locus of $X_1$ does not dominate $\P_{\F_p}^1 \times \P_{\F_p}^1$, and that the exceptional divisor meets the smooth locus.
+\begin{lemma}
+  \label{lem:GenericFiberSmooth}
+  The generic fiber of the map $f \from X_1 \to \P_{\F_p}^1 \times \P_{\F_p}^1$ is smooth and meets $E$. Furthermore, the generic fiber of $f_E \from E \to \P_{\F_p}^1 \times \P_{\F_p}^1$ is also smooth.
+\end{lemma}
+\begin{proof}
+  Let $K$ be the field corresponding to the generic point of $\P^1 \times \P^1$. Then the generic fiber of $f$ is a quadric surface over $K$ defined by the polynomial $F$, as a polynomial in $K[U,V,W,T]$. Since this quadric is in diagonal form with nonzero coefficients, it is smooth. Furthermore, since the subvariety $E$ is defined by $T=0$, it must meet the generic fiber of $f$ and dominate $\P^1 \times \P^1$. The second statement is proven in the same manner as the first.
+\end{proof}
+
+
+\begin{remark}
+	\label{rem:SingularitiesOfX1}
+  More precisely, the variety $X_1$ is singular along six curves, two curves projecting to points in $\P_{\F_p}^1 \times \P_{\F_p}^1$, two  curves not contained in $E$ that project to coordinate axes in $\P_{\F_p}^1 \times \P_{\F_p}^1$ and two curves contained in $E$ that project to coordinate axes in $\P_{\F_p}^1 \times \P_{\F_p}^1$. These three pairs of curves are defined by
+\begin{equation}
+\label{eq:VertCurves} 
+\begin{gathered}
+	y_1=z_0-z_1=U=V^2 + W^2 -4y_0^2z_0^2 T^2=0,\\
+	z_1=y_0-y_1=V=U^2 + W^2 -4y_0^2z_0^2 T^2=0,
+      \end{gathered}
+\end{equation}
+\begin{equation}
+\label{eq:HorCurves}       
+\begin{gathered}
+  y_0=V=W=z_1U^2 + y_1^2z_0^3T^2=0,\\
+  z_0=U=W=y_1V^2 + y_0^3z_1^2T^2=0
+\end{gathered}
+\end{equation}
+and
+\begin{equation}
+  \label{eq:SingOfE}
+\begin{gathered}
+	z_1=V=T=y_1W^2+y_0U^2=0,\\
+	y_1=U=T=z_1W^2+y_0V^2=0,
+      \end{gathered}
+\end{equation}      
+respectively.
+Furthermore, $E$ is singular along the two curves defined by \eqref{eq:SingOfE}.
+\end{remark}
+
+
+In the remainder of this section, we will consider $\overline{X}_1 \coloneqq X_1 \otimes \overline{\F_p}$, the base change of $X_1$ to the algebraic closure of $\F_p$. We will first look at the unramified cohomology of $\overline{X}_1$, and then use this to obstruct the existence of a decomposition of the diagonal.
+
+In \cite{HPTActa}, Hassett, Pirutka and Tschinkel describe the following quadric surface bundle over $\P^2$, which has a nontrivial class in unramified cohomology. 
+\begin{proposition}{{c.f. \cite[Proposition 10]{HPTActa}}}
+	\label{prop:NontrivialClassHPT}
+	Let $k=\C$ (\cite{HPTActa}) or let $k$ be an algebraically closed field of characteristic different from 2 (\cite{SchreiederCyclesAndRationality}), let $\P_k^2 \times \P_k^3$ have coordinates $x,y,z$ and $s,t,u,v$, respectively. Let $K = k(x,y) = k(\P_k^2)$ and $f \from Y \to \P_k^2$ be the hypersurface defined by
+	\[yzs^2 + xzt^2 + xyu^2 + F(x,y,z)v^2 = 0\]
+	where
+	\[F(x,y,z)=x^2+y^2+z^2-2(xy+xz+yz).\]
+	Then $Y$ is a quadric surface bundle over $\P_k^2$ with a nontrivial unramified cohomology class
+ \[0 \neq \alpha = f^*\left( \left(\frac{x}{z},\frac{y}{z}\right) \right) \in H_{nr}^2(k(Y)/k,\mu_2^{\otimes 2}).\] 
+\end{proposition}
+In \cite{HPTActa}, the authors work over $\C$, but in \cite[Proposition 9.6]{SchreiederCyclesAndRationality} it is observed that the same proof works as long as $k$ is an algebraically closed field of characteristic different from 2. An immediate consequence is:
+\begin{corollary}
+	\label{cor:AlphaNonTriv}
+	With notation as above, $\overline{X}_1$ is birational to the quadric surface bundle $Y$ defined in \cref{prop:NontrivialClassHPT}. It follows that there is a nontrivial class $0 \neq \alpha = f^*((\frac{y_1}{y_0},\frac{z_1}{z_0})) \in H_{nr}^2(k(X_1)/k,\mu_2^{\otimes 2})$
+\end{corollary}
+
+\begin{proof}
+The ambient spaces of $Y$ and $\overline{X}_1$ are birational and are isomorphic on the open sets defined by $z \neq 0$ and $y_0,z_0 \neq 0$, respectively. If we set $z=1$ in the defining equation of $Y$, and $y_0=z_0=1$ in the defining equation for $X_1$, the equations are equal. So the birational map on the ambient spaces induces a birational map between $Y$ and $\overline{X}_1$. Therefore, $k(Y) \simeq k(X_1)$, so the corresponding unramified cohomology groups are also isomorphic.
+\end{proof}
+
+Using the explicit description of the nonzero class $\alpha$, we obtain the following result:
+\begin{lemma}
+\label{lem:ERestriction}
+  Let $\overline{E} \subset \overline{X}_1$ be the exceptional divisor. Consider the class $\alpha = f^*((\frac{y_1}{y_0},\frac{z_1}{z_0})) \in H_{nr}^2(k(\overline{X}_1)/k,\mu_2^{\otimes 2})$. Then $\alpha$ restricted to the smooth locus $\overline{E}^\circ$ of $\overline{E}$ is zero.
+\end{lemma}
+\begin{proof}
+The unramified cohomology groups $H_{nr}^2(k(\overline{X}_1)/k,\mu_2^{\otimes 2})$ and $H_{nr}^2(k(\overline{E})/k,\mu_2^{\otimes 2})$ are isomorphic to the 2-torsion in the Brauer groups, written $\Br(\Spec(k(\overline{X}_1))[2]$ and $\Br(\Spec(k(\overline{E})))[2]$, respectively (c.f. \cite[Proposition 4.11]{SchreiederCyclesAndRationality}). Furthermore, the isomorphism is compatible with the restriction maps. Using the affine coordinates $y_1$ and $z_1$ the nonzero class $\alpha \in \Br(\Spec(k(\overline{X}_1))[2]$ corresponds to the conic
+  \[y_1A^2 + z_1B^2 = y_1z_1C^2,\]
+  which has no points over $k(\overline{X}_1)$. The restriction of $\alpha$ to $\Br(\Spec(k(\overline{E})))[2]$ corresponds to the same quadric over the field $k(\overline{E})$. However, in $k(\overline{E})$ we have the relation $z_1U^2 + y_1V^2 + y_1z_1W^2 = 0$, so for any square root $\iota$ of $-1$, the conic
+  \[y_1A^2 + z_1B^2 = y_1z_1C^2\]
+   has a point over $k(\overline{E})$ given by $A=V,B=U,C=\iota W$. Therefore, the restriction of $\alpha$ to $\Br(\Spec(k(\overline{E})))[2]$ is trivial. The conclusion then follows from functoriality and the fact that $\Br(\overline{E}^\circ) \to \Br(\Spec(k(\overline{E})))$ is injective. (\cite[Theorem 3.5.5]{CTS21})
+\end{proof}
+
+\begin{remark}
+The subvariety $E$ is rational, but because it is singular, it does not follow immediately that the restriction of $\alpha$ to any scheme point in $E$ vanishes.
+\end{remark}
+
+While $X_1$ is still singular, the following result by Schreieder will ensure that the singularities of $X_1$ do not interfere with the Merkurjev pairing.
+\begin{theorem}{{\cite[Theorem 10.1]{SchreiederCyclesAndRationality}}}	
+  \label{thm:SchreiederVanishing}
+  Let $f \from Y \to S$ be a surjective morphism of proper varieties over an algebraically closed field $k$ with $char(k) \neq 2$ whose generic fiber is birational to a smooth quadric over $k(S)$. Let $n = \dim(S)$ and assume that there is a class $\alpha \in H^n(k(S),\mu_2^{\otimes n})$ with $f^* \alpha \in H_{nr}^n(k(Y)/k,\mu_2^{\otimes n})$.
+  Then for any dominant generically finite morphism $\tau \from Y' \to Y$ of varieties, and for any subvariety $E \subset Y'$ that meets the smooth locus of $Y'$ and which does not dominate $S$ via $f \circ \tau$, we have $\restr{(\tau^* f^* \alpha)}{E} = 0 \in H^n(k(E),\mu_2^{\otimes n})$.
+\end{theorem}
+
+We are now ready to prove that the geometric special fiber does not have a decomposition of the diagonal. The proof strategy is the same as in \cite[Proposition 3.1]{SchreiederHypersurface}.
+
+\begin{proposition}
+ \label{lem:NoDoD}
+	Let $X_p$ be the complete intersection $Q_p \cap C_p \subset \P_{\F_p}^6$ from \eqref{eq:Qquadric} and \eqref{eq:Qqubic} and let $\overline{X}_p$ be the base change of $X_p$ to $k  \coloneqq \overline{\F_p}$, the algebraic closure of $\F_p$. Then $\overline{X}_p$ does not admit a decomposition of the diagonal.
+\end{proposition}
+\begin{proof}
+Assume for contradiction that 
+	\[\delta_{\overline{X}_p} = (z_p)_{k({\overline{X}_p})} \in CH_0(({\overline{X}_p})_{k({X_p})}))\]
+	is a decomposition of the diagonal of $\overline{X}_p$, where $z$ is a zero-cycle on $\overline{X}_p$ The map $\rho_{X_1} \from \overline{X}_1 \to \overline{X}_p$ (cf. \cref{lem:XpBlowup}) is the blowup of $\overline{X}_p$ in a plane, and therefore an isomorphism on the complement of the exceptional divisor $\overline{E}$. Hence, $\rho_{X_1}^*(\delta_{\overline{X}_p}) = \delta_{\overline{X}_1}$. Using this and the exact sequence:
+\[\CH_0(\overline{E}) \to \CH_0(\overline{X}_1) \to \CH_0(\overline{X}_1 \setminus \overline{E}) \to 0\]
+ we get the following equality, where we write $K$ for $k(\overline{X}_1)$.
+	\begin{equation}
+		\label{eq:DoDY}
+		\delta_{\overline{X}_1} = [z_K] + [z'_K] \in CH_0((\overline{X}_1)_K)
+	\end{equation}
+	for some zero-cycle $z'$ supported on $\overline{E}$.
+	
+	Let $\tau \from \widetilde{X}_1 \to \overline{X}_1$ be an alteration of odd degree, and let $U \subset \overline{X}_1$ be a subset of the smooth locus of $\overline{X}_1$ such that $U \cap \overline{E}$ is smooth and the complement $X_1 \setminus U$ does not dominate $\P^1 \times \P^1$. In fact, from \cref{rem:SingularitiesOfX1}, one can simply let $U$ be the smooth locus of $X_1$. Define $\widetilde{U} \coloneqq \tau^{-1}(U)$ and consider the following commutative diagram:
+        \[
+          \begin{tikzcd}
+            \widetilde{U}_{K} \arrow[hookrightarrow,"j'"]{r} \arrow["\tau_{\widetilde{U}}"]{d} & (\widetilde{X}_1)_{K} \arrow["\tau"]{d}\\
+            U_K \arrow[hookrightarrow,"j"]{r}& (\overline{X}_1)_{K}
+          \end{tikzcd}
+        \]
+        Since $j$ is flat and both $\widetilde{U}_{K}$ and $U_{K}$ are smooth, there are well-defined pullback maps $j^*$ and $\tau_{\widetilde{U}}^*$ on Chow rings. Pulling back \eqref{eq:DoDY} by $\tau_{\widetilde{U}}^* \circ j^*$ gives an equality
+        \begin{equation}
+          \tau_{\widetilde{U}}^*(j^*(\delta_{\overline{X}_1})) = \tau_{\widetilde{U}}^*(j^*([z_{K}])) + \tau_{\widetilde{U}}^*(j^*([z'_{K}]))
+        \end{equation}
+
+        Since $\tau$ is \'etale in a neighborhood of the diagonal point, we have $\tau_{\widetilde{U}}^*(j^* \delta_{\overline{X}_1}) = \widetilde{\delta}_{\tau}$, where $\widetilde{\delta}_\tau$ is the $0$-cycle corresponding to the graph of the map $\tau$ in $\widetilde{X}_1 \times X_1$.
+
+        In $\CH_0((\widetilde{X}_1)_K)$ we get the equality:
+        \begin{equation}
+          \label{eq:DoDX'}
+          \widetilde{\delta}_{\tau} = [\widetilde{z}_{K}] + [\widetilde{z}_{K}'] + [\widetilde{z}_{K}'']
+        \end{equation}
+        where $[z_{K}]$ is supported on $\widetilde{U}_{K}$, $[\widetilde{z}'_{K}]$ is supported on $\tau^{-1}(U_{K} \cap \overline{E}_{K})$ and $[z''_{K}])$ on $\widetilde{X}_1 \setminus \widetilde{U}$.
+
+We will compute the pairing of each term in \eqref{eq:DoDX'} with the class $\tau^* \alpha$ to obtain a contradiction. To compute the pairing of $\widetilde{\delta}_{\tau}$ with $\tau^*$, recall that $\widetilde{\delta}_{\tau}$ represents the graph of $\tau$. Since this graph is isomorphic to $\widetilde{X}_1$, $\tau$ induces a map from $k(\widetilde{X}_1)$, the residue field of $\widetilde{\delta}_{\tau}$, to $\Spec(K)$. Furthermore, to compute the pairing, we compute the pushforward of $\tau^* \alpha$ by this map. Therefore we have:
+        \[\ip{\widetilde{\delta}_{\tau},\tau^*\alpha} = \tau_* \tau^* \alpha = (\deg \tau) \alpha \neq 0.\]
+The class is nonzero since $\alpha$ is nonzero of even order. 
+
+We now compute the pairing of $\tau^* \alpha$ with the summands on the right-hand side. Firstly,
+\[\ip{[\widetilde{z}]_{K},\tau^*\alpha} = 0 \] since the pairing factors through the restriction of $\tau^*\alpha$ to a closed point on $\widetilde{X}_1$, a smooth variety over an algebraically closed field, and the restriction of unramified cohomology classes of positive degree to such classes vanishes. 
+
+Secondly,
+\[ \ip{[\widetilde{z}'_{K}], \tau^* \alpha} = 0, \]
+ since the restriction of $\tau^* \alpha$ to $\widetilde{z}$  factors through the restriction of $\tau^* \alpha$ to $\tau^{-1}(U_{K} \cap \overline{E}_{K})$. By functoriality, this restriction is equal to $\tau^*(i^* \alpha)$, where $i \from U_{K} \cap \overline{E}_{K} \to (\overline{X}_1)_{K}$ is the inclusion map. From \cref{lem:ERestriction} we know that $i^* \alpha$ vanishes, so $\ip{[\widetilde{z}'_{K}],\tau^*\alpha} = 0$.
+
+Finally, by \cref{thm:SchreiederVanishing},
+\[\ip{[\widetilde{z}''_{K}],\tau^*\alpha} = 0,\]
+ since by \cref{lem:GenericFiberSmooth} the singular locus of $X_1$ does not dominate $\P^1 \times \P^1$.
+
+From these computations, we see that the pairing of $\tau^*\alpha$ with the left hand side of \eqref{eq:DoDX'} is nonzero, but the pairing of $\tau^*\alpha$ with the right-hand side of \eqref{eq:DoDX'} is zero. This contradiction proves that $\overline{X}_p$ cannot have a decomposition of the diagonal.        
+\end{proof}	
+
+Using this, we can apply \cref{prop:ZSpecialization} to get the main result of the paper:
+
+\begin{theorem}
+  Let $R=\Z$ or $R=\F_p[t]$ with field of fractions $K$. In the first case let $p \geq 3, q \geq 11$ be distinct primes and set $u=p, v=q$, and in the second case let $u=t,v=(t-1)$. Let $X_1$ be the smooth complete intersection in $\P^6_{K}$ defined by the intersection $Q \cap C$ for
+\begin{equation*}
+	\label{eq:Quadric3}
+	Q = V\left( u \left(\sum_{i=0}^6 x_i^2 \right) + v(x_3x_6-x_4x_5)\right) 
+\end{equation*}
+\begin{equation*}
+	\label{eq:Cubic3}
+	\begin{split}
+		C = &V\left( u \left(\sum_{i=0}^6 x_i^3 \right) + v(x_0^2x_5 + x_1^2x_4 + x_2^2x_6 + x_3(x_5^2+x_4^2+x_3^2 -2x_3(x_6 + x_5 + x_4))) \right)
+	\end{split}
+\end{equation*}
+Then $X_1$ is not geometrically retract rational.
+\end{theorem}
+\begin{proof}
+	After a base change $\Spec R' \to \Spec R_{(u)}$ we can assume that $X_1$ is defined over a DVR with residue field $\overline{\F_p}$. Then, by \cref{lem:NoDoD}, the special fiber does not admit a decomposition of the diagonal. From \cref{prop:ZSpecialization}, we can then conclude that the geometric generic fiber over $\Spec R'$ does not admit a decomposition of the diagonal, and is therefore not geometrically retract rational. Since this geometric generic fiber is a base change of $X_1$, it follows that $X_1$ is also not geometrically retract rational.
+\end{proof}
+
+\begin{remark}
+By a specialization argument, it follows from the existence of a single smooth $(2,3)$-complete intersection that does not admit a decomposition of the diagonal, that the very general such intersection does not admit a decomposition of the diagonal, and is therefore not retract rational. Since in this case the special fiber is smooth, one can in this case also use the specialization technique from \cite[Théorème 1.12]{ColliotThelenePirutka} to prove that the very general fiber has no decomposition of the diagonal.
+\end{remark}
+
+\printbibliography[heading = subbibliography]
+\stopcontents[chapters]

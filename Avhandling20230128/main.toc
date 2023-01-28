@@ -1,0 +1,97 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {english}{}
+\contentsline {chapter}{Preface}{i}{chapter*.1}%
+\contentsline {chapter}{Contents}{iii}{section*.3}%
+\contentsline {chapter}{\chapternumberline {1}Introduction}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Solving Equations}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}The Rationality Hierarchy}{2}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Retract Rationality and Unirationality of Certain Complete Intersections}{5}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Specialization and Decomposition of the Diagonal}{6}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Summary of \cref {pap:23diagonal}}{8}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.3}The Specialization Technique of Pavic and Schreieder}{9}{subsection.1.3.3}%
+\contentsline {subsection}{\numberline {1.3.4}Summary of \cref {pap:33diagonal}}{10}{subsection.1.3.4}%
+\contentsline {subsection}{\numberline {1.3.5}Unirationality in High Dimensions}{11}{subsection.1.3.5}%
+\contentsline {subsection}{\numberline {1.3.6}Summary of \cref {pap:unirationality}}{11}{subsection.1.3.6}%
+\contentsline {section}{\numberline {1.4}Birational Invariants on Some Rationally Connected Varieties}{12}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}The Integral Hodge Conjecture}{13}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Summary of \cref {pap:integralhodge}}{14}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.3}Lines On Double Covers and Summary of \cref {pap:linesondoublecovers}}{15}{subsection.1.4.3}%
+\contentsline {subsection}{\numberline {1.4.4}The Griffiths Group of 1-Cycles}{16}{subsection.1.4.4}%
+\contentsline {subsection}{\numberline {1.4.5}Summary of \cref {pap:griffiths}}{17}{subsection.1.4.5}%
+\contentsline {subsection}{\numberline {1.4.6}Coniveau}{18}{subsection.1.4.6}%
+\contentsline {subsection}{\numberline {1.4.7}Summary of \cref {pap:coniveaudoublecovers}}{19}{subsection.1.4.7}%
+\contentsline {subsection}{\numberline {1.4.8}Summary of \cref {pap:coniveauhypersurfaces}}{20}{subsection.1.4.8}%
+\contentsline {section}{References}{21}{section*.5}%
+\contentsline {chapter}{Papers}{26}{section*.7}%
+\contentsline {chapter}{\chapternumberline {I}A (2,3)-Intersection Fourfold with no Decomposition of the Diagonal}{27}{chapter.papter.1}%
+\contentsline {section}{\numberline {I.1}Introduction}{27}{section.papter.1.1}%
+\contentsline {subsection}{\numberline {I.1.1}Acknowledgements}{29}{subsection.papter.1.1.1}%
+\contentsline {section}{\numberline {I.2}Rationality and Specialization}{29}{section.papter.1.2}%
+\contentsline {subsection}{\numberline {I.2.1}Unramified Cohomology}{29}{subsection.papter.1.2.1}%
+\contentsline {subsection}{\numberline {I.2.2}The Merkurjev Pairing}{31}{subsection.papter.1.2.2}%
+\contentsline {subsection}{\numberline {I.2.3}Alterations}{31}{subsection.papter.1.2.3}%
+\contentsline {subsection}{\numberline {I.2.4}Decomposition of the Diagonal}{31}{subsection.papter.1.2.4}%
+\contentsline {subsection}{\numberline {I.2.5}The Specialization Method}{32}{subsection.papter.1.2.5}%
+\contentsline {section}{\numberline {I.3}A Non Retract Rational (2,3)-Complete Intersection}{32}{section.papter.1.3}%
+\contentsline {section}{References}{39}{section*.9}%
+\contentsline {chapter}{\chapternumberline {II}The Very General (3,3)-Complete Intersection Fivefold has no Decomposition of the Diagonal}{41}{chapter.papter.2}%
+\contentsline {section}{\numberline {II.1}Introduction}{41}{section.papter.2.1}%
+\contentsline {subsection}{\numberline {II.1.1}Definitions and Conventions}{43}{subsection.papter.2.1.1}%
+\contentsline {section}{\numberline {II.2}Preliminaries}{44}{section.papter.2.2}%
+\contentsline {section}{\numberline {II.3}Non Retract Rationality of a Very General $(3,3)$-Fivefold}{46}{section.papter.2.3}%
+\contentsline {subsection}{\numberline {II.3.1}Sketch of Specializations}{46}{subsection.papter.2.3.1}%
+\contentsline {subsection}{\numberline {II.3.2}Detailed Construction}{48}{subsection.papter.2.3.2}%
+\contentsline {subsubsection}{\numberline {II.3.2.1}A Strictly Semi-Stable Family}{49}{subsubsection.papter.2.3.2.1}%
+\contentsline {subsubsection}{\numberline {II.3.2.2}Understanding $\Phi $ by Specializing}{52}{subsubsection.papter.2.3.2.2}%
+\contentsline {subsubsection}{\numberline {II.3.2.3}Obstructing a Decomposition of the Diagonal}{60}{subsubsection.papter.2.3.2.3}%
+\contentsline {section}{References}{63}{section*.14}%
+\contentsline {chapter}{\chapternumberline {III}Unirationality of Double Covers and Complete Intersections of Quadrics of Large Dimension}{65}{chapter.papter.3}%
+\contentsline {section}{\numberline {III.1}Introduction}{65}{section.papter.3.1}%
+\contentsline {section}{\numberline {III.2}Cyclic Covers of Large Dimension}{67}{section.papter.3.2}%
+\contentsline {section}{\numberline {III.3}Intersections of Quadrics}{67}{section.papter.3.3}%
+\contentsline {section}{References}{73}{section*.16}%
+\contentsline {chapter}{\chapternumberline {IV}Curve Classes on Calabi-Yau Complete Intersections in Toric Varieties}{75}{chapter.papter.4}%
+\contentsline {section}{\numberline {IV.1}Introduction}{75}{section.papter.4.1}%
+\contentsline {section}{\numberline {IV.2}Preliminaries}{77}{section.papter.4.2}%
+\contentsline {subsection}{\numberline {IV.2.1}Contractible Classes of a Toric Variety}{79}{subsection.papter.4.2.1}%
+\contentsline {subsection}{\numberline {IV.2.2}Ample Vector Bundles and Positivity of Chern classes}{80}{subsection.papter.4.2.2}%
+\contentsline {section}{\numberline {IV.3}Complete Intersections}{80}{section.papter.4.3}%
+\contentsline {subsection}{\numberline {IV.3.1}Setup}{81}{subsection.papter.4.3.1}%
+\contentsline {subsection}{\numberline {IV.3.2}Rank and Dimension}{83}{subsection.papter.4.3.2}%
+\contentsline {subsection}{\numberline {IV.3.3}Positivity}{84}{subsection.papter.4.3.3}%
+\contentsline {subsection}{\numberline {IV.3.4}Example}{88}{subsection.papter.4.3.4}%
+\contentsline {section}{References}{89}{section*.19}%
+\contentsline {chapter}{\chapternumberline {V}Lines on Double Covers}{91}{chapter.papter.5}%
+\contentsline {section}{\numberline {V.1}Introduction}{91}{section.papter.5.1}%
+\contentsline {section}{\numberline {V.2}Definitions}{92}{section.papter.5.2}%
+\contentsline {section}{\numberline {V.3}Properties of $F(X)$}{94}{section.papter.5.3}%
+\contentsline {subsection}{\numberline {V.3.1}Dimension}{94}{subsection.papter.5.3.1}%
+\contentsline {subsection}{\numberline {V.3.2}Smoothness}{98}{subsection.papter.5.3.2}%
+\contentsline {subsection}{\numberline {V.3.3}Connectedness}{101}{subsection.papter.5.3.3}%
+\contentsline {section}{References}{102}{section*.21}%
+\contentsline {chapter}{\chapternumberline {VI}The Griffiths Group of 1-cycles on Double Covers}{103}{chapter.papter.6}%
+\contentsline {section}{\numberline {VI.1}Introduction}{103}{section.papter.6.1}%
+\contentsline {section}{\numberline {VI.2}1-Cycles on Double Covers of Low Degree}{105}{section.papter.6.2}%
+\contentsline {section}{References}{111}{section*.23}%
+\contentsline {chapter}{\chapternumberline {VII}Coniveau on Fano Double Covers}{113}{chapter.papter.7}%
+\contentsline {section}{\numberline {VII.1}Introduction}{113}{section.papter.7.1}%
+\contentsline {section}{\numberline {VII.2}Preliminaries}{114}{section.papter.7.2}%
+\contentsline {subsection}{\numberline {VII.2.1}Double Covers of $\mathbb {P}^n$}{115}{subsection.papter.7.2.1}%
+\contentsline {subsection}{\numberline {VII.2.2}Coniveau and Strong Coniveau}{116}{subsection.papter.7.2.2}%
+\contentsline {subsection}{\numberline {VII.2.3}The Cylinder Map}{117}{subsection.papter.7.2.3}%
+\contentsline {subsection}{\numberline {VII.2.4}Lefschetz Pencils}{118}{subsection.papter.7.2.4}%
+\contentsline {section}{\numberline {VII.3}Coniveau on Double Covers}{120}{section.papter.7.3}%
+\contentsline {section}{\numberline {VII.4}Double Cover Fourfolds}{126}{section.papter.7.4}%
+\contentsline {section}{References}{129}{section*.26}%
+\contentsline {chapter}{\chapternumberline {VIII}The Image of the Cylinder Map on Hypersurfaces}{131}{chapter.papter.8}%
+\contentsline {section}{\numberline {VIII.1}Introduction}{131}{section.papter.8.1}%
+\contentsline {section}{\numberline {VIII.2}Preliminaries}{134}{section.papter.8.2}%
+\contentsline {section}{\numberline {VIII.3}Hypersurfaces Containing a Linear Space}{137}{section.papter.8.3}%
+\contentsline {section}{\numberline {VIII.4}Hypersurfaces Containing Cones}{139}{section.papter.8.4}%
+\contentsline {section}{\numberline {VIII.5}Quintic Fourfolds}{141}{section.papter.8.5}%
+\contentsline {subsection}{\numberline {VIII.5.1}Quintic Fourfolds Containing a Cone}{141}{subsection.papter.8.5.1}%
+\contentsline {subsection}{\numberline {VIII.5.2}Cylinder Map on the Quintic Fourfold}{143}{subsection.papter.8.5.2}%
+\contentsline {section}{References}{146}{section*.28}%
+\contentsline {chapter}{Appendices}{149}{section*.29}%
+\contentsline {chapter}{\chapternumberline {A}Computations on a Quintic Fourfold}{151}{appendix.1}%
+\contentsfinish 

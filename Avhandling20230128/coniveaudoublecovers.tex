@@ -1,0 +1,593 @@
+\title{Coniveau on Fano Double Covers}
+\author{Bjørn Skauli}
+\date{}
+\maketitle
+\label{pap:coniveaudoublecovers}
+
+\begin{abstract}
+Let $X$ be a complex Fano double cover of $\P^n$ of sufficiently low degree. We prove that for $0 \leq k \leq 2n$ all classes in $H^k(X,\Z)$ have strong coniveau 1. In particular, the first level of the coniveau filtration and the strong coniveau filtration coincide. The proofs are based on the family of lines in such double covers, following the ideas in \cite[Theorem 1.13]{VoisinConiveauThreefolds} for complete intersections in projective space.
+\end{abstract}
+
+\section{Introduction}
+% Coniveau filtrations
+% Important examples that are double covers
+% Work over $\C$
+
+For a smooth complex projective variety $X$ of dimension $n$ and an abelian group $A$, we can define the coniveau filtration and the strong coniveau filtration on $H^k(X,A)$. A class $\gamma \in H^k(X,A)$ has coniveau $c$, written $\gamma \in N^cH^k(X,\Z)$, if it vanishes on the complement of a codimension $c$ subvariety of $X$. It has strong coniveau $c$,  written $\gamma \in \widetilde{N}^cH^k(X,\Z)$, if it is in the image of a pushforward map from the cohomology of a smooth variety $Y$ of dimension at most $n-c$.
+
+Deligne (\cite[Corollaire 8.2.8, Remarque 8.2.9]{DeligneHodgeTheory}) proves that for $A=\Q$ these two filtrations are the same. However, for $A=\Z$, the two filtrations may differ, even at the first level, as was shown by Benoist and Ottem in \cite[Theorem 1.1]{BenoistOttemConiveau}. From the point of view of birational geometry, the difference between coniveau 1 and strong coniveau 1 is particularly interesting, since the quotient group $N^1H^k(X,\Z) / \widetilde{N}^1H^k(X,\Z)$ is a stable birational invariant.
+
+It remains an open question whether this invariant can be nontrivial for Fano varieties, or rationally connected varieties more generally. If the invariant is nontrivial on some rationally connected varieties, it could be useful to prove irrationality. In dimension 3, Voisin proves in \cite{VoisinConiveauThreefolds} that $N^1H^3(X,\Z)$ and $\widetilde{N}^1H^3(X,\Z)$ coincide on the torsion free part of cohomology for any smooth rationally connected threefold. 
+
+To understand the two coniveau filtrations better, it is useful to study the two filtrations on important examples of rationally connected varieties. One such class of examples is Fano complete intersections in projective space. In \cite{VoisinConiveauThreefolds}, Voisin also proves that $\widetilde{N}^1H^n(X,\Z) =  N^1H^n(X,\Z) = H^n(X,\Z)$ for $n$-dimensional smooth Fano complete intersections $X$, as long as the corresponding Fano schemes of lines $F(X)$ is not too singular.
+
+Another good source of examples in birational geometry is double covers of projective space. The famous Artin-Mumford example of a unirational, but not retract rational, variety (\cite{ArtinMumford}) is constructed as a resolution of a singular double quartic solid, which shows the importance of double covers as examples in birational geometry. More recently, after Voisin's landmark paper \cite{VoisinUniversalCycle} rationality of double cover has attracted much attention. Some significant examples are the papers by Beauville (\cite{BeauvilleSextic}), Okada (\cite[Theorem 1.1]{OkadaCyclicCovers}), Colliot-Thélène and Pirutka (\cite{ColliotThelenePirutkaCyclicCovers}) and Schreieder (\cite[Theorem 9.1]{SchreiederHypersurface}).
+
+The purpose of this paper is to prove that for smooth Fano double covers of sufficently low degree and smooth Fano scheme of lines, coniveau 1 and strong coniveau 1 coincide. Our main tool will be the cylinder map from the Fano scheme of lines in $X$, and especially the results in \cref{pap:linesondoublecovers}. We first recall some important facts about double covers, the coniveau filtrations and Lefschetz pencils. Then we use a Lefschetz pencil argument, analogous to the one used by Voisin in \cite[Theorem 1.13]{VoisinConiveauThreefolds}, to prove that the vanishing cohomology of double covers has strong coniveau 1. Finally, we use a specialization argument, similar to the one used by Shimada in \cite[Theorem 2-ii]{ShimadaHypersurfaces}, to check that the nonvanishing cohomology also has strong coniveau 1. It is this final specialization argument for which we need the degree to be sufficiently low. Our main result is
+\begin{theorem}[{c.f. \cref{cor:Coincides}}]
+   \label{thm:IntroductionCoincides}
+    If $X$ is a smooth complex double cover of degree $d$ and dimension $n \geq 3$, with $F(X)$ smooth of expected dimension, and $d \leq \frac{n}{2}+1$, then $\widetilde{N}^1H^k(X,\Z) = H^k(X,\Z)$ for all $k$. In particular $\widetilde{N}^1H^k(X,\Z) = N^1H^k(X,\Z)$.
+\end{theorem}
+
+ Additionally, we show that in dimension 4, we can construct double covers such that the specialization argument works for all Fano double cover fourfolds, so we can prove
+
+\begin{theorem}[{c.f. \cref{thm:Degree4Fourfolds}}]
+  \label{thm:IntroductionFourfolds}
+  Let $p \from X \to \P^4$ be a smooth complex Fano double cover with smooth Fano scheme of lines. Then $\widetilde{N}^1H^k(X,\Z) = H^k(X,\Z)$ for all $k$.
+\end{theorem}
+
+
+\subsection*{Acknowledgements}
+I wish to thank my advisor John Christian Ottem for many conversations and patience in answering my questions. I am also grateful to prof. Voisin for answering my questions about \cite{VoisinConiveauThreefolds} This material is partly based upon work supported by the Swedish Research Council under grant no. 2016-06596 while in residence at Institut Mittag-Leffler in Djursholm, Sweden during the fall of 2021.
+
+
+\section{Preliminaries}
+We will work over the complex numbers throughout, and all cohomology is Betti cohomology.
+\subsection{Double Covers of $\P^n$} 
+\begin{definition}
+	Let $n,d$ be positive integers. We construct a \emph{double cover of $\P^n$ of degree $d$} in the following way. Let $P \coloneqq \P(\sO_{\P^n}\oplus \sO_{\P^n}(d))$ with projection map $p \from P \to \P^n$. Now let $X$ be a hypersurface defined by the vanishing of a section in $\sO_P(2)$ of the form 
+	\begin{equation}
+		\label{eq:DoubleCoverGeneral}
+		y_0^2 - y_1^2f(x_0,\dots,x_n).
+	\end{equation}
+Then $X$ is a \emph{double cover of $\P^n$ of degree $d$} with covering map $\restr{p}{X} \from X \to \P^n$.
+\end{definition}
+Here we use the coordinates $x_i$ on $\P^n$. As in \cref{pap:linesondoublecovers}, we define $y_0$ as the generator of $H^0(\sO(1) \otimes p^* \sO_{\P^n}(-d))$ and $y_1$ as a generator of the cokernel of the map $H^0(\sO(1) \otimes p^* \sO_{\P^n}(-d)) \otimes H^0(p^* \sO_{\P^n}(d)) \to H^0(\sO(1))$. To guide the intuition, it is useful to think of the $y_i$ as coordinates on the fibers of $P \to P^n$. Also note that in \eqref{eq:DoubleCoverGeneral} $f(x_0,\dots,x_n)$ is a homogeneous polynomial of degree $2d$. Finally, we will simply write $p \from X \to \P^n$ for the restriction of $p \from P \to \P^n$ when no confusion is likely to arise.
+
+We call the divisor $B \subset \P^n$ defined by $f(x_0,\dots,x_n) = 0$ the \emph{branch divisor} of the double cover.
+
+\begin{remark}
+  This construction is closely related to constructing the double cover as a hypersurface of degree $2d$ in the weighted projective space $\P(1^n,d)$. In fact, in the construction above, $P$ is a resolution of the singularities of $\P(1^n,d)$.
+\end{remark}
+
+We will use the notation and results on Fano schemes of lines in double covers described in \cref{pap:linesondoublecovers}. In particular, when $p \from X \to \P^n$ is a double cover of degree $d$ (i.e. ramified over a hypersurface of degree $2d$), we will say that a curve $C \subset X$ is a \emph{line} if $p$ maps $C$ isomorphically to a line in $\P^n$.
+
+All homology groups of a double cover, except for the middle one, are determined by the following result by Lanteri and Struppa in \cite{LS89}, which is a version of the Lefschetz hyperplane theorem for cyclic covers. By Poincar\'e duality, for a smooth double cover all cohomology groups, except the middle one, are also determined by this result. We will typically use Poincar\'e duality to identify homology and cohomology on smooth varieties.
+\begin{proposition}[{\cite[Proposition 1.11]{LS89}}]
+  \label{prop:LSTopology}
+  Let $X',X$ be two connected $n$-folds, and let $p \from X' \to X$ be a cyclic covering of order $n$ branched along a divisor $D$. If $D$ is ample, the morphism
+  \[p_* \from H_k(X') \to H_k(X) \]
+  induced by $p$ on the integral $q$-th homology groups is an isomorphism for $k \leq n-1$ and a surjection for $k=n$.
+\end{proposition}
+In analogy with the case of hypersurfaces, we call the kernel of the surjective pushforward map $p_* \from H^n(X,\Z) \to H^n(\P^n,\Z)$ \emph{vanishing cohomology}.
+
+We have the following results about the Picard group and canonical divisor of $X$.
+\begin{proposition}
+  The Picard group of a smooth double cover $X$ of dimension $n \geq 3$ is generated by $p^*H$, where $H$ is the hyperplane divisor in $\P^n$.
+\end{proposition}
+\begin{proof}
+  It follows from \cref{prop:LSTopology} that $p^* \from \Pic(\P^n) \to \Pic(X)$ is an isomorphism when $n \geq 3$.
+\end{proof}
+
+\begin{proposition}
+  The canonical divisor of a smooth double cover $X$ of degree $d$ is $(d-n-1)p^*H$.
+\end{proposition}
+\begin{proof}
+  The morphism $p \from X \to \P^n$ is a finite morphism, and it is ramified over $R$ with ramification index 1. So we have $K_X = K_{\P^n}+R$. Furthermore, if $B$ is the branch divisor, $p^*B = 2R$, so $R = p^*(dH)$. Since $K_{\P^n} = -(n+1)H$, we get that $K_X = (d-n-1)p^*H$.
+\end{proof}
+Recall that a variety $X$ is Fano if its anticanonical divisor $-K_X$ is ample.
+\begin{corollary}
+	\label{cor:FanoBound}
+  A double cover $p \from X \to \P^n$ of degree $d$ is Fano if and only if $d \leq n$.
+\end{corollary}
+
+
+\subsection{Coniveau and Strong Coniveau}
+In this section, we recall the definitions of the two coniveau filtrations and of the cylinder homomorphism. Additionally, we collect without proofs some basic results relating these concepts. 
+
+ Recall the two coniveau filtrations, which we will call \emph{coniveau} and \emph{strong coniveau}. The coniveau filtration is:
+\[
+\begin{split}
+N^c H^k(X,\Z) &= \sum_{Z \subset X} \ker (j^* \from H^k(X,\Z) \to H^k(X \setminus Z,\Z)) \\
+&= \sum_{Z \subset X} \im(H^k_Z(X,\Z) \to H^k(X,\Z)),
+\end{split}
+ \]
+where $Z$ runs through all closed subvarieties of $X$ of codimension at least $c$.
+The strong coniveau filtration is
+\[\widetilde{N}^c H^k(X,\Z) = \sum_{f \from Y \to Z} \im(f_*\from H^{k-2r}(Y,\Z) \to H^k(X,\Z)),\]
+where the sum is over all proper morphisms $f \from Y \to X$ from a smooth variety $Y$ of dimension $n-r$, with $r \geq c$. By setting $Z = f(Y)$, we see that $\widetilde{N}^c H^k(X,\Z) \subset N^c H^k(X,\Z)$.
+
+Of particular interest is the first levels of the coniveau filtrations because of the following result.
+\begin{proposition}[{\cite[Proposition 2.4]{BenoistOttemConiveau}}]
+  For smooth, projective varieties, the quotient group $N^1H^k(X,\Z) / \widetilde{N}^1H^k(X,\Z)$ is a stable birational invariant.
+\end{proposition}
+
+Since Fano varieties are rationally connected, the first level of the coniveau filtration is simple.
+\begin{proposition}[{\cite[Section 3]{VoisinConiveauThreefolds}}]
+\label{lem:VoisinRegularConiveauDoubleCover}
+  Let $X$ be a smooth, rationally connected variety, then 
+\[N^1H^k(X,\Z) = H^k(X,\Z) \]
+for any $k$.
+\end{proposition}
+But it remains an interesting question if the inclusion $\widetilde{N}^1(X,\Z) \subset H^k(X,\Z)$ can be strict for a Fano, or more generally rationally connected, variety.
+%\begin{proof}
+%  Since $X$ is rationally connected, it has a decomposition of the diagonal with $\Q$-coefficients. Since the diagonal acts on the group $H^k(X,\Z)/N^1H^k(X,\Z)$, it follows that this group must be torsion. On the other hand, the same group is torsion free since by \cite{Colliot-TheleneVoisinIntegralHodge} it injects into a torsion free unramified cohomology group. \todo{Add some details?}
+%\end{proof}
+
+\subsection{The Cylinder Map}
+In \cite[Section 1]{VoisinConiveauThreefolds}, the relationship between coniveau and general cylinder maps is studied. Here we are only interested in the cylinder map from the Fano scheme of lines and will restrict the definitions and results to this particular case.
+
+Let $X$ be a smooth double cover of dimension $n$, with smooth Fano scheme of lines $F(X)$. Let $U$ be the universal line on $X$, which fits in the following diagram.
+\begin{equation}
+  \label{eq:UniversalLine}
+  \begin{tikzcd}
+  U \arrow["q"]{d} \arrow["\phi"]{r} & X \\
+  F(X) & 
+  \end{tikzcd}
+\end{equation}
+Define the cylinder map
+\[\Gamma_* = \phi_* \circ q^* \from H_{k-2}(F(X),\Z) \to H_k(X,\Z) = H^{2(n-k)}(X,\Z).\]
+Intuitively, we can think of this map as given by
+\begin{equation}
+H_{k-2}(F(X),\Z) \ni [Z] \mapsto \left[\bigcup_{z \in Z} l_z\right] \in H_k(X,\Z),
+\end{equation}
+where $l_z$ is the line in $X$ corresponding to $z \in Z \subset F(X)$.
+
+The following result connects the cylinder map with the strong coniveau filtration. A more general result in the same direction is proven in \cite[Lemma 1.2]{VoisinConiveauThreefolds}.
+\begin{lemma}
+\label{lem:StrongCylinderConiveauNew}
+  Let $X$ be a smooth double cover of dimension $n$ with smooth Fano scheme of lines $F(X)$. Then for $k \leq n$, if $\alpha \in H^{2(n-k)}(X,\Z)$ is in the image of the cylinder map
+\[\Gamma_* \from H_{k-2}(F(X),\Z) \to H_{k}(X,\Z) = H^{2(n-k)}(X,\Z),\]
+it has strong coniveau $1$.
+\end{lemma}
+\begin{proof}
+  Since $F(X)$ is smooth, it follows from the Lefschetz Hyperplane Theorem that its homology of degree $k-2$ is supported on smooth subvarieties $Z \subset F(X)$ of dimension at most $k-2$. For any such subvariety $Z$, the inverse image $q^{-1}(Z) \subset U$ is a smooth variety of dimension $k-1$. So $\alpha$ is contained in the image of the pushforward map from a smooth variety of dimension $k-1$. Furthermore, $k-1 \leq n-1$ by our assumption on $k$. So we see from the definition of strong coniveau that $\alpha \in \widetilde{N}^1(H^{2(n-k)}(X,\Z))$.
+\end{proof}
+
+
+% Let $Z,X$ be smooth varieties, with $\dim X = n$. We define a correspondence between $Z$ and $X$ as a subvariety $\Gamma \subset Z \times X$ of codimension $n-c$, such that the projection $p_1 \from \Gamma \to Z$ is surjective. Such a corresponcence gives a map
+% \[\Gamma_* \from H^{k+2c}(Z,\Z) \to H_{2n-k}(X,\Z)\]
+% defined by
+% \[\gamma \mapsto (p_2)_*\left (p_1^*(\gamma) \cdot [\Gamma]\right) \]
+% When $Z$ and $X$ are smooth, using Poincar\'e duality these maps give rise to the strong cylinder coniveau filtration $\widetilde{N}_{c,\text{cyl}} H^k(X,\Z)$ on $ H^k(X,\Z)$. The subgroup $\widetilde{N}_{c,\text{cyl}} H^k(X,\Z) \subset H^k(X,\Z)$ is generated by the images of the cylinder maps
+% \[\Gamma_* \from H_{2n-k-2c}(Z,\Z) \to H_{2n-k}(X,\Z) = H^k(X,\Z) \]
+% for all smooth projective varieties $Z$ and all correspondences $\Gamma \in CH^{n-c}(Z \times X, \Z)$.
+
+% We will work with cylinder maps from the Fano scheme $F(X)$. The correspondence inducing this cylinder map is the universal family of lines $U \to F(X)$.
+%  Intuitively, we can think of these maps as given by
+% \begin{align*}
+% 	\Gamma_* \from H_{k-2}(F(X),\Z) &\to H_{k}(X,\Z) \\
+% 	[\gamma] &\mapsto [\cup_{p \in \gamma} l_p]
+% \end{align*}
+% where $l_p$ is the line in $X$ corresponding to $p$.
+
+% Strong cylinder coniveau and strong coniveau are related through the following lemma.
+% \begin{lemma}[{\cite[Lemma 1.2]{VoisinConiveauThreefolds}}]
+%   \label{lem:StrongCylinderConiveau}
+% 	Let $X$ be a smooth variety of dimension $n$. We have $\widetilde{N}_{c,cyl}H^k(X,\Z) \subset \widetilde{N}^{k+c-n}H^k(X,\Z)$. In particular, for $k=n$, we have $\widetilde{N}_{1,\text{cyl}}H^n(X,\Z) \subset \widetilde{N}^{1}H^n(X,\Z)$.
+% \end{lemma}
+%\begin{proof}
+%	Since by definition $Z$ is smooth, we can apply the Lefschetz Hyperplane Theorem. It follows that the degree $2n-l-2c$ homology is supported on smooth subvarieties $Z'$ of $Z$ of dimension $\leq 2n-l-2c$. We can therefore restrict the varieties $Z$ occuring in the definition of strong cylinder coniveau to varieties $Z$ of dimension at most $2n-l-2c$. By desingularizing, cycles $\Gamma \in CH^{n-c}(Z \times X)$ can be represented as integral combinations of smooth projective varieties $\Gamma_i$ mapping to $Z \times X$ such that
+%	\[\im \Gamma_* \subset \sum_i \im(\Gamma_i)_*.\]
+%	Since $\dim Z \leq 2n-l-2c$ and $\Gamma_i$ has codimension $n-c$, we find that $\dim \Gamma_i \leq 2n-l-c$. From the definition it follows that:
+%	\[\im (\Gamma_i)_* \subset \widetilde{N}^{k+c-n}H^l(X,\Z)\]
+%\end{proof}
+
+\subsection{Lefschetz Pencils}
+Recall that a Lefschetz pencil $\set{X_t}_{t \in \P^1}$ of hypersurfaces in a variety $Y$ is a pencil of hypersurfaces $X_t \subset Y$ for $t \in \P^1$, such that the base locus is smooth of codimension 2 in $X$, and every hypersurface $X_t$ has at most one ordinary double point as singularity. In this section, we collect some results on Lefschetz pencils on double covers that we will use later. The necessary background on Lefschetz pencils, including the definition of vanishing cycles, vanishing cohomology etc., can be found \eg in \cite{VoisinHodgeTheory2}.
+
+\begin{lemma}
+  \label{lem:SingularityEquivalenceFullDoubleCover}
+  Let $p \from X \to \P^n$ be a double cover with branch locus $B \subset \P^n$, $X$ has an ordinary double point singularity at $x \in X$, if and only if $p(z) \in B$, and $p(x)$ is an ordinary node singularity.
+\end{lemma}
+\begin{proof}
+Recall that a singular point is a double point singularity if the corresponding Hessian matrix is invertible. $X$ is completely contained in the locus where $y_1 \neq 0$, so we will assume that $y_1 = 1$. After possibly changing coordintes, we may further assume that any singular point satisfies $x_0 \neq 0$ and is therefore contained in an affine chart with coordinates $x_1,\dots,x_n,y_0$. We will therefore work in this affine chart.
+In this chart the double cover defined by $y_0^2 - f(x_1,\dots,x_n) = 0$. In the affine open in $\P^n$ with coordinates $x_1,\dots,x_n$, the branch locus $B$ is defined by $f(x_1,\dots,x_n)=0$. At a point $(x_1,\dots,x_n,y_0) \in X$, one can compute that the Jacobian is given by
+\[
+  \begin{bmatrix}
+    \mathbf{J}_{B,x'} & y_0
+  \end{bmatrix},
+\]
+where $\mathbf{J}_{B,x}$ is the Jacobian of $B$ at $x' \coloneqq p(x)$. From this Jacobian we see that if a singular point $x \in X$ vanishes, then the $y_0$-coordinate of $x$ is $0$, hence $p(x) \in B$.
+
+ The Hessian consists of the following four blocks, of sizes $n \times n$, $n\times 1$, $1 \times n$ and $1 \times 1$.
+ \begin{equation}
+   \label{eq:HessianMatrix1}
+     \begin{bmatrix}
+    H_{B,x'} & \mathbf{0} \\
+    \mathbf{0} & 2
+  \end{bmatrix}
+ \end{equation}
+The block $H_{B,x'}$ is the Hessian of $B$ at the point $x'$. Then from \eqref{eq:HessianMatrix1} we see that the Hessian matrix at $x$ is invertible if and only if the Hessian matrix at $x'$ is invertible. So $x$ is an ordinary double point singularity if and only if $x'$ is.
+\end{proof}
+
+\begin{corollary}
+	\label{lem:SingularityEquivalence}
+	Let $p \from X \to \P^n$ be a double cover with branch divisor $B \subset \P^n$, and let $H \subset \P^n$ be a hyperplane. Then $p^{-1}(H)$ has at most one ordinary double point singularity if and only if $H \cap B$ has at most one ordinary double point singularity.
+\end{corollary}
+\begin{proof}
+	The restriction of $p$ from $p^{-1}(H) \to H$ is a double cover of $H \simeq \P^{n-1}$ ramified over $H \cap B$. The conclusion now follows from \cref{lem:SingularityEquivalenceFullDoubleCover}.
+\end{proof}
+
+\begin{corollary}
+	\label{cor:GeneralLefschetzPencil}
+  Let $p \from X \to \P^n$ be a smooth double cover. Then a general pencil of hyperplanes $H_t$ gives a Lefschetz pencil  of hypersurfaces $p^{-1}(H_t)$ in $X$.
+\end{corollary}
+\begin{proof}
+  A general pencil of hyperplanes gives a Lefschetz pencil on $B$ given by $B \cap H_t$. By \cref{lem:SingularityEquivalence} $p^{-1}(H)$ is a Lefschetz pencil of hypersurfaces in $X$.
+\end{proof}
+For a smooth double cover $p \from X \to \P^n$ we define the \emph{vanishing cohomology} as the kernel of $p_* \from H^n(X,\Z) \to H^n(\P^n,\Z)$. This is generated by the vanishing cycles of a Lefschetz pencil as in \cref{cor:GeneralLefschetzPencil}. 
+\begin{lemma}
+	\label{lem:VanishingCommutes}
+	Let $p_X \from X \to \P^n$ be a smooth double cover of degree $d$.
+	Let $p_Y \from Y \to \P^{n+1}$ be a smooth double cover of degree $d$ such
+	that $X = p_Y^{-1}(H_{t_0})$ is the inverse image of a hyperplane, and $\set{p^{-1}_Y(H_t)}_{t \in \P^1}$ is a Lefschetz pencil on $Y$. Write $i \from X \to Y$ for the inclusion. Then the vanishing cohomology of $X$
+	with respect to this Lefschetz pencil \ie $\ker i_* H^n(X,\Z) \to H^n(Y,\Z)$ is equal to
+	$\ker((p_X)_* \from H^n(X,\Z) \to H^n(\P^n,\Z))$.
+%\todo{Reread and check if the statement is correct}
+\end{lemma}
+\begin{proof}
+	We have a commutative diagram
+	\begin{equation}
+		\label{eq:VanishingCohomologyDiagram}
+		\begin{tikzcd}
+			X \arrow[hook,r,"i"] \arrow[d,"p_X"]& Y \arrow[d,"p_Y"] \\
+			\P^n \arrow[hook,r,"j"]& \P^{n+1}
+		\end{tikzcd}
+	\end{equation}
+	where $j$ is the obvious inclusion.
+	Since  $j_* \from H^n(\P^n,\Z) \to H^n(\P^{n+1},\Z)$ is an isomorphism, $(p_Y)_* \from H^n(Y,\Z) \to H^n(\P^{n+1},\Z)$ is an isomorphism by \cref{prop:LSTopology}, and the diagram \eqref{eq:VanishingCohomologyDiagram} is commutative,
+we must have that 
+	\begin{equation*}
+		%\label{eq:VanishingCohomologyCommutative}
+		\ker\left((p_X)_* \from H^n(X,\Z) \to H^n(\P^n,\Z)\right) = \ker\left(i_* \from H^n(X,\Z) \to H^n(Y,\Z)\right).
+	\end{equation*}
+\end{proof}
+
+We also need the following result, which is an adaptation to double covers of an argument that appears in \cite[Lemma 2.14]{BlochLectures}. Essentially we replace hyperplane sections of a projective variety with inverse images of hyperplanes and observe that the argument still goes through.
+
+\begin{lemma}
+\label{lem:BlochLemma}
+  Let $p_Y \from Y \to \P^{n+1}$ be a smooth double cover, and let $\Phi \from V \to Y$ be a proper, generically finite morphism of degree $k$ from an irreducible variety $V$. Let $X \coloneqq p_Y^{-1}(H) \subset Y$ be a smooth inverse image of a hyperplane $H \subset \P^{n+1}$, with $W = \Phi^{-1}(X)$. Then the image of $\Phi_* \from H_n(W,\Z) \to H_n(X,\Z)$ contains the vanishing cycles of the inclusion $i \from X \to Y$.
+\end{lemma}
+\begin{proof}
+  Let $\set{X_t}_{t \in \P^1}$ be a Lefschetz pencil constructed as $\set{p^{-1}(H_t)}_{t \in \P^1}$ for a pencil of hyperplanes $\set{H_t}_{t \in \P^1}$ containing the hyperplane $H$, which we call $H_0$. Write $X_0$ for $X$ and let $X_{t_i}$ with $i \in \set{1,\dots,M}$ be the singular elements of the Lefschetz pencil, with paths $\tau_i \from [0,1] \to P$ satisfying $\tau_i(0) = 0$ and $\tau_i(1) = t_i$. We may further assume that $\tau_i([0,1))$ avoids all the singular fibers. Then there is a vanishing cycle $\delta_i$ corresponding to $\tau_i$.
+  
+  Let $X_t$ be a general element of the Lefschetz pencil. Consider the commutative diagram:
+\[
+  \begin{tikzcd}
+    H_d(W_t,\Z) \arrow[r] \arrow[d] & H_d(W_0,\Z) \arrow[d]\\
+    H_d(X_t,\Z) \arrow[r] & H_d(X_0,\Z)
+  \end{tikzcd}
+\]
+By Ehresmann's theorem, the bottom arrow is an isomorphism, so if $H_d(W_t, \Z) \to H_d(X_t,\Z)$ is surjective, then so is $H_d(W_0, \Z) \to H_d(X_0,\Z)$. Hence it suffices to prove the statement for a general $X_t$ in the Lefschetz pencil. So we will assume that $H$, and therefore $X_0$, is general. By choosing $\set{H_t}_{t \in \P^1}$ generally, we may further assume that the singular points in the singular fibers of the Lefschetz pencil lie in the \'etale locus of $\Phi$.
+
+We will now prove for one such singular fiber $X_{t_i}$ that the corresponding vanishing cycle $\delta_i$ is in the image of $\Phi$. Let $A \subset Y$ be a small neighborhood around the singular point $p_i \in X_{t_i}$ contained in the \'etale locus of $\Phi$. So the inverse image of $A$ splits as $\Phi^{-1}(A) = B_1 \cup \cdots \cup B_k$, with $A \simeq B_j$. For small $\epsilon > 0$, consider the map $\Phi_{1-\epsilon} \from W_{\tau(1-\epsilon)} \to X_{\tau(1-\epsilon)}$. By choosing $\epsilon$ sufficiently small, the vanishing cycle $\delta_{1-\epsilon}$, which is the cycle in $H_d(X_{1-\epsilon},\Z)$ corresponding to $\delta_i \in H_d(X_0,\Z)$, will be supported on $A \cap X$, hence it lifts to $B_1 \cap W$ (or any other $B_i \cap W$). Therefore, it is in the image of $\Phi_{1-\epsilon}$. From the diagram
+\[
+  \begin{tikzcd}
+    H_d(W_{1-\epsilon},\Z) \arrow[r,"\simeq"] \arrow[d,"\Phi_{1-\epsilon}"] & H_d(W_0,\Z) \arrow[d,"\Phi_0"] \\
+H_d(X_{1-\epsilon},\Z) \arrow[r,"\simeq"] & H_d(X_0,\Z)
+  \end{tikzcd}
+\]
+we see that $\delta_i$ is in the image of $\Phi_0$ as desired. Since this argument applies to all vanishing cycles, the result follows. Alternatively, after we check that $\delta_i$ is in the image of $\Phi_0$, then all the other vanishing cycles must also be in the image since they are conjugate to $\delta_i$.
+\end{proof}
+
+\section{Coniveau on Double Covers}
+\label{sec:ConiveauLinearSpace}
+We will use \cref{lem:StrongCylinderConiveauNew} to understand the first level of the strong coniveau filtration on a double cover. First we will prove that the vanishing cohomology is in the image of the cylinder map. Then, we will find conditions guaranteeing that the nonvanishing cohomology is also in the image of the cylinder map. We conclude that all the cohomology classes have strong coniveau 1.
+
+To study the image of the cylinder map on the vanishing cohomology, we adapt an argument used for hypersurfaces by Shimada \cite[Theorem 2-ii]{ShimadaHypersurfaces} and developed by Voisin in \cite[1.13]{VoisinConiveauThreefolds}. The argument is based on \cref{lem:BlochLemma}.
+\begin{proposition}
+\label{prop:SurjectiveVanishing}
+	Let $p \from X \to \P^n$ be a smooth Fano double cover of degree $d$. Then the image of the cylinder map $\Gamma_* \from H_{n-2}(F(X),\Z) \to H^n(X,\Z)$ is surjective on the vanishing cohomology of $X$.
+\end{proposition}
+%\todo{An alternative is to first use the current argument to prove for $X$ general, then Voisin's argument to prove for all smooth}
+\begin{proof}
+We will use Poincar\'e duality to identify homology and cohomology.  Let $p_Y \from Y \to \P^{n+1}$ be another smooth Fano double cover, such that $X$ appears as $p_Y^{-1}(H)$ for a general hyperplane $H \subset \P^{n+1}$. By \cref{prop:LinesThroughPoint} and \cref{rem:LinesThroughPointAllDoubleCovers}, Y is covered by lines. Pick a general smooth $(n-1)$-dimensional intersection $Z_Y \subset Y$ of ample divisors in $F(Y)$. Then the restriction of the universal family of lines $U_Y \to Z_Y$ has a finite map $\beta \from U_Y \to Y$. Furthermore, we define $Z_X = Z_Y \cap F(X)$ and $X' = \beta^{-1}(X)$. The following diagram summarizes this construction.
+\begin{equation*}
+  \begin{tikzcd}
+    U_Z \arrow["q"]{dd} \arrow["\beta"]{rr} &   & Y \arrow["p_Y"]{r}& \P^{n+1}\\
+      & X' \arrow{r} \arrow{ul} \arrow{dl}& X \arrow[hook]{u} \arrow["p"]{r}& \P^n \arrow[hook]{u}\\
+    Z_Y  & Z_X \arrow[hook]{l}& 
+  \end{tikzcd}
+\end{equation*}
+ Since $H$ is a general member of a base point free linear system, $X' = \beta^{-1}(p_Y^{-1}(H))$ is smooth by Bertini's theorem. Now, from \cref{lem:BlochLemma}, we see that the image of $H_n(X',\Z) \to H_n(X,\Z)$ contains the vanishing cycles of the Lefschetz pencil.
+ 
+ Observe that a general line on $Y$ intersects $X$ in a single point, hence the map $X' \to Z_Y$ is birational. It is not finite precisely at $Z_X \subset Z_Y$ and is in fact the blowup of $Z_Y$ in $Z_X$. Importantly for us, we can write $X'$ as the union of $Z_Y \setminus Z_X$ and a $\P^1$-bundle over $Z_X$. It follows from excision that $H_n(X',\Z) \simeq H_n(Z_Y,\Z) \oplus H_{n-2}(Z_X,\Z)$.
+ 
+We first consider the image of $H_n(Z_Y,\Z)$ in $H_n(X,\Z)$ by the pushforward $(\restr{\beta}{X'})_*$. The pushforward of a class $\gamma \in H_n(Z_Y,\Z)$ by $(\restr{\beta}{X'})_*$ can be obtained by applying the cylinder map on $Z_Y$ to obtain a class in $H_{n+2}(Y,\Z)$ and then taking the pullback of this class to $X$. Hence the image of $H_n(Z_Y,\Z)$  is contained in the image of the pullback from $H_{n+2}(Y,\Z) \to H_n(X,\Z)$. By the Lefschetz hyperplane theorem, this image is contained in the nonvanishing cohomology. We conclude that the vanishing cycles must be in the image of $H_{n-2}(Z_X,\Z)$.
+
+But the image of $H_{n-2}(Z_X,\Z)$ by $(\restr{\beta}{X'})_*$ is precisely the image of the cylinder map on $Z_X$. Hence the vanishing cycles of the Lefschetz pencil are in the image of the cylinder map. Since these vanishing cycles generate the vanishing cohomology of $X$ by \cref{lem:VanishingCommutes}, it must be in the image of the cylinder map.
+\end{proof}
+
+
+% If $p \from X \to \P^n$ is a double cover of degree $d$, then for even numbers $2n \geq 2k \geq n$ the pullback $p^*[H^k] \in H^k(X,\Z)$ of the generator of $H^k(\P^n,\Z)$ is a torsion free cohomology class of coniveau 1. In this section, we construct some double covers $X$ such that coprime multiples of $p^*[H^k]$ are the images by the cylinder morphism of subvarieties contained in the smooth locus  $F(X)$.
+
+It now remains to find the strong coniveau of the cohomology classes that are pullbacks from cohomology classes in $\P^n$. To do this, we will specialize to particular double covers where it is easy to check that the nonvanishing cohomology classes are in the image of the cylinder map. We can reach the same conclusion on any smooth double cover with smooth Fano scheme of lines, using two results from differential geometry. We begin with a standard result on tubular neighborhoods.
+
+\begin{lemma}
+\label{lem:Z0Deform}
+  Let $\Delta$ be an analytic disk, and let $\mathscr{Y} \to \Delta$ be a family of projective varieties with special fiber $Y_0$. Assume that $Z_0 \subset Y_0$ is a closed smooth subvariety lying in a smooth open set $W \subset \mathscr{Y}$. Then, after possibly shrinking $\Delta$, there is a family of submanifolds $\mathscr{Z} \subset \mathscr{Y}$, such that $\mathscr{Z} \to \Delta$ is a locally trivial fibration.
+\end{lemma}
+\begin{proof}
+  Let $N$ be the total space of the normal bundle of $Z$ in $W \subset \mathscr{Y}$. There is a neighborhood $U \subset \mathscr{Y}$ of $Z_0$, such that $U$ is diffeomorphic to a neighborhood $V \subset N$, containing the zero section of the normal bundle. Since $\mathscr{Y}$ is smooth near $Y_0$, $N$ splits as $N_0 \oplus \C$, where $N_0$ is the total space of the normal bundle of $Z_0$ in $W_0 = W \cap Y_0$. Then we can define $\mathscr{Z}$ as the image of $V \cap (\set{0} \times \C)$ via the diffeomorphism $V \xrightarrow{\sim} U$.
+\end{proof}
+
+We use this result on tubular neighborhood in the following technical result, with somewhat complicated hypotheses. The reason for the convoluted hypotheses is to avoid assuming that $F(X_0)$ is smooth. Even if $F(X_0)$ is not smooth, it makes sense to speak of the image via the cylinder map of a proper submanifold $[Z_0]$ contained in the smooth locus of $F(X_0)$, since we can look at the universal line restricted to the smooth subvariety $Z_0$. On this restriction there is a cylinder map. We can then take the image of the fundamental class of $Z_0$ by this map.
+
+\begin{lemma}
+    \label{prop:SpecializationDoubleCover}
+  Let $X_0$ be a smooth double cover of dimension $n$ with Fano scheme of lines $F(X_0)$. Furthermore, let $Z_0 \subset F(X_0)$ be a smooth proper subvariety of dimension $k-1$, lying in an open set $W_0 \subset F(X_0)$, with $W_0$ smooth of expected dimension. Assume that the cylinder map sends $[Z_0]$ to $p^*\beta \in H^{2(n-k)}(X_0,\Z)$, with $\beta \in H^{2(n-k)}(\P^n,\Z)$ and $p \from X \to \P^n$ the covering map. Then for any smooth double cover $X$, with smooth Fano scheme of lines $F(X)$ of expected dimension, $p^*\beta$ is in the image of the cylinder map $\Gamma_* \from H_{k-2}(F(X),\Z) \to H^{2(n-k)}(X,\Z)$.
+\end{lemma}
+
+\begin{proof}
+  We first prove that if $p^*\beta$ is in the image of the cylinder map 
+\[(\Gamma_t)_* \from H_{k-2}(F(X_t),\Z) \to H^{2(n-k)}(X_t,\Z)\]
+ for some smooth $X_t$ with smooth Fano scheme of lines, then it is true for any $X$ with smooth Fano scheme of lines. To see this, observe that we can connect $X$ and $X_t$ by a family of smooth double covers with smooth Fano schemes of lines. So by Ehresmann's theorem both $X$, $X_t$ and $F(X), F(X_t)$ are diffeomorphic. Furthermore, the diagram
+\begin{equation*}
+  \begin{tikzcd}
+    H_{2k-2}(F(X),\Z) \arrow["\Gamma_*"]{r} \arrow["\simeq"]{d}& H^{2(n-k)}(X,\Z) \arrow["\simeq"]{d}\\
+    H_{2k-2}(F(X_t),\Z) \arrow["(\Gamma_t)_*"]{r}& H^{2(n-k)}(X_t,\Z)
+  \end{tikzcd}
+\end{equation*}
+commutes. So if $p^*\beta$ of the cylinder map for $X_t$, it is also in the image for the cylinder map for $X$.
+
+We will find such an $X_t$ by deforming $X_0$. Let $\Delta$ be a small analytic disk, and assume that $\mathscr{X} \to \Delta$ is a family of double covers with $\mathscr{X}_0 = X_0$, and $\mathscr{X}_t$ smooth with $F(\mathscr{X}_t)$ smooth of expected dimension for $t \neq 0$. With our assumptions, we see from \cref{lem:Z0Deform} that $Z_0$ deforms as a submanifold $\mathscr{Z} \subset F(\mathscr{X}_t)$, which is locally trivial. This is compatible with the cylinder map in the following sense. For any $t \neq 0$, $Z_t$ is also mapped to $p^*\beta$ by the cylinder map induced by the restriction of the universal line to $Z_t$. But since $Z_t$ is a submanifold of $F(X_t)$, which is smooth, we can consider the cylinder map $(\Gamma_t)_* \from  H_{2k-2}(F(X_t),\Z) \to H^{2(n-k)}(X_t,\Z)$. This must also map $[Z_t]$ to $p^*\beta$.
+\end{proof}
+
+
+% \begin{lemma}
+%   \label{prop:Specialization}
+%   Let $X_0$ be a smooth double cover of dimension $n$, and assume that $Z_0 \subset F(X_0)$ is a smooth proper subvariety of dimension $k-1$ lying in an open set $W_0 \subset F(X_0)$, where $W_0$ is smooth of expected dimension. Let $\gamma \coloneqq \Gamma_*[Z_0] \subset H_k(X_0,\Z)$ be the image of the fundamental class $[Z_0] \in H_{2k-2}(Z_0,\Z)$ via the cylinder map $(\Gamma_{Z_0})_* \from H_{2k-2}(Z_0,\Z) \to H_k(X_0,\Z)$. Assume $\gamma$ is monodromy invariant, so $\gamma \in H_k(X,\Z)$ is well-defined.  Then for any smooth double cover $X$ with smooth Fano scheme of lines $F(X)$, $\gamma$ is in the image of the cylinder map $(\Gamma_X)_* \from H_{k-2}(F(X),\Z) \to H_k(X,\Z)$.
+% %\todo{Some changes here, so reread carefully}
+% \end{lemma}
+% \begin{proof}
+% We first argue that if $\gamma$ is in the image of the cylinder map 
+% \[(\Gamma_{X_t})_* \from H_{k-2}(F(X),\Z) \to H_k(X,\Z)\]
+%  for some smooth $X_t$ with smooth Fano scheme of lines, then it is true for any $X$ with smooth Fano scheme of lines. Since we can connect $X$ and $X_t$ by a family of smooth double covers with smooth Fano schemes of lines, by Ehresmann's theorem both $X$, $X_t$ and $F(X), F(X_t)$ are diffeomorphic. Furthermore, the diagram
+% \begin{equation*}
+%   \begin{tikzcd}
+%     H_{k-2}(F(X),\Z) \arrow["(\Gamma_X)_*"]{r} \arrow["\simeq"]{d}& H_k(X,\Z) \arrow["\simeq"]{d}\\
+%     H_{k-2}(F(X_t),\Z) \arrow["(\Gamma_{X_t})_*"]{r}& H_k(X_t,\Z)
+%   \end{tikzcd}
+% \end{equation*}
+% commutes. So if $\gamma$ is in the image of $(\Gamma_{X_t})_*$, it is in the image of $(\Gamma_X)_*$.
+
+%  We will find such an $X_t$ by deforming $X_0$. Let $\Delta$ be a small analytic disc, and assume that $\mathscr{X} \to \Delta$ is a family of double covers with $\mathscr{X}_0 = X_0$ and $\mathscr{X}_t$ smooth with $F(\mathscr{X}_t)$ smooth of expected dimension for $t \neq 0$. Since $Z_0$ is contained in $W_0$, which is smooth,  by taking a tubular neighborhood of $Z_0$, we see that $Z_0$ deforms in a family $\mathscr{Z} \subset \mathscr{X}$ over $\Delta$. Let $U_{\mathscr{Z}_t}$ denote the universal line on $\mathscr{Z}_t$. By Ehresmann's theorem we have diffeomorphims $\mathscr{Z}_t \simeq Z_0$, $\mathscr{X}_t \simeq X_0$ and $U_{\mathscr{Z}_t} \simeq U_{Z_0}$, compatible with the cylinder map.
+% Since the cylinder map $(\Gamma_{Z_0})_*$ arising from $U_{\mathscr{Z}_t}$ maps $[Z_0]$ to $\gamma$, the cylinder map $(\Gamma_{\mathscr{Z}_t})_* \from H_{k-2}(\mathscr{Z}_t,\Z) \to H_{k}(\mathscr{X}_t,\Z)$ also maps $[\mathscr{Z}_t]$ to $\gamma$. Therefore, also $(\Gamma_{\mathscr{X}_t})_*$ maps $[\mathscr{Z}_t]$ to $\gamma$.
+% \end{proof}
+
+One should compare this to the following specialization result in \cite{VoisinConiveauThreefolds}.
+\begin{lemma}[{\cite[Claim 1.14]{VoisinConiveauThreefolds}}]
+	\label{lem:VoisinSpecializationDoubleCover}
+	If the cylinder map 
+	\[H_{n-2}(F(X),\Z) \to H_n(X,\Z)\]
+	is surjective for a smooth complete intersection $X$ with smooth Fano scheme of lines $F(X)$, then the cylinder map is surjective for all smooth complete intersections with smooth Fano schemes of lines.
+\end{lemma}
+The benefit of \cref{prop:SpecializationDoubleCover} over \cref{lem:VoisinSpecializationDoubleCover} is that it suffices to check smoothness locally around $Z_0$.
+
+To apply \cref{prop:SpecializationDoubleCover}, we need to construct suitable examples to target with the specialization. The following proposition gives a construction that works in all dimensions, but only for sufficently low degrees.
+
+\begin{proposition}
+  \label{prop:SmoothExampleLinearSpace}
+  Let $k$ be an even number, $k = 2m$, such that $n \leq k \leq 2n-2$ and $d \leq 2n-3m+1$. Then there exists a smooth double cover $X$ of dimension $n$, with a smooth family of lines $\mathcal{C} \subset F(X)$ sweeping out a subvariety $W$ with class $[W] = p^*[H^m] \in H^k(X,\Z)$. Furthermore, there is a neighborhood $U \subset F(X)$ containing $\mathcal{C}$ such that $U$ is smooth of expected dimension. 
+\end{proposition}
+% \begin{remark}
+%   Similar to the case of hypersurfaces (see \cref{chap:HypersurfaceConiveau}), one could also use a construction with cones to find double covers $X$ such that coprime multiples of $p^*[H^m]$ are swept out by lines. But as is the case for hypersurfaces, this construction does not seem to improve on the bound $d \leq 2n-3m+1$. 
+% \end{remark}
+\begin{remark}
+  When $n$ is even and $k=n$, the bound on $d$ is $\frac{n}{2} + 1$, which is asymptotically half the Fano bound (cf. \cref{cor:FanoBound}). This is similar to the result for hypersurfaces in \cite[Theorem 2-ii]{ShimadaHypersurfaces}.
+\end{remark}
+\begin{proof}[Proof of \cref{prop:SmoothExampleLinearSpace}]
+	The idea is to fix a linear space $\Lambda$ in $\P^n$ of dimension $m$. We then pick a double cover $p \from X \to \P^n$ such that the inverse image of $\Lambda$ is reducible and splits into two components. If $X$ is chosen generally among double covers with this property, then each component of $W$ will be a possible choice for the subvariety $W \subset X$ in the statement.
+	
+  We now give a detailed construction of such an $X$ and check that in fact it has the necessary properties. Let $X \subset P$ be a double cover defined by a polynomial of the form
+  \begin{align}
+    \label{eq:ContainingLinearSpaceForm}
+    y_0^2 - y_1^2(&g(x_0,\dots,x_m)^2 + x_{m+1}f_{m+1}(x_0,\dots,x_n) \nonumber\\*
+ &+ x_{m+1}f_{m+1}(x_0,\dots,x_n) + \dots + x_nf_n(x_0,\dots,x_n)), 
+  \end{align}
+where $g$ has degree $d$ and the $f_i$ have degree $2d-1$. Let $W$ the subvariety defined by $y_0-y_1g(x_0,\dots,x_m) = x_{m+1} = \cdots = x_n = 0$ and define $\mathcal{C}$ as the familiy of lines contained in $W$ and passing through the point defined by 
+\[y_0-y_1g(x_0,\dots,x_m) = x_{1} = \cdots = x_n = 0.\]
+The familiy $\mathcal{C}$ is smooth and sweeps out a subvariety of $X$ of the desired class. It is also straightforward to check that a general $X$ of the the form \eqref{eq:ContainingLinearSpaceForm} is smooth.
+
+So it remains to check that for a general $X$ of this form, $F(X)$ is smooth of expected dimension along $\mathcal{C}$. We will do this using incidence correspondences.
+
+Let $\mathscr{X}_{\mathcal{C}}^\circ$ be the parameter space of smooth double covers of the form \eqref{eq:ContainingLinearSpaceForm}.
+Define the incidence correspondence $I^\circ = \mathcal{C} \times \mathscr{X}_{\mathcal{C}}^\circ$, with projections $p_{\mathscr{X}} \from I^\circ \to \mathscr{X}^\circ$ and $P_{\mathcal{C}} \from I^\circ \to \mathcal{C}$. Furthermore, define
+\[ J^\circ \coloneqq \set{(l,X) \in I^\circ \vert F(X) \text{ is not smooth of expected dimension at } l}.\]
+Since $\dim(\mathcal{C}) = m-1$, $J^\circ$ cannot dominate $\mathcal{X}^\circ$ if $J^\circ$ has codimension at least $m$ in $I^\circ$. To estimate the dimension of $J^\circ$, we will study the projection $J^\circ \to \mathcal{C}$.
+
+For a any fixed $l \in \mathcal{C}$, we can after a coordinate change assume $L$ is defined by
+\begin{equation}
+  \label{eq:LineDefinition1}
+  y_0-y_1g(x_0,\dots,x_m) = x_2 = \cdots = x_n = 0,
+\end{equation}
+$F(X)$ is singular at $l$ if and only if
+\begin{equation}
+  \label{eq:SingularCondition1DoubleCovers}
+  H^0(l,\sO_l(d))g + \sum_{i=m+1}^nH^0(l,\sO_l(1))f_i \subset V \subsetneq H^0(l,\sO_l(2d))
+\end{equation}
+for some hyperplane $V \subset H^0(l,\sO_l(2d))$(\cref{prop:LocalSmoothConditionDoubleCover}).
+
+We now argue analogously to the proof of \cref{lem:JCircCodimension} to find that this is happens in codimension at least $2(n-m)-d+1$. Let $V \in \P(H^0(l,\sO_l(2d))^\vee)$ be a hyperplane, and think of this dual projective space as the union
+\[ \bigcup_{k=0}^d S_k^\circ, \]
+where $S_k$ is the $k$-th secant variety of the rational normal curve of degree $2d$ in $\P(H^0(l,\sO_l(2d))^\vee)$ and $S_k^\circ = S_k \setminus S_{k-1}$. For consistency, we define both $S_0$ and $S_0^\circ$ to be the rational normal curve itself. If \eqref{eq:SingularCondition1} holds for $V \in S_0$, then $X$ will be singular along $l$ by \cref{lem:SingularConditionLineForm}, so we may assume $k \geq 1$.
+The fiber of $J^\circ \to \mathcal{C}$ over $l$ can be written as the union
+\begin{equation}
+  \label{eq:DoubleUnion1}
+   \bigcup_{k=1}^d \left(  \bigcup_{V \in S_{k}^\circ} X_V \right) ,
+\end{equation}
+where $X_V$ are the double covers containing $l$ and satisfying \eqref{eq:SingularCondition1DoubleCovers} for the given hyperplane $V \in \P(H^0(l,\sO_l(2d))^\vee)$. We will prove that for each $k$ the union over $V \in S_k^\circ$ in \eqref{eq:DoubleUnion1} has codimension at least $m$.
+
+By \cref{lem:MultiplicationMapCodimension}, for $k \in \set{1,\dots,d}$ and $V \in S_k^\circ$, $H^0(l,\sO_l(1))f_i \subset V$ is a codimension 2 condition and $H^0(l,\sO_l(d))g \subset V$ is a codimension $k+1$ condition, on the $f_i$ and $g$, respectively. Hence $X_V$ has codimension $k+1+2(n-m)$ for a given $V \in S_k^\circ$. So $H^0(l,\sO_l(d))g + \sum_{i=m+1}^nH^0(l,\sO_l(1))f_i \subset V$ is a codimension $k+1+2(n-m)$ condition. Since $S_k^\circ$ has dimension $2k+1$ for $k\leq d-1$ and $2d$ for $k=d$, we get that
+\[ \bigcup_{V \in S_{k}^\circ} X_V \]
+has codimension $2(n-m)-k$ if $k < d$ and $2(n-m)-d+1$ if $k=d$.
+
+Hence the codimension of $J^\circ$ in $I^\circ$ is the minimum of the two integers
+\[\min_{k \in \set{1,\dots,d-1}} (2(n-m)-k) \, \text{ and } \, 2(n-m)-d+1.\]
+ This minimum is equal to $2(n-m)-d+1$. Since $\mathcal{C}$ has dimension $m-1$, as long as $2(n-m)-d+1 > m-1$, or equivalently $2n-3m+1 \geq d$ $F(X)$ will be smooth of expected dimension along $\mathcal{C}$ for a general $X$ of the form \eqref{eq:ContainingLinearSpaceForm}. Since smoothness is an open condition, a neighborhood of $\mathcal{C}$ in $F(X)$ will also be smooth.
+\end{proof}
+
+By specializing to the examples constructed in \cref{prop:SmoothExampleLinearSpace}, we obtain the following result about the cylinder map.
+\begin{corollary}
+	\label{cor:NonVanishingInImage}
+	Let $X$ be a smooth double cover of degree $d$ and dimension $n$, with $F(X)$ smooth of expected dimension. Then for $m$ satisfying $n-1 \geq m \geq \frac{n}{2}$ and $d \leq 2n-3m+1$, the generator $p^*[H^m] \in H^{2m}(X,\Z)$ is in the image of the cylinder morphism. In particular, when $n$ is even and $m = \frac{n}{2}$, $p^*[H^m] \in H^n(X,\Z)$ is in the image of the cylinder morphism $\Gamma_*$ if $d \leq m+1 = \frac{n}{2}+1$.
+\end{corollary}
+\begin{proof}
+	For this choice of $n,d,m$, we can let $X_0$ be a double cover as in \cref{prop:SmoothExampleLinearSpace}. The conclusion now follows from \cref{prop:SpecializationDoubleCover}
+\end{proof}
+
+Using this, we obtain the following result on strong coniveau for $H^k(X,\Z)$, with $k \geq n$, where $n$ is the dimension of the double cover $X$.
+\begin{corollary}
+\label{cor:NonVanishingStrongConiveau}
+    If $X$ is a smooth double cover of degree $d$ and dimension $n$, with $F(X)$ smooth of expected dimension, then for $m \geq \frac{n}{2}$ the generator $p^*[H^m] \in H^{2m}(X,\Z)$ has strong coniveau $2m+1-n \geq 1$.
+\end{corollary}
+\begin{proof}
+For $m \leq n-2$, we see from \cref{cor:NonVanishingInImage}, that $p^*[H^m]$ is in the image of the cylinder map, so the conclusion follows from \cref{lem:StrongCylinderConiveauNew}. When $m=n$, we see that the statement holds by pushing forward the class of a point. 
+\end{proof}
+
+Altogether, we get the following result on when the two coniveau filtrations coincide.
+\begin{theorem}
+  \label{cor:Coincides}
+    If $X$ is a smooth double cover of degree $d$ and dimension $n$, with $F(X)$ smooth of expected dimension, and $d \leq \frac{n}{2}+1$, then $\widetilde{N}^1H^k(X,\Z) = H^k(X,\Z)$ for all $k$, so in particular $\widetilde{N}^1H^k(X,\Z) = N^1H^k(X,\Z)$
+\end{theorem}
+\begin{proof}
+For $k \leq \frac{n}{2}$ and this bound on $d$, by \cref{cor:NonVanishingStrongConiveau}, the nonvanishing part of $H^k(X,\Z)$ has strong coniveau at least 1. And by \cref{prop:SurjectiveVanishing}, the vanishing part of the cohomology is in the image of the cylinder morphism, hence has strong coniveau 1 by \cref{lem:StrongCylinderConiveauNew}. Therefore $\widetilde{N}^1H^k(X,\Z) = H^k(X,\Z)$ for all $k \geq \frac{n}{2}$.
+
+For even numbers $k \leq \frac{n}{2}$, the generator of $p^*[H^{\frac{k}{2}}]$ is represented by the inverse image $p^{-1}(H^{\frac{k}{2}})$ by \cref{prop:LSTopology}. So the pushforward of the fundamental class on (a desingularization of) $p^{-1}(H^{\frac{k}{2}})$ is $p^*[H^{\frac{k}{2}}] \in H^k(X,\Z)$, proving that these classes have strong coniveau at least 1.
+\end{proof}
+
+\section{Double Cover Fourfolds}
+\cref{cor:Coincides} only covers slightly more than half of Fano double covers of a given dimension. This is because the construction in \cref{prop:SmoothExampleLinearSpace} fails for larger degrees. However, in dimension 4 we can give an alternative construction that proves that the two coniveau filtrations coincide for all smooth Fano double cover fourfolds with smooth Fano scheme of lines.
+
+The only case missing from \cref{cor:Coincides} is that of a double cover $X \to \P^4$ ramified over an octic threefold \ie $d=4$. Furthermore, the only part of the proof of \cref{cor:Coincides} that fails for $X$ is the proof that the nonvanishing cohomology in $H^4(X,\Z)$ has strong coniveau $1$. Specifically, we can no longer use \cref{prop:SmoothExampleLinearSpace} to prove that the generator $[p^*H^2]$ of the nonvanishing cohomology $H^4(X,\Z)_{nv}$ has strong coniveau $1$.
+
+In \cref{prop:SmoothExampleLinearSpace}, the idea was to specialize to a single double cover containing a ruled subvariety whose cohomology class is $[p^*H^2]$ and thus prove that this class is in the image of the cylinder map. For double octic fourfold $X$, we replace this construction by two separate double octic solids, each containing a ruled subvariety with cohomology class some multiple of $[p^*H^2]$.  If these two classes are coprime multiples of the generator $[p^*H^2]$, say $2[p^*H^2]$ and $3[p^*H^2]$, we can prove that both these multiples are in the image of the cylinder map, and hence have strong coniveau $1$. Then also $[p^*H^2]$ must have strong coniveau $1$.
+
+To find the two examples we will specialize to, we use the same idea as the one used in \cref{prop:SmoothExampleLinearSpace}. We pick a surface $Y$ in $\P^4$ of appropriate degree, and then choose a double cover $p \from X \to \P^4$ such that the inverse image $p^{-1}(Y)$ consists of two components. The details of the two constructions are in \cref{prop:Degree2SurfaceSmooth} and \cref{prop:Degree3SurfaceSmooth}.
+\begin{proposition}
+	\label{prop:Degree2SurfaceSmooth}
+  There exists a smooth double cover fourfold $X$ of degree $4$ containing a surface $Y$ swept out by lines in a smooth family $\mathcal{C}$, such that $[Y] = 2p^*[H^2] \in H^4(X,\Z)$. Furthermore, $X$ can be chosen such that a neighborhood of $\mathcal{C}$ in $F(X)$ is smooth of expected dimension.
+\end{proposition}
+\begin{proof}
+  Let $X$ be defined by a polynomial of the form
+  \begin{equation}
+  	\label{eq:QuadricSurfaceForm}
+  	y_0^2 - y_1^2(g^2 + (x_0x_2 - x_1x_3)r + x_4 f_4),
+  \end{equation}
+where $g$ has degree 4, $r$ degree 6 and $f_4$ degree 7. Let the surface $Y \subset X$ be defined by $y_0-y_1g = x_4 = x_0x_2 - x_1x_3 = 0$. It is straightforward to check that a general such $X$ is smooth. The restriction of $p \from X \to \P^4$ to $Y$ gives an isomorphism between $Y$ and the quadric surface in $\P^4$ defined by $x_0x_2 - x_1x_3=x_4 = 0$, hence $[Y] = 2p^*[H^2] \in H^4(X,\Z)$. Furthermore, since any smooth quadric surface in $\P^3$ is swept out by a $\P^1$ of  lines, $Y$ is swept out by a smooth 1-dimensional family of lines in $X$. We call such a family $\mathcal{C}$.
+
+Let $\mathscr{X}_Y^\circ$ be the parameter space of smooth double cover fourfolds of degree $4$ containing $Y$, and consider the incidence correspondence
+\[J^\circ = \set{(l,X) \in \mathcal{C} \times \mathscr{X}_Y^\circ \vert F(X) \text{ is not smooth of expected dimension at } l}.\]
+We will estimate the dimension of $J^\circ$ using the projection $J^\circ \to \mathcal{C}$. To study smoothness of $F(X)$ along a given line $l \in \mathcal{C}$, we may assume after a coordinate change that $l$ is defined by $y_0-y_1g = x_2 = x_3 = x_4 = 0$. By writing the polynomial defining $X$ on the form
+\[(y_0- y_1g)(y_0 + y_1g) + y_1^2(x_2x_0r - x_3x_1r +  x_4 f_4),\]
+we see from \cref{prop:LocalSmoothConditionDoubleCover}, that $F(X)$ is singular at $l$ if and only if
+\[H^0(\sO_{\P^1}(4))g + H^0(\sO_{\P^1}(1))x_0r + H^0(\sO_{\P^1}(1))x_1r + H^0(\sO_{\P^1}(1))f_4 \subsetneq H^0(\sO_{\P^1}(8)). \]
+This is equivalent to
+\begin{equation}
+  \label{eq:SingularCondition2DoubleCovers}
+  H^0(\sO_{\P^1}(4))g + H^0(\sO_{\P^1}(2))r + H^0(\sO_{\P^1}(1))f_4 \subset V \subsetneq H^0(\sO_{\P^1}(8)), 
+\end{equation}
+for some hyperplane $V$. As in the proof of \cref{prop:SmoothExampleLinearSpace}, we must estimate the codimension of 
+\begin{equation}
+  \label{eq:BigUnion2}
+  \bigcup_{k=1}^4 \left( \bigcup_{V \in S_k^\circ} X_V \right) ,
+\end{equation}
+where $X_V$ are the double covers satisfying \eqref{eq:SingularCondition2DoubleCovers} for the given $V$.
+
+If $k=1$, then
+\[H^0(\sO_{\P^1}(4))g + H^0(\sO_{\P^1}(2))r + H^0(\sO_{\P^1}(1))f_4 \subset V\]
+is a codimension $2+2+2 = 6$ condition  by \cref{lem:MultiplicationMapCodimension}. Furthermore, $S_1^\circ$ has dimension 3. Hence 
+\[\bigcup_{V \in S_1^\circ} X_V\]
+has codimension at least 3.
+
+ If $k \geq 2$, then $H^0(\sO_{\P^1}(4))g + H^0(\sO_{\P^1}(2))r + H^0(\sO_{\P^1}(1))f_4 \subset V$ is a codimension $k+1+3+2 = k+6$ condition. Also, $S_k^\circ$ has dimension $2k+1$ for $k=2,3$ and $8$ if $k=4$. So 
+\[\bigcup_{V \in S_k^\circ} X_V\]
+has codimension at least $k+6-2k-1 = 5-k$ for $k=2,3$ and codimension at least $10-8=2$ for $k=4$. Combining this, we find that $F(X)$ being singular at $l$ is at least a codimension 2 condition.
+
+Since the fibers $J^\circ \to \mathcal{C}$ have codimension at least 2, and $\dim \mathcal{C} = 1$, we conclude that $\dim J^\circ < \dim \mathscr{X}_Y^\circ$. So for a general $X \in \mathscr{X}^\circ$, $F(X)$ is smooth along the curves sweeping out $Y$, and hence also in a neighborhood of those curves.
+\end{proof}
+
+We prove the following proposition completely analogously.
+\begin{proposition}
+	\label{prop:Degree3SurfaceSmooth}
+  There exists a smooth double cover $X$ containing a surface $Y$ swept out by lines in a smooth family $\mathcal{C}$, such that $[Y] = 3p^*[H^2] \in H^4(X,\Z)$. Furthermore, $X$ can be chosen such that a neighborhood of $\mathcal{C}$ in $F(X)$ is smooth of expected dimension.
+\end{proposition}
+\begin{proof}
+Consider the three quadrics $q_1,q_2,q_3$ given by 
+\begin{align*}
+  q_1 &\coloneqq x_0x_2 - x_1^2, \\
+  q_2 &\coloneqq x_1x_4 - x_2x_3, \\
+  q_3 &\coloneqq x_0x_4 - x_1x_3.
+\end{align*}
+Then $q_1=q_2=q_3=0$ defines a cubic scroll $Z \subset \P^4$, which is a surface of degree 3. 
+  Let the double cover $X$ be defined by a general polynomial of the form
+  \begin{equation}
+  \label{eq:CubicScroll1DoubleCover}
+  \begin{split}
+  y_0^2 &- y_1^2(g^2 + q_1r_1 
+ + q_2r_2 
+ + q_3r_3),
+ \end{split}
+\end{equation}
+where $g$ has degree $4$ and the $r_i$ have degree 6. Let $Y$ be the surface contained in $X$ defined by $y_0-y_1g = q_1 = q_2 = q_3 = 0$. Then the restriction of $p \from X \to \P^n$ to $Y$ is an isomorphism from $Y$ to $Z$. Furthermore $Z$ is swept out by a familty of lines in $\P^4$. This family is isomorphic to a rational normal curve of degree 3. Hence $Y$ is swept out by a smooth family $\mathcal{C}$ of lines in $X$ and $[Y] = 3p^*[H^2]$.
+
+Let one such line $l$ be given by
+$y_0-y_1g=x_1 = x_2 = x_4= 0$. We can rewrite the polynomial defining $X$ as
+\begin{equation}
+  \label{eq:CubicScroll2DoubleCover}
+  \begin{split}
+(y_0&- y_1g)(y_0 + y_1g)
+ \\ &+y_1^2\left(x_1(-x_1r_1 + x_4r_2 - x_3r_3)
++ x_2(x_0r_1 + x_3r_2) 
++ x_4(x_0 r_3)\right). 
+  \end{split}
+\end{equation}
+We find that $F(X)$ is singular at $l$ if and only if
+\begin{equation}
+  \begin{split}
+&H^0(\P^1,\sO(4))g + H^0(\P^1,\sO(1))x_3r_3\\
++&H^0(\P^1,\sO(1))(x_0r_1 - x_3r_2)+H^0(\P^1,\sO(1))x_0r_3  \subsetneq H^0(\P^1,\sO(8)),\\
+  \end{split}
+\end{equation}
+or equivalently
+\begin{equation}
+  \label{eq:CubicScroll3DoubleCover}
+  \begin{split}
+&H^0(\P^1,\sO(4))g + H^0(\P^1,\sO(2))r_3\\
++ &H^0(\P^1,\sO(1))(x_0r_1 - x_3r_2)  \subsetneq H^0(\P^1,\sO(8)).
+\end{split}
+\end{equation}
+By arguing with incidence correspondences exactly as in the proof of \cref{prop:Degree2SurfaceSmooth}, we may conclude.
+\end{proof}
+
+\begin{theorem}
+\label{thm:Degree4Fourfolds}
+  Let $p \from X \to \P^4$ be a smooth double cover of degree $4$ with smooth Fano scheme of lines. Then $\widetilde{N}^1H^k(X,\Z) = H^k(X,\Z)$ for all $k$.
+\end{theorem}
+\begin{proof}
+By arguing as in the proof of \cref{cor:Coincides}, the statement holds for $k \neq 4$. So we will prove that $\widetilde{N}^1H^4(X,\Z) = H^4(X,\Z)$. From \cref{prop:SurjectiveVanishing} the vanishing cohomology in $H^4(X,\Z)$ has strong coniveau 1, so it remains to check that the generator of the nonvanishing cohomology has strong coniveau 1. By \cref{prop:Degree2SurfaceSmooth} there exists a double cover $X_2$ such that 
+there exists $Z_2 \subset F(X_2)$, contained in the smooth locus of $F(X_2)$, with $[Z_2]$ is mapped to $2p^*[H^2] \in H^4(X_2,\Z)$ by the cylinder map. Similarly, there is a $X_3$ such that there exists $Z_3 \subset F(X_3)$, contained in the smooth locus of $F(X_3)$, with $[Z_3]$ is mapped to $3p^*[H^2] \in H^4(X_2,\Z)$ by the cylinder map. Using \cref{prop:SpecializationDoubleCover} we may therefore conclude that both $2p^*[H^2]$ and $3p^*[H^2]$ are in the image of the cylinder map, hence the cylinder map is surjective. So by \cref{lem:StrongCylinderConiveauNew}, $\widetilde{N}^1H^4(X,\Z) = H^4(X,\Z)$.
+\end{proof}
+
+\begin{remark}
+	There is an analogous argument that works for smooth double cover fivefolds of degree $4$ and $5$ with smooth Fano scheme of lines, proving that $\widetilde{N}^1H^4(X,\Z) = N^1H^4(X,\Z)$. One first checks that the vanishing cohomology  is in the image of the cylinder map, which follows from \cref{prop:SurjectiveVanishing}. One then checks that also the nonvanishing cohomology has strong coniveau $1$. As for fourfolds, the only difficult case is to check that $H^4(X,\Z)$ has strong coniveau 1. To prove this, one uses the same constructions as for fourfolds to see that $H^4(X,\Z)$ is contained in the image of the cylinder map. So strong coniveau and regular coniveau coincide also for all Fano double cover fivefolds.
+\end{remark}
+
+\begin{remark}
+	 For a double cover $X$ of degree greater than $\frac{n}{2}+1$ in dimensions $n \geq 6$, it is harder to study the two coniveau filtrations using this specialization method. In particular, to check that the nonvanishing cohomology in $H^{2m}(X,\Z)$ is in the image of the cylinder map for $m \geq 3$, one would need to construct double covers containing ruled threefolds, such that the ruled threefold is not a linear space or a cone. But it should still defined by simple enough ideals that one can check that the conditions of \cref{prop:SpecializationDoubleCover} are satisfied.
+\end{remark}
+
+\printbibliography[heading = subbibliography]
+\stopcontents[chapters]

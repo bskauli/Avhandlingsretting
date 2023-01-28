@@ -1,0 +1,513 @@
+\title{The Image of the Cylinder Map on Hypersurfaces}
+\author{Bjørn Skauli}
+\date{}
+
+	\maketitle
+
+\label{pap:coniveauhypersurfaces}
+        \begin{abstract}
+          Our goal is to provide some details on the constructions used in Voisin's proof that the cylinder map is surjective for all Fano complete intersections. This is used to prove that the first levels of the coniveau filtration and the strong coniveau filtration coincide on Fano complete intersections  (\cite[Theorem 1.13]{VoisinConiveauThreefolds}). We also find an example suggesting that the construction outlined in the proof of \cite{VoisinConiveauThreefolds} is insufficient to prove this statement. Finally, using a different construction, we give a detailed proof that the first levels of he two coniveau filtrations is equal on all Fano hypersurfaces of dimension 4.
+        \end{abstract}
+	
+\section{Introduction}
+Let $X \subset \P^{n+1}$ be a smooth complex hypersurface, with smooth Fano scheme of lines $F(X)$. There is a \emph{cylinder map} 
+\[\Gamma_* \from H_{k-2}(F(X),\Z) \to H_k(X,\Z) = H^{2n-k}(X,\Z), \]
+induced by the universal family of lines on $X$. Let $p \from U \to F(X)$ is the universal family of lines, with map $q \from U \to X$. Then we define 
+\[ \Gamma_* = q_* \circ p^* \from H_{k-2}(F(X),\Z) \to H_k(X,\Z) = H^{2n-k}(X,\Z).\]
+Intuitively, we can think of the map as
+\[H_{k-2}(F(X),\Z) \ni [Z] \mapsto \left[\bigcup_{z \in Z} l_z\right] \in H_k(X,\Z), \]
+where $l_z$ is the line in $X$ corresponding to $z \in Z \subset F(X)$. In \cite{ShimadaHypersurfaces}, Shimada proves that when $X$ a smooth hypersurface  in $\P^{n+1}$ of degree $d \leq \frac{n}{2}+2$ with smooth Fano scheme of lines $F(X)$, then the cylinder map is surjective.
+
+Recall that on a smooth complex variety $X$ of dimension $n$ there are two coniveau filtrations on $H^k(X,\Z)$. We let $N^1H^k(X,\Z)$ and $\widetilde{N}^1H^k(X,\Z)$ denote the first levels of the coniveau filtration and the strong coniveau filtrations, respectively. For the relevant definitions, see \cref{pap:coniveaudoublecovers}. In \cite[Proposition 2.4]{BenoistOttemConiveau}, Benoist and Ottem prove that the quotient group $N^1H^k(X,\Z) / \widetilde{N}^1H^k(X,\Z)$ is a stable birational invariant. Hence, studying the difference between these two filtrations is interesting from the perspective of birational geometry.
+
+One way of proving that a class has strong coniveau 1 is to prove that it lies in the image of the cylinder map. Precisely, we have the following lemma, which can be proven in exactly the same way as \cref{lem:StrongCylinderConiveauNew}.
+\begin{lemma}
+	\label{lem:ImageStrongConiveau}
+	Let $X$ be a smooth complex hypersurface of dimension $n$ with smooth Fano scheme of lines $F(X)$. Then for $2 \leq k \leq n$, classes in the image of the cylinder map 
+	\[\Gamma_* \from H_{k-2}(F(X),\Z) \to H_k(X,\Z) = H^{2n-k}(X,\Z)\]
+	have strong coniveau 1.
+\end{lemma}
+	
+It is natural to ask whether the group $N^1H^k(X,\Z) / \widetilde{N}^1H^k(X,\Z)$ is always trivial on rationally connected varieties. A particularly interesting case is Fano complete intersections in projective space. For this class of varieties, the question is answered by Voisin in \cite[Theorem 1.13]{VoisinConiveauThreefolds}.
+\begin{theorem}[{\cite[Theorem 1.13 i), iii)]{VoisinConiveauThreefolds}}]
+\label{thm:VoisinConiveau}
+\leavevmode
+  \begin{enumerate}[i)]
+\item   For any smooth Fano complete intersection  $X \subset \P^N$ of dimension $n$ of hypersurfaces of degree $d_1,\dots,d_{N-n}$, the cylinder map 
+\[\Gamma_* \from H_{n-2}(F(X),\Z) \to H_n(X,\Z) = H^n(X,\Z) \]
+is surjective.
+\setcounter{enumi}{2}
+\item If either $F(X)$ has the expected dimension $2N - 2 - \sum_{i}(d_i+1)$ and $\Sing F(X)$ is of codimension $\geq n-2$ in $F(X)$, or $\dim X = 3$, we have
+\[H^n(X,\Z) = \widetilde{N}^1H^n(X,\Z).\]
+  \end{enumerate}
+\end{theorem}
+Here we will focus on hypersurfaces in projective space and the following special case of \cref{thm:VoisinConiveau}.
+\begin{theorem}
+  \label{thm:VoisinOnHypersurfaces}
+  Let $X \subset \P^{n+1}$ be a smooth hypersurface of degree $d \leq n$, with smooth Fano scheme of lines $F(X)$ of expected dimension. Then $N^1H^n(X,\Z) = \widetilde{N}^1H^n(X,\Z) = H^n(X,\Z)$.
+\end{theorem}
+
+On Fano hypersurfaces, the first level of the coniveau filtration is simple, and our main task is therefore to understand the strong coniveau filtration.
+\begin{proposition}[{\cite[Section 3]{VoisinConiveauThreefolds}}]
+\label{lem:VoisinRegularConiveauHypersurface}
+  Let $X$ be a smooth complex rationally connected variety, then 
+\[N^1H^k(X,\Z) = H^k(X,\Z) \]
+for any $k$.
+\end{proposition}
+
+The strategy used in \cite{VoisinConiveauThreefolds} to prove \cref{thm:VoisinConiveau} is proving that the cylinder map is surjective on $H^n(X,\Z)$. Here we will use the same strategy to prove the following theorem, which also applies to the other cohomology groups of $X$.
+\begin{theorem}
+\label{thm:ConiveauIntroduction}
+  Let $X \subset \P^{n+1}$ be a smooth complex hypersurface of degree $d$. Assume that $F(X)$ is smooth of expected dimension and that either
+  \begin{enumerate}[i)]
+    \item$d \leq \frac{n}{2}+2$ or 
+    \item $n \leq 4$.
+  \end{enumerate}
+Then $\widetilde{N}^1H^k(X,\Z) = N^1H^k(X,\Z) = H^k(X,\Z)$ for all $k$.
+\end{theorem}
+Compared to \cref{thm:VoisinOnHypersurfaces}, this applies to all cohomology groups. More importantly, it unfortunately only applies to Fano hypersurfaces of sufficiently low degree. A second goal of this paper is to explain the why the bounds in \cref{thm:VoisinOnHypersurfaces} and \cref{thm:ConiveauIntroduction} differ.
+
+It turns out that it is easy to understand the strong coniveau filtration on the cohomology groups $H^k(X,\Z)$, with $k \leq n$. The main step to prove \cref{thm:ConiveauIntroduction} is therefore studying the cohomology groups $H^k(X,\Z)$, with $k \geq n$. We do this using the same strategy as in Voisin's proof of \cref{thm:VoisinConiveau}. The basic idea is to prove that the cylinder map is surjective onto $H^k(X,\Z)$. The cohomology $H^k(X,\Z)$ can be split into the vanishing and nonvanishing cohomology. The vanishing cohomology only lies in $H^k(X,\Z)$ and is therefore covered by Voisin's result. We will therefore focus on proving that the cylinder map is surjective onto the nonvanishing cohomology.
+
+Recall that on a smooth hypersurface $i \from X \to \P^{n+1}$, the \emph{vanishing cohomology} is the kernel of $i_* \from H^n(X,\Z) \to H^n(\P^n,\Z)$. Completely analogously to the case of double covers (c.f. \cref{prop:SurjectiveVanishing}), the vanishing cohomology is in the image of the cylinder map also for hypersurfaces. Precisely, Voisin establishes the following result as a step in the proof of \cite[Theorem 1.13]{VoisinConiveauThreefolds}, using an argument based on Lefschetz pencils. This is also proven with $\Q$-coefficients by Shimada in \cite[Proposition 4]{ShimadaHypersurfaces}.
+\begin{proposition}
+\label{prop:SurjectiveVanishingHypersurface}
+	Let $X \subset \P^{n+1}$ be a smooth complex Fano hypersurface of degree $d$ with smooth Fano scheme of expected dimension. Then the image of the cylinder map $\Gamma_* \from H_{n-2}(F(X),\Z) \to H^n(X,\Z)$ is surjective on the vanishing cohomology.
+\end{proposition}
+
+We now turn to the nonvanishing cohomology of $X$. It follows from the Lefschetz hyperplane theorem that for a smooth ample hypersurface $X \subset \P^{n+1}$, the nonvanishing cohomology of $X$, $H^k(X,\Z)_{nv}$, is isomorphic to $H^k(\P^{n+1},\Z)$ for $k \geq n$.
+
+Following Voisin's argument in \cite{VoisinConiveauThreefolds}, and also Shimada's proof of a similar statement in \cite[Theorem 2-ii]{ShimadaHypersurfaces}, we will use a specialization argument to prove that the cylinder map is surjective onto the nonvanishing cohomology of degree at least $n$.
+
+Specifically, we construct a special hypersurface $X_0$ containing a ruled subvariety $Y_0$. The class of $Y_0$ is clearly in the cylinder map from $F(X_0)$. If $F(X_0)$ is sufficiently smooth, we can then specialize a general hypersurface $X$ to $X_0$ and conclude that the class of $Y_0$ is also in the image of the cylinder map from $F(X)$. In \cite[Theorem 2-ii]{ShimadaHypersurfaces}, $Y_0$ is chosen to be a linear space, which generates the nonvanishing cohomology of $X$. This gives the bound $d \leq \frac{n}{2}+2$ in the first part of \cref{thm:ConiveauIntroduction}. The argument is detailed in \cref{sec:Linear}.
+
+In Voisin's proof of \cref{thm:VoisinOnHypersurfaces}, a different construction is used. Let $X_0$ be an $n$-dimensional hypersurface, where $n = 2m$ is even. Furthermore, construct $X_0$ such that an $m$-dimensional linear section of $X_0$ contains two cones over hypersurfaces, say $Y_1,Y_2$. Furthermore, ensure that the degrees of $Y_1$ and $Y_2$ are coprime. Then the classes of both $Y_1$ and $Y_2$ are contained in the image of the cylinder map, so the image of the cylinder map must contain a generator of the nonvanishing cohomology $H^n(X_0,\Z)_{nv}$. If $F(X_0)$ is smooth, we can again use a specialization argument to prove that the cylinder map is surjective for any smooth hypersurface $X$ of the same dimension and degree.
+
+In \cref{sec:Cones} we find a sufficient condition on the degree $d$ for this construction to work. However, this sufficient condition is also $\frac{n}{2}+2$, offering no improvement over the construction in \cite[Theorem 2-ii]{ShimadaHypersurfaces}.
+
+To study whether this sufficent condition is also necessary, we prove the following statement in \cref{sec:Computation}.
+\begin{theorem}
+	\label{thm:QuinticSingularIntro}
+	If a quintic fourfold $X \subset F(X)$ contains the cone over a plane cubic curve, then the Fano scheme $F(X)$ has singular points at lines in the ruling of the cone.
+\end{theorem}
+This result suggests that a straightforward application of the construction in the proof of \cite[Theorem 1.13]{VoisinConiveauThreefolds} does not work to prove \cite[Theorem 1.13]{VoisinConiveauThreefolds} for all Fano hypersurfaces.
+
+Finally, in \cref{sec:Fourfolds} we prove the second part of \cref{thm:ConiveauIntroduction} by specializing to hypersurfaces containing particular surface scrolls.
+
+\section{Preliminaries}
+We will work over $\C$ throughout, and all cohomology will be Betti cohomology. First we recall some preliminary results, starting with the specialization results we will use to prove surjectivity of the cylinder map. 
+%First we recall \label{lem:Z0Deform}.
+%\begin{lemma}
+%	Let $\Delta$ be an analytic disk, and let $\mathscr{Y} \to \Delta$ be a family of varieties with special fiber $Y_0$. Assume that $Z_0 \subset Y_0$ is a smooth proper subvariety lying in a smooth open set $W \subset \mathscr{Y}$. Then, after possibly shrinking $\Delta$, there is a family of submanifolds $\mathscr{Z} \subset \mathscr{Y}$, such that $\mathscr{Z} \to \Delta$ is a locally trivial fibration.
+%\end{lemma}
+This result is the analogue of \cref{prop:SpecializationDoubleCover} and has a completely analogous proof. As was the case for \cref{prop:SpecializationDoubleCover}, the reason for the convoluted assumptions is that we wish to avoid assuming that $F(X)$ is smooth globally. Instead we only assume smoothness locally around a subvariety of interest.
+\begin{lemma}
+	\label{prop:SpecializationHypersurface}
+	Let $X_0 \subset \P^{n+1}$ be a smooth hypersurface of dimension $n$ with Fano scheme of lines $F(X_0)$. Furthermore, let $Z_0 \subset F(X_0)$ be a smooth proper subvariety of dimension $k-1$, lying in an open set $W_0 \subset F(X_0)$, with $W_0$ smooth of expected dimension. Assume that the cylinder map sends $[Z_0]$ to $i^*\beta \in H^{2(n-k)}(X_0,\Z)$, with $\beta \in H^{2(n-k)}(\P^n,\Z)$ and $i \from X \to \P^{n+1}$ the inclusion. Then for any smooth hypersurface $X$ with smooth Fano scheme of lines $F(X)$ of expected dimension, $i^*\beta$ is in the image of the cylinder map $\Gamma_* \from H_{k-2}(F(X),\Z) \to H^{2(n-k)}(X,\Z)$.
+\end{lemma}
+%\begin{lemma}
+%	\label{prop:SpecializationHypersurface}
+%  Let $X_0 \subset \P^{n+1}$ be a smooth hypersurface of dimension $n$ with Fano scheme of line $F(X_0)$. Furthermore, let $Z_0 \subset F(X_0)$ be a smooth proper subvariety of dimension $k-1$ lying in an open set $W_0 \subset F(X_0)$, where $W_0$ is smooth of expected dimension. Assume that the cylinder map sends $[Z_0]$ to $i^*\beta \in H^{2(n-k)}(X_0,\Z)$, where $\beta \in H^{2(n-k)}(\P^{n+1},\Z)$ is a cohomology class, and $i \from X \to \P^n$ is the inclusion. Then for any smooth hypersurface $X$ with smooth Fano scheme of lines $F(X)$ of expected dimension, $i^*\beta$ is in the image of the cylinder map $\Gamma_* \from H_{k-2}(F(X),\Z) \to H^{2(n-k)}(X,\Z)$.
+%\end{lemma}
+% \begin{proof}
+% We first argue that if $\gamma$ is in the image of the cylinder map 
+% \[(\Gamma_{X_t})_* \from H_{k-2}(F(X),\Z) \to H_k(X,\Z)\]
+%  for some smooth $X_t$ with smooth Fano scheme of lines, then it is true for any $X$ with smooth Fano scheme of lines. Since we can connect $X$ and $X_t$ by a family of smooth hypersurfaces with smooth Fano schemes of lines, by Ehresmann's theorem both $X$, $X_t$ and $F(X), F(X_t)$ are diffeomorphic. Furthermore, the diagram
+% \begin{equation*}
+%   \begin{tikzcd}
+%     H_{k-2}(F(X),\Z) \arrow["(\Gamma_X)_*"]{r} \arrow["\simeq"]{d}& H_k(X,\Z) \arrow["\simeq"]{d}\\
+%     H_{k-2}(F(X_t),\Z) \arrow["(\Gamma_{X_t})_*"]{r}& H_k(X_t,\Z)
+%   \end{tikzcd}
+% \end{equation*}
+% commutes. So if $\gamma$ is in the image of $(\Gamma_{X_t})_*$, it is in the image of $(\Gamma_X)_*$.
+
+%  We will find one such $X_t$ by deforming $X_0$. Let $\Delta$ be a small analytic disc, and assume that $\mathscr{X} \to \Delta$ is a family of hypersurfaces with $\mathscr{X}_0 = X_0$ and $\mathscr{X}_t$ smooth with $F(\mathscr{X}_t)$ smooth of expected dimension for $t \neq 0$. Since $Z_0$ is contained in $W_0$, which is smooth,  by taking a tubular neighborhood of $Z_0$, we see that $Z_0$ deforms in a family $\mathscr{Z} \subset \mathscr{X}$ over $\Delta$. Let $U_{\mathscr{Z}_t}$ denote the universal line on $\mathscr{Z}_t$. By Ehresmann's theorem we have diffeomorphims $\mathscr{Z}_t \simeq Z_0$, $\mathscr{X}_t \simeq X_0$ and $U_{\mathscr{Z}_t} \simeq U_{Z_0}$, compatible with the cylinder map.
+% Since the cylinder map $(\Gamma_{Z_0})_*$ arising from $U_{\mathscr{Z}_t}$ maps $[Z_0]$ to $\gamma$, the cylinder map $(\Gamma_{\mathscr{Z}_t})_* \from H_{k-2}(\mathscr{Z}_t,\Z) \to H_{k}(\mathscr{X}_t,\Z)$ also maps $[\mathscr{Z}_t]$ to $\gamma$. Therefore, also $(\Gamma_{\mathscr{X}_t})_*$ maps $[\mathscr{Z}_t]$ to $\gamma$.
+% \end{proof}
+We can use this result to prove that the cylinder map is surjective. Since classes in the image of the cylinder map have strong coniveau 1,  this will let us prove \cref{thm:ConiveauIntroduction}.
+
+A key step in the proof of \cref{thm:VoisinConiveau} is to establish in each even dimension $n = 2m$ the existence of a complete intersection $X$ of dimension $n$ with the three following properties: $X$ is smooth, the Fano scheme $F(X)$ is smooth and the image of the cylinder map contains a generator of the nonvanishing cohomology $H^{m}(X,\Z)_{nv}$. In \cite{VoisinConiveauThreefolds}, Voisin suggests the construction based on cones outlined in the introduction. It is clear that for such an $X$, the image of the cylinder map contains a generator of $H^{m}(X,\Z)_{nv}$, and one can choose an $X$ of this form to be smooth. However, as we will see in \cref{sec:Computation}, it is not clear that one can always choose $X$ such that $F(X)$ is smooth. A sufficient condition for this construction to work is described in \cref{sec:Cones}.
+
+The main work in proving \cref{thm:ConiveauIntroduction} is done in \cref{sec:Linear} and \cref{sec:Fourfolds} by finding constructions that let us prove case i) and ii) of \cref{thm:ConiveauIntroduction}, respectively. Since the vanishing cohomology has strong coniveau $1$, the constructions we find are used to prove that also the nonvanishing cohomology is in the image of the cylinder map. For this argument we also need the specialization result \cref{prop:SpecializationHypersurface}.
+
+To apply \cref{prop:SpecializationHypersurface}, we need to know when the Fano scheme of lines of a hypersurface is smooth. For a hypersurface $X \subset \P^{n+1}$, let $F(X) \subset \Gr(2,n+2)$ be its Fano scheme of lines. Recall that if $X$ has degree $d$, the \emph{expected dimension} of $F(X)$ is $2n-d-1$. A good reference for properties of Fano schemes of lines on hypersurfaces is \cite[Section V.4]{KollarRationalCurves}. For our purposes, we mainly need the following result:
+	\begin{lemma}[{\cite[Lemma V.4.3.7]{KollarRationalCurves}}]
+		\label{lem:KollarSmoothness}
+		Let $l \subset \P^n$ be the line defined by ${x_2=\cdots=x_n=0}$ and $X \subset \P^n$ a hypersurface containing $l$. Then $X$ is defined by a polynomial of the form
+		\[\sum_{i=2}^n x_i f_i(x_0,\dots,x_n) \]
+		for polynomials $f_i$ of degree $d-1$. In this case
+		\begin{enumerate}[i)]
+			\item $X$ is singular at $p$ if and only if $f_2(p)= \cdots = f_n(p) = 0$.
+			\item If $X$ is smooth along $l$, then $F(X)$ is smooth of expected dimension at $(l,X)$ if and only if
+			\[
+			\sum_{i=2}^{n}H^0(\sO_{\P^1}(1))f_i = H^0(\sO_{\P^1}(d)).
+			\]
+		\end{enumerate}
+	\end{lemma}
+	
+The main strategy we will use in this paper is estimating the dimension of suitable incidence correspondences of pairs $(l,X)$. In this pair, $X$ is a smooth hypersurface and $l$ is a line contained in the $X$, such that $F(X)$ is smooth of expected dimension at $l$. For these dimension estimates we will need some preliminary definitions and results, in addition to \cref{lem:KollarSmoothness}.
+	
+	Define the multiplication map
+	\[m \from H^0(\sO_{\P^1}(1)) \times H^0(\sO_{\P^1}(d-1)) \to H^0(\sO_{\P^1}(d)).\]
+	For a subspace $V \subset H^0(\sO_{\P^1}(d))$, we will write
+	\[ m^{-1}(V) = \set{f \in H^0(\sO_{\P^1}(d-1)) \vert m(H^0(\sO_{\P^1}(1)) \times \set{f}) \subset V }.\]
+	
+In \cite[Section V.4]{KollarRationalCurves}, the following lemma is central to these dimension estimates.
+	\begin{lemma}
+		\label{lem:KollarCodimension}
+		Let $V \subset H^0(\sO_{\P^1}(d))$ be a hyperplane, then one of the following is true:
+		\begin{itemize}
+			\item $V = H^0(\sO_{\P^1}(d))(-p)$ for some $p \in \P^1$ and $m^{-1}(V) = H^0(\sO_{\P^1}(d-1))(-p)$
+			\item $m^{-1}(V)$ has codimension $2$
+		\end{itemize}
+	\end{lemma}
+%	
+%	
+%	We will also use the following generalization of \cref{lem:KollarCodimension} based on the following result.
+%	\begin{proposition}{{\cite[Proposition 9.7]{Harris95}}}
+%		\label{prop:DeterminantalSecantVariety}
+%		For any $l \leq \alpha, d - \alpha$ the rank $l$ determinantal variety associated to the matrix
+%		\[
+%		\begin{pmatrix}
+%			Z_0 & Z_1 & \cdots & Z_{d-\alpha} \\
+%			Z_1 & Z_2 & \cdots & Z_{d-\alpha+1}\\
+%			\vdots & \vdots & \ddots & \vdots \\
+%			Z_\alpha & Z_{\alpha + 1} & \cdots & Z_{d}
+%		\end{pmatrix}
+%		\]
+%		is the $l$-secant variety $S_{l-1}(C)$ of the rational normal curve $C \subset \P^d$
+%	\end{proposition}
+	
+	More generally, write $m_{d_1}$ for the multiplication map
+	\[m_{d_1} \from H^0(\sO_{\P^1}(d_1)) \times H^0(\sO_{\P^1}(d_2)) \to H^0(\sO_{\P^1}(d_1+d_2)),\]
+	and define
+	\[m_{d_1}^{-1}(V) = \set{f \in H^0(\sO_{\P^1}(d_2)) \vert m_{d_1}(H^0(\sO_{\P^1}(d_1)) \times \set{f}) \subset V }\]
+	for a subset $V \subset H^0(\sO_{\P^1}(d_1+d_2))$.
+	
+	\begin{definition}
+		Let $S_k$ denote the $k$-secant variety of the rational normal curve of degree $d_1+d_2$ in $\P(H^0(\sO_{\P^1}(d_1+d_2))^\vee)$, the dual space to $\P(H^0(\sO_{\P^1}(d_1+d_2)))$, and define $S_k^\circ \coloneqq S_k \setminus S_{k-1}$ for $k \geq 1$. We also let $S_0$ denote the rational normal curve itself, and for consistency define $S_0^\circ \coloneqq S_0$. 
+	\end{definition}
+	
+This gives a more general version of \cref{lem:KollarCodimension}.
+	\begin{lemma}[{= \cref{lem:MultiplicationMapCodimension}}]
+		\label{lem:MultiplicationMapCodimensionHypersurfaces}
+		For a hyperplane $V \in \P(H^0(\sO_{\P^1}(d_1+d_2))^\vee)$ assume that $V \in S_{k'}^\circ$. 
+		Then $m_{d_1}^{-1}(V)$ has codimension $\min(k'+1,d_1+1)$ in $H^0(\sO_{\P^1}(d_2))$.
+	\end{lemma}
+%	
+%	\begin{proof}
+%		Let polynomials in $H^0(l,\sO_l(d_1+d_2))$ be written as $\sum_{i=0}^{d_1+d_2}\alpha_ix_0^{d_1+d_2-i}x_1^i$, and $V$ be defined by $\sum_{i=0}^{d_1+d_2}\beta_ia_i = 0$. Then $m_{d_1}^{-1}(V) \subset H^0(l,\sO_l(d_1+d_2))$ is defined by the $d_1+1$-equations
+%		\[ \sum_{i=0}^{d_2} \beta_{d_1+j}b_i = 0 \]
+%		for $j = 0,\dots,d_1$. These $(d_1+1)$ equations define a linear subspace of $H^0(l,\sO_l(d_2))$ of codimension equal to the rank of the matrix
+%		\[
+%		\begin{pmatrix}
+%			\beta_0 & \beta_1 & \cdots & \beta_{d_2} \\
+%			\beta_1 & \beta_2 & \cdots & \beta_{d_2}\\
+%			\vdots & \vdots & \ddots & \vdots \\
+%			\beta_{d_1} & \beta_{d_1+1} & \cdots & \beta_{d_1+d_2}
+%		\end{pmatrix}
+%		\]
+%		Using \cref{prop:DeterminantalSecantVariety} we conclude that $m_{d_1}^{-1}(V)$ has codimension ${\min(k'+1,d_1+1)}$.
+%	\end{proof}
+
+In \cref{sec:Cones}, the following modification of \cref{lem:KollarCodimension} will also be useful. Let $\delta < d$ be positive integers, and let the map
+\[m_\delta \from H^0(\sO_{\P^1}(1)) \times H^0(\sO_{\P^1}(d-\delta)) \to H^0(\sO_{\P^1}(d)) \]
+be given by
+\[ (x_i, r) \mapsto x_1^{\delta-1}x_ir. \]
+Define
+	\[m_\delta^{-1}(V) = \set{f \in H^0(\sO_{\P^1}(d-\delta)) \vert m_{\delta}(H^0(\sO_{\P^1}(1)) \times \set{f}) \subset V }\]
+for a subset $V \subset H^0(\sO_{\P^1}(d))$.
+\begin{lemma}
+  \label{lem:CodimensionCone}
+  Let $V \subset H^0(\sO_{\P^1}(d))$ be a hyperplane. Then
+  \begin{enumerate}[i)]
+\item there is a $(d-\delta-1)$-dimensional family of $V \in \P(H^0(\sO_{\P^1}(d))^\vee)$ such that $m_\delta^{-1}(V) = H^0(\sO_{\P^1}(d-\delta))$,
+\item there is a $(d-\delta)$-dimensional family of $V \in \P(H^0(\sO_{\P^1}(d))^\vee)$ such that $m_\delta^{-1}(V)$ is a hyperplane in $H^0(\sO_{\P^1}(d-\delta))$,
+\item for the remaining $V \in \P(H^0(\sO_{\P^1}(d))^\vee)$, $m_\delta^{-1}(V)$ has codimension $2$ in ${H^0(\sO_{\P^1}(d-\delta))}$.
+  \end{enumerate}
+\end{lemma}
+\begin{proof}
+  As in the proof of \cref{lem:MultiplicationMapCodimensionHypersurfaces}, we let $V$ be defined by 
+		\[ \sum_{i=0}^{d} \beta_{i}b_i = 0. \] Then
+$m_\delta^{-1}(V)$ will have codimension equal to the rank of the matrix
+\[
+  \begin{pmatrix}
+    \beta_{\delta} & \beta_{\delta+1} & \dots & \beta_{d-1}\\
+    \beta_{\delta+1} & \beta_{\delta+1} & \dots & \beta_{d}\\
+  \end{pmatrix}.
+ \]
+The rank 0 locus of this matrix is a linear space of dimension $d-\delta-1$ in $\P(H^0(\sO_{\P^1}(d))^\vee)$. The rank 1 locus is the cone over a rational normal curve in $\P(H^0(\sO_{\P^1}(d))^\vee)$ where the vertex is given by the rank 0 locus. This is a $(d-\delta)$-dimensional variety.
+\end{proof}
+
+
+\section{Hypersurfaces Containing a Linear Space}
+\label{sec:Linear}
+To prove \cite[Theorem 2-ii]{ShimadaHypersurfaces}, Shimada considers hypersurfaces $X$ containing linear spaces. The goal of this section is to give some details on the construction of the proof in \cite[Theorem 2-ii]{ShimadaHypersurfaces} and show how it can be applied to prove that the two coniveau filtrations coincide at the first level.
+\begin{proposition}
+	\label{prop:LinearSpaceSmooth}
+	Let $X \subset \P^{n+1}$ be a general hypersurface of degree $d$, containing a linear space $Y$ of dimension $k$. If $2k \leq n$, then $X$ is smooth. Furthermore, if  $2n-d+3 > 3k$, then there is a smooth family of lines $\mathcal{C} \subset F(X)$, contained in a neighborhood $W \subset F(X)$, such that $W$ is smooth of expected dimension, and the curves in $\mathcal{C}$ sweep out $Y$. In particular, if $d \leq \frac{n}{2}+2$, then such an $X$ exists for all $k \leq \frac{n}{2}$. 
+\end{proposition}
+\begin{proof}
+	We may always assume that $Y$ is the linear space defined by $x_{k+1} = \cdots = x_{n+1} = 0$. Then  $X$ is defined by an equation of the form 
+	\begin{equation}
+		\label{eq:LinearSpaceForm}
+		x_{k+1}f_{k+1} + \cdots + x_{n+1}f_{n+1} = 0,
+	\end{equation}
+	where the $f_i$ have degree $d-1$. Let $p = (1:0:\cdots:0)$, so $Y$ is swept out by the following smooth family $\mathcal{C}$ of lines
+	\[\mathcal{C} \coloneqq \set{l \in \Gr(2,n+2) \vert p \in l \subset Y}.\]
+Let $\mathscr{X}$ be the parameter space of hypersurfaces of this form, and let $\mathscr{X}^\circ$ be the open subset of smooth hypersurfaces. Checking that a general $X \in \mathscr{X}$ is smooth along the fixed linear space $Y$ is a straightforward application of the Jacobian criterion. It then follows from Bertini's theorem that a general $X$ of this form is smooth.
+	
+	Let $p_{\mathscr{X}} \from \mathcal{C} \times \mathscr{X}^\circ \to \mathscr{X}$ be the projection, and define the incidence correspondence
+	\[J^\circ \coloneqq \set{(l,X) \in \mathcal{C} \times \mathscr{X}^\circ \vert F(X) \text{ is not smooth of expected dimension at } l}.\]
+Any $X$ in $\mathscr{X}^\circ \setminus p_{\mathscr{X}}(J^\circ)$ satisfies the conditions of the theorem. So it will suffice to prove that $\dim J^\circ < \dim \mathscr{X}^\circ$. We will prove this by proving that all fibers of $J^\circ \to \mathcal{C}$ have codimension greater than $\dim \mathcal{C} = k-1$.
+
+For a point $(l,X) \in {\mathcal{C}} \times \mathscr{X}^\circ$, write $X$ on the form \eqref{eq:LinearSpaceForm}. Then by \cref{lem:KollarSmoothness}, $F(X)$ is not smooth of expected dimension at $l$ if and only if
+	\begin{equation}
+		\label{eq:LinearSpaceCondition}
+		\sum_{i=k+1}^{n+1}H^0(l,\sO_l(1))f_i \subset V \subsetneq H^0(l,\sO(d)),
+	\end{equation}
+	where $V$ is some hyperplane in $H^0(l,\sO(d))$. By \cref{lem:KollarCodimension}, either $H^0(l,\sO_l(1))f_i \subset V$ is a codimension $2$ condition of $f_i$, or $V$ is of the form $H^0(l,\sO(d))(-p)$. If $V$ is of the form $H^0(l,\sO(d))(-p)$ and 
+	\[\sum_{i=k+1}^{n+1}H^0(l,\sO_l(1))f_i \subset V,\]
+	then by \cref{lem:KollarSmoothness}, $X$ is singular, hence $(l,X) \not\in J^\circ$. So \eqref{eq:LinearSpaceCondition} is a codimension $2(n-k+1)$ condition in $\mathscr{X}^\circ$ for a fixed $V$. 
+	
+	Since $V$ varies in a $d$-dimensional family, the fiber of $J^\circ \to \mathcal{C}$ has codimension $2(n-k+1)-d$ in $\mathscr{X}^\circ$. The family $\mathcal{C}$ has dimension $k-1$, hence the condition that $\dim J^\circ < \dim \mathscr{X}^\circ$ is satisfied as long as $2(n-k+1)-d > k-1$, or equivalently, $2n-d+3 > 3k$.
+\end{proof}
+Together with \cref{prop:SpecializationHypersurface}, this construction lets us prove that the nonvanishing cohomology is in the image of the cylinder map. From this the first case of \cref{thm:ConiveauIntroduction} follows.
+\begin{theorem}
+  \label{thm:ConiveauConclusion}
+    Let $X \subset \P^{n+1}$ be a smooth complex hypersurface of degree $d$. Assume that $F(X)$ is smooth of expected dimension and that $d \leq \frac{n}{2}+2$. Then $\widetilde{N}^1H^i(X,\Z) = N^1H^i(X,\Z) = H^i(X,\Z)$ for all $i$.
+\end{theorem}
+\begin{proof}
+We first check that for $i < \frac{n}{2}$, $\widetilde{N}^1H^i(X,\Z) = N^1H^i(X,\Z) = H^i(X,\Z)$. Any class in $H^i(X,\Z)$ is represented by a multiple of the class of a section of $X$ by a linear space. Pushing forward a multiple of the fundamental class on a desingularization of this linear section proves that the given class has strong coniveau 1. By pushing forward the class of a point, it is also clear that the statement holds for $i=2n$.
+
+Now assume $2n-2 \geq i \geq \frac{n}{2}$. Since $d \leq \frac{n}{2}+2$, by \cref{prop:LinearSpaceSmooth} we can find a smooth hypersurface $X_1$ of degree $d$, such that there is a smooth subvariety $\mathcal{C}_1 \subset F(X_1)$, with $\mathcal{C}_1$ contained in a smooth neighborhood of expected dimension, and the lines in $\mathcal{C}_1$ sweep out a linear space $L$. Then $[L]$ generates the nonvanishing part of $H^i(X,\Z)$. From \cref{prop:SpecializationHypersurface}, we see that the nonvanishing part of $H^i(X,\Z)$ has strong coniveau 1. Finally, the vanishing cohomology has strong coniveau 1 by \cref{prop:SurjectiveVanishingHypersurface}.
+\end{proof}
+\begin{remark}
+	Asymptotically, the bound in \cref{thm:ConiveauConclusion} is one half of the Fano bound on the degree of a hypersurface.
+\end{remark}
+
+\section{Hypersurfaces Containing Cones}
+\label{sec:Cones}
+Constructing hypersurfaces containing linear spaces does not suffice to prove that the nonvanishing cohomology is in the image of the cylinder map for all Fano hypersurfaces. As an alternative to this construction, Voisin suggests in \cite{VoisinConiveauThreefolds} the following. Let $X$ be a hypersurface such that a linear section of $X$ contains a cone over a hypersurface. By picking cones over hypersurfaces of coprime degrees, one can ensure that a cycle of degree 1 is in the image of the cylinder map. The following proposition gives a sufficient condition for when the Fano scheme $F(X)$ of such a hypersurface is smooth, at least along the ruling of the cone. This smoothness property is necessary to apply the specialization result in \cref{prop:SpecializationHypersurface}. In Voisin's construction, a single linear section of $X$ should contain two cones of coprime degree. To simplify the analysis, we will only assume that the linear section contains a single cone.
+
+In \cref{sec:Computation} we compute that when $X$ a general quintic hypersurface containing the cone over a plane cubic curve, $F(X)$ has singularities along the ruling of this cone, suggesting that the sufficient condition in \cref{prop:ConeSmooth} is also necessary.
+
+\begin{proposition}
+	\label{prop:ConeSmooth}
+	Let $X \subset \P^{n+1}$ be a general hypersurface of degree $d$ such that for a $(k+1)$-dimensional linear space $\Lambda$, the intersection $X \cap \Lambda$ has a component $Y$, with $Y$ isomorphic to the cone over a general hypersurface $Z$ in $\P^k$ of degree $\delta$. Here $\delta$ must satify $2 \leq \delta \leq d-2$. If $2k \leq n$, then $X$ is smooth.
+	
+	Furthermore, if $2n-d+3 > 3k$ and $\mathcal{C} \subset F(X)$, $\mathcal{C} \simeq Z$, are the lines in the ruling of the cone, then for a general such $X$, the family of lines $\mathcal{C} \subset F(X)$ is contained in a neighborhood $W \subset F(X)$ such that $W$ is smooth of expected dimension.
+\end{proposition}
+\begin{remark}
+	These bounds are the same as in \cref{prop:LinearSpaceSmooth}, so \cref{prop:LinearSpaceSmooth} can be interpreted as the case $\delta = 1$ of \cref{prop:ConeSmooth}. Furthermore, since the bounds on the degree of $X$ are the same, the construction in \cref{prop:ConeSmooth} can not straightforwardly be used to improve the bound in \cref{thm:ConiveauConclusion}.
+\end{remark}
+\begin{proof}[Proof of \cref{prop:ConeSmooth}]
+	For a suitable choice of coordinates, the linear space $\Lambda$ is defined by $x_{k+2} = \cdots = x_{n+1}$, and the vertex of the cone $Y$ is $p = (1:0:\cdots:0)$. So $Y$ is the cone over a hypersurface defined by a polynomial $g(x_1,\dots,x_{k+1})$. Then any hypersurface $X$ containing $Y$ is defined by a polynomial of the form
+	\begin{equation}
+		\label{eq:ContainingConeForm}
+		g(x_1,\dots,x_{k+1})r(x_0,\dots,x_{k+1}) + \sum_{i=k+2}^{n+1} x_i f_i,
+	\end{equation}
+	where $g$ has degree $\delta$, $r$ degree $d-\delta$ and the $f_i$ have degree $d-1$. We let $\mathscr{X}$ be the parameter space of smooth hypersurfaces of the form \eqref{eq:ContainingConeForm}. A standard argument using the Jacobian criterion shows that a general $X$ of the form \eqref{eq:ContainingConeForm} is smooth, and we let $\mathscr{X}^\circ \subset \mathscr{X}$ denote the open subset of smooth hypersurfaces.
+	
+	Let ${\mathcal{C}} \subset F(X)$ be the family of lines in $Y$ passing through $p$, and define
+	\[J^\circ \coloneqq \set{(l,X) \in {\mathcal{C}} \times \mathscr{X}^\circ \vert F(X) \text{ is not smooth of expected dimension at } l},\]
+	with $p_{\mathscr{X}} \from {\mathcal{C}} \times \mathscr{X}^\circ \to \mathscr{X}^\circ$ the projection map. Let $l$ be a line in ${\mathcal{C}}$. To compute the dimension of $J^\circ$, we compute the dimension of the fiber $p_{\mathcal{C}}^{-1}(l) \cap J^\circ$, where $p_{\mathcal{C}} \from {\mathcal{C}} \times \mathscr{X} \to {\mathcal{C}}$ is the other projection.
+
+We may choose coordinates such that $l$ is defined by $x_2 = \cdots = x_{n+1} = 0$. Since $l$ is a line through the vertex of the cone in $\Lambda$ defined by $g=0$, the polynomial $g(x_1,\dots,x_{k+1})$ must be of the form
+	\[g(x_1,\dots,x_{k+1}) = \sum_{i=2}^{k+1}x_ig_i(x_1,\dots,x_{k+1}).\]
+	Furthermore, the coordinates on $l$ are $x_0$ and $x_1$, and $x_0$ does not appear in the polynomials $g_i$. So the $g_i$ must all be of the form $a_ix_1^{\delta-1}$ for some constant $a_i$. In the notation of \cref{lem:KollarSmoothness}, we have $f_i = a_ix_1^{\delta-1}r$ for $i=2,\dots,k+1$. Hence $F(X)$ is not smooth of expected dimension at $l$ if and only if
+	\begin{equation}
+		\label{eq:ConeCondition2}
+		H^0(l,\sO_l(1))x_1^{\delta-1}r + \sum_{i=k+2}^{n+1}H^0(l,\sO_l(1))f_i \subset V \subsetneq H^0(l,\sO_l(d)).
+	\end{equation}
+$H^0(l,\sO_l(1))f_i \subset V$ is a codimension $2$ condition in $\mathscr{X}^\circ$ for a given $V$. Since there is a $d$-dimensional space of hyperplanes in $H^0(l,\sO(d))$, we find that 
+\[\sum_{i=k+2}^{n+1}H^0(l,\sO_l(1))f_i \subset V,\]
+ for some $V$, is a codimension $2(n-k)-d$ condition on $f_i$. By \cref{lem:CodimensionCone} \[H^0(l,\sO_l(1))x_1^{\delta-1}r \subset V\]
+  is satisfied for $r$ in a subset of codimension $0$,$1$ or $2$ when $V$ lies in a subset of dimension $d-\delta - 1$, $d-\delta$ and $d$, respectively. So we see that \eqref{eq:ConeCondition2} holding for some $V$ is a condition defining a subset of codimension 
+  \begin{align*}
+  	\min(&2(n-k+1)-d,\\
+  	     &2(n-k+1)-1-(d-\delta),\\
+  	     &2(n-k+1)-2-(d-\delta-1)).\\
+  \end{align*}
+So if $\delta \geq 2$, \eqref{eq:ConeCondition2} holding for some $V$ is a codimension $2(n-k+1)-d$ condition on the hypersurface $X$.
+
+We can therefore conclude that $p^{-1}_{\mathcal{C}}(l) \cap J^\circ$ has codimension $2(n-k+1)-d$ in $\mathscr{X}^\circ$. So $\dim J^\circ < \dim \mathcal{C}$ is satisfied as long as $2(n-k+1)-d > k-1$, or equivalently $2n-d + 3 > 3k$.
+\end{proof}
+
+
+
+\section{Quintic Fourfolds}
+Our goal in this final section is first to show that if a quintic fourfold contains the cone over a plane cubic, then its Fano scheme is singular. In particular, this shows that the bound in \cref{prop:ConeSmooth} is sharp. To prove that the cylinder map is surjective for all Fano hypersurfaces, one therefore either needs a better source of examples to specialize to or to modify the method of proof used in \cref{thm:ConiveauConclusion} and in \cite[Theorem 1.13]{VoisinConiveauThreefolds}.
+
+The second goal of this section is to show that, nevertheless, the cylinder map is surjective onto $H^4(X,\Z)$, and therefore the first two levels of the coniveau filtrations are equal. From this we can conclude that also the second part of \cref{thm:ConiveauIntroduction} holds.
+
+\subsection{Quintic Fourfolds Containing a Cone}
+\label{sec:Computation}
+We begin by proving that if a quintic fourfold contains the cone over a plane cubic curve, then its Fano scheme of lines is singular. This is the first example of a Fano hypersurface that does not satisfy the bound in \cref{prop:ConeSmooth} for a $k$ equal to half the dimension of $X$. It is therefore the first example where the bound in \cref{prop:ConeSmooth} is insufficient to prove that coniveau $1$ and strong coniveau $1$ are equal, using the specialization method as in \cite[Theorem 1.13]{VoisinConiveauThreefolds} and \cref{thm:ConiveauConclusion}.
+   
+Fix a plane cubic $C \subset \P^2 \subset \P^5$. Explicity, let the plane be defined by $x_0 = x_4 = x_5 = 0$, and let $C$ be defined by $g(x_1,x_2,x_3) = x_0 = x_4 = x_5 = 0$ for a general cubic polynomial $g$. After a coordinate change, we may assume that $g(1,0,0) = g(0,1,0) = 0$. Let $\mathscr{X}_C$ be the linear system of quintic fourfolds containing the cone over $C$ with vertex $(1:0:\cdots:0)$, and let $\mathcal{C} \subset \Gr(2,6)$ be the lines in this cone. Write $\mathscr{X}_C^\circ \subset \mathscr{X}_C$ for the subset of smooth elements of the linear system.
+   
+Define the incidence correspondences
+\[ J = \set{(l,X) \in \mathcal{C} \times \mathscr{X}_C \vert F(X) \text{ is not smooth of expected dimension at } l }, \]
+and its restriction to smooth quintic fourfolds
+\[J^\circ = J \cap p_2^{-1}(X_C^\circ). \]
+We begin by estimating the dimension of $J^\circ$.
+\begin{proposition}
+  \label{prop:QuinticExpectedDimension}
+  The incidence correspondence $J^\circ$ has dimension equal to the dimension of $\mathscr{X}^\circ_C$.
+\end{proposition}
+\begin{proof}
+Any $X \in \mathscr{X}_C^\circ$ is defined by the vanishing of a polynomial of the form
+\begin{equation}
+  \label{eq:QuinticConeForm}
+  g(x_1,\dots,x_3)r(x_0,\dots,x_3) + x_4 f_4 + x_5f_5,
+\end{equation}
+where $r$ is a degree 2 polynomial, and $f_4$ and $f_5$ have degree $4$. We have chosen coordinates such that the line $l$ defined by $x_2 = x_3 = x_4 = x_5 = 0$ is contained in $\mathcal{C}$ and hence in $X$. So $g$ must be of the form $x_2g_2 + x_3g_3$. By \cref{lem:KollarSmoothness}, $F(X)$ is not smooth at $l$ if and only if
+\begin{align}
+  \label{eq:QuinticSmoothAtLine1}
+  H^0(l,\sO_l(1))g_2r + H^0(l,\sO_l(1))g_3r + H^0(l,\sO_l(1))f_4 &+ H^0(l,\sO_l(1))f_4 \nonumber \\ &\subsetneq H^0(l,\sO_l(5)).
+\end{align}
+Since the polynomial $g$ does not contain the variable $x_0$, both $g_2$ and $g_3$ restrict to some multiple of $x_1^2$ on $l$. So \eqref{eq:QuinticSmoothAtLine1} holds if the following condition holds for some hyperplane $V \subset H^0(l,\sO_l(5))$.
+\begin{equation}
+  \label{eq:QuinticSmoothAtLine2}
+  H^0(l,\sO_l(1))x_1^2r + H^0(l,\sO_l(1))f_4 + H^0(l,\sO_l(1))f_4 \subset V \subsetneq H^0(l,\sO_l(5)).
+\end{equation}
+By \cref{lem:KollarCodimension} and \cref{lem:CodimensionCone} this is a codimension 6 condition for any given hyperplane. Since there is a $5$-dimensional space of hyperplanes in $H^0(l,\sO_l(5))$, \eqref{eq:QuinticSmoothAtLine1} is a codimension 1 condition. Since $\dim \mathcal{C} = 1$, we conclude that $\dim J^\circ = \dim \mathscr{X}_C^\circ$.  
+\end{proof}
+
+
+So we would expect the Fano scheme of a general element in $\mathscr{X}_C$ to be singular at some line in $\mathcal{C}$. In fact, using a computation carried out in Macaulay2 we can prove the following.
+\begin{proposition}
+  \label{prop:QuinticDominant}
+  The second projection $p_2 \from J^\circ \to \mathscr{X}_C^\circ$ is surjective.
+\end{proposition}
+\begin{proof}
+  It suffices to prove that $p_2 \from J \to \mathscr{X}$ is surjective. Since $J$ and $\mathscr{X}_C$ are proper varieties and $\dim J \geq \dim \mathscr{X}_C$, it will in fact suffice to prove that $p_2$ is a dominant map, which we can do by finding a $0$-dimensional fiber of $p_2$. So if we find an $X \in \mathscr{X}_C$ and a line $l \in \mathcal{C}$ such that $F(X)$ has an isolated singularity at $l$, then we show that $p_2$ is surjective. Such a pair $(l,X)$ exists by \cref{lem:ComputationResultMainText}, the proof of which is a computation done in Macaulay2 (\cite{Macaulay2}). This computation is described in \cref{app:QuinticComputation}
+  
+  When computing, we take the following viewpoint. Equation \eqref{eq:QuinticSmoothAtLine1} holding for some hyperplane $V$, is equivalent to stating that the map $\eta$ of vector bundles
+  \begin{equation}
+  	\label{eq:QuinticSmoothVectorBundleCondition}
+  	 \bigoplus_{i=2}^5\sO_l(1) \xrightarrow{\eta} \sO_l(5) 
+  \end{equation}
+  given by multiplication with $(g_2r,g_3r,f_4,f_5)$ is not surjective on global sections. Since the codomain is a vector space of dimension 6, we will check that the map on global sections is not surjective at one line $l_1$ by computing that the matrix corresponding to the map has rank 5. Hence the Fano scheme is singular at this line. To see that this is a $0$-dimensional fiber of $p_2$, we then compute that at a different line $l_2$, the corresponding matrix has rank 6, and $l_2$ is therefore a smooth point of $F(X)$.
+\end{proof}
+
+\begin{lemma}
+	\label{lem:ComputationResultMainText}
+	There exists a quintic fivefold containing the cone over a plane cubic curve, such that $F(X)$ has an isolated singularity along the curve in $F(X)$ corresponding to the ruling of the cone.
+\end{lemma}
+
+Since the projection $p_2 \from J^\circ \to \mathscr{X}_C^\circ$ is surjective, we obtain \cref{thm:QuinticSingularIntro} from the introduction.
+\begin{theorem}
+	\label{thm:QuinticSingularMain}
+	If a quintic fourfold $X \subset F(X)$ contains the cone over a plane cubic curve, then the Fano scheme $F(X)$ has singular points at lines in the ruling of the cone.
+\end{theorem}
+
+\subsection{Cylinder Map on the Quintic Fourfold}
+\label{sec:Fourfolds}
+The constructions based on linear spaces and cones in the two previous sections work in any dimension, but because they require $d\leq \frac{n}{2}+2$, we get the bound $d \leq \frac{n}{2}+2$ in \cref{thm:ConiveauIntroduction}. Since a hypersurface is Fano if $d \leq n$, the first case of \cref{thm:ConiveauIntroduction} only applies to about half of all Fano hypersurfaces. For hypersurfaces in $\P^5$, we can find different constructions, which let us prove the second case of \cref{thm:ConiveauIntroduction}.
+
+Since we have already proven the first case of \cref{thm:ConiveauIntroduction}, we can prove the second case of \cref{thm:ConiveauIntroduction} by checking only the quintic fourfold. Rather than specializing to a single construction of a hypersurface with a ruled variety as before, we will handle this case by specializing to two different constructions.
+
+We first show that we can specialize to a quintic fourfold containing a quadric surface.
+\begin{proposition}
+  \label{prop:QuadricSurface}
+  There exists a quintic fourfold $X \subset \P^5$ containing a quadric surface $Y$, and a smooth curve $\mathcal{C} \subset F(X)$, such that the lines in $\mathcal{C}$ sweep out $Y$. Furthermore, $\mathcal{C}$ lies in an open subset $W$ of $F(X)$, where $W$ is smooth of expected dimension.
+\end{proposition}
+\begin{proof}
+  Assume without loss of generality that the quadric surface $Y$ lies in the intersection of $X$ with the $\P^3$ defined by $x_4 = x_5 = 0$, and in this $\P^3$ $Y$ is defined by $x_0x_2 - x_1x_3=0$. Then $X$ is defined by the vanishing of a polynomial of the form
+\begin{equation}
+	\label{eq:QuarticDeg2_1}
+	f(x_0,x_1,x_2,x_3,x_4,x_5) = (x_0x_2 - x_1x_3)r(x_0,x_1,x_2,x_3) + x_4 f_4 + x_5f_5,
+\end{equation}
+where $r$ has degree $3$ and $f_4,f_5$ have degree $4$. It is straightforward to check that a general such hypersurface is smooth along $Y$, and it follows from Bertini's theorem that it is smooth outside of $Y$.
+
+ Let $\mathscr{X}^\circ$ be the parameter space of smooth hypersurfaces defined by polynomials of this form. Let ${\mathcal{C}}$ be one of the rulings of $Y$, and define
+\[J^\circ = \set{(l,X) \subset {\mathcal{C}} \times \mathscr{X}^\circ \vert F(X) \text{ is not smooth of expected dimension at } l }.\]
+To prove that $J^\circ$ cannot dominate $\mathscr{X}^\circ$, we prove for any line $l \in \mathcal{C}$ that $p_{\mathcal{C}}^{-1}(l) \cap J^\circ$ has codimension at least $2$ in $p_{\mathcal{C}}^{-1}(l)$. For this we use \cref{lem:KollarSmoothness}.
+
+After a coordinate change, we may assume that $l$ is defined by $x_2 = \cdots = x_5 = 0$, and we can write the polynomial in \eqref{eq:QuarticDeg2_1} as
+\begin{equation}
+	\label{eq:QuarticDeg2_2}
+	f = x_2x_0r - x_3x_1r + x_4f_4 + x_5f_5.
+\end{equation}
+By \cref{lem:KollarSmoothness}, $F(X)$ is not smooth of expected dimenison at $l$ if and only if
+\begin{gather*}
+H^0(\P^1,\sO_{\P^1}(1))x_0r + H^0(\P^1,\sO_{\P^1}(1))x_1r
+\\ +  \sum_{i=4}^{5}H^0(\P^1,\sO_{\P^1}(1))f_i \subset V \subsetneq H^0(\P^1,\sO_{\P^1}(5))
+\end{gather*}
+for some hyperplane $V$.
+This is equivalent to 
+\begin{equation}
+	\label{eq:QuarticCondition1}
+	H^0(\P^1,\sO_{\P^1}(2))r + \sum_{i=4}^{5}H^0(\P^1,\sO_{\P^1}(1))f_i \subset V \subsetneq H^0(\P^1,\sO_{\P^1}(5))
+\end{equation}
+for some hyperplane $V$.
+It follows from \cref{lem:KollarCodimension} that when $V$ is a general hyperplane, the condition \eqref{eq:QuarticCondition1} holds for a codimension 7 subset $\mathscr{X}^\circ$. When $V$ lies on the secant variety of the rational normal curve in $\P(H^0(\P^1,\sO_{\P^1}(5))^\vee)$, it is a codimension 6 condition in $\mathscr{X}^\circ$. We conclude that the codimension of hypersurfaces in $\mathscr{X}^\circ$ satisfying \eqref{eq:QuarticCondition1} for some $V$ is $\min(7-5,6-3) = \min(7-5,3) \geq 2$, which is greater than $\dim {\mathcal{C}} = 1$. So we may conclude.
+\end{proof}
+
+The next construction we consider is a quintic fourfold containing a cubic scroll.
+The cubic scroll $S \subset \P^4$ has degree 3 in $\P^4$ and is defined by the $2 \times 2$ minors of the matrix
+\begin{equation*}
+	\begin{pmatrix}
+		x_0 & x_1 & x_3 \\
+		x_1 & x_2 & x_4
+	\end{pmatrix}.
+\end{equation*}
+We give the three minors names:
+\begin{align*}
+	q_1 &\coloneqq x_0x_2 - x_1^2 \\
+	q_2 &\coloneqq x_1x_4 - x_2x_3 \\
+	q_3 &\coloneqq x_0x_4 - x_1x_3. \\
+\end{align*}
+
+\begin{proposition}
+  \label{prop:QuinticDeg3Surface}
+  There exists a smooth quintic fourfold $X \subset \P^5$ containing a cubic scroll $Y$. Furthermore, the smooth curve $\mathcal{C} \subset F(X)$ of lines sweeping out $Y$ lies in an open subset $W$ of $F(X)$, where $W$ is smooth of expected dimension.
+\end{proposition}
+\begin{proof}
+$X$ is defined by a polynomial of the form
+\begin{equation}
+	\label{eq:CubicScroll1Hypersurface}
+		f = q_1g_1 + q_2g_2 + q_3g_3 + x_5f_5,
+\end{equation}
+where the $g_i$ have degree $3$ and $f_5$ has degree $4$. A straightforward argument using the Jacobian criterion proves that a general such $X$ is smooth along $Y$, and it follows from Bertini's theorem that when $X$ is general, it is also smooth outside of $S$. Let $\mathscr{X}^\circ$ be the parameter space of smooth hypersurfaces of this form. Let ${\mathcal{C}} \subset X$ be the family of lines on $Y$, which is isomorphic to a rational normal curve of degree 3. Define
+\[J^\circ = \set{(l,X) \subset {\mathcal{C}} \times \mathscr{X}^\circ \vert F(X)\text{ is not smooth of expected dimension at } l }.\]
+To prove that $J^\circ$ cannot dominate $\mathscr{X}^\circ$, we will prove that $p_{\mathcal{C}}^{-1}(l) \cap J^\circ$ have codimension at least $2$ in $p_{\mathcal{C}}^{-1}(l)$ for any $l$. By picking suitable coordinates, we may assume that $l$ is defined by $x_1 = x_2 = x_4 = x_5 = 0$. To compute the codimension of $p_{\mathcal{C}}^{-1}(l) \cap J^\circ$ we rewrite $f$ as
+\begin{equation}
+	\label{eq:CubicScroll2}
+	\begin{split}
+		f &= x_1(-x_1g_1 + x_4g_2 - x_3g_3)\\
+		  &+ x_2(x_0g_1 - x_3g_2) + x_4(x_0 g_3) + x_5f_5.
+	\end{split}
+\end{equation}
+Define $\overline{g}(x_0,x_3) \coloneqq (x_0g_1(x_0,x_3) - x_3g_2(x_0,x_3))$. Since $x_1g_1$ and $x_4g_2$ vanish along $l$, $F(X)$ is not smooth of expected dimension at $l$ if and only if
+\begin{align}
+	\label{eq:ScrollCondition}
+	H^0(\P^1,\sO(2))g_3 + H^0(\P^1,\sO(1))\overline{g} &+ H^0(\P^1,\sO(1))f_5 \nonumber \\ &\subset V \subsetneq H^0(\P^1,\sO(5)).
+\end{align}
+Using \cref{lem:MultiplicationMapCodimension}, we see that if $V$ lies on the secant variety of the rational normal curve in $\P(H^0(\P^1,\sO(5))^\vee)$, \eqref{eq:ScrollCondition} is a codimension $6$ condition in $p_{\mathcal{C}}^{-1}(l)$. Otherwise it is a codimension 7 condition.
+
+As in the previous construction, the secant variety to the rational normal curve has dimension $3$, and $\P(H^0(\P^1,\sO(5))^\vee)$ has dimension $5$. Hence the codimension of $J^\circ \cap p_{\mathcal{C}}^{-1}(l)$ in $p_{\mathcal{C}}^{-1}(l)$ is $\min(7-5,6-3) = 2$. Therefore $J^\circ$ cannot dominate $\mathscr{X}^\circ$, and we conclude that for a general hypersurface $X$ of the form \eqref{eq:CubicScroll1Hypersurface} $F(X)$ is smooth in a neighborhood of $\mathcal{C}$.
+\end{proof}
+
+
+With these constructions, we can now prove that for also for quintic fourfolds, the cylinder map is surjective. This also proves the second case of \cref{thm:ConiveauIntroduction}.
+\begin{theorem}
+  Let $X \subset \P^5$ be a smooth hypersurface of degree $5$ with smooth Fano scheme of lines. Then the cylinder map
+  \[\Gamma_* \from H_{6-2k}(F(X), \Z) \to H_{8-2k}(X, \Z) = H^2k(X, \Z)\]
+  is surjective for $k=2,3$. It follows that
+   $\widetilde{N}^1H^i(X,\Z) =  N^1H^i(X,\Z) = H^i(X,\Z)$ for all $i$.
+\end{theorem}
+\begin{proof}
+	For $k \neq 2$, we can prove that that $\widetilde{N}^1H^k(X,\Z) = H^k(X,\Z)$ in the same way as in \cref{thm:ConiveauConclusion}. So it remains to prove that $\widetilde{N}^1H^4(X,\Z) = H^4(X,\Z)$. By \cref{prop:SurjectiveVanishingHypersurface} we know that the vanishing cohomology is in the image of the cylinder map. It remains to check that the nonvanishing cohomology is also in the image of the cylinder map.
+	
+	We know from \cref{prop:QuadricSurface} that there exists a smooth quintic fourfold $X_2$ with a smooth curve $\mathcal{C}_2 \subset F(X_2)$ contained in a smooth neighborhood of expected dimension. Furthermore, the cylinder map takes $[\mathcal{C}_2]$ to the class of a quadric surface. This class is $2[H^2] \in H^2(X,\Z)$. By \cref{prop:SpecializationHypersurface}, it follows that for any smooth $X$ with $F(X)$ smooth of expected dimension, $2[H^2]$ is in the image of the cylinder map. A similar argument, using the construction in \cref{prop:QuinticDeg3Surface}, proves that $3[H^2]$ is in the image of the cylinder map. Hence the cylinder map must be surjective, and we see that $\widetilde{N}^1H^4(X,\Z) = H^4(X,\Z)$ by \cref{lem:ImageStrongConiveau}. 
+\end{proof}
+
+\begin{remark}
+	Analogous constructions prove that the cylinder map is surjective for all smooth Fano hypersurfaces in $\P^6$ with smooth Fano schemes of lines, and hence the first levels of the two coniveau filtrations are equal for these varieties. One first checks that the vanishing cohomology is in the image of the cylinder map. Then one check that the nonvanishing cohomology has strong coniveau $1$. The only difficult case is $H^4(X,\Z)$, where one can use the same constructions as for fourfolds to prove that $H^4(X,\Z)$ is in the image of the cylinder map.
+\end{remark}
+
+\printbibliography[heading = subbibliography]
+\stopcontents[chapters]

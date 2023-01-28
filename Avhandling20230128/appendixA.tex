@@ -1,0 +1,155 @@
+\chapter{Computations on a Quintic Fourfold}
+\label{app:Appendix}
+\setcounter{section}{1}
+
+\label{app:QuinticComputation}
+The goal of this section is to prove \cref{lem:ComputationResultMainText} by an explicit computation. The computation is aided by the computer algebra package Macaulay2.
+\begin{lemma}[{= \cref{lem:ComputationResultMainText}}]
+	\label{lem:ComputationResultAppendix}
+	There exists a quintic fivefold containing the cone over a plane cubic curve, such that $F(X)$ has an isolated singularity along the curve in $F(X)$ corresponding to the ruling of the cone.
+\end{lemma}
+\begin{proof}
+	We outline how this computation is done in Macaulay2, and how one should interpret the results.
+	
+	First we define a polynomial ring, and the general form of a quintic polynomial from \cref{sec:Computation}. In particular, we pick the polynomial $g$ to be of the form $x_1x_2 g_1 + x_3g_3$ such that $g(1,0,0) = g(0,1,0) = 0$. This is consistent with the choice of coordinates in \cref{sec:Computation}.
+	\begin{verbatim}
+		kk = QQ
+		R = kk[x_0..x_5]
+		R' = R[g1,g3,r,f_4,f_5,Degrees => {1,2,2,4,4}]
+		F = (x_1*x_2*g1+x_3*g3)*r + x_4*f_4 + x_5*f_5
+	\end{verbatim}
+	At the line $l_1$, defined by $x_2 = x_3 = x_4 = x_5=0$, we want \eqref{eq:QuinticSmoothAtLine2} to hold for some hyperplane $V$. If elements in $H^0(l,\sO_l(5))$ are written as
+	\[\sum_{i=0}^5 a_ix_0^{5-i}x_1^i, \]
+	we choose the hyperplane $V_{34}$ defined by $a_3 = a_4$. This hyperplane is not of the form $H^0(l,\sO_l(5))(-p)$ for any point $p \in l$. An easy way to see this is to observe that both $x_0^5$ and $x_1^5$ are contained in $V_{34}$ but have no common zeros.  So requiring \eqref{eq:QuinticSmoothAtLine2} to hold for $V_{34}$ does not force $X$ to be singular. 
+	
+	We want the Fano scheme $F(X)$ to be smooth at a different line $l_2$. By our choice of \lstinline{F}, we can use as $l_2$ the line defined by $x_1 = x_3 = x_4 = x_5=0$.
+	
+	We now choose the elements \lstinline{g1}, \lstinline{g3}, \lstinline{r}, \lstinline{f4}, \lstinline{f5} as general as possible, while still ensuring that \eqref{eq:QuinticSmoothAtLine2} holds for the hyperplane $V_{34}$. In particular, we enforce that for the polynomials \lstinline{r}, \lstinline{f4} and \lstinline{f5}, certain coefficients should be equal. We do this by setting the required coefficient equal to randomly chosen numbers \lstinline{rcoeff}, \lstinline{f4coeffs1} and \lstinline{f5coeffs1}, respectively.
+	\begin{verbatim}
+		use R
+		
+		rcoeff = random(kk)
+		rcoeffs = (rcoeff,rcoeff,rcoeff)
+		rsub = sum(for i from 0 to 2 list x_0^(2-i)*x_1^i*rcoeffs#i) +
+		sub(random(2,kk[x_2,x_3,x_4,x_5]),R)
+		g1sub = sub(random(1,kk[x_1,x_2,x_3]),R)
+		g3sub = sub(random(2,kk[x_1,x_2,x_3]),R)
+		
+		use R
+		f4coeffs1 = random(kk)
+		f4coeffs = join(for i from 3 to 4 list random(kk),
+		(f4coeffs1,f4coeffs1,f4coeffs1))
+		f4sub = sum(for i from 0 to 4 list x_0^(4-i)*x_1^i*f4coeffs#i)
+		f4sub = f4sub + sum(for i from 2 to 5 list x_i*random(3,R))
+		
+		f5coeffs1 = random(kk)
+		f5coeffs = join(for i from 3 to 4 list random(kk),
+		(f5coeffs1,f5coeffs1,f5coeffs1))
+		f5sub = sum(for i from 0 to 4 list x_0^(4-i)*x_1^i*f5coeffs#i)
+		f5sub = f5sub + sum(for i from 2 to 5 list x_i*random(3,R))
+	\end{verbatim}
+		We then insert the chosen elements into the general form of \lstinline{F} to obtain \lstinline{F'}.
+	\begin{verbatim}
+		use R'
+		F' = sub(F,{g1=>g1sub, g3=>g3sub,
+			r=>rsub, f_4=>f4sub, f_5=>f5sub})
+	\end{verbatim}
+	Now \lstinline{F'} is a polynomial defining a quintic hypersurface $X'$ containing the cone over a plane cubic.
+	
+	Our goal is to compute that the line $l_1$ is a singular point of $F(X')$, but the line $l_2$ is a smooth point of $F(X')$. We first verify that $X'$ contains the desired lines.
+	\begin{verbatim}
+		i22 : sub(F',{x_2=>0,x_3=>0,x_4=>0,x_5=>0})==0
+		
+		o22 = true
+		
+		i23 : sub(F',{x_1=>0,x_3=>0,x_4=>0,x_5=>0})==0
+		
+		o23 = true
+	\end{verbatim}
+	
+	We first look at $F(X')$ at $l_1$. For this choice of hypersurface $X'$, we compute the matrix corresponding to the map between global sections of vector bundles, as in \eqref{eq:QuinticSmoothVectorBundleCondition}. It is useful when doing this to observe that we can find the $f_i$-terms by computing the partial derivatives of $F'$, and then restricting to the line.
+	\begin{verbatim}
+		Rl1 = kk[x_0,x_1]
+		pdiffs = for i from 0 to 3 list sub(sub(diff(x_(i+2),F'),
+		{x_2=>0,x_3=>0,x_4=>0,x_5=>0}),Rl1)
+		
+		getCoefficients = (f,R) -> 
+		transpose((coefficients(f,
+		Monomials => basis(degree(f),R)))_1)
+		
+		matrixRows = join(for i from 0 to 3 list 
+		getCoefficients(x_0*pdiffs#i,Rl1),
+		for i from 0 to 3 list 
+		getCoefficients(x_1*pdiffs#i,Rl1))
+
+	\end{verbatim}
+	Here \lstinline{pdiffs} is a list of the partial derivatives of $F'$ with respect to the variables whose vanishing defines $l_1$ and then restricted to $l_1$. By extracting the coefficients of these, we obtain the rows of the matrix defining the map on global sections induced by $\eta$ from \cref{eq:QuinticSmoothVectorBundleCondition}.
+	
+	We next define a simple helper function \lstinline{verticalJoin} to join these rows into a matrix.
+	\begin{verbatim}	
+		verticalJoin = (l) ->
+		if length(l)==1 then l#0 else
+		l#0 || verticalJoin(l_{1..length(l)-1})
+	\end{verbatim}
+    This lets us run the following commands.
+	\begin{verbatim}
+		i34 : verticalJoin(matrixRows)
+		
+		o34 = {-5} | 0   0   14/27 14/27 14/27 0     |
+		      {-5} | 0   0   3/5   3/5   3/5   0     |
+		      {-5} | 9   1/5 1/2   1/2   1/2   0     |
+		      {-5} | 1/4 7/3 3     3     3     0     |
+		      {-5} | 0   0   0     14/27 14/27 14/27 |
+		      {-5} | 0   0   0     3/5   3/5   3/5   |
+		      {-5} | 0   9   1/5   1/2   1/2   1/2   |
+		      {-5} | 0   1/4 7/3   3     3     3     |
+		
+		                8         6
+		o34 : Matrix Rl1  <--- Rl1
+		
+		i35 : rank(oo)==5
+		
+		o35 = true
+	\end{verbatim}
+	We see that the image of $\eta$ is contained in $V_{34}$. In particular, it follows from \eqref{eq:QuinticSmoothAtLine1} that $F(X')$ is singular at $l'$.
+	
+	Also observe that in this matrix, rows 1 and 2, and rows 5 and 6 are multiples of each other. The reason for this is that the polynomials $g_2$ and $g_3$ in \eqref{eq:QuinticSmoothAtLine1} restrict to multiples of each other on $l_1$.
+	
+	It now remains to run the analogous commands for the line $l_2$ to check that $l_2$ is a smooth point of $F(X')$. We first compute the rows of the corresponding matrix.
+	\begin{verbatim}
+		use R
+		Rl2 = kk[x_0,x_2]
+		F'1 = sub(sub(diff(x_1,F'),{x_1=>0,x_3=>0,x_4=>0,x_5=>0}),Rl2)
+		F'3 = sub(sub(diff(x_3,F'),{x_1=>0,x_3=>0,x_4=>0,x_5=>0}),Rl2)
+		F'4 = sub(sub(diff(x_4,F'),{x_1=>0,x_3=>0,x_4=>0,x_5=>0}),Rl2)
+		F'5 = sub(sub(diff(x_5,F'),{x_1=>0,x_3=>0,x_4=>0,x_5=>0}),Rl2)
+		
+		pdiffs = {F'1,F'3,F'4,F'5}
+		
+		matrixRows = join(for i from 0 to 3 list 
+		getCoefficients(x_0*pdiffs#i,Rl2),
+		for i from 0 to 3 list 
+		getCoefficients(x_2*pdiffs#i,Rl2))
+	\end{verbatim}
+	Finally we run the commands
+	\begin{verbatim}
+		i44 : verticalJoin(matrixRows)
+		
+		o44 = {-5} | 0   0   14/15 0     7/5 0   |
+		      {-5} | 0   0   2/3   0     1   0   |
+		      {-5} | 9   2   1     1/2   2   0   |
+		      {-5} | 1/4 8/5 3/2   5/3   5/3 0   |
+		      {-5} | 0   0   0     14/15 0   7/5 |
+		      {-5} | 0   0   0     2/3   0   1   |
+		      {-5} | 0   9   2     1     1/2 2   |
+		      {-5} | 0   1/4 8/5   3/2   5/3 5/3 |
+		
+		                8         6
+		o44 : Matrix Rl2  <--- Rl2
+		
+		i45 : rank(oo)==6
+		
+		o45 = true
+	\end{verbatim}
+	Since this matrix has rank 6, it follows from \eqref{eq:QuinticSmoothAtLine1} that $l_2$ is a point where $F(X')$ is smooth of expected dimension. As for $l_1$, we see that also here, rows 1 and 2, and rows 5 and 6 are multiples of each other.
+\end{proof}

@@ -1,0 +1,451 @@
+\title{Lines on Double Covers}
+\author{Bjørn Skauli}
+\date{}
+
+\maketitle
+\label{pap:linesondoublecovers}
+\begin{abstract}
+In the paper \cite{BarthVandeVenFano} several results are collected about the space of lines on hypersurfaces in $\P^n$, in particular results about their dimension and smoothness. These results are gathered and slightly improved in  \cite[Section V.4]{KollarRationalCurves}. In this note we prove analogues of these results for double covers.
+\end{abstract}
+
+\section{Introduction}
+
+One reason to study the Fano scheme of lines on a hypersurface, is that this scheme is a powerful tool for understanding the geometry of the hypersurface. More generally, rational curves of low degree can be used to study the geometry of other Fano varieties. One such kind of Fano varieties are double covers of projective space ramified over hypersurfaces of low degree.
+
+Our goal is to generalize the results about smoothness and dimension of the space of lines on hypersurfaces in $\P^n$ found in \cite[Section V.4]{KollarRationalCurves} to double covers. What we mean by a line on a double cover will be made precise in \cref{def:LineOnDoubleCover}.
+
+The proofs use the same ideas as the ones used in \cite[Section V.4]{KollarRationalCurves}. Our primary strategy will be to construct appropriate incidence correspondences and then estimate their dimension. The main change to the proofs is the use of \cref{prop:DeterminantalSecantVariety} as a tool. When compared to \cite[Theorem V.4.3]{KollarRationalCurves} we get the same numerical bounds as long as one consistently uses $n$ for the dimension, and $d$ for its degree.  We will also construct an ambient space for the space of lines on a double cover. For this we the same construction as is used by Tihomirov in \cite{TihFanoSurface}.
+
+The paper has three main goals. Firstly, we prove are that for a general double cover $X$ the Fano scheme of lines is smooth of expected dimension (\cref{prop:FanoVarietyExpectedDimension}, \cref{prop:SmoothnessOfFanoVariety}). Secondly, we prove that if $X$ has index at least 2, it is covered by lines. (\cref{prop:LinesThroughPoint}). Finally, we prove that the space of lines on a double cover $X$ of dimension at least 3 and sufficiently low degree is connected (\cref{prop:FConnected}).
+
+We use the quotient convention for projective bundles and Grassmannians, and work over an algebraically closed field of characteristic different from 2.
+
+\section{Definitions}
+\begin{definition}
+  \label{def:DoubleCover1}
+  Let $n, d$ be positive integers. Define the projective bundle
+\[P = \P\left(\sO_{\P^n} \oplus \sO_{\P^n}(d)\right),\]
+with projection map $p \from P \to \P^n$.
+
+We will construct double covers as hypersurfaces in the linear system $\sO_P(2)$. To do this explicitly,we will fix a basis of $H^0(\sO_P(1))$ as follows. Let $y_1$ be the generator of $H^0(\sO(1) \otimes p^* \sO_{\P^n}(-d))$, and let $y_0 \in H^0(\sO_P(1))$ be an element that is not in the image of the natural map $H^0(\sO(1) \otimes p^* \sO_{\P^n}(-d)) \otimes H^0(p^* \sO_{\P^n}(d)) \to H^0(\sO(1))$. Intuitively, we may think of the $x_i$ as coordinates on $\P^n$ and the $y_i$ as coordinates in the fibers of $P \to P^n$.
+
+A \emph{double cover of degree d} of $\P^n$ is a hypersurface in $P$ defined by the vanishing of a section of $\sO_P(2)$ of the form
+\begin{equation}
+	\label{eq:DoubleCoverDefinition}
+	y_0^2 - y_1^2f(x_0,\dots,x_n).
+\end{equation}
+\end{definition}
+Throughout the paper, we will use $x_i$ for the coordinates in $\P^n$ and $y_0,y_1$ for the coordinates in the fibers of the bundle $P \to \P^n$.
+
+We will, abusing notation slightly, also write $p \from X \to \P^n$, when no confusion will result. Observe that the map $p \from X \to \P^n$ is finite of degree 2, and ramified precisely when $f(x_0,\dots,x_n) = 0$.
+%\begin{definition}
+%  For a double cover $X$ of degree $d$ and dimension $n$, the hypersurface in $\P^n$ defined by $f(x_0,\dots,x_n) = 0$ is called the \emph{branch divisor}.
+%\end{definition}
+%
+%\begin{remark}
+%\label{rem:CurlyspecDefinition}
+%  There is also a more intrinsic definition of double covers. Let $\mathcal{L}$ be a line bundle on $\P^n$, and let $s \in H^0(\P^n,\mathcal{L}^2)$ be a nonzero section. The section $s$ induces a morphism $\mathcal{L}^{-2} \to \sO_{\P^n}$. Now define the $\sO_X$-algebra $\mathcal{S}$ as the quotient of $\bigoplus_{i \geq 0}\mathcal{L}^{-i}y^i$ by $(uy^2 - s(u))$ for $u$ a local section of $\mathcal{L}^{-2}$. Then
+%\[p \from \curlyspec (\mathcal{S}) \to \P^n \]
+%is a double cover of $\P^n$ branched along the divisor defined by $s=0$.
+%\end{remark}
+
+\begin{proposition}
+  A double cover $p \from X \to \P^n$ is determined up to isomorphism by the branch divisor $B \in \P^n$.
+\end{proposition}
+\begin{proof}
+  If the double covers $X$ and $X'$ have the same branch locus, then their defining equations in $P$ are
+\[y_0^2 - y_1^2f(x_0,\dots,x_n) = 0\]
+and
+\[y_0^2 - y_1^2 \lambda f(x_0,\dots,x_n) = 0, \]
+respectively, for some nonzero constant $\lambda$. %Picking a $\mu$ such that $\mu^2 = \lambda$, the second equation is equivalent to 
+%\[(\mu^{-1}y_0)^2 - y_1^2f(x_0,\dots,x_n) = 0, \]
+%which is isomorphic to the first equation after a coordinate change.
+These two equations differ only by a change of coordinates.
+\end{proof}
+
+In particular, smoothness of a double cover is determined by the branch locus, by the following well-known result.
+\begin{proposition}
+  \label{prop:SmoothnessByBranchDivisor}
+  A double cover $X$ is smooth if and only if its branch divisor is smooth.
+\end{proposition}
+
+%\begin{proof}
+%This follows from a straightforward computation. Let the double cover $X$ be defined by 
+%\[F(x_0,\dots,x_n,y_0,y_1) = y_0^2 - y_1^2f(x_0,\dots,x_n) = 0. \]
+%We see that $X$ is contained in the open subset where $y_1 \neq 0$. Furthermore, the partial derivative with respect to $y_0$ is $2y_0$, so any singular point must satisfy $y_0 = 0$, hence necessarily $f(x_0,\dots,x_n) = 0$. Since additionally, $\frac{\partial F}{\partial x_i} = \frac{\partial f}{\partial x_i}$, any singular point of $X$ would give rise to a singular point of the hypersurface defined by $f(x_0,\dots,x_n) = 0$, which is the branch divisor, and vice versa.
+%\end{proof}
+
+We define a line in a double cover as follows:
+\begin{definition}
+  \label{def:LineOnDoubleCover}
+  Let $X$ be a smooth double cover of $\P^n$. A \emph{line} on $X$ is a curve $l$ such that the intersection product $l \insec p^*H = 1$
+\end{definition}
+
+\begin{proposition}
+  If $l \subset X \subset P$ is a line, then $l$ is defined in $P$ as the vanishing locus of a section of the bundle
+\[ \sO_P(1) \oplus p^*(\sO_{\P^n}(1))^{\oplus n-1}.\]
+\end{proposition}
+\begin{proof}
+By the push-pull formula, the image of a line $l$ on $X$ by the map $p \from X \to \P^n$ must be a line $l'$ in $\P^n$ (in the usual sense). If $s' \in H^0(\P^n,\sO_{\P^n}(1)^{\oplus n-1})$ is the section that vanishes along $l'$, then $p^*s \in H^0(P,p^*(\sO_{\P^n}(1))^{\oplus n-1})$  defines the Hirzebruch surface $Z \coloneqq p^{-1}(l')$, which contains $l$.  Furthermore, the restriction $p_l \from l \to l'$ must be an isomorphism. So $l$ must be a curve in Hirzebruch surface $Z$ defined by a section of $\sO_Z(1)$, which extends to a section of $\sO_P(1)$.
+\end{proof}
+In light of this, we define a \emph{line} on $P$ to be the vanishing locus of any section of the bundle $\sO_P(1) \oplus p^*(\sO_{\P^n}(1))^{\oplus n-1}$. Let $\Gr(2,n+1)$ be the Grassmannian of lines in $\P^n$, with tautological rank $2$ quotient bundle $\mathcal{Q}$ and universal line $U \coloneqq \P(\mathcal{Q}^\vee)$ with maps $\rho \from U \to \P^n$ and $q \from U \to \Gr(2,n+1)$. Then lines on $P$ are parametrized by the following space:
+\begin{proposition}
+The space of lines on $P$ is isomorphic to 
+\[ G \coloneqq \P(\sO_{\Gr(2,n+1)} \oplus \Sym^d \mathcal{Q}^\vee),\]
+where $\mathcal{Q}^\vee$ is the dual of the tautological quotient bundle. The dimension of $G$ is $2n+d-1$.
+\end{proposition}
+\begin{proof}
+Define $U' \coloneqq U \times_{\P^n} P$ with projections $u \from U' \to U$ and $\rho' \from U' \to P$, and write $t$ for the composed map $t = q \circ u \from U' \to \P^n$. A fiber of the map $\gamma \from G \to \Gr(2,n+1)$ is the restriction of the linear system $\abs{\sO_P(1)}$ to the Hirzebruch surface $Z_l = p^{-1}(l)$. The fiber is therefore $\P((\restr{t}{{Z_l}})_*(\sO_P(1))) = \P(\restr{t_* \rho'^* \sO_P(1)}{l})$. So $G$ is isomorphic to:
+\begin{equation}
+\label{eq:GBundle}
+\begin{split}
+\P((q_* u_* \rho'^* \sO_P(1))) &= \P((q_* \rho^* (f_P)_* \sO_P(1)))
+\\ &= \P(q_*(\sO_U \oplus \sO_{U/\Gr(2,n+1)}(d))) \\ &= \P(\sO_G \oplus \Sym^d(\mathcal{Q}^\vee)))
+\end{split}
+\end{equation}
+To compute the dimension of $G$, observe that it is the projectivization of a rank $d+2$ bundle on $\Gr(2,n+1)$, which has dimension $2n-2$.
+\end{proof}
+The construction and proof appears for $n=3$ and $d=2$ in \cite{TihFanoSurface}. When $l$ is a line in $P$, we will use $l$ interchangeably for the curve in $P$ and the corresponding point $G$. With our definitions, there are reducible lines in $P$. However, the projection of the reducible lines to $\P^n$ is not finite, so these lines cannot be contained in a double cover $X$. They will therefore not play a significant role, and except for a brief appearance in the proof of \cref{lem:IConnected}, they can safely be ignored.
+
+
+\begin{definition}
+  Let $X \subset P$ be a double cover. The Fano scheme of lines on $X$, written $F(X)$, is the subvariety 
+\[F(X) \coloneqq \set{l \in G \vert l \subset X}.\]
+\end{definition}
+
+\begin{remark}
+	\label{rem:FanoSchemeBundle}
+	While it will not play any role in the following, the Fano scheme $F(X)$ of a double cover $X$ is defined by the section of the bundle $\sO_G(2) \otimes \gamma^* \Sym^{2d} \mathcal{Q}$ induced by $X$, where $\gamma \from G \to \Gr(2,n+1)$ is the structure map of the projective bundle $G$.  The case $n=3$, $d=2$ is proven in \cite{TihFanoSurface}, and the proof generalizes to all $n$ and $d$.
+\end{remark}
+
+\section{Properties of $F(X)$}
+%Section goals
+% Normal bundle sequence
+% Smoothness condition
+% Determinantal varieties result
+% Incidence correspondences
+% Proof of main theorem via smoothness of morphisms
+\subsection{Dimension}
+
+
+The following observation will be used frequently:
+\begin{observation}
+  \label{lem:ContainingLineForm}
+  Let $l$ be the line defined by
+  \begin{equation}
+    \label{eq:LineEquations}
+    y_0 - y_1g(x_0,\dots,x_n) = x_2 = \cdots = x_n = 0,
+  \end{equation}
+where $g$ has degree $d$. Let $X$ be a double cover of degree $d$ containing $l$. Then $X$ is defined in $P$ by the vanishing of a section of $\sO_P(2)$ of the form in \eqref{eq:DoubleCoverDefinition} that is contained in the ideal defining the line $l$. Hence the section defining $X$ must be of the form
+\begin{equation}
+  \label{eq:XContainingLineForm}
+  y_0^2 - y_1^2\left(g(x_0,\dots,x_n)^2 + \sum_{i=2}^nx_if_i(x_0,\dots,x_n)\right),
+\end{equation}
+where $x_i$ are the coordinates of $\P^n$, $y_i$ are the coordinates in the fibers of the projective bundle $P$, and $f_i$ are homogenous polynomials of degree $2d-1$.
+\end{observation}
+
+To study $F(X)$ locally around a line $l$, we will use the following:
+\begin{proposition}
+  \label{prop:FanoSchemeTangent}
+  Let $X$ be a double cover and $l$ a line contained in the smooth locus of $X$. The tangent space to $F(X)$ at $[l]$ is isomorphic to $H^0(\sN_{l/X},l)$.
+\end{proposition}
+\begin{proof}
+  This follows from standard facts in deformation theory, see \eg \cite[Theorem 4.3.5]{SernesiDeformation}.
+\end{proof}
+
+\begin{lemma}
+  \label{lem:SingularConditionLineForm}
+  Let $l$ and $X$ be as in \eqref{eq:LineEquations} and \eqref{eq:XContainingLineForm}, respectively. Then $X$ is singular at $\alpha \in l$ if and only if $g$ and $f_i$ are such that $g(\alpha)=f_2(\alpha)=\cdots = f_n(\alpha) = 0$. \end{lemma}
+\begin{proof}
+First assume that $g(\alpha)=f_2(\alpha)=\cdots = f_n(\alpha) = 0$. By \cref{prop:SmoothnessByBranchDivisor} it suffices to prove that the branch divisor, which is defined by
+\[G(x_0,\dots,x_n) = g(x_0,\dots,x_n)^2 + \sum_{i=2}^nx_if_i(x_0,\dots,x_n)=0 \]
+is singular at the point $\alpha' = p(\alpha) \in l' = p(l) \subset \P^n$. The partial derivatives of $G$, restricted to $l'$, are 
+\begin{align*}
+  \frac{\partial G}{\partial x_0} &= 2g\frac{\partial g}{\partial x_0}\\
+  \frac{\partial G}{\partial x_1} &= 2g\frac{\partial g}{\partial x_1}\\
+  \frac{\partial G}{\partial x_i} &= 2g\frac{\partial g}{\partial x_i} + f_i
+\end{align*}
+for $i=2,\dots,n$. So if $g(\alpha')=f_2(\alpha')=\cdots = f_n(\alpha') = 0$, then all partial derivatives of $G$ vanish, and the branch divisor is singular at $\alpha'$. Thus $X$ is singular at $\alpha$.
+
+Now assume that $X$ is singular at a point $\alpha$, and let $\alpha' = p(\alpha) \subset \P^n$, so the branch divisor is singular at $\alpha' \in l'$. Hence all the partial derivatives of $G$ vanish at $\alpha'$. Since $\alpha$ is a singular point of $X$, the $y_0$-coordinate of $\alpha$ must be 0. By the first equation in \eqref{eq:LineEquations}, this implies that $g(x_0,\dots,x_n)$ must be 0. From the computations of partial derivatives above, we see that if $g(x_0,\dots,x_n) = 0$ and all partial derivatives of $G$ vanish at $\alpha$, then $f_i$ must vanish at $\alpha$ for all $i = 2,\dots,n$.
+%  If $g(\alpha') = 0$, then from the computations of the partial derivatives of $F$, we see that also $f_i(\alpha') = 0$. Assume for contradiction that $g(\alpha') \neq 0$, then for all partial derivatives of $F$ to vanish, we must have 
+% \[\frac{\partial g}{\partial x_0} = 0 \]
+% \[\frac{\partial g}{\partial x_1} = 0 \]
+% and
+% \[\frac{\partial g}{\partial x_i}(\alpha') = - \frac{f_i(\alpha')}{g(\alpha')}. \]
+% Therefore, by Euler's Homogeneous Function Theorem,
+% \[2dg(\alpha') = - \sum_{i=2}^n \alpha'_i \frac{f_i(\alpha')}{g(\alpha')}, \]
+% where $\alpha'_i$ are coordinates of $\alpha'$. Since $\alpha' \in l$, and $l$ is of the form \eqref{eq:LineEquation}, $\alpha'_i = 0$ for all $i$, and $g(\alpha')$ must in fact be zero, giving a contradiction. \todo{Think about this proof once more also}
+\end{proof}
+ 
+We can compute the normal bundle of $l$ in $X$ using the following exact sequence:
+\begin{proposition}
+  \label{prop:NormalBundleSeq}
+Let $l \subset X$ be a line in a double cover, and assume $l$ lies in the smooth locus of $X$, then the normal bundle $\sN_{l/X}$ fits in an exact sequence
+\begin{equation}
+\label{eq:NormalBundleSeq1}
+0 \to  \sN_{l/X} \to  \restr{(\sO_P(1) \oplus p^*(\sO_{\P^n}(1)^{\otimes n-1}))}{l} \to \restr{\sO_P(2)}{l}  \to 0.
+\end{equation}
+which is isomorphic to
+\begin{equation}
+\label{eq:NormalBundleSeq2}
+0 \to  \sN_{l/X} \to  \sO_l(d) \oplus \sO_l(1)^{\oplus n-1} \xrightarrow{\eta} \sO_l(2d)  \to 0.
+\end{equation}
+
+When $X$ is on the form \eqref{eq:XContainingLineForm}, $\eta$ in \eqref{eq:NormalBundleSeq2} is given by multiplication with $(2g,f_2,\dots,f_n)$.
+\end{proposition}
+
+\begin{proof}
+Both $X$ and $l$ are defined by the vanishing of sections of the vector bundles $\sO_P(2)$ and $\sO_P(1) \oplus  p^*(\sO_{\P^n}(1))^{\oplus n-1}$, respectively. So their respective normal bundles are $\restr{\sO_P(2)}{X}$ and $\restr{(\sO_P(1) \oplus  p^*(\sO_{\P^n}(1))^{\oplus n-1})}{l}$.
+
+Inserting this into the exact sequence
+\[0 \to  \restr{\sN_{l/X}}{l} \to \restr{\sN_{l/P}}{l} \to  \restr{\sN_{X/P}}{l} \to 0 \]
+gives \eqref{eq:NormalBundleSeq1}. To get \eqref{eq:NormalBundleSeq2}, combine this sequence with the fact that $\restr{\sO_P(1)}{l} = \sO_l(d)$ and $\restr{p^*(\sO_{\P^n}(1))}{l} = \sO_l(1)$.
+
+To describe $\eta$ explicitly, we consider the dual sequence of conormal bundles, considered as sheaves on $l$. Let $\mathcal{I}$ be the ideal defining $X$ and $\mathcal{J}$ the ideal defining $l$, where $l$ is defined as in \eqref{eq:LineEquations}. Then the map $\mathcal{I}/\mathcal{I}^2 \to \mathcal{J}/\mathcal{J}^2$ is the map taking the generator 
+\[y_0^2 - y_1^2\left(g(x_0,\dots,x_n)^2 + \sum_{i=2}^nx_if_i(x_0,\dots,x_n)\right) \]
+to
+\[ \left( (y_0 + y_1g(x_0,\dots,x_n), f_2, \dots, f_n \right).\]
+The projection $p$ restricts to an isomorphism on $l$, and using this isomorphism we let $l$ have coordinates $x_0$ and $x_1$. We see from the equations defining $l$ that in these coordinates, $y_0 + y_1g(x_0,\dots,x_n)$ becomes $2g(x_0,\dots,x_n)$, and the $f_i$ are preserved. Taking the dual, we see that $\eta$ must be of the desired form.
+\end{proof}
+
+
+Our main tool to study $F(X)$ will be incidence correspondences. For fixed dimension $n$ and degree $d$, let $\mathscr{X}$ be the parameter space of double covers of dimension $n$ and degree $d$, which we think of as the subset of $\P(H^0(\sO_P(2)))$, of sections of the form \cref{eq:DoubleCoverDefinition}. This is isomorphic to the affine scheme of nonzero polynomials on $\P^n$ of degree $2d$.  Define $\mathscr{X}^\circ \subset \mathscr{X}$ as the open subset of smooth double covers. Consider the incidence correspondences
+\begin{equation}
+  \label{eq:IDefinition}
+  I \coloneqq \set{(l,X) \in G \times \mathscr{X} \vert l \subset X},
+\end{equation}
+\begin{equation}
+  \label{eq:ICircDefinition}
+  I^\circ \coloneqq I \cap (G \times \mathscr{X}^\circ),
+\end{equation}
+equipped with the two projections $p_G \from I \to G$ and $p_{\mathscr{X}}\from I \to \mathscr{X}$.
+
+\begin{observation}
+The fiber $p_{\mathscr{X}}^{-1}(X)$ is isomorphic to the Fano scheme of lines on $X$, and the fiber $p_{G}^{-1}(l)$ are the double covers containing the line $l$.
+\end{observation}
+
+\begin{lemma}
+  \label{lem:FiberCodimension}
+  Each fiber of the projection $p_G$ has codimension $2d+1$, so $I$ has codimension $2d+1$ in $G \times \mathscr{X}$.
+\end{lemma}
+\begin{proof}
+  Let a line $l \subset P$ be defined by
+\[y_0 - y_1g(x_0,\dots,x_n) = x_2 = \cdots = x_n = 0,\]
+and let $l'$ be its image in $\P^n$. Then from \cref{eq:XContainingLineForm} we see that a double cover $X$ defined by the vanishing of
+\[y_0^2 - y_1^2f(x_0,\dots,x_n) \]
+contains $l$ if and only if $f(x_0,\dots,x_n)$ is equal to $g(x_0,\dots,x_n)^2$ when both are restricted to $l'$. The restricted polynomials have $2d+1$ coefficients, which all must be equal. Hence this is a codimension $2d+1$ condition in the space of smooth double covers.
+\end{proof}
+% \begin{remark}
+%   This is unsurprising, since the intersection number of a double cover in $P$ with a line in $P$ is $2d$. So of $X$ meets $l$ at $2d+1$ points, then $X$ contains $l$, and $X$ containing a fixed point is a codimension 1 condition.
+% \end{remark}
+
+Since the space of lines $G$ has dimension $2n+d-1$, this lemma leads us to define the \emph{expected dimension} of $F(X)$ to be $2n-d-2$, whenever this number is nonnegative.
+
+\begin{proposition}
+\label{prop:LocalSmoothConditionDoubleCover}
+  With $X$ and $l$ as in \cref{prop:NormalBundleSeq}, $F(X)$ is smooth of expected dimension at $l$, or equivalently $p_{\mathscr{X}}$ is smooth at $(l,X)$, if and only if $\eta$ is surjective on global sections. Equivalently, but more explicitly, $p_{\mathscr{X}}$ is smooth at $(l,X)$ if and only if
+\[ H^0(l,\sO_l(d))g + \sum_{i=2}^nH^0(l,\sO_l(1))f_i = H^0(l,\sO_l(2d)),\]
+where we use the notation of \cref{prop:NormalBundleSeq}.
+\end{proposition}
+\begin{proof}
+The relative dimension of $p_{\mathscr{X}}$ is $2n-d-2$ by \cref{lem:FiberCodimension}. So by \cref{prop:FanoSchemeTangent}, $p_{\mathscr{X}}$ is smooth at $(l,X)$ if and only if $H^0(\sN_{l/X}) = 2n-d-2$. We see that $H^0(\sO_l(d) \oplus \sO_l(1)^{n-1}) = 2n+d-1$ and $H^0(\sO_l(2d)) = d+1$. So from the exact sequence \eqref{eq:NormalBundleSeq2} we see that $H^0(\sN_{l/X}) = 2n-d-2$ if and only if $\eta$ is surjective.
+\end{proof}
+
+\begin{proposition}
+\label{prop:FanoVarietyExpectedDimension}
+Let $X$ be a general double cover of dimension $n$ and degree $d$.
+\begin{enumerate}
+	\item If $d > 2n-2$, then $F(X)$ is empty.
+	\item If $d \leq 2n-2$, then $F(X)$ has dimension $ \geq 2n-2-d$, with equality when $X$ is general.
+\end{enumerate}
+  
+\end{proposition}
+\begin{proof}
+To prove the first statement, observe that for such a choice of $d$ and $n$ $\dim I < \dim \mathscr{X}$, by \cref{lem:FiberCodimension}.
+
+  To prove the second statement it suffices to find a single point $(l,X) \subset I$ such that $p_{\mathscr{X}}$ is smooth at this point. Equivalently, we can find a choice of $l$ and $X$ such that the map $\eta$ from \eqref{eq:NormalBundleSeq2} is surjective. Let $l$ be defined by $y_0 - y_1x_0^d = x_2 = \cdots = x_n = 0$ and $X$ be defined by 
+\[ y_0^2 - y_1^2(x_0^{2d} + x_2x_0^{d-2}x_1^{d+1} + x_3x_0^{d-4}x_1^{d+3} + \cdots + x_{i}x_1^{2d-1}) = 0 \]
+where $i = \lceil \frac{n}{d} \rceil -1$, then the map $\eta$ in \eqref{eq:NormalBundleSeq2} is surjective, because it acts as matrix multiplication by a matrix $M$, where $M$ contains a square block which has nonzero entries precisely along a single diagonal.
+\end{proof}
+
+Similar to the case for hypersurfaces, for a general point $p$ in a double cover $X$, the dimension of lines passing through $p$ is what we expect.
+\begin{proposition}
+	\label{prop:LinesThroughPoint}
+  Let $X$ be a general double cover of dimension $n$ and degree $d$.
+  \begin{enumerate}
+  \item If $d \leq n-1$ then through a general point $p \in X$ there is an $(n-d-1)$-dimensional family of lines.
+  \item If $d=n$, then the lines in $X$ cover a divisor in $X$, and through a general point in this divisor there passes a finite number of lines.
+  \end{enumerate}
+\end{proposition}
+\begin{proof}
+  $X$ is general, so $F(X)$ has expected dimension $2n-d-2$, and the universal line has dimension $2n-d-1$. Since the dimension of $X$ is $n$, it will suffice to find a single point on $X$, through which there passes a $(n-d-1)$-dimensional family of lines.
+
+Fix a point $p$, which we assume is defined by $y_0=x_1=\cdots=x_n=0$, and the line defined by ${y_0-g = x_2 = \cdots = x_n = 0}$, where $g_i \in H^0(p^*\sO_{\P^n}(d-1))(-p)$ \ie $g_i$ vanishes at the point $p$. A general double cover containing this $l$ is defined by a polynomial of the form $y_0^2 - y_1(g^2 + \sum_{i=2}^nx_if_i)$ for $f_i \in H^0(p^*\sO_{\P^n}(2d-1))$. There is an exact sequence similar to \eqref{eq:NormalBundleSeq2}, which lets us compute the dimension of the family of lines through $p$. Precisely, infinitesimal deformations of lines in $X$ passing through $p$ are parametrized by the kernel of the map
+\[
+H^0\left(l,\sO_l(d)(-p)) \oplus \sO_l(1)(-p)^{\oplus n-1} \right) \xrightarrow{\eta_p} H^0\left(l,\sO_l(2d)(-p)\right),
+\]
+which is equivalent to 
+\begin{equation}
+\label{eq:NormalBundleThroughPoint}
+H^0\left(l,\sO_l(d-1) \oplus \sO_l^{\oplus n-1}\right) \xrightarrow{\eta_p} H^0\left(l,\sO_l(2d-1)\right).
+\end{equation}
+The map $\eta_p$ is given by multiplication with $(2g,f_1,\dots,f_n)$. A similar construction as the one in the proof of \cref{prop:FanoVarietyExpectedDimension} lets us find a choice of $X$ such that $\eta_p$ is surjective, and we see that the deformations are unobstructed. Computing the ranks of the two vector spaces shows that the kernel must then have dimension $n-d-1$, and we are done.
+\end{proof}
+\begin{remark}
+  \label{rem:LinesThroughPointAllDoubleCovers}
+  Since specializing the double cover $Y$ can only increase the dimension of the space of lines, any double cover $Y$ with $d \leq n-1$ is covered by lines.
+\end{remark}
+
+\subsection{Smoothness}
+We now turn to studying smoothness of $F(X)$. For this we introduce further incidence correspondences
+\begin{equation}
+  \label{eq:JDefinition}
+  J = \set{(l,X) \subset I \vert p_{\mathscr{X}} \text{ is not smooth at } (l,X)}
+\end{equation}
+and
+\begin{equation}
+\label{eq:JCircDefinition}
+J^\circ = J \cap I^\circ,
+\end{equation}
+where $I^\circ$ is as in \eqref{eq:ICircDefinition}.
+
+To prove that $F(X)$ is smooth for a general double cover $X$, we will prove the following lemma on the dimension of $J^\circ$.
+\begin{lemma}
+  \label{lem:JCircCodimension}
+  $J^\circ$ has codimension $2n-d-1$ in $I^\circ$.
+\end{lemma}
+Importantly, the codimension of $J^\circ$ is greater than the expected dimension of $F(X)$. Before we prove this lemma, we will prove some preliminary results, building on the following result about determinantal varieties.
+\begin{proposition}{{See \cite[Proposition 9.7]{Harris95}}}
+  \label{prop:DeterminantalSecantVariety}
+  For any $k \leq \alpha$ $k \leq d - \alpha$ the rank $k$ determinantal variety associated to the matrix
+\[
+  \begin{pmatrix}
+    Z_0 & Z_1 & \cdots & Z_{d-\alpha} \\
+    Z_1 & Z_2 & \cdots & Z_{d-\alpha+1}\\
+    \vdots & \vdots & \ddots & \vdots \\
+    Z_\alpha & Z_{\alpha + 1} & \cdots & Z_{d}
+  \end{pmatrix}
+\]
+is the $k$-secant variety $S_{k-1}(C)$ of the rational normal curve of degree $d$ in $C \subset \P^d$.
+\end{proposition}
+ Recall that the $k$-secant variety of a curve $C \subset \P^n$ is the closure of the union of all $k$-dimensional linear spaces spanned by $k$ points on $C$.
+
+We write $m_{d_1}$ for the multiplication map
+\[m_{d_1} \from H^0(\sO_{\P^1}(d_1)) \times H^0(\sO_{\P^1}(d_2)) \to H^0(\sO_{\P^1}(d_1+d_2)),\]
+and define
+\[m_{d_1}^{-1}(V) = \set{f \in H^0(\sO_{\P^1}(d_2)) \vert m_{d_1}(H^0(\sO_{\P^1}(d_1)) \times \set{f}) \subset V }\]
+for a subset $V \subset H^0(\sO_{\P^1}(d_1+d_2))$.
+
+\begin{definition}
+	We now fix the notation $S_k$ for the $k$-secant variety of the rational normal curve of degree $d_1+d_2$ in 
+\[ \P(H^0(\sO_{\P^1}(d_1+d_2))^\vee),\]
+the dual space to 
+\[ \P(H^0(\sO_{\P^1}(d_1+d_2)))\]
+and define $S_k^\circ \coloneqq S_k \setminus S_{k-1}$ for $k \geq 1$. We also let $S_0$ denote the rational normal curve itself, and for consistency define $S_0^\circ = S_0$. 
+\end{definition}
+
+The dimension of $S_k$ is also known.
+\begin{proposition}[{See \cite[Proposition 11.32]{Harris95}}]
+  The dimension of $S_k$ is $\min(2k+1,d_1+d_2)$.
+\end{proposition}
+%
+%\begin{proof}
+%  Since $S_k \subset \P(H^0(\sO_{\P^1}(d_1+d_2))^\vee)$, which has dimension $d_1 + d_2$, it will suffice to prove that $\dim S_k \leq 2k+1$, whenever $2k+1 < d_1 + d_2$. In this case, $S_k$ is parametrized by a choice of $k+1$ points on $S$, together with a point on the $k$-plane spanned by these points. Hence $S_k$ is dominated by a variety of dimension $2k+1$.
+%\end{proof}
+
+\begin{lemma}
+  \label{lem:MultiplicationMapCodimension}
+For a hyperplane $V \in \P(H^0(\sO_{\P^1}(d_1+d_2))^\vee)$ assume that $V \in S_{k'}^\circ$. 
+  Then $m_{d_1}^{-1}(V)$ has codimension $\min(k'+1,d_1+1)$ in $H^0(\sO_{\P^1}(d_2))$.
+\end{lemma}
+
+\begin{proof}
+Let polynomials in $H^0(l,\sO_l(d_1+d_2))$ be written as $\sum_{i=0}^{d_1+d_2}\alpha_ix_0^{d_1+d_2-i}x_1^i$, and let $V$ be defined by $\sum_{i=0}^{d_1+d_2}\beta_ia_i = 0$. Then $m_{d_1}^{-1}(V) \subset H^0(l,\sO_l(d_1+d_2))$ is defined by the $d_1+1$-equations
+\[ \sum_{i=0}^{d_2} \beta_{i+j}b_i = 0 \]
+for $j = 0,\dots,d_1$. These $d_1+1$-equations define a linear subspace of $H^0(l,\sO_l(d_2))$ of codimension equal to the rank of the matrix
+\[
+  \begin{pmatrix}
+    \beta_0 & \beta_1 & \cdots & \beta_{d_2} \\
+    \beta_1 & \beta_2 & \cdots & \beta_{d_2}\\
+    \vdots & \vdots & \ddots & \vdots \\
+    \beta_{d_1} & \beta_{d_1+1} & \cdots & \beta_{d_1+d_2}
+  \end{pmatrix}.
+\]
+We now conclude that the codimension of  $m_{d_1}^{-1}(V)$ is ${\min(k+1,d_1+1)}$ by applying \cref{prop:DeterminantalSecantVariety}.
+\end{proof}
+
+\begin{proof}[Proof of \cref{lem:JCircCodimension}]
+  We fix a line $l$ and look at double covers $X$ containing $l$. Without loss of generality we assume that $l$ and $X$ are of the form in \eqref{eq:LineEquations} and \eqref{eq:XContainingLineForm}. It suffices to prove that for any line $l$, codimension of $p^{-1}_G(l) \cap J^\circ$ in $p^{-1}_G(l) \cap I^\circ$ is at least $2n-d-1$. To compute this codimension, observe that if a double cover $X$ contains $l$ and $F(X)$ is singular at $l$, then 
+  \begin{equation}
+    \label{eq:SingularCondition1}
+        H^0(l,\sO_l(d))g + \sum_{i=2}^nH^0(l,\sO_l(1))f_i \subset V \subsetneq H^0(l,\sO_l(2d))
+  \end{equation}
+for some hyperplane $V \in \P(H^0(l,\sO_l(2d))^\vee)$. Let $\mathscr{X}^\circ_V$ be the smooth double covers containing $l$ and satisfying \eqref{eq:SingularCondition1} for a fixed hyperplane $V \subsetneq H^0(l,\sO_l(2d))$. Then the fiber $p^{-1}_G(l) \cap J^\circ$ is the union 
+\[\bigcup_{V \in H^0(l,\sO_l(2d))^\vee} \mathscr{X}^\circ_V. \]
+
+To apply \cref{lem:MultiplicationMapCodimension}, we think of $\P(H^0(l,\sO_l(2d))^\vee)$ as a union of secant varieties of the rational normal curve of degree $2d$ in $\P(H^0(l,\sO_l(2d))^\vee)$,
+\[ \bigcup_{k=0}^{d} S_k^\circ = \P(H^0(l,\sO_l(2d))^\vee).\]
+The union only goes up to $d$, since $S_d = \P(H^0(l,\sO_l(2d))^\vee)$.
+
+For each $S_k^\circ$ we will prove that the union
+\begin{equation}
+  \label{eq:UnionSingular}
+  \bigcup_{V \in S_k^\circ} \mathscr{X}_V
+\end{equation}
+have codimension at least $2n-d-1$ in $p^{-1}_G(l) \cap \mathscr{X}^\circ$.
+
+We first consider $V \in S_0$ \ie $V$ lies on the degree $2d$ rational curve in $\P(H^0(l,\sO_l(2d))^\vee)$. Then the condition $\sum_{i=0}^{2d}\beta_ia_i = 0$ can be written as $\sum_{i=0}^{2d}s^{2d-i}t^ia_i = 0$ for some $(s:t) \in l \simeq \P^1$. Therefore, if \eqref{eq:SingularCondition1} holds for some $V \in S_0$, by \cref{lem:SingularConditionLineForm} the double cover $X$ is singular at some point along the line $l$, contradicting our assumption that $X \in \mathscr{X}^\circ$.
+
+We now consider $V \in S_k^\circ$ for $k \geq 1$. Then
+\[\sum_{i=2}^nH^0(l,\sO_l(1))f_i \subset V \]
+is equivalent to $f_i \in m_1^{-1}(V)$, which is a codimension 2 condition on $f_i$, and 
+\[H^0(l,\sO_l(d))g \subset V \]
+is equivalent to $g \in m_d^{-1}(V)$, which is a codimension $k+1$ condition on $g$ by \cref{lem:MultiplicationMapCodimension}. We get that for this choice of $V$, the condition
+\eqref{eq:SingularCondition1} is a codimension $2n-2+k+1$ condition on $X$.
+ $S_k^\circ$ has dimension at most $2k+1$ for $k=1,\dots,d-1$ and $S_d = \P(H^0(l,\sO_l(2d))^\vee)$, hence has dimension $2d$, so $S_d^\circ$ also has dimension $2d$. So the unions in \eqref{eq:UnionSingular} have codimension $\min(2n-2-k,2n-2-d+1)$, where $k = 1,\dots,d-1$. This minimum is $2n-2-d+1$, so $p_{\mathscr{X}}$ being not smooth at $(l,X)$ for a fixed $l$ is a codimension $2n-2-d+1$ condition.
+\end{proof}
+
+\begin{proposition}
+\label{prop:SmoothnessOfFanoVariety}
+  Let $X$ be a general smooth double cover. Then $F(X)$ is smooth of expected dimension.
+\end{proposition}
+\begin{proof}
+  The generic fiber of $p_{\mathcal{X}}$ has dimension $2n-d-2$. So by \cref{lem:JCircCodimension}, the general fiber of $p_{\mathscr{X}}$ cannot meet $J^\circ$, and the proposition follows.
+\end{proof}
+
+\subsection{Connectedness}
+Finally, we study connectedness of $F(X)$ for a double cover. We begin by checking that the incidence correspondence $I$ is connected.
+ \begin{lemma}
+   \label{lem:IConnected}
+ 	The incidence corresponcence $I$ is connected.
+ \end{lemma}
+ \begin{proof}
+   We first check that the subset $G^\circ$ of irreducible lines in $G$ is connected. $G$ is a projective bundle over $\Gr(2,n+1)$. The fiber over a given line ${l_0 \in \Gr(2,n+1)}$ is the 
+projectivization of the space of global sections $\P(H^0(\sO_Z(1))$, where $Z$ is the Hirzebruch surface $p^{-1}(l_0) \subset P$. Recall that $P$ is the ambient space containing $X$ in \cref{def:DoubleCover1}. Reducible such global sections are a hypersurface in $\P(H^0(\sO_Z(1))$, so the irreducible lines in this fiber correspond to the complement of a hypersurface, which is connected. So the map $G^\circ \to \Gr(2,n+1)$ is surjective with connected fibers, and since $\Gr(2,n+1)$ is connected, $G^\circ$ must be as well.
+
+We see that double covers containing a given irreducible line corresponds to the polynomial defining the branch locus restricting to a given polynomial on the corresponding line in $\P^n$. This space is connected. So the projection $p_G \from I \to G^\circ$ also has connected fibers and connected image. The conclusion follows.
+ \end{proof}
+
+Next, we introduce yet another incidence correspondence.
+ \begin{lemma}
+ 	\label{cor:WCodimension}
+ Let $W$ be the incidence correspondence
+ \[ W \coloneqq \set{(l,X) \subset I \vert X \text{ is singular at some point of } l}. \]
+ Then $W$ has codimension at least $n-1$ in $I$.
+ \end{lemma}
+ \begin{proof}
+   For any fixed point $x \in l$, we see from \cref{lem:SingularConditionLineForm} that $X$ being singular at $l$ is a codimension $n$ condition. So being singular at some point in $l$ is a codimension $n-1$ condition. 
+ \end{proof}
+
+We can prove connectedness of Fano schemes on double covers of sufficiently low degree and dimension at least 3. The proof is analogous to \cite[Theorem V.4.3.3]{KollarRationalCurves}.
+ \begin{proposition}
+   \label{prop:FConnected}
+ 	Let $X$ be a double cover of degree $d$ and dimension $n$, and assume that $2n-d \geq 3$ and $n \geq 3$. Then $F(X)$ is connected.
+ \end{proposition}
+ \begin{proof}
+ 	The map $p_{\mathscr{X}} \from I \to \mathscr{X}$ is proper. Let $I \xrightarrow{\beta} \mathscr{X}' \xrightarrow{\gamma} \mathscr{X}$ be the Stein factorization of this map, so the fibers of $\beta$ are connected, and $\gamma$ is finite. If $F(X)$ is disconnected for some $X$, then $F(X)$ is disconnected for a general $X$. Since $I$ is connected, $\mathscr{X}'$ must also be connected, so $\gamma$ is either bijective or ramified along some divisor $D \subset \mathscr{X}'$. But along any point in $I$ mapping to $D$, $p_{\mathscr{X}}$ will not be smooth. \cref{lem:JCircCodimension} proves that with our assumptions on $n$ and $d$ for smooth $X$, $p_{\mathscr{X}}$ is smooth outside a codimension 2 subset. Furthermore, \cref{cor:WCodimension} proves that the locus where $X$ is nonsmooth also has codimension at least 2. 
+\end{proof}
+
+\printbibliography[heading = subbibliography]
+\stopcontents[chapters]

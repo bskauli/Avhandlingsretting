@@ -1,0 +1,752 @@
+
+\title{The Very General (3,3)-Complete Intersection Fivefold has no Decomposition of the Diagonal}
+\author{Bjørn Skauli}
+\date{}
+	\maketitle
+\label{pap:33diagonal}
+        \begin{abstract}
+          We use the obstruction developed by Pavic and Schreieder in \cite{PavicSchreieder} to prove that the very general complex $(3,3)$-complete intersection fivefold \ie the intersection of two very general cubic hypersurfaces in $\P^7$, does not admit a decomposition of the diagonal. We apply the obstruction from \cite{PavicSchreieder} by specializing one of the cubics to a union of a quadric and a hyperplane. We choose the specialization such that the components meet along a $(2,3)$-complete intersection in $\P^6$ known to not admit a decomposition of the diagonal.
+        \end{abstract}
+
+
+\section{Introduction}
+Hypersurfaces, and more generally complete intersections in projective space, are central examples in algebraic geometry. From the perspective of birational geometry, a widely studied question is the following: For what degrees $d_i$ is a (very) general complete intersection of hypersurfaces in $\P^n$ of degrees $d_i$ not rational, or not stably/retract rational?
+
+Recall that $X$ is \emph{retract rational} if the identity map on $X$ factors rationally through a projective space, $X \ratmap \P^N \ratmap X$. The standard technique for proving that the very general complete intersection $X$ of a given degree is not retract rational, is to prove that $X$ does not admit a \emph{decomposition of the diagonal}. This is an equality
+\[\Delta_X = z \times X + W \in \CH(X \times X). \]
+Here $W$ is supported on $X \times D$, with $D$ a proper closed subscheme of $X$.
+
+In \cite{VoisinUniversalCycle}, Voisin introduced a specialization technique to prove that the very general member $X$ of some class of varieties does not admit a decomposition of the diagonal. The idea is to specialize $X$ to a specific example, which is known  by some other means not to admit a decomposition of the diagonal. This was further developed, and applied to hypersurfaces, by Colliot-Thélène and Pirutka in \cite{ColliotThelenePirutka} and by Schreieder in \cite{SchreiederHypersurface}. It was also successfully applied to complete intersections by Chatzistamatiou and Levine in \cite{ChatzistamatiouLevine}.
+
+On the other hand, recall that a variety $X$ is \emph{stably rational} if $X \times \P^m$ is rational for some $m$. It is easy to see that a stably rational variety is retract rational. Using a specialization technique based on the motivic volume, many new examples of stably irrational complex varieties were found by Nicaise and Ottem in the paper \cite{NicaiseOttem}. In dimension four, Nicaise and Ottem find that a very general complex complete intersection of degree $(2,3)$ is not stably rational. In dimension five, stable irrationality of the complete intersection fivefolds of degrees $(4), (3,3), (2,2,3)$ and $(2,2,2,2)$ is established in \cite{NicaiseOttem}. Here, and in the rest of the paper, we use the notation that a $(d_1,\dots,d_k)$-complete intersection, or equivalently a complete intersection of degree $(d_1,\dots,d_k)$ is the intersection of $k$ hypersurfaces of degrees $d_1,\dots,d_k$.
+
+Much of the power of the specialization technique in \cite{NicaiseOttem} comes from the possibility of specializing a complete intersection to a union of several components. The strongest results typically arise by specializing such that some of the components intersect in a lower dimensional variety, and this intersection is known by some other method not to be stably rational. This is how stable irrationality of the four new complete intersection fivefolds was proven.
+
+A priori, the techniques in \cite{NicaiseOttem} only prove stable irrationality and give no information on neither retract rationality, nor the existence of a decomposition of the diagonal. So these examples are stably irrational, but possibly retract rational or admitting a decomposition of the diagonal. It is therefore interesting to investigate whether these complete intersections admit decompositions of the diagonal. The $(2,3)$ complete intersection fourfold was studied in \cref{pap:23diagonal} and found not to admit a decomposition of the diagonal.
+
+Motivated by the question of whether the very general quartic fivefold is an example of a retract rational, but stably irrational variety, Pavic and Schreieder introduce a new obstruction to the existence of a decomposition of the diagonal in \cite{PavicSchreieder}. This new obstruction is applicable when specializing to a union of components meeting along a variety, which does not admit a decomposition of the diagonal. Using this new obstruction, Pavic and Schreieder successfully prove that the quartic fivefold does not admit a decomposition of the diagonal by specializing to a union of two double covers. The two components are chosen such that their intersection is birational to the remarkable example of Hassett, Pirutka and Tschinkel in \cite{HPTActa}, which is known not to admit a decomposition of the diagonal.
+
+The goal of this paper is to apply the same obstruction as in \cite{PavicSchreieder} to another fivefold whose stable irrationality was established in \cite{NicaiseOttem}, namely the intersection of two cubics in $\P^7$. The main theorem is
+\begin{theorem}[{= \cref{cor:33NotRetractRational}}]
+  \label{thm:33NotRetractIntroduction}  
+  Let $k$ be an uncountable algebraically closed field of characteristic $0$. Then the very general complete intersection of two cubic hypersurfaces in $\P^7_k$ does not admit a decomposition of the diagonal, and is therefore not retract rational.
+\end{theorem}
+In fact, this also holds over algebraically closed fields of characteristic strictly greater than $3$. All proofs, except for the one of \cref{prop:DiagonalNotInBaseChangeImage}, go through without modification over these fields as well. The statement of \cref{prop:DiagonalNotInBaseChangeImage} also holds over fields of characteristic strictly greater than $2$, but since one cannot use resolution of singularities over fields of positive characteristic, one must use so-called alterations instead. How to do so is explained after the proof of \cref{prop:DiagonalNotInBaseChangeImage}, but this it quite technical. To avoid these technicalities, we stick to field of characteristic 0. Aside from \cref{prop:DiagonalNotInBaseChangeImage}, there is also only one point where it is needed that the characteristic is different from $3$, which is the claim in \cref{lem:K'UniversallyTrivial}. 
+
+The specialization we use is the same one as in \cite[Theorem 7.2]{NicaiseOttem}, where stable irrationality of this fivefold is established. We specialize one of the cubic hypersurfaces to a union of a hyperplane and a quadric. Then the intersection of the two components is a complete intersection of degree $(2,3)$ in $\P^6$. A decomposition of the diagonal on the intersection is therefore obstructed by the result in \cref{pap:23diagonal}. The main challenge in establishing \cref{thm:33NotRetractIntroduction} is the technical work necessary to a apply the obstruction from \cite{PavicSchreieder}. We follow the argument in \cite{PavicSchreieder} very closely when we apply this obstruction. But many of the calculations are slightly more complicated since we work with a variety defined by two polynomials.
+
+\subsection{Definitions and Conventions}
+Before we begin, we collect some necessary definitions and conventions.
+
+We will work with varieties embedded in projective spaces, and we will often need a notation to keep track of the coordinates on a given projective space. To indicate that a given projective space $\P^n$ has coordinates $x_0,\dots,x_n$, for instance when $\P^n$ lies as a linear space inside a bigger projective space, we will use the notation $\P^n_{[x_0:\dots:x_n]}$.
+
+There are some technical aspects to the obstruction developed by Pavic and Schreieder. In particular we will need the following two definitions.
+\begin{definition}
+	Let $R$ be a discrete valuation ring with residue field $k$ and fraction field $K$. A proper flat $R$-scheme $\mathcal{X} \to \Spec R$ is called \emph{strictly semi-stable} if the special fiber $\mathcal{X} \times_R k$ is a geometrically reduced, simple normal crossing divisor on $\mathcal{X}$.
+\end{definition}
+
+\begin{definition}
+	We say that a union of Cartier divisors $\bigcup_{i=1}^N D_i$ is a \emph{chain of Cartier divisors} if $D_i \cap D_j = \emptyset$ if $\abs{i-j} \geq 2$ and $D_{i-1} \cap D_i$ is disjoint from $D_i \cap D_{i+1}$ for all $1 < i < N$.
+\end{definition}
+
+Additionally, it will turn out to be easier to work with the concept of universal $\CH_0$-triviality, rather than the equivalent viewpoint of decompositions of the diagonal. For this we first need a shorthand notation for the base change of a scheme by a field extension. For a scheme $X$ over a field $k$ and a field extension $K/k$, we will write $X \times_k K$ for the base change of $X$ to $\Spec K$. To reduce clutter in the notation, we will also often simply write $X \times K$. Additionally, if $\mathcal{X} \to \Spec R$ is a scheme over a DVR $R$ with closed point $\Spec k$, we will also occationally write $X_k$ for the base change of $\mathcal{X}$ to $\Spec k$.
+
+\begin{definition}
+	For a scheme $X$ over a field $k$, we say that $\CH_0(X)$ is \emph{universally trivial}, or $X$ is \emph{universally $\CH_0$-trivial}, if the degree map gives an isomorphism $\CH_0(X \times K) \simeq \Z$ for any field extension $K$ of $k$. When $X$ is smooth, proper and geometrically integral, this is equivalent to the existence of a decomposition of the diagonal.
+\end{definition}
+%
+%\begin{definition}
+%	The torsion order of a variety $X$ is the smallest natural number $N$ such that $N\Delta$ admits a decomposition in $\CH_n(X \times X)$. This is a stable birational invariant of smooth varieties. 
+%\end{definition}
+%This is also the order of the cycle $\delta_X - z \times \kappa(X) \in \CH_0(X \times \kappa(X))$, where $\kappa(X)$ is the function field of $X$, $\delta_X$ is the class induced by the diagonal, and $z$ is the class of a point in $X$. We denote the base change of $z$ to $\kappa(X)$ by $z$.
+
+
+\section{Preliminaries}
+%Should also add the following
+%Definition of Decomposition of Diagonal and universally CH_0 trivial
+%Results by C-T and Pirutka that I use later
+%Follow convention that a variety is a reduced and irreducible scheme over a field
+In this section, we recall the obstruction to the existence of a decomposition of the diagonal introduced in \cite{PavicSchreieder}, together with some background results. We also recall the main result of \cref{pap:23diagonal}, which forms the basis of our construction of a target for specialization.
+
+\begin{definition}[{\cite[Definition 3.1]{PavicSchreieder}}]
+  \label{def:BigPhiMap}
+  Let $R$ be a discrete valuation ring, and let $\mathcal{X} \to \Spec R$ be a strictly semi-stable $R$-scheme with special fiber $Y$. Let $Y_i$ with $i \in I$ be the irreducible components of $Y$, and let $\iota \from Y \to \mathcal{X}$ and $\iota_i \from Y_i \to \mathcal{X}$ be the natural embeddings. We define $\Phi_{\mathcal{X},Y_i} \from \CH_1(Y) \to \CH_0(Y_i)$ to be the composition
+\[ \Phi_{\mathcal{X},Y_i} \from \CH_1(Y) \xrightarrow{\iota_*} \CH_1(\mathcal{X}) \xrightarrow{\iota^*} \CH(Y_i), \]
+and we denote by $\Phi_{\mathcal{X}}$ the direct sum
+\[ \Phi_{\mathcal{X}} \coloneqq \sum_{i \in I}  \Phi_{\mathcal{X},Y_i}  \from \CH_1(Y) \to  \bigoplus_{i \in I}\CH_0(Y_i).\]
+\end{definition}
+
+As the following lemma shows, the map $\Phi_{\mathcal{X}}$ depends only on the special fiber $Y$.
+\begin{lemma}[{\cite[Lemma 3.2]{PavicSchreieder}}]
+  \label{lem:BigPhiSpecial}
+  In the notation of \cref{def:BigPhiMap}, let $Y_{ij} \coloneqq Y_i \cap Y_j$, denote by $\iota_{ij} \from Y_{ij} \to Y_j$ and $\iota_i \from Y_i \to Y$ the natural inclusions, and write $\restr{\gamma_i}{Y_{ji}} \coloneqq \iota_{ji}^*\gamma_i$ for $\gamma_i \in \CH_1(Y_i)$.   
+  \begin{enumerate}[i)]
+  \item For any $\gamma_i \in \CH_1(Y_i)$ we have
+\[\Phi_{\mathcal{X},Y_j}((\iota_i)_*\gamma_i) = 
+\begin{cases}
+  (\iota_{ij})_*(\restr{\gamma_i}{Y_{ji}}) \in \CH_0(Y_j) & j \neq i \\
+  -\sum_{k \in I \setminus \set{i}} (\iota_{ki})_*(\restr{\gamma_i}{Y_{ki}}) \in \CH_0(Y_i) & j = i
+\end{cases}
+ \]
+\item Let $\gamma = \sum_{i \in I} (\iota_i)_* \gamma_i \in \CH_1(Y)$. Then
+\[\Phi_{\mathcal{X},Y_i}(\gamma) = \sum_{j \in I \setminus \set{i}} (\iota_{ji})_* \restr{\gamma_j}{Y_{ji}} - \sum_{j \in I \setminus \set{i}} (\iota_{ji})_* \restr{\gamma_i}{Y_{ji}} \in \CH_0(Y_i). \]
+  \end{enumerate}
+\end{lemma}
+
+The map $\Phi_{\mathcal{X}}$ has the following properties:
+\begin{observation}
+  If $ \gamma \in \CH_1(Y)$, then $\deg \Phi_{\mathcal{X}}(\gamma) = \deg \iota^* \iota_* \gamma = 0$. So $\im \Phi_{\mathcal{X}} \subset \ker (\deg \from \CH_0(Y) \to \Z)$
+\end{observation}
+\begin{observation}
+  Whenever $A/R$ is an unramified extension of DVRs, $\mathcal{X}_A \coloneqq \mathcal{X} \times_{R} A$ is a semi-stable $A$-scheme. In particular, if $L$ denotes the residue field of $A$, which will be an extension of the residue field of $R$, then from \cref{def:BigPhiMap} we get a homomorphism
+  \begin{equation}
+    \label{eq:BigPhiMapOverA}
+    \Phi_{\mathcal{X}_A} \from \CH_1(Y \times L) \to \ker\left( \deg \from \bigoplus_{i \in I} \CH_0(Y_{i} \times L) \to \Z \right).
+  \end{equation}
+\end{observation}
+
+
+Pavic and Schreieder prove that if the geometric generic fiber of a specialization admits a decomposition of the diagonal, it has the following consequence. %\todo{Replace with the main theorem of Pavic-Schreieder?}
+%\begin{theorem}[{\cite[Theorem 4.1]{PavicSchreieder}}]
+%  \label{thm:BigPhiSurjective}
+%  Let $R$ be a discrete valuation ring with algebraically closed residue field, and let $\mathcal{X} \to \Spec R$ be a strictly semi-stable projective $R$-scheme whose special fiber $Y = \bigcup_{i \in I} Y_i$ is a chain of Cartier divisors. Assume that the geometric generic fiber of $\mathcal{X} \to \Spec R$ has a decomposition of the diagonal. Then for any unramified extension $A/R$ of discrete valuation rings, with induced extension $L/k$ of residue fields, the natural map
+%  \begin{equation}
+%    \label{eq:BigPhiMapOverAReduced}
+%    \Phi_{\mathcal{X}_A}/2 \from \CH_1(Y \times L)/2 \to \ker(\deg \from \CH_0(Y_{i,L})/2 \to \Z/2)
+%  \end{equation}
+%given by reduction modulo 2 of \eqref{eq:BigPhiMapOverA} is surjective.
+%\end{theorem}
+
+\begin{theorem}[{\cite[Theorem 1.2]{PavicSchreieder}}]
+    \label{thm:BigPhiSurjective}
+	Let $R$ be a discrete valuation ring with algebraically closed residue field, and let $\pi \from \mathcal{X} \to \Spec R$ be a projective stricly semi-stable $R$-scheme.
+	\begin{enumerate}[i)]
+		\item If the generic fiber of $\pi$ admits a decomposition of the diagonal, then for any unramified extension $A/R$ of DVRs, the map $\Phi_{\mathcal{X}_A}$ is surjective.
+		\item If the geometric generic fiber of $\pi$ admits a decomposition of the diagonal and the components of the special fiber form a chain, then for any unramified extension $A/R$ of DVRs, the map $\Phi_{\mathcal{X}_A}$ is surjective modulo $2$.
+	\end{enumerate}
+\end{theorem}
+The first part of the theorem is perhaps a more natural formulation, and the second condition follows from the first. But the second condition makes the technical work easier and is therefore the one we will use. That is, we will work with an $R$-scheme $\mathcal{X}$ where the special fiber is a chain of Cartier divisors $\bigcup_{i \in I} Y_i$ and investigate whether the map 
+\begin{equation}
+	    \label{eq:BigPhiMapOverAReduced}
+	    \Phi_{\mathcal{X}_A}/2 \from \CH_1(Y \times L)/2 \to \ker(\deg \from \bigoplus_{i \in I} \CH_0(Y_{i} \times L)/2 \to \Z/2)
+\end{equation}
+is surjective. By proving that this map is not surjective, we can conclude that the geometric generic fiber of the specialization does not admit a decomposition of the diagonal.
+
+%The following result captures the intuition behind how we will use this obstruction.
+%\begin{theorem}[{\cite[Corollary 1.3]{PavicSchreieder}}]
+%	\label{thm:PSCorollary}
+%	Let $R$ be a DVR with algebraically closed residue field $k$ and let $\pi \from \mathcal{X} \to \Spec R$ be a projective semi-stable $R$-scheme whose special fiber $Y = Y_1 \cup Y_2$ has two components. Assume that
+%	\begin{itemize}
+%		\item $Y$ is universally $\CH_1$-trivial in the sense that for any field extension $L/k$, the natural map $\CH_1(Y) \to \CH_1(Y \times L)$ is surjective;
+%		\item $Y_{12} \coloneqq Y_1 \cap Y_2$ is integral and its torsion order is even.
+%	\end{itemize}
+%	Then the geometric generic fiber of $\pi$ does not admit a decomposition of the diagonal.
+%\end{theorem}
+
+Finally, we need a target for the specializations. This should be a variety known not to admit a decomposition of the diagonal. The target for specialization here is the same variety as was used as the target for the specialization in \cref{pap:23diagonal}. It is based on the remarkable example in \cite{HPTActa}.
+
+\begin{proposition}[{\cref{lem:NoDoD}}]
+	\label{prop:23NoDoD}
+	Let $k$ be an algebraically closed field of characteristic different from $2$, and consider the hypersurfaces in $\P^6_k$ defined by the polynomials
+	\[x_3x_6-x_4x_5 = 0\]
+	and
+	\[x_0^2x_5 + x_1^2x_4 + x_2^2x_6 + x_3\left(x_5^2+x_4^2+x_3^2 -2(x_3x_6 + x_3x_5 + x_3x_4)\right) = 0.\]
+	Let $W$ be the complete intersection of these two hypersurfaces. Then $W$ does not admit a decomposition of the diagonal.
+\end{proposition}
+\begin{remark}
+	\label{rem:ChangesFrom23Result}
+	 In the proof of \cref{lem:NoDoD}, existence of a decomposition of the diagonal is obstructed by an unramified cohomology class of order 2. We will use this unramified cohomology class in the final part of the proof of the main theorem \cref{thm:33NotRetractIntroduction}.
+	 In \cref{pap:23diagonal}, the statement is that for $k = \overline{\F}_p$, $W$ does not admit a decomposition of the diagonal. However, the proof works over any algebraically closed field of characteristic different from $2$. In characteristic $0$, the proof actually simplifies considerably, since one may use resolutions of singularities rather than alterations.
+\end{remark}
+
+
+
+\section{Non Retract Rationality of a Very General $(3,3)$-Fivefold}
+\label{sec:33specialization}
+
+\subsection{Sketch of Specializations}
+Starting from the complete intersection $X$ of two cubic hypersurfaces 
+\[X = X_1 \cap X_2 \subset \P^7,\]
+we specialize as follows. First we specialize $X_2$ to a union $H \cup Q$, where $H$ is a hyperplane and $Q$ is a quadric hypersurface. We next define 
+\[Y \coloneqq (X_1 \cap H),\]
+a cubic hypersurface in $\P^6_{[x_0:\dots:x_6]}$ and
+\[Z \coloneqq (X_1 \cap Q),\]
+a $(2,3)$ complete intersection in $\P^7$.
+After specializing, we get a special fiber $X_0 = Y \cup Z$, where the two components intersect along \[W = H \cap Q \cap X_1,\]
+a complete intersection in $\P^6_{[x_0:\dots:x_6]}$ of degree $(2,3)$. By picking $X_1,H$ and $Q$ with some care, we can ensure that $W$ specializes to the complete intersection from \cref{prop:23NoDoD}.
+
+We then modify this specialization in a series of blowups and base changes to satisfy the technical requirements in Pavich and Schreieders obstruction (\cref{lem:XCalPrime}, \cref{lem:XCalDoublePrime}). The total space of such a specialization is singular, with ordinary quadratic singularities along a subscheme
+\[S \subset W\]
+ of dimension 3. Blowing up $Z$ in the total space leads to a strictly semi-stable specialization of $X$ to $Y \cup \Bl_S Z$. Since $S$ is a smooth divisor in the smooth scheme $W$, the intersection of the two components remains unchanged. After a base change, we can then blow up $W$ to end up with another semi-stable specialization $\widetilde{\mathcal{X}}$, whose special fiber is $\widetilde{X}_k = Y \cup P_W \cup \Bl_S Z$, where $P_W$ is a $\P^1$-bundle over $W$. Furthermore, $Y \cap P_W$ and $\Bl_S Z \cap P_W$ are sections of this bundle. The special fiber is then a chain of three Cartier divisors in the total space. 
+
+Our goal is to use the fact that $W$ does not admit a decomposition of the diagonal to see that after a suitable unramified extension, $\Phi_{\mathcal{X}}$ is not surjective mod $2$. We base change by an unramified extension of DVRs, such that after this extension, the residue field is $\kappa(P_W)$, the function field of $P_W$. Over this field, the diagonal of $P_W$ induces a cycle $\delta_{P_W} \in \CH_0(P_W)$. So after this base change, we can apply what we know about decomposition of the diagonal on $W$. Specifically, we will prove in \cref{prop:DiagonalNotInBaseChangeImage} that the cycle
+\begin{equation}
+	\label{eq:DiagonalCycleSummary}
+	\delta_{P_W} - z \times \kappa(P_W) \in \CH_0(P_W \times \kappa(P_W))
+\end{equation}
+is nonzero, also in the mod $2$ reduction of this group.
+
+Our goal is to prove that $\Phi_{\widetilde{\mathcal{X}}_A}$ is not surjective mod $2$, which will let us obstruct the existence of a decomposition of the diagonal using the second part in \cref{thm:BigPhiSurjective}. In particular, we will show that $\delta_{P_W} - z \times \kappa(P_W)$ is not in the image of the mod $2$ reduction of
+\[\Phi_{\widetilde{\mathcal{X}}_A,P_W} \from \CH_1(\widetilde{X}_A) \to \CH_0(P_W \times \kappa(P_W)).\]
+Using \cref{lem:BigPhiSpecial}, we will think of this as a map
+\begin{equation}
+	\label{eq:BigPhiSpecialFiberSummary}
+	\Phi_{\widetilde{\mathcal{X}}_A,P_W}/2 \from \CH_1(\widetilde{X}_k \times \kappa(P_W))/2 \to \CH_0(P_W \times \kappa(P_W))/2.
+\end{equation}
+This is a map from the $\CH_1$-group of the special fiber to the $\CH_0$-group of a component of the special fiber.
+
+Still, on this special fiber the $\CH_1$-group can be quite complicated. To understand this group, and especially the image of \eqref{eq:BigPhiSpecialFiberSummary}, we will use \cref{lem:SpecializationFulton}, which describes a specialization map $\textrm{sp}$ on Chow groups. Since this map commutes with proper pushforwards and pullbacks via regular embeddings, the map $\Phi_{\widetilde{\mathcal{X}}_A,P_W}/2$ commutes with this specialization map. We may specialize the field $k$ to another field $k_0$ and obtain the following commutative diagram.
+\begin{equation}
+	\label{eq:SpecializationDiagramSummary}
+	\begin{tikzcd}
+		\CH_1(\widetilde{X}_k \times \kappa((P_{W})_k))])/2 & \CH_1(\widetilde{X}_{k_0}\times \kappa((P_{W})_{k_0}))/2 \\
+		\CH_0((P_{W})_k\times \kappa((P_{W})_k))/2 & \CH_0((P_{W})_{k_0}\times \kappa((P_{W})_{k_0}))/2
+		\arrow["{\Phi_k}", from=1-1, to=2-1]
+		\arrow["{\textrm{sp}}", from=1-1, to=1-2]
+		\arrow["{\Phi_{k_0}}", from=1-2, to=2-2]
+		\arrow["{\textrm{sp}}", from=2-1, to=2-2]
+	\end{tikzcd}
+\end{equation}
+Here $\Phi_k$ and $\Phi_{k_0}$ denote the map in \eqref{eq:BigPhiSpecialFiberSummary} and its specialization, respectively. Since $P_W$ is integral, it follows from \cref{lem:SpecializationFulton} that the lower horizontal arrow takes the class in \eqref{eq:DiagonalCycleSummary} to a class of the same form in $\CH_0((P_{W})_{k_0}\times \kappa((P_{W})_{k_0}))/2$. If $\Phi_k$ is surjective, we must therefore have that $\delta_{(P_W)_{k_0}} - z \times \kappa((P_W)_{k_0})$ is in the image of the composed map $\Phi_{k_0} \circ \textrm{sp}$.
+
+What we then show is that by carefully picking the exact equations defining the special fiber, we can ensure that after this second specialization the image of $\Phi_{k_0} \circ \textrm{sp}$ is contained in the image of
+\begin{equation}
+	\label{eq:BaseChangeMapSummary}
+	\CH_0((P_{W})_{k_0})/2 \to \CH_0\left((P_{W})_{k_0}\times \kappa((P_{W})_{k_0})\right)/2.
+\end{equation}
+
+We can further ensure that $W_{k_0}$ is the variety from \cref{prop:23NoDoD}. Therefore, the image of the map \eqref{eq:BaseChangeMapSummary} cannot contain the specialization of the cycle \eqref{eq:DiagonalCycleSummary} (\cref{prop:DiagonalNotInBaseChangeImage}). We conclude that $\Phi_k$ is not surjective, so the geometric generic fiber of $\widetilde{X} \to \Spec R$, which is a smooth $(3,3)$-complete intersection, cannot admit a decomposition of the diagonal.
+
+The most technical part of the argument is understanding the image of $\Phi_{k_0} \circ \textrm{sp}$ and proving that it is contained in the image of \eqref{eq:BaseChangeMapSummary}. We begin by describing $\CH_1(\widetilde{X}_0)$ in terms of simpler components. There is a canonical surjection (\cref{lem:CanonicalSurjection})
+\[\CH_1(Y) \oplus \CH_1(W) \oplus \CH_0(W) \oplus  \CH_0(S) \oplus \CH_1(Z) \twoheadrightarrow \CH_1(X_0),\]
+where $X_0$ is the special fiber. This remains valid over any extension of the base field. To understand the image of the composed map $\Phi_{k_0} \circ \textrm{sp}$ it suffices to understand the image of each of the summands on the left hand side, considered separately. Using two simple observations, \cref{obs:CH1WAbsorbed} and \cref{lem:CH0WVanishes}, we take care of $\CH_1(W)$ and $\CH_0(W)$, respectively.
+
+It remains to study the three groups 
+\[\CH_1(Y \times \kappa((P_{W})_{k_0})), \, \CH_1(Z \times \kappa((P_{W})_{k_0})) \text{ and } \, \CH_0(S \times \kappa((P_{W})_{k_0})).\]
+ We will control these groups by specializing $Y,Z$ and $S$ to rational varieties. Using explicit descriptions of the birational maps $Y \birat \P^5$ and $Z \birat \P^5$, together with the excision exact sequence of Chow groups (\cite[Proposition 1.8]{FultonIntersectionTheory}), we can understand $\CH_1(Y \times \kappa(P_W))$, $\CH_1(Z\times \kappa(P_W))$ and $\CH_0(S \times \kappa((P_{W})_{k_0}))$ and their images by $\Phi_{k_0} \circ \textrm{sp}$.
+ 
+The rationality constructions are quite simple. We specialize $Y$ to a nodal cubic hypersurface and $Z$ to a $(2,3)$ complete intersection with nodal singularities along a line. Both of these are rational. We can find birational maps from $Y$ and $Z$ to $\P^5$ by projecting from the node and the line, respectively. The technical challenges lie in computing the exact exceptional locus of the projection maps and in seeing how also the exceptional loci specialize to varieties with simple Chow groups. An important trick we use for this, is that Chow groups of a scheme only depend on the reduced structure. So we typically specialize to a nonreduced scheme where the underlying reduced structure is a rational variety. We are lucky that the particular equations for a $(2,3)$-complete intersection written down in \cref{prop:23NoDoD} are well suited for such a specialization.
+
+\subsection{Detailed Construction}
+We now give the technical details of the argument outlined above. 
+
+Let $k_0$ be an algebraically closed field of $0$, and let $k = \overline{k_0(\alpha, \beta, \gamma)}$ be the algebraic closure of a purely transcendental extension of $k_0$ of degree 3. We work over the field $\overline{k_0(\alpha, \beta, \gamma)}$ so that we may use Bertini's theorem to guarantee that the special fiber is a union of simply normal crossing divisors, but still have the ability to set the transcendental parameters $\alpha, \beta$ and $\gamma$ to zero, and thereby degenerate the special fiber to a singular scheme where Chow groups are easier to analyze.
+
+Define the following polynomials:
+\[q = x_4x_5 - x_6x_3 - x_3x_7, \]
+\[c = x_0^2x_5 + x_1^2x_4 + x_3\left(x_5^2 + x_4^2 + x_3^2 - 2x_3(x_5 + x_4)\right) + x_6(x_2^2 - 2x_3^2)  - x_7x_2^2, \]
+\[q_{\gamma} = q + \gamma \left(q'_{5\gamma}(x_0,\dots,x_5) + x_6q'_{6\gamma}(x_0,\dots,x_5) + x_7q'_{7\gamma}(x_0,\dots,x_5)\right), \]
+\[c_{\gamma} = c + \gamma \left(c'_{5 \gamma}(x_0,\dots,x_5) + x_6c'_{6\gamma}(x_0,\dots,x_5) + x_7c'_{7\gamma}(x_0,\dots,x_5)\right), \]
+where $q'_{6\gamma}$ and $c'_{6\gamma}$ are general polynomials in $k_0[x_0,\dots,x_5]$ of degree $1$ and $2$, respectively. For $i = 5,7$, $q'_{i\gamma}$ and $c'_{i\gamma}$ are polynomials of degree $1$ and $2$, respectively, chosen generally among those in the ideal $(x_2,x_3,x_4,x_5) \subset k_0[x_0,\dots,x_5]$ \ie defining hypersurfaces in $\P^5$ containing the line
+\begin{equation}
+  \label{eq:LineGeneralChoice}
+  x_2 = x_3 = x_4 = x_5 = 0.
+\end{equation}
+ By construction, $q_{\gamma}$ lies in the ideal $(x_0,\dots,x_5)$, and $c_{\gamma}$ lies in the ideal $(x_0,\dots,x_5)^2$. Furthermore, we see that $q=c=x_7=0$ defines the variety from \cref{prop:23NoDoD}.
+Define further
+\[q_{\beta \gamma} = q_\gamma + \beta q'_\beta(x_0,\dots,x_7), \]
+\[c_{\beta \gamma} = c_\gamma + \beta c'_\beta(x_0,\dots,x_7),\]
+where $q'_\beta$ and $c'_\beta$ are general elements of $k_0[x_0,\dots,x_7]$ of degree $2$ and $3$, respectively.
+
+Finally, define 
+\[ F_\alpha = x_3^3 + \alpha F'_\alpha,\]
+where $F'_\alpha$ is a general cubic polynomial in $k_0[x_0,\dots,x_7]$.
+
+\subsubsection{A Strictly Semi-Stable Family}
+We can now construct a strictly semi-stable family. For this, we follow closely the approach in \cite{PavicSchreieder}.
+\begin{definition}
+	\label{def:MathcalX}
+	Let $R = k[[t]]$ be a DVR, and define $\mathcal{X} \subset \P^7_R$ by the equations
+	\begin{equation}
+		\label{eq:XDefinition}
+		x_7q_{\beta \gamma} + tF_\alpha = c_{\beta \gamma} = 0.
+	\end{equation}
+\end{definition}
+
+
+Define also the following subschemes of the special fiber $\P^7_k$ of $\P^7_R$:
+\begin{equation}
+  \label{eq:YDefinition}
+  Y_{\beta\gamma} \coloneqq \left(x_7 = c_{\beta\gamma} = 0 \right),
+\end{equation}
+\begin{equation}
+  \label{eq:ZDefinition}
+  Z_{\beta\gamma} \coloneqq \left(q_{\beta\gamma} = c_{\beta\gamma} = 0 \right),
+\end{equation}
+\begin{equation}
+  \label{eq:WDefinition}
+  W_{\beta\gamma} \coloneqq Y_{\beta\gamma} \cap Z_{\beta\gamma} = \left(x_7 = q_{\beta\gamma} = c_{\beta\gamma} = 0 \right),
+\end{equation}
+\begin{equation}
+  \label{eq:SDefinition}
+  S_{\alpha\beta\gamma} \coloneqq W_{\beta\gamma} \cap \left(F_\alpha = 0 \right) = \left(F_\alpha = x_7 = q_{\beta\gamma} = c_{\beta\gamma} = 0 \right).
+\end{equation}
+The subscripts indicate the parameters on which the subscheme depends. As we specialize $\alpha, \beta, \gamma$ to zero, we will indicate this by deleting the corresponding subscript.
+
+\begin{lemma}
+  \label{lem:Smoothness}
+  The four varieties defined in \eqref{eq:YDefinition}, \eqref{eq:ZDefinition}, \eqref{eq:WDefinition} and \eqref{eq:SDefinition} are nonsingular.
+\end{lemma}
+\begin{proof}
+  Since smoothness is a generic property, we can check smoothness after specializing some of the parameters to $\infty$. For \eqref{eq:YDefinition}, \eqref{eq:ZDefinition} and \eqref{eq:WDefinition}, we specialize $\beta \to \infty$. Since $q'_{\beta}$ and $c'_{\beta}$ are general, the conclusion follows from Bertini's theorem. For \eqref{eq:SDefinition}, we additionally specialize $\alpha \to \infty$ and then apply the same argument.
+\end{proof}
+
+\begin{lemma}
+  \label{lem:XCalPrime}
+  With notation as above, define the $R$-scheme $\mathcal{X}' \coloneqq \Bl_{Z_{\beta \gamma}} \mathcal{X}$, where $\mathcal{X}$ is the scheme from \cref{def:MathcalX}. Then $\mathcal{X}'$ is strictly semi-stable with special fiber $Y_{\beta\gamma} \cup \widetilde{Z}_{\alpha\beta\gamma}$, where $\widetilde{Z}_{\alpha\beta\gamma} \coloneqq \Bl_{S_{\alpha \beta \gamma}}Z_{\beta \gamma}$.
+\end{lemma}
+\begin{proof}
+The total space $\mathcal{X}$ is singular at the points in $S$. To see this, first note that the singular locus of the total space $\mathcal{X}$ must be a subset of the singular locus of the special fiber. This follows \eg from a local computation using the Jacobian criterion. By \cref{lem:Smoothness}, the special fiber is only singular along $W_{\beta\gamma}$, the intersection of the two components. Furthermore, a calculation with the Jacobian criterion shows that the singular locus of the total space is the subset of $W_{\beta\gamma}$ where also $F_{\alpha}$ vanishes, hence equal to $S_{\alpha\beta\gamma}$. Locally at a point in $S_{\alpha\beta\gamma} \subset \mathcal{X}$, $\mathcal{X}$ has ordinary quadratic singularities, since the type of singularity is exactly that of two smooth components meeting transversally.
+
+For the specialization to be a strictly semi-stable $R$-scheme, all components of the special fiber must be Cartier divisors. However, in a neighborhood of the singular locus of $\mathscr{X}$, the two components of the special fiber, $Y_{\beta \gamma}$ and $Z_{\beta \gamma}$, are not Cartier. To force the components of the special fiber to be Cartier, we blow up $Z_{\beta \gamma}$ in the total space.
+
+To see how this blowup changes the special fiber, we recall that $\mathcal{X}$ has ordinary quadratic singularities. Therefore, the local picture is analogous to the standard example of a Weil, but not Cartier, divisor, namely a line passing through the vertex on a quadric cone. As in \cite{PavicSchreieder}, from this local picture one can see that the inverse image of $Z_{\beta \gamma}$ by the blowup is $\widetilde{Z}_{\alpha\beta\gamma}$, which is isomorphic to the blowup of $Z_{\alpha \beta}$ in $S_{\alpha \beta \gamma}$. Additionally, $\widetilde{Z}_{\alpha\beta\gamma}$ is Cartier by the universal property of the blowup, and since both $Z_{\beta\gamma}$ and $S_{\alpha\beta\gamma}$ are smooth, so is $\widetilde{Z}_{\alpha\beta\gamma}$.
+
+We next look at how blowing up $Z_{\beta \gamma}$ affects $Y_{\beta \gamma}$. First note that  $\widetilde{Z}_{\alpha\beta\gamma} \cap W_{\beta\gamma} = \Bl_{S_{\alpha\beta\gamma}} W_{\beta\gamma} = W_{\beta\gamma}$. The second equality holds since $S_{\alpha\beta\gamma}$ is a divisor in the smooth variety $W_{\beta\gamma}$. Since $W_{\beta\gamma}$, the intersection of $Y_{\beta \gamma}$ and $Z_{\beta \gamma}$, is unchanged by the blowup, $Y_{\beta \gamma}$ is also unchanged. In particular the two components of the special fiber remain smooth.
+
+Finally, to check that after the blowup we obtain a semi-stable $R$-scheme, we must check that also $Y_{\beta \gamma}$ becomes Cartier after the blowup. But since the whole special fiber is Cartier, and the complement of $Y_{\beta \gamma}$ is Cartier by construction, $Y_{\beta \gamma}$ must also be Cartier. We conclude that $\mathcal{X}'$ is a strictly semi-stable $R$-scheme.
+\end{proof}
+
+To apply the obstruction of Pavic and Schreieder, we need to further modify the family such that a component of the special fiber is stably birational to $W_{\beta \gamma}$. Following the argument in \cite{PavicSchreieder}, we do this by first base changing by a 2:1 morphism, then blowing up.
+\begin{lemma}
+  \label{lem:XCalDoublePrime}
+  With notation as above, let $\mathcal{X}'' \coloneqq \mathcal{X}' \times_{R \xrightarrow{t \mapsto t^2} R} R$. Then $\widetilde{\mathcal{X}} \coloneqq \Bl_{W_{\beta\gamma}} \mathcal{X}''$ is a strictly semi-stable $R$-scheme with special fiber 
+\[ \widetilde{X}_0 = Y_{\beta\gamma} \cup P_{W_{\beta\gamma}} \cup \widetilde{Z}_{\alpha \beta\gamma}, \]
+where $P_{W_{\beta\gamma}}$ is a $\P^1$-bundle over $W_{\beta\gamma}$. The intersections $Y_{\alpha \beta\gamma} \cap P_{W_{\beta\gamma}}$ and $\widetilde{Z}_{\beta\gamma} \cap P_{W_{\beta\gamma}}$ are disjoint sections of the bundle $P_{W_{\beta\gamma}} \to W_{\beta\gamma}$. The generic fiber of $\widetilde{\mathcal{X}}$ is a smooth complete intersection of two cubic hypersurfaces in $\P^7$.
+\end{lemma}
+\begin{proof}
+	Since $\mathcal{X}' \to R$ is strictly semi-stable by \cref{lem:XCalPrime}, the $2 \mathbin{:} 1$ base change $\mathcal{X}''$ is regular away from $W_{\beta \gamma}$. Along the singular locus $W_{\beta\gamma}$ of the special fiber, the family has ordinary double point singularities, since $W_{\beta \gamma}$ is the transversal intersection of two smooth hypersurfaces. Hence the blowup of $W_{\beta\gamma}$ resolves these singularities, and the exceptional divisor will be a reduced component of the special fiber. So the special fiber is of the form
+	\[Y_{\beta\gamma} \cup P_{W_{\beta\gamma}} \cup \widetilde{Z}_{\alpha \beta\gamma},\]
+	where $P_{W_{\beta\gamma}}$ is a conic bundle admitting a section $P_{W_{\beta\gamma}} \cap Z_{\beta\gamma}$, hence a $\P^1$-bundle.
+\end{proof}
+ In \cref{def:MathcalX}, $c_{\beta \gamma}$ is smooth and $F_\alpha$ defines a smooth cubic hypersurface, so the generic fiber of $\widetilde{\mathcal{X}}$ is a smooth intersection of two cubic hypersurfaces.
+
+Define the DVR $A = \sO_{\widetilde{X},P_W}$, the localization of the ring $\sO_{\widetilde{X}}$ of regular functions on $\widetilde{X}$ by rational functions on $P_W$. The residue field of $A$ is $\kappa(P_W)$. Furthermore, $R \to A$ is an unramified extension of DVRs, since the inclusion $R \to A$ maps the uniformizing parameter $t$ of $R$ to the uniformizing parameter $t$ of $A$. The base change $\widetilde{\mathcal{X}}_A \to \Spec A$ of $\widetilde{\mathcal{X}}$ is strictly semi-stable by \cref{lem:XCalPrime}. In order to use the second condition in \cref{thm:BigPhiSurjective} to prove that a generic $(3,3)$ complete intersection does not admit a decomposition of the diagonal, we wish to prove that the reduction mod 2 of $\Phi_{\widetilde{\mathcal{X}}_A}$ is not surjective. Specifically, we will prove that $\delta_{P_W} - z \times \kappa(P_W) \in \CH_0(P_W \times \kappa(P_W))/2$ is not in the image of the reduction mod 2 of $\Phi_{\widetilde{\mathcal{X}}_A,P_W}$.
+
+We begin by describing the Chow group on $1$-cycles on the special fiber.
+The special fiber $X_0$ is the union
+\[Y_{\beta\gamma} \cup P_{W_{\beta\gamma}} \cup \widetilde{Z}_{\alpha \beta\gamma}.\]
+So there is a canonical surjection 
+\[\CH_1(Y_{\beta \gamma}) \oplus \CH_1(P_{W_{\beta\gamma}}) \oplus \CH_1(\widetilde{Z}_{\alpha \beta\gamma})  \twoheadrightarrow \CH_1(X_0).\]
+The formula for $\CH_1$ of a blowup (\cite[Proposition 6.7]{FultonIntersectionTheory}) gives the isomorphism 
+\[\CH_1(\widetilde{Z}_{\alpha \beta\gamma}) \simeq \CH_1(Z_{\beta \gamma}) \oplus \CH_0(S_{\alpha \beta \gamma}),\]
+and the formula for $\CH_1$ of a projective bundle (\cite[Theorem 3.3]{FultonIntersectionTheory}) gives
+\[\CH_1(P_{W_{\beta\gamma}}) \simeq \CH_1(W_{\beta \gamma}) \oplus \CH_0(W_{\beta \gamma}).\]
+All of these statements hold also after arbitrary extensions of the base field. We can therefore conclude the following:
+\begin{lemma}
+  \label{lem:CanonicalSurjection}
+  There is a canonical surjection, valid over any extension of the base field, of Chow groups
+  \begin{align}
+    \label{eq:CanonicalSurjection}
+    \CH_1(Y_{\beta \gamma}) \oplus\CH_1(W_{\beta \gamma}) \oplus \CH_0(W_{\beta \gamma}) \oplus  \CH_0(S_{\alpha \beta \gamma}) &\oplus  \CH_1(Z_{\beta \gamma}) \nonumber \\
+    											&\twoheadrightarrow \CH_1(X_0).
+  \end{align}
+\end{lemma}
+
+\begin{observation}
+  \label{obs:CH1WAbsorbed}
+  Since $Y_{\beta \gamma} \cap P_{W_{\beta \gamma}}$ and $Z_{\beta \gamma} \cap P_{W_{\beta \gamma}}$ are sections of the bundle $P_{W_{\beta \gamma}}$, the image of $\CH_1(W_{\beta \gamma})$ via the map \eqref{eq:CanonicalSurjection} is contained in the image of both $\CH_1(Y_{\beta \gamma})$ and $\CH_1(Z_{\beta \gamma})$. We may therefore ignore this group in what follows.
+\end{observation}
+
+\begin{lemma}
+  \label{lem:CH0WVanishes}
+  When $\Phi_{\widetilde{X}_A,P_{W_{\beta \gamma}}}$ is applied to any cycle in the image of $\CH_0(W_{\beta \gamma})$ in $\CH_1(X_0)$ via \eqref{eq:CanonicalSurjection}, one obtains a cycle divisible by $2$. Hence the image of $\CH_0(W_{\beta \gamma})$ is in the kernel of the reduction mod $2$ of $\Phi_{\widetilde{X}_A,P_{W_{\beta \gamma}}}$.
+\end{lemma}
+\begin{proof}
+  The class of a point $[w] \in \CH_0(W_{\beta \gamma})$ is mapped by \eqref{eq:CanonicalSurjection} to the class of a fiber $[F]$ of $P_{W_{\beta \gamma}} \to W_{\beta \gamma}$ in $\CH_1(X_0)$. From the description of $\Phi_{\widetilde{X}_A,P_{W_{\beta \gamma}}}$ in \cref{lem:BigPhiSpecial}, we see that the image of $[F]$ in $\CH_0(W_{\beta \gamma})$ is $-1$ times the intersection of $F$ with $Y \cup Z$. Since both $Y$ and $Z$ are sections of $P_{W_{\beta \gamma}}$, this is $-2$ times the class of a point on $F$.
+\end{proof}
+
+\subsubsection{Understanding  $\Phi$ by Specializing}
+It remains to understand the three Chow groups $\CH_1(Y_{\beta \gamma})$, $\CH_0(S_{\alpha \beta \gamma})$ and $\CH_1(Z_{\beta \gamma})$. We will study the mod 2 reduction of $\Phi_{\widetilde{X}_A,P_{W_{\beta \gamma}}}$ applied to
+\[\CH_1(Y_{\beta \gamma} \times \kappa(P_W))/2 \oplus \CH_0(S_{\alpha \beta \gamma} \times \kappa(P_W))/2 \oplus \CH_1(Z_{\beta \gamma} \times \kappa(P_W))/2.\]
+These Chow groups are hard to describe completely, and luckily this is not necessary to apply the obstruction in \cref{thm:BigPhiSurjective}. Instead we will specialize the varieties and use the following result to obtain the minimal information we need about \cref{thm:BigPhiSurjective}.
+\begin{lemma}[{\cite[Lemma 5.7]{PavicSchreieder}}]
+	\label{lem:SpecializationFulton}
+	Let $B$ be a discrete valuation ring with fraction field $F$ and residue field $L$. Let $p \from \mathcal{X} \to \Spec B$ and $q \from \mathcal{Y} \to \Spec B$ be flat proper $B$-schemes with connected fibers. Denote by $X_\eta,Y_\eta$ and $X_0,Y_0$ the generic and special fibers, respectively. Assume that there is a component $Y'_0 \subset Y_0$ such that $A = \sO_{\mathcal{Y},Y'_0}$ is a discrete valuation ring (this holds if $Y_0$ is reduced along $Y'_0$) and consider the flat proper $A$-scheme $\mathcal{X}_A \to \Spec A$, given by base change of $\pi$. Then Fultons's specialization map induces a specialization map
+	\[\mathrm{sp} \from \CH_i(X_\eta \times_F \overline{F}(Y_\eta)) \to \CH_i(X_0 \times_L \overline{L}(Y'_0)), \]
+	where $\overline{F}$ and $\overline{L}$ denote the algebraic closures of $F$ and $L$ respectively, such that the following holds:
+	\begin{enumerate}[i)]
+		\item $\mathrm{sp}$ commutes with pushforwards along proper maps, and pullbacks along regular embeddings;
+		\item If $\mathcal{X} = \mathcal{Y}$, and $X_0$ is integral, then $\mathrm{sp}(\delta_{X_{\eta}}) = \delta_{X_0}$, where $\delta_{X_{\eta}} \in \CH_0(X_{\eta} \times_F \overline{F}(X_{\eta})$ and $\delta_{X_0} \in \CH_0(X_0 \times_L \overline{L}(X_0))$ denote the diagonal points.
+	\end{enumerate}
+\end{lemma}
+
+% When we use the lemma, $\mathcal{Y}$ will correspond to $P_W$, so $Y_0$ is irreducible, and the diagonal point of $P_W$ is mapped to the diagonal point of $P_W$. Also note that as we specialize using \cref{lem:SpecializationFulton}, we change what field we work over, but it remains algebraically closed.
+
+To reduce clutter in the notation, we define $\Phi_{\alpha \beta \gamma}$ as the mod 2 reduction of $\Phi_{\widetilde{X}_A,P_{W_{\beta \gamma}}}$ applied to these Chow groups,
+\begin{multline*}
+   \Phi_{\alpha \beta \gamma} \coloneqq\\
+\Phi_{\widetilde{X}_A,P_{W_{\beta \gamma}}}/2 \from \CH_1(Y_{\beta \gamma} \times \kappa(P_W))/2 \oplus \CH_0(S_{\alpha \beta \gamma}  \times \kappa(P_W))/2 \oplus \CH_1(Z_{\beta \gamma} \times \kappa(P_W))/2\\ 
+\to \CH_0(P_W  \times \kappa(P_{W_{\beta \gamma}}))/2,
+\end{multline*}
+After specializing, we will indicate the resulting map by deleting the appropriate subscript \eg after specializing $\alpha \to 0$ we obtain $\Phi_{\beta \gamma}$. Precisely, the map $\Phi_\alpha$ is the composed map obtained by first applying the specialization map on Chow grops associated with the specialization of $\alpha$ to $0$, then applying the map from $\cref{def:BigPhiMap}$ on the specialized variety.
+
+Our goal will be to show that after specializing $\alpha, \beta, \gamma \to 0$, the resulting map $\Phi$ has image contained in the image of the map
+\begin{equation}
+  \label{eq:BaseChangeMapReduced}
+  \CH_0(P_W)/2 \to \CH_0(P_W \times \kappa(P_W))/2.
+\end{equation}
+It is a consequence of \cref{prop:23NoDoD} that the image of \eqref{eq:BaseChangeMapReduced} does not contain the cycle
+\begin{equation}
+  \label{eq:DiagonalCycle1}
+  \delta_{P_W} - z \times \kappa(P_W) \in \CH_0(P_W \times \kappa(P_W))/2.
+\end{equation}
+From the diagram \eqref{eq:SpecializationDiagramSummary}, this proves that $\Phi_{\alpha \beta \gamma}$ is not surjective. Hence from the second part of \cref{thm:BigPhiSurjective}, we may conclude that the geometric generic fiber of $\widetilde{\mathcal{X}}$ does not admit a decomposition of the diagonal.
+
+We will specialize $\overline{k_0(\alpha,\beta,\gamma)}$ to $k_0$ in three steps, by successively setting $\alpha, \beta$ and $\gamma$ to 0 \ie deleting the transcendental parameters one by one. In each step the ground field changes, but it remains algebraically closed by construction in \cref{lem:SpecializationFulton}. To avoid cluttering the notation, we will not explicitly specify the ground field in each step. 
+\subsubsection*{Step 1:}
+In this first step, we specialize $\alpha \to 0$. When $\alpha$ specializes to 0, $S_{\alpha \beta \gamma}$ specializes to $S_{\beta \gamma}$. The subschemes $Y_{\beta \gamma}$ and $Z_{\beta \gamma}$ have no dependence on $\alpha$, so specialize smoothly in this step.
+\begin{lemma}
+  \label{lem:S1Specialization1}
+  $\CH_0(S_{\beta \gamma})$ is supported on the reduced subscheme $S_{\beta \gamma}^{red}$, defined by
+  \begin{equation}
+  \label{eq:S1Equations}
+  x_7 = q_{\beta \gamma} = c_{\beta \gamma} = x_3 = 0.
+  \end{equation}
+\end{lemma}
+\begin{proof}
+  By setting $\alpha =0$, we see that $S_{\beta \gamma}$ is defined by
+\[x_7 = q_{\beta \gamma} = c_{\beta \gamma} = x_3^3 = 0.\]
+Since Chow groups only depend on the underlying reduced scheme, the conclusion follows.
+\end{proof}
+After this specialization, we must understand the image of $\Phi_{\beta \gamma}$ applied to
+\[\CH_1(Y_{\beta \gamma} \times \kappa(P_W)) \oplus \CH_0(S_{\beta \gamma}^{red}\times \kappa(P_W)) \oplus \CH_1(Z_{\beta \gamma}\times \kappa(P_W)).\]
+
+\subsubsection*{Step 2:}
+In this step, we specialize $\beta \to 0$. We first look at the specialization of $Y_{\beta \gamma}$ to $Y_\gamma$.
+
+\begin{lemma}
+\label{lem:Y2Specialization}
+  Let $K'_\gamma \subset \P^5_{[x_0:\dots:x_5]}$ be defined by
+\begin{align*}
+  &x_0^2x_5 + x_1^2x_4 + x_3\left(x_5^2 + x_4^2 + x_3^2 - 2x_3(x_5 + x_4)\right)+ \gamma c'_{5\gamma}(x_0,\dots,x_5) \\
+=&x_2^2 - 2x_3^2 + \gamma c'_{6\gamma}(x_0,\dots,x_5)=0,
+\end{align*}
+and let $K_\gamma \subset Y \subset \P^6_{[x_0:\dots:x_6]}$ be the cone over $K'_{\gamma}$ with vertex $(0:\cdots:0:1)$. Then the map
+\begin{equation}
+  \label{eq:Y2Surjective}
+  \CH_1(K_\gamma) \to \CH_1(Y_\gamma)
+\end{equation}
+given by pushforward via the inclusion, is surjective after any extension of the base field. Furthermore, there is an isomorphism 
+\[\CH_1(K_\gamma) \simeq \CH_0(K'), \]
+also valid after any extension of the base field.
+\end{lemma}
+\begin{proof}
+  $Y_\gamma$ is defined by $c_\gamma = x_7 = 0$. As a subset of $\P^6_{[x_0:\dots:x_6]}$, $Y_\gamma$ is defined by
+\begin{align*}
+  &x_0^2x_5 + x_1^2x_4 + x_3\left(x_5^2 + x_4^2 + x_3^2 - 2x_3(x_5 + x_4)\right) + \gamma c'_{5\gamma}(x_0,\dots,x_5)\\
+ + &x_6\left(x_2^2 - 2x_3^2 + \gamma c'_{6\gamma}(x_0,\dots,x_5)\right) = 0.
+\end{align*}
+This is a cubic hypersurface, with a node at $x_0=\dots=x_5=0$. Projection from the node is a birational map $Y_\gamma \birat \P^5_{[x_0:\dots:x_5]}$, with exceptional locus $K$ defined by
+\begin{align*}
+  &x_0^2x_5 + x_1^2x_4 + x_3\left(x_5^2 + x_4^2 + x_3^2 - 2x_3(x_5 + x_4)\right)+ \gamma c'_{5\gamma}(x_0,\dots,x_5) \\
+=&x_2^2 - 2x_3^2 + \gamma c'_{6\gamma}(x_0,\dots,x_5)=0.
+\end{align*}
+We see that $K_\gamma$ is the cone over $K'_\gamma$, an intersection of a quadric and a cubic in $\P^5$. The vertex of $K_\gamma$ is at the node of $Y_\gamma$.
+
+Let $U^Y_{\gamma} \simeq (Y_\gamma \setminus K_\gamma) \simeq (\P^5 \setminus K'_\gamma)$ be the open set on which the birational map is an isomorphism. We have the excision exact sequence
+\[\CH_1(K'_\gamma) \to \CH_1(\P^5) \to \CH_1(U^Y_{\gamma}) \to 0.\]
+Over an algebraically closed field, any intersection of a quadric and a cubic hypersurface in $\P^5$ contains a line. Hence $K'_\gamma$ contains a line over any extension of the algebraically closed base field. So $\CH_1(U^Y_{\gamma}) = 0$ after any extension of the base field. Now from the excision exact sequence
+\[\CH_1(K_\gamma) \to \CH_1(Y_\gamma) \to \CH_1(U^Y_{\gamma}) \to 0,\]
+we see that $\CH_1(K_\gamma) \to \CH_1(Y_\gamma)$ is surjective after arbitrary extensions of the base field. 
+
+Finally, since $K_\gamma$ is a cone over $K'_\gamma$ with vertex a single point, we have the isomorphism
+\[\CH_1(K_\gamma) \simeq \CH_0(K'_\gamma). \]
+One way of understanding this isomorphism is that by the excision exact sequence, $\CH_1(K_\gamma)$ is supported on the complement of the vertex point. This complement is an affine bundle over $K'_\gamma$, and $\CH_1$ of this affine bundle is isomorphic to $\CH_0(K'_\gamma)$. (See \cite[Proposition 1.9]{FultonIntersectionTheory}.)
+\end{proof}
+
+We next consider the specialization $Z_{\beta \gamma}$ to $Z_\gamma$.
+\begin{lemma}
+\label{lem:TDefinition}
+ Let $\lambda \subset \P^7$ be the line defined by $x_0 = x_1 = x_2 = x_3 = x_4 = x_5 = 0$. Projecting from $\lambda$ gives a birational map $Z_\gamma \birat \P^5_{[x_0:\dots:x_5]}$. The inverse of this map is undefined at the determinantal variety $T'_\gamma$ defined by
+ \begin{equation}
+   \label{eq:T'Matrix}
+\rk
+  \begin{pmatrix}
+    x_3 +  \gamma q'_{6\gamma} & -x_3 + \gamma q'_{7\gamma} & x_4x_5 + \gamma q'_{5\gamma} \\
+    x_2^2 - 2x_3^2 + \gamma c'_{6 \gamma} & -x_2^2 + \gamma c'_{7 \gamma} & c' + \gamma c'_{5 \gamma}
+  \end{pmatrix} \leq 1,   
+ \end{equation}
+where 
+\[ c' = x_0^2x_5 + x_1^2x_4 + x_3\left(x_5^2 + x_4^2 + x_3^2 - 2x_3(x_5 + x_4)\right).\]
+
+Let $T_\gamma$ be the subscheme defined as the intersection in $\P^7$ of the cone over $T'_\gamma$ in $\P^5_{[x_0:\dots:x_5]}$ and $Z_\gamma$. Then $T_\gamma$ is the exceptional locus of the birational map $Z_\gamma \birat \P^5_{[x_0:\dots:x_5]}$, and the map $\CH_1(T_\gamma) \to \CH_1(Z_\gamma)$ is surjective after any extension of the base field.
+\end{lemma}
+\begin{proof}
+  The projection from $\lambda$ of the ambient space $\P^7$ gives a map $\Bl_{\lambda}\P^7 \to \P^5$. The fibers of the projection are the planes in $\P^7$ passing through $\lambda$, which are parametrized by $\P^5_{[x_0,\dots,x_5]}$. For a point $(\alpha_0:\dots:\alpha_5)$ in this $\P^5_{[x_0,\dots,x_5]}$, let the corresponding plane $\Lambda$ have coordinates $x_6,x_7,\xi$. Then we can compute the restriction of $q$ to $\Lambda$,
+  \begin{align*}
+  \restr{q_{\gamma}}{\Lambda} &= \xi x_6 (\alpha_3 + \gamma q'_{6 \gamma}(\alpha_0,\dots,\alpha_5))\\
+    &+ \xi x_7(-\alpha_3 + \gamma q'_{7\gamma}(\alpha_0,\dots,\alpha_5))\\
+    &+ \xi^2(\alpha_4\alpha_5 + \gamma q'_{5\gamma}(\alpha_0,\dots,\alpha_5)).
+  \end{align*}
+In $\Lambda$, the line $\lambda$ is defined by $\xi = 0$, so the residual line to $\lambda$ of $q_\gamma = 0$ is defined in $\Lambda$ by
+\begin{align*}
+  &x_6 (\alpha_3 + \gamma q'_{6 \gamma}(\alpha_0,\dots,\alpha_5))\\
+ +&x_7(-\alpha_3 + \gamma q'_{7\gamma}(\alpha_0,\dots,\alpha_5))\\
+ +&\xi(\alpha_4\alpha_5 + \gamma q'_{5\gamma}(\alpha_0,\dots,\alpha_5)) = 0.
+\end{align*}
+Analogously, we find that
+\begin{align*}
+	\restr{c_{\gamma}}{\Lambda} &= \xi^2 x_6(\alpha_2^2 - 2\alpha_3^2 + \gamma c'_{6\gamma}(\alpha_0,\dots,\alpha_5))
+	\\ &+ \xi^2 x_7(-\alpha_2^2 + \gamma c'_{7\gamma}(\alpha_0,\dots,\alpha_5))
+	\\ &+ \xi^3c'(\alpha_0,\dots,\alpha_5) + \gamma c'_{5\gamma}(\alpha_0,\dots,\alpha_5)),
+\end{align*}
+so the residual line of $c_\gamma = 0$ to $\lambda$ in $\Lambda$ is defined by
+\begin{align*}
+	&x_6(\alpha_2^2 - 2\alpha_3^2 + \gamma c'_{6\gamma}(\alpha_0,\dots,\alpha_5)) \\
+	+ &x_7(-\alpha_2^2 + \gamma c'_{7\gamma}(\alpha_0,\dots,\alpha_5))\\
+	+ &\xi c'(\alpha_0,\dots,\alpha_5) + \gamma c'_{5\gamma}(\alpha_0,\dots,\alpha_5))= 0.	
+\end{align*}
+From the equations for the residual lines we see that when the matrix in \eqref{eq:T'Matrix} has rank 2, the residual lines have a unique intersection point, and therefore the fiber of the map $Z_\gamma \dashrightarrow \P^5$ consists of a unique point. So on $U^Z_\gamma = (Z_\gamma \setminus T_\gamma) \simeq (\P^5 \setminus T'_\gamma)$, the projection from $\lambda$ restricts to an isomorphism.
+
+We again use an excision exact sequence,
+\[\CH_1(T'_\gamma) \to \CH_1(\P^5) \to \CH_1(U^Z_\gamma) \to 0. \]
+$T'_\gamma$ contains a line even after an arbitrary extension of the base field. Specifically, the line from \eqref{eq:LineGeneralChoice} is contained in $T'_\gamma$ by our choice of $q'_{7\gamma}$, $q'_{5\gamma}$, $c'_{7\gamma}$ and $c'_{5\gamma}$. So the first map of this sequence is surjective after any extension of the base field. Hence $\CH_1(U^Z_\gamma) = 0$ even after an arbitrary extension of the base field.
+
+We also have an excision exact sequence 
+\[\CH_1(T_\gamma) \to \CH_1(Z_\gamma) \to \CH_1(U^Z_\gamma) \to 0. \]
+Since $\CH_1(U^Z_\gamma) = 0$ for any extension of the base field, we must have that the map $\CH_1(T_\gamma) \to \CH_1(Z_\gamma)$ is surjective for any extension of the base field.
+\end{proof}
+
+
+\subsubsection*{Step 3:}
+ We have now established two surjections
+\[\CH_0(K'_\gamma \times \kappa(P_W))/2 \twoheadrightarrow \CH_1(Y_\gamma \times \kappa(P_W))/2, \]
+\[\CH_1(T_\gamma \times \kappa(P_W))/2 \twoheadrightarrow \CH_1(Z_\gamma \times \kappa(P_W))/2. \]
+When we specialize $\gamma \to 0$, $Y_\gamma$, $S_\gamma$ and $Z_\gamma$ specialize to $Y$, $S$ and $Z$, respectively. We can understand the image of the specialized map $\Phi$ by understanding the image of the group
+\[\CH_0(K' \times \kappa(P_W))/2 \oplus \CH_0(S \times \kappa(P_W))/2 \oplus \CH_1(T\times \kappa(P_W))/2.\]
+So in this final step, we specialize to schemes $K'$, $S$ and $T$ with universally trivial $\CH_0$. To establish universal triviality of $\CH_0$, we use two results by Colliot-Thélène and Pirutka from \cite{ColliotThelenePirutkaCyclicCovers}.
+\begin{lemma}[{\cite[Lemma 2.2]{ColliotThelenePirutkaCyclicCovers}}]
+	\label{lem:RationalCH0Trivial}
+	Let $k$ be an algebraically closed field and $X$ an integral projective $k$-rational variety. If $X$ is smooth on the complement of a finite number of closed points, then $\CH_0(X)$ is universally trivial.
+\end{lemma}
+\begin{lemma}[{\cite[Lemma 2.4]{ColliotThelenePirutkaCyclicCovers}}]
+	\label{lem:CH0TrivialComponents}
+	Let $X$ be a projective reduced geometrically connected scheme over a field $k$ and $X = \bigcup_{i=1}^N X_i$ its decomposition into irreducible components. Assume that
+	\begin{enumerate}[i)]
+		\item each $X_i$ is geometrically irreducible and $\CH_0(X_i)$ is universally trivial
+		\item each intersection $X_i \cap X_j$ is either empty or contains a $0$-cycle $z_{ij}$ of degree $1$.
+	\end{enumerate}
+	Then $\CH_0(X)$ is universally trivial.
+\end{lemma}
+
+We begin by studying $\CH_0(K')$.
+\begin{lemma}
+  \label{lem:K'UniversallyTrivial}
+  $\CH_0(K')$ is universally trivial.
+\end{lemma}
+\begin{proof}
+   $K'$ is defined in $\P^5_{[x_0:\dots:x_5]}$ by
+\begin{align*}
+  &x_0^2x_5 + x_1^2x_4 + x_3(x_5^2 + x_4^2 + x_3^2 - 2x_3(x_5 + x_4))\\
+=&x_2^2 - 2x_3^2=0.
+\end{align*}
+Since the ground field is algebraically closed, the quadric $x_2^2 - 2x_3^2 = 0$ is the union of the two hyperplanes $x_2-\sqrt{2}x_3 = 0$ and $x_2 + \sqrt{2}x_3=0$. So $K'$ is the union of two cubic hypersurfaces $K'_1$ and $K'_2$. The variable $x_2$ does not occur in the equation
+\begin{equation}
+  \label{eq:K'1Defining}
+  G = x_0^2x_5 + x_1^2x_4 + x_3(x_5^2 + x_4^2 + x_3^2 - 2x_3(x_5 + x_4)) = 0.
+\end{equation}
+So by eliminating $x_2$, we see that both $K'_1$ and $K'_2$ are isomorphic to the cubic hypersurface defined by \eqref{eq:K'1Defining} in $\P^4_{[x_0:x_1:x_3:x_4:x_5]}$.
+\begin{claim}
+  The cubic threefold defined by \eqref{eq:K'1Defining} in $\P^4_{[x_0:x_1:x_3:x_4:x_5]}$  has isolated singularities.
+\end{claim}
+Before we prove the claim, we see how it implies the lemma. A singular cubic hypersurface, which is not a cone, is rational, and since the singularities are isolated, it follows from \cref{lem:RationalCH0Trivial} that $\CH_0(K'_i)$ is universally trivial. Since the two components of $K'$ are universally $\CH_0$-trivial,  it follows from \cref{lem:CH0TrivialComponents} that $\CH_0(K')$ is universally trivial as well. 
+
+To prove the claim, we first compute the partial deriviatives of $G$ from \eqref{eq:K'1Defining},
+  \begin{align*}
+  \frac{\partial G}{\partial x_0} &=  2x_0x_5\\
+  \frac{\partial G}{\partial x_1} &=  2x_1x_4\\
+  \frac{\partial G}{\partial x_3} &=  3x_3^2-4x_3x_4+x_4^2-4x_3x_5+x_5^2\\
+  \frac{\partial G}{\partial x_4} &=  x_1^2-2x_3^2+2x_3x_4\\
+  \frac{\partial G}{\partial x_5} &=  x_0^2-2x_3^2+2x_3x_5.\\
+  \end{align*}
+From the first two partial derivatives, we see that there are four cases to check, $x_4=x_5=0$, $x_4=x_0=0$, $x_1=x_5=0$ and $x_1=x_0=0$. It is straightforward to check that there are no singular points satisfying $x_4=x_5=0$ and two isolated singular points for each of the three remaining cases.
+%
+%We begin with the case, $x_4 = x_5 = 0$. Then for any singular point, we see from $\frac{\partial G}{\partial x_3}$ that also $x_3 =0$. It then follows from $\frac{\partial G}{\partial x_4}$ and $\frac{\partial G}{\partial x_5}$ that $x_1$ and $x_0$ must also vanish. So all coordinates must vanish, hence there are no singular points satisfying $x_4=x_5=0$.
+%
+%In the second case, $x_5 \neq 0$ and $x_0=x_4 = 0$. Then $\frac{\partial G}{\partial x_5} = 2x_3(x_5-x_3)$. So at any singular point, either $x_3=0$ or $x_3=x_5$. If $x_3=0$ then $\frac{\partial G}{\partial x_3} \neq 0$. So we must have $x_3=x_5$. Since at any singular point, also $\frac{\partial G}{\partial x_4} =0$, we must have $x_1^2-2x_3^2 =0$. This defines two disjoint points. Finally, we can check that $G$ vanishes at these points.
+%
+%To handle the third case, $x_1=x_5=0$, observe that the equations are symmetric with respect to exchanging $x_0,x_1$ and $x_4,x_5$. So by the previous argument, we find an additional 2 isolated singularities.
+%
+%In the final case, $x_1=x_0=0$, we can again factor $\frac{\partial G}{\partial x_4}$ and $\frac{\partial G}{\partial x_5}$ as $2x_3(x_4-x_3)$ and $2x_3(x_5-x_3)$ respectively. So either $x_3 =0$, or $x_3=x_4=x_5$. In the latter case, we see that $\frac{\partial G}{\partial x_3} \neq 0$, so this does not give any singular points. So we must look at the case $x_3=0$. In this case, $\frac{\partial G}{\partial x_3} =0$ is satisfied as long as $x_4^2 + x_5^2 =0$. So again all partial derivatives of $G$ vanish at a pair of points, and we can check that also $G$ vanishes at these points.
+\end{proof}
+
+This has the following implication for the image of $\CH_0(K')$ via $\Phi$:
+\begin{lemma}
+\label{lem:PWBaseChange1}
+  The image of $\CH_0(K' \times \kappa(P_W))/2$ via $\Phi$ is contained in the image of the map $\CH_0(P_W)/2 \to \CH_0(P_W \times \kappa(P_W))/2$ \eqref{eq:BaseChangeMapReduced}.
+\end{lemma}
+\begin{proof}
+Since $\CH_0(K')$ is universally trivial by \cref{lem:K'UniversallyTrivial}, the composed map
+\[\CH_0(K') \to \CH_0(K' \times \kappa(P_W)) \to \CH_1(Y \times \kappa(P_W))\]
+is surjective. So we can compute the image of $\CH_1(Y \times \kappa(P_W))$ in $\CH_0(P_W \times \kappa(P_W))$ by first computing the image of $\CH_0(K')/2$ in $\CH_0(P_W)/2$ and then applying the map \eqref{eq:BaseChangeMapReduced}.
+\end{proof}
+
+Next we look at the specialization $T_\gamma$ to $T$.
+\begin{lemma}
+\label{lem:T'Ideal}
+  $T'_\gamma$ specializes to $T' \subset \P^5$ defined by
+    \begin{equation}
+  	\label{eq:T'SpecialMatrix}
+  	\rk
+  	\begin{pmatrix}
+  		x_3 & -x_3 & x_4x_5\\
+  		x_2^2-2x_3^2 & -x_2^2 & c'    
+  	\end{pmatrix} \leq 1,
+  \end{equation}
+	with underlying reduced scheme defined by $x_3 = x_2x_4x_5=0$.
+\end{lemma}
+\begin{proof}
+	That $T'$ is defined by this matrix is immediate from \cref{lem:TDefinition}. The minors of \eqref{eq:T'SpecialMatrix} are
+	  \[-2x_3^3\]
+	\[x_3c' - x_4x_5 (x_2^2 - 2x_3^2)\]
+	\[ -x_3 c' + x_4x_5x_2^2. \]
+The underlying reduced scheme is therefore defined by
+\[x_3 = x_2x_4x_5=0.\]
+\end{proof}
+
+\begin{lemma}
+  \label{lem:TEquation}
+  $T_\gamma$ from \cref{lem:TDefinition} specializes to the scheme $T$ defined by the vanishing of the $(2 \times 2)$ minors of
+  \begin{equation}
+  	\begin{pmatrix}
+  		x_3 & -x_3 & x_4x_5\\
+  		x_2^2-2x_3^2 & -x_2^2 & c'    
+  	\end{pmatrix}
+  \end{equation}
+together with the vanishing of $c$ and $q$.
+Furthermore, $\CH_1(T) \simeq \CH_1(T^{red})$, where the underlying reduced scheme $T^{red}$ is defined by
+\[x_3 = x_4x_5 = x_0^2x_5 + x_1^2x_4 + x_6x_2^2 = 0.\]
+\end{lemma}
+\begin{proof}
+The statement about how $T_\gamma$ specializes is clear from \cref{lem:TDefinition}. From \cref{lem:T'Ideal} we see that the ideal of $T^{red}$ is
+\[\left(x_3,x_2x_4x_5,q,c \right), \]
+which is equal to
+\[\left(x_3,x_4x_5,x_0^2x_5 + x_1^2x_4 + (x_6-x_7)x_2^2\right). \]
+\end{proof}
+
+\begin{lemma}
+  \label{lem:TFactorsThroughV}
+  Define $V = T^{red} \cap P_W$. Then $V$ is isomorphic to the subset of $\P^7$ defined by
+\[x_3 = x_4x_5 = x_7 = x_0^2x_5 + x_1^2x_4 + x_6x_2^2 = 0.\]
+  The image of $\CH_1(T \times \kappa(P_W))/2$ via $\Phi$ factors through the natural map \[\CH_0(V \times \kappa(P_W))/2 \to \CH_0(P_W \times \kappa(P_W))/2.\]
+\end{lemma}
+\begin{proof}
+As a subset of $Z \subset \P^7$, $Z \cap P_W$ is defined by $x_7=0$. The equations for $V$ now follow from \cref{lem:TEquation}.
+From the description of $\Phi$ in \cref{lem:BigPhiSpecial} we see that the image of $\CH_1(T^{red} \times \kappa(P_W))$ must be contained in the image of $\CH_0((T^{red} \cap P_W) \times \kappa(P_W)) = \CH_0(V \times \kappa(P_W))/2 \to \CH_0(P_W \times \kappa(P_W))$.
+\end{proof}
+
+\begin{lemma}
+  \label{lem:VUniversallyTrivial}
+  The scheme $V$ from \cref{lem:TFactorsThroughV} is universally $\CH_0$ trivial. So the image of $\CH_1(T \times \kappa(P_W))/2$ via $\Phi$ is contained in the image of \eqref{eq:BaseChangeMapReduced}.
+\end{lemma}
+\begin{proof}
+  $V$ has two components, corresponding to $x_4=0$ or $x_5=0$. Since the equations are symmetric with respect to exchanging $x_0, x_5$ with $x_1, x_4$, the two components are isomorphic. Let $V_1$ be one such component, corresponding to $x_4 =0$. Then $V_1$ is defined by $x_0^2x_5 + x_2^2x_6 = 0$ in $\P^4_{[x_0:x_1:x_2:x_5:x_6]}$. So it is the cone over a rational cubic surface $C_1 \subset \P^3_{[x_0:x_2:x_5:x_6]}$.
+  
+  This surface is singular along the line $x_0 = x_2 = 0$, which is its non-normal locus. The normalization of $C_1$ is a rational surface. Furthermore, since it is normal it is regular in codimension 1, hence has isolated singularities. Therefore $\CH_0(C_1)$ is universally trivial by \cref{lem:RationalCH0Trivial}. Since the non-normal locus is a line, and hence has universally trivial $\CH_0$ group, we conclude that $CH_0(C_1)$ is universally trivial. 
+  
+  Cones over universally $\CH_0$-trival varieties are universally $\CH_0$-trivial, so $V_1$ is universally $\CH_0$-trivial. The other component of $V$ is likewise universally $\CH_0$ trivial. By \cref{lem:CH0TrivialComponents} we can conclude that $V$ is universally $\CH_0$ trivial.
+
+The image of $\CH_1(T \times \kappa(P_W))/2$ via $\Phi$ is contained in the image of $\CH_0(V \times \kappa(P_W))/2 \to \CH_0(P_W \times \kappa(P_W))/2$. Since $V$ is universally $\CH_0$ trivial, the base change map $\CH_0(V)/2 \to \CH_0(V \times \kappa(P_W))/2$ is surjective. So the image of $\CH_1(T \times \kappa(P_W))/2$ via $\Phi$ is contained in the image of this base change map, which is clearly a subset of the image of the map \eqref{eq:BaseChangeMapReduced}.
+\end{proof}
+
+Finally we look at what happens to $S_{\beta \gamma}^{red}$ under these specializations.
+\begin{lemma}
+  \label{lem:PWBaseChange3}
+  $S^{red}_{\beta \gamma}$ specializes to $S^{red} = V$, where $V$ is from \cref{lem:TFactorsThroughV}. Hence $S^{red}$ is universally $\CH_0$ trivial and the image of
+ $\CH_0(S \times \kappa(P_W))/2$ via $\Phi$ is contained in the image of \eqref{eq:BaseChangeMapReduced}.
+\end{lemma}
+\begin{proof}
+   Recall that $S_{\beta \gamma}^{red}$ was defined by $x_7 = q_{\beta \gamma} = c_{\beta \gamma} = x_3 = 0$. So as $\beta$ and $\gamma$ specialize to 0, $S^{red}_{\beta \gamma}$ specializes to $S^{red}$. This is defined by
+\[x_3 = x_7 = q = c = 0,\]
+which becomes 
+\[ x_3 = x_7 = x_4x_5 = x_0^2x_5 + x_1^2x_4 + x_6x_2^2 = 0.\]
+These are the same equations as the ones defining $V$. The result then follows.
+\end{proof}
+
+\subsubsection{Obstructing a Decomposition of the Diagonal}
+From \cref{lem:CanonicalSurjection}, \cref{obs:CH1WAbsorbed} and \cref{lem:CH0WVanishes} we see that the image of $\Phi$, can be described as the image of three parts, $\CH_1(Y)$, $\CH_1(Z)$ and $\CH_1(S)$. The three results \cref{lem:PWBaseChange1}, \cref{lem:VUniversallyTrivial} and \cref{lem:PWBaseChange3}, show that, after base changing to $\kappa(P_W)$, $\Phi$ maps each of these three parts into the image of $\CH_0(P_W)/2 \to \CH_0(P_W \times \kappa(P_W))/2$. Hence we obtain the following theorem:
+\begin{lemma}
+  \label{lem:ImageOfPhiContained}
+  The reduction mod $2$ of $\Phi_{\widetilde{\mathcal{X}},P_W}$ has image contained in the image of the map
+  \begin{equation}
+    \label{eq:PWBaseChangeMap4}
+    \CH_0(P_W)/2 \to \CH_0(P_W \times \kappa(P_W))/2.
+  \end{equation}
+\end{lemma}
+
+However, we chose $W$ specifically such that \eqref{eq:PWBaseChangeMap4} is not surjective, as the following proposition shows.
+\begin{lemma}
+	\label{prop:DiagonalNotInBaseChangeImage}
+	The class
+	\begin{equation}
+		\label{eq:DoDClass}
+		\delta_{P_W} - z \times {\kappa(P_W)} \in \CH_0(P_W \times \kappa(P_W))/2
+	\end{equation}
+	is not in the image of the map
+  \begin{equation}
+    \label{eq:PWBaseChangeMap5}
+    \CH_0(P_W)/2 \to \CH_0(P_W \times \kappa(P_W))/2,
+  \end{equation}
+and therefore not in the image of $\Phi_{\widetilde{\mathcal{X}},P_W}/2$.
+\end{lemma}
+\begin{proof}
+First note that \eqref{eq:DoDClass} is in the image of \eqref{eq:PWBaseChangeMap5} if and only if 
+\[\delta_{P_W} = w \times {\kappa(P_W)} \in \CH_0(P_W \times \kappa(P_W))/2\]
+for some zero cycle $w \in \CH_0(P_W)$. Furthermore, since $\CH_0(P_W) \simeq \CH_0(W)$ over any field, this holds if and only if there is some cycle $w \in \CH_0(W)/2$ such that $\delta_W = w \times \kappa(W)$ in $\CH_0(W \times \kappa(W))/2$. Equivalently it holds if
+\begin{equation}
+	\label{eq:WEquality}
+	\delta_W = w \times \kappa(W) + 2w' \in \CH_0(W \times \kappa(W))
+\end{equation}
+for some $w'$.
+
+As in the proof of \cref{lem:NoDoD} in \cref{pap:23diagonal}, we will prove that such an equality cannot hold by using the Merkurjev pairing. We will follow the proof in \cref{pap:23diagonal} very closely. That result is stated in positive characteristic different from $2$, but the proof goes through also in characteristic $0$. Precisely, in the proof of \cref{lem:NoDoD} it is proven that $\delta_W = w \times \kappa(W)$ cannot hold in $\CH_0(W)$ by pairing with a nonzero unramified cohomology class of order $2$. Since pairing such a class with $2w'$ results in zero since the pairing is bilinear, this proof and the proof of \cref{lem:NoDoD} are essentially the same.
+
+We will therefore only sketch the proof. To simplify the proof, we will work with a resolution of singularities, rather than a so-called alteration, although this restricts us to characteristic $0$. By comparing with the proof of \cref{lem:NoDoD}, one can see how to use alterations to prove the result also over fields of positive characteristic different from $2$.  Furthermore, we will simply state as facts properties of $W$ that are checked in detail in \cref{pap:23diagonal}. For a definition of the Merkurjev pairing and its important properties, see likewise \cref{pap:23diagonal}.
+
+To prove that \eqref{eq:WEquality} cannot hold, we proceed as follows. From \cref{lem:XpBlowup} we know that $W$ is singular along the plane defined by $x_3=x_4=x_5=x_6=x_7=0.$ From that paper we also know that after blowing up this plane, we obtain a quadric surface bundle over $\P^1 \times \P^1$ with smooth generic fiber, which we call $W'$. As is checked in \cref{pap:23diagonal}, the exceptional locus $E$ of this blowup is a rational conic bundle, and $W'$ is singular along six plane conics. In \cref{pap:23diagonal}, these results are stated over a field of positive characteristic, but the proofs go through also in characteristic $0$.
+
+If \eqref{eq:WEquality} holds, we must have an equality 
+\begin{equation}
+	\label{eq:W'Equality}
+	\delta_W' = w \times \kappa(W) + 2w' + w'' \in \CH_0(W \times \kappa(W)),
+\end{equation}
+where $w''$ is supported on $E$. We work over a field of characteristic $0$, so by resolution of singularities we can find a smooth variety $\widetilde{W}$, together with a map to $W'$, such that this map is an isomorphism outside of the singular locus. From \eqref{eq:W'Equality} we obtain an equality
+\begin{equation}
+	\label{eq:WTildeEquality}
+	\delta_{\widetilde{W}} = w \times \kappa(W) + 2w' + w'' + w''' \in \CH_0(W \times \kappa(W)).
+\end{equation}
+Here $w'''$ is supported on the exceptional locus of the map $\widetilde{W} \to W'$.
+
+By construction, $\widetilde{W}$ is birational to the quadric surface bundle in \cite{HPTActa}, hence has a nonzero unramified cohomology class $\alpha \in H_{nr}^2(\kappa(W)/k, \mu_2^{\otimes 2})$ of order $2$, see \cref{cor:AlphaNonTriv}. Since $\widetilde{W}$ is smooth, the Merkurjev pairing is defined on $\widetilde{W}$.
+
+We will show that pairing of $\alpha$ with the two sides of \eqref{eq:WTildeEquality} gives different results, hence this equality cannot hold. For the left hand side, the pairing $\ip{\delta_{\widetilde{W}}, \alpha} = \alpha \neq 0$ since $\delta_{\widetilde{W}}$ corresponds to the graph of the identity map on $\widetilde{W}$.
+
+To show that the pairing of $\alpha$ with the right hand side is zero, we will show that the pairing with each term is zero. Since $\alpha$ has order $2$, we must have $\ip{2w, \alpha} = 0$. Furthermore, as is explained in the proof of \cref{lem:NoDoD}, $\ip{w \times \kappa(W), \alpha} = 0$. This follows since $w$ is a direct sum of classes of closed points. So one can compute the pairing $\ip{w \times \kappa(W), \alpha}$ by first restricting $\alpha$ to the points in $w$. Over an algebraically closed field the restriction of an unramified cohomology class to a closed point must vanish. Additionally, since the singular locus of the quadric bundle $W'$ does not dominate $\P^1 \times \P^1$, we find that $\ip{w''', \alpha} = 0$ by a result of Schreieder (\cite[Theorem 10.1]{SchreiederCyclesAndRationality}).
+
+Finally, since the map $\widetilde{W} \to W'$ is an isomorphism outside the singular locus of $W'$, it also follows that $\ip{w'', \alpha} = 0$. To see this, note that $w''$ is supported on the rational variety $E$. As before, one can compute the pairing by first restricting $\alpha$ to $E$, and since $E$ is rational the restriction of $\alpha$ to $E$ must vanish. Over a field of characteristic different from $2$, the pairing $\ip{w'', \alpha}$ has the same value, but the proof is slightly more technical, see \cref{lem:NoDoD}.
+
+Combining this, we see that pairing $\alpha$ with the left hand side of \eqref{eq:WTildeEquality} we get a nonzero result, whereas pairing $\alpha$ with the right hand side gives $0$. This proves that an equality as in \eqref{eq:WTildeEquality} cannot hold, and we are done.
+\end{proof}
+Also over fields of positive characteristic, we have $\ip{2w, \alpha} = 0$.Also over fields of positive characteristic, we have $\ip{2w, \alpha} = 0$. This is the only point on which this proof and the proof of \cref{lem:NoDoD} differs, hence \cref{prop:DiagonalNotInBaseChange} also holds over fields positive characteristic different from $2$. Since the only other additional condition of the characteristic of the ground field is the proof of \cref{lem:K'UniversallyTrivia}, which does not go through in characteristic $3$, one can prove the main result, \cref{thm:GenericFiberNoDecomposition}, over algebraically closed ground fields of characteristic different from $2$ and $3$.
+
+Combining \cref{thm:BigPhiSurjective} and \cref{prop:DiagonalNotInBaseChangeImage} we obtain our main theorem.
+\begin{theorem}
+	\label{thm:GenericFiberNoDecomposition}
+	Let $\overline{K}$ be the algebraic closure of the fraction field $K$ of $R = k[[t]]$. Then $\overline{X}_{\overline{K}}$, the base change of generic fiber of $\widetilde{\mathcal{X}}$ to $\Spec \overline{K}$, does not admit a decomposition of the diagonal.
+\end{theorem}
+\begin{proof}
+	The specialization map $\mathrm{sp}$ from \cref{lem:SpecializationFulton} commutes with proper pushforwards and regular pullbacks.
+	By \cref{lem:ImageOfPhiContained} and \cref{prop:DiagonalNotInBaseChangeImage} we see that after specializing $\alpha, \beta, \gamma$ to zero, the image of $\Phi_{\widetilde{\mathcal{X}},P_W}/2$ does not contain $\delta_{P_W} - z \times \kappa(P_W) \in \CH_0(P_W \times \kappa(P_W))/2$. Since the specialization map \cref{lem:SpecializationFulton} takes $\delta_{P_{W_{\beta \gamma}}}$ to $\delta_{P_W}$, we see that also before specializing, the image of $\Phi_{\widetilde{\mathcal{X}},P_{W_\beta \gamma}}$ cannot contain $\delta_{P_{W_{\beta \gamma}}} - z \times \kappa(P_{W_{\beta \gamma}})$. It is therefore not surjective onto the kernel of the degree map. By the obstruction of Pavic and Schreieder,  \cref{thm:BigPhiSurjective}, it follows that the geometric generic fiber of $\widetilde{\mathcal{X}}$ cannot admit a decomposition of the diagonal.
+\end{proof}
+
+\begin{corollary}
+	\label{cor:33NotRetractRational}  
+	Let $k_0$ be an uncountable algebraically closed field of characteristic $0$. Then the very general complete intersection of two cubic hypersurfaces in $\P^7_{k_0}$ does not admit a decomposition of the diagonal, and is therefore not retract rational.
+\end{corollary}
+\begin{proof}
+	$\overline{X}$ from \cref{thm:GenericFiberNoDecomposition} is abstractly isomorphic to a smooth very general complete intersection of two cubic hypersurfaces in $\P^7_{k_0}$. We can specialize any very general complete intersection of two cubic hypersurfaces to this one and conclude using an additional specialization argument.
+\end{proof}
+
+\printbibliography[heading = subbibliography]
+\stopcontents[chapters]

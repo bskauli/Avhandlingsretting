@@ -1,0 +1,250 @@
+
+\title{Unirationality of Double Covers and Complete Intersections of Quadrics of Large Dimension} 
+\author{Bjørn Skauli}
+\date{}
+
+	\maketitle
+\label{pap:unirationality}
+        \begin{abstract}
+          We strengthen the result in \cite{CMMDoubleCover} by proving that for any fixed degree $d$ there is an integer $\eta(d)$, such that any smooth double cover of degree $d$ and dimension at least $\eta(d)$ is unirational. The proof is based on the analogous result for hypersurfaces (see \cite{HMP} and \cite{BRHypersurface}), together with a simple observation relating smooth double covers to a smooth hypersurface. We also generalize a construction of Beauville to prove that for sufficiently large dimension, the intersection of $K$ quadric hypersurfaces in $\P^N$ is unirational.
+        \end{abstract}
+
+	
+	\section{Introduction}
+	%Unirationality is important
+	%Historical results
+	
+	A variety $X$ is unirational if there exists a dominant rational map $\P^n \dashrightarrow X$. It is clear that any unirational variety is rationally connected. However, it remains a major open question if every rationally connected variety is unirational. Although it is widely expected that there exists non unirational, rationally connected varieties, no such example has been constructed.
+	
+Hypersurfaces $X \subset \P^n$ are a major source of examples in algebraic geometry, and studying how the rationality properties of a hypersurface $X$ depend on its degree is an important question. If the degree $d$ of $X$ is at most $n$, then $X$ is rationally chain connected, but for high degrees, $X$ is expected to not be unirational. In the converse direction, one can ask the following question. Given a degree $d$, is there a bound $\eta(d)$ such that if a hypersurface $X$ of degree $d$ has dimension at least $\eta(d)$, then $X$ is guaranteed to be unirational.
+
+Morin \cite{Morin} asserted that over a field of characteristic $0$, there exists such a bound guaranteeing that the general hypersurface of degree $d$ is unirational. The result was extended to complete intersections by Predonzan in \cite{Predonzan}. Ramero (\cite{Ramero}) improved the bounds on the required dimension. A clear account of these proofs can be found in \cite{PS}.
+
+In \cite{HMP}, Harris, Mazur and Pandharipande proved that over an algebraically closed field of characteristic $0$, there is in fact  a bound $\eta(d)$ such that any smooth hypersurface $X$ of degree $d$ in a projective space of dimension at least $\eta(d)$ is unirational. The idea behind the unirational parametrization in \cite{HMP} is the same as was used for general hypersurfaces, namely finding a linear space $\Lambda$ of dimension $l$ in $X$, and then for the $(l+1)$-dimensional linear spaces containing $\Lambda$, one studies the residual hypersurface to $\Lambda$ in the $(l+1)$-dimensional linear space. Compared to the result asserted by Morin, the extra work in \cite{HMP} is verifying that certain facts, which are clear for general hypersurfaces, hold for any smooth hypersurface.
+
+In \cite{HMP}, an upper bound on $\eta(d)$ is also given. The bound $\eta(d)$ from \cite{HMP} grows as a $d$-fold iterated exponential of a $d$-fold iterated exponential. Recently, Beheshti and Riedl give the following result, improving the bound from \cite{HMP}.
+	\begin{theorem}[{\cite[Corollary 4.4,Corollary 4.6]{BRHypersurface}}]
+		\label{thm:BRHypersurface}
+		For any positive integer $d$, there is an integer $\eta(d)$ such that any smooth degree $d$ hypersurface in $\P^n$ is unirational provided that $\eta(d) \leq n$. Furthermore, $\eta(d) \leq 2^{d!}$.
+	\end{theorem}
+	
+Double covers of projective space is another important source of examples in algebraic geometry. One can also ask if for a fixed degree, there is a dimension above which any smooth double cover is unirational. In \cite{CMMDoubleCover}, Conte, Marchiso and Murre use an idea of Ciliberto to prove the following result:
+	\begin{theorem}[{\cite[Theorem 4.1]{CMMDoubleCover}}]
+		\label{thm:CMM}
+		For any field $k$ of characteristic 0 and any integer $d > 2$ there exists a constant $\eta_2(d)$ such that if $\eta_2(d) \leq n$ the general double cover $X \to \P^n$ branched over a hypersurface of degree $2d$ is unirational over $k$.
+	\end{theorem}
+While no explicit upper bound on $\eta_2(d)$ is given in \cite{CMMDoubleCover}, the growth behaviour is similar to the bounds given by \cite{Ramero} for when a hypersurface of degree $2d$ is unirational.
+	Our first goal is to show that when $k$ is algebraically closed, one can improve \cref{thm:CMM} to hold for any smooth double cover $X$, and also give an explicit expression bounding $\eta$ from above (\cref{thm:SmoothDoubleCoverUnirationality}). In fact, the result applies any smooth cyclic cover of projective space.
+
+Another family of rationally connected varieties with rich geometry are smooth complete intersection of $K$ quadrics in $\P^N$. If $K \leq \frac{N}{2}$, then the resulting variety is Fano. Our second goal is to prove an analogue of \cref{thm:BRHypersurface} for such intersections. We do this by generalizing a construction by Beauville in \cite[1.4.4]{Beauville} to $K$ quadrics, and obtain the following result:
+\begin{theorem}
+  \label{thm:QuadricsUnirationalIntroduction}
+	Let $k$ be an algebraically closed field of characteristic different from $2$. $X_{K,N}$ be an irreducible intersection of $K$ general quadrics in $\P_k^N$. If $\dim X_{K,N} \geq 1$ and
+	\[\frac{K^2}{2} + K - 2 \leq N,\]
+	then $X_{K,N}$ is unirational.
+\end{theorem}
+
+	\section{Cyclic Covers of Large Dimension}
+	We have the following simple observation.
+	\begin{lemma}
+		\label{lem:DominatingHypersurface}
+		Let the equation $y^e-f(x_0,\dots,x_n) = 0$ in the weighted projective space $\P(1,\dots,1,d)$ of dimension $n+1$ define a smooth cyclic $e$-fold cover $X \to \P^n$ ramified over a hypersurface of degree $ed$. Then 
+\[F(x_0,\dots,x_n,z) = z^{ed}-f(x_0,\dots,x_n) = 0\]
+ defines a smooth hypersurface $Y$ in $\P^{n+1}$ of degree $ed$. Furthermore, the map $f \from Y \to X$ defined by $(x_0,\dots,x_n,z) \mapsto (x_0,\dots,x_n,z^d)$ is surjective of degree $d$.
+	\end{lemma}
+	\begin{proof}
+		We first check that $y^{ed}-f(x_0,\dots,x_n) = 0$ defines a smooth hypersurface in $\P^{n+1}$. The partial derivatives are given by
+		\[\frac{\partial F}{\partial z}(x_0,\dots,x_n,z) = edz^{ed-1}\]
+		and
+		\[\frac{\partial F}{\partial x_i}(x_0,\dots,x_n,z) = \frac{\partial f}{\partial x_i}(x_0,\dots,x_n,z)\]
+		for $i=0,\dots,n$.
+		From this we see that $Y$ is nonsingular if and only if the hypersurface in $\P^n$ defined by $f(x_0,\dots,x_n)$ is nonsingular, which in turn is equivalent to $X$ being nonsingular. The map $f$ clearly maps $Y$ onto $X$ and has degree $d$.
+	\end{proof}
+
+	\begin{theorem}
+          \label{thm:SmoothDoubleCoverUnirationality}
+		Let $k$ be an algebraically closed field of characteristic 0. Then for any positive integer $d$ there is an integer $\eta'(d)$ such that any smooth cyclic $e$-fold cover of ramified over a divisor of degree $ed$, and of dimension at least $\eta'(d)$ is unirational. Furthermore, $\eta'(d) \leq 2^{(ed)!}-1$.
+	\end{theorem}
+	\begin{proof}
+		Take $\eta'(d)$ to be the integer $\eta(ed)-1$ from \cref{thm:BRHypersurface}, such that any smooth hypersurface $Y \subset \P^{n+1}$ of degree $ed$ is unirational for $\eta'(d) \leq n$. Then for any smooth $e$-fold cyclic cover $X \to \P^n$ of degree $d$ we can, by \cref{lem:DominatingHypersurface}, find a smooth hypersurface $Y \subset \P^{n+1}$ of degree $ed$ with a dominant map $Y \to X$. By \cref{thm:BRHypersurface}, $Y$ is necessarily unirational, hence $X$ must be unirational as well.
+	\end{proof}
+
+\section{Intersections of Quadrics}
+Intersections of quadrics in projective space have also been an important source of examples in studying rationality questions. For example, \cite{HPTThreeQuadrics} considers how the rationality of the intersection $Q_1 \cap Q_2 \cap Q_3 \subset \P^7$ varies in families. The remarkable result is that for families of smooth fourfolds, the very general member can be retract irrational, but the rational members of the family are dense, even in the Euclidean topology. We will work throughout over an algebraically closed field $k$ of characteristic different from 2.
+
+We will study $Q_1 \cap \cdots \cap Q_K \subset \P^N$, complete intersections of $K$ quadrics in $\P^N$. In the negative direction, we have the following result from \cite[Theorem 7.8]{NicaiseOttem}.
+\begin{theorem}
+	\label{thm:QuadricsIrrationality}
+  Let $X_{K,N} = Q_1 \cap \cdots \cap Q_K \subset \P_k^N$ be a very general complete intersection of quadrics. Then $X_{K,N}$ is not stably rational if $N \leq 2K+1$ and $3 \leq K$.
+\end{theorem}
+\begin{remark}
+  To the author's best knowledge, retract rationality of many of these examples is still unknown. The first open case is 4 quadrics in $\P^9$.
+\end{remark}
+
+Similar to the case of hypersurfaces, one can also ask for bounds on $K$ and $N$ that give results in the positive direction. For example,
+\begin{proposition}
+	\label{prop:QuadricsRationalConnectedness}
+  Let $X_{K,N}$ be a smooth complete intersection of $K$ quadrics in $\P_k^N$. Then $X$ is rationally chain connected if and only if $2K \leq N$.
+\end{proposition}
+\begin{proof}
+  $2K \leq N$ is precisely the Fano bound, and smooth complete intersections are rationally chain connected if and only if they are Fano.
+\end{proof}
+\begin{remark}
+	The bounds in \cref{thm:QuadricsIrrationality} and \cref{prop:QuadricsRationalConnectedness} follow each other closely. For each $K \geq 3$, we find exactly two dimensions, $N-K$ and $N+1-K$, where the very general intersection of $K$ quadrics in $\P^{N}$ or $\P^{N+1}$ is known not to be retract rational, but still rationally chain connected.
+\end{remark}
+
+We now turn to positive rationality results, aiming to prove \cref{thm:QuadricsUnirationalIntroduction}. The first step is studying linear spaces in a complete intersection of quadrics. The following result is presumably well known,    but we include a proof here for lack of a suitable reference.
+\begin{lemma}
+\label{lem:ExpectedLinearSpaceQuadrics}
+Assume that $m \leq \frac{N-1}{2}$. The \emph{expected dimension} of $m$-dimensional linear spaces in an intersection of $K$ quadrics in $\P_k^N$ is 
+\[\dim(\Gr(m+1,N+1)) - K\left(\binom{m+2}{2} \right) = (m+1)(N-k) - K\frac{(m+2)(m+1)}{2}. \]
+If this number is nonnegative, then the space of $m$-dimensional linear spaces on an intersection of $K$ general quadrics in $\P_k^N$ has dimension equal to the expected dimension. Furthermore, if the expected dimension is nonnegative, the space of $m$-dimensional linear spaces is nonempty for any intersection of $K$ quadrics.
+\end{lemma}
+\begin{proof}
+We assume that the expected dimension is nonnegative. Let $V$ be an $(N+1)$-dimensional $k$-vector space such that $\P_k^N = \P(V)$. Recall that a nonsingular form of degree 2 on $V$ corresponds to an isomorphism from $V$ to the dual vector space $V^\vee$, written $q \from V \to V^\vee$. Via this correspondence, a $m$-dimensional linear space on a quadric $\P(W)$ corresponds to a $(k+1)$ dimensional subspace $W \subset V$ such that $q(W) \subset \Ann(W)$. Hence a $m$-dimensional linear space in an intersection of $K$ general quadrics corresponds to a $(k+1)$-dimensional subspace $W \subset V$ such that $q_i(W) \subset \Ann(W)$ for $i=1,\dots,K$, where $q_i\from V \to V^\vee$ are the isomorphisms corresponding to the quadric hypersurface $Q_i$. Since the $Q_i$ are general, so are the $q_i$. We can count the dimension of bases of such subspaces. Namely, we first pick any vector $v_1$ such that $q_i(v_1)(v_1) = 0$ for all $i$. There is an $(N+1-K)$-dimensional family of such choices. Now pick $v_2$ such that $q_i(v_2)(v_1) = q_i(v_2)(v_2) = 0$. This is an $(N+1-2K)$-dimensional choice. Continue in this way until we reach $v_{k+1}$, giving a basis for $W$. At step $i$, the next vector is chosen from a locally closed subset of dimension $(N+1-iK)$. Note that since the $q_i$ are general, the conditions they impose on the $v_i$ are linearly independent. The dimension of the space of bases for such subspaces $W$ is therefore
+\[(N+1-K)+(N+1-2K)+\cdots+(N+1-(k+1)K).\]
+Since for each $W$, there is a $(k+1)^2$ dimensional space of bases for this subspace, the dimension of $(k+1)$-dimensional subspaces $W$ such that $\P(W)$ is contained in all quadrics is
+\begin{align*}
+  &(N+1-K)+(N+1-2K)+\cdots+(N+1-(k+1)K) - (k+1)^2\\
+ &= (k+1)(N+1) - (k+1)^2 - K \left(\sum_{i=1}^{k+1}i )\right)\\
+&= (k+1)(N-k) - K \frac{(k+2)(k+1)}{2}
+\end{align*}
+For any choice of quadrics, this number is a lower bound on the possible choices of $W$. If this number is nonnegative, then there is some possible choice of $W$ such that the $m$-dimensional linear space $\P(W)$ is contained in all the quadrics. So the final part of the result holds.
+% A straightforward way to prove the lemma is through an incidence correspondence. Consider the correspondence
+% \[ I \coloneqq \set{(\lambda,(Q_1,\dots,Q_K)) \in \Gr(k+1,N+1) \times \P(H^0(\sO_{\P^N}(2)))^K \vert \lambda \subset \Q_i \, i = 1,\dots,K} \]
+% The fiber of the projection $I \to \Gr(k+1,N+1)$ has codimension $K\frac{(k+2)(k+1)}{2}$, so to prove the statement, it suffices to find a single $m$-plane $\lambda_0$ and a $K$-tuple of quadrics $Q_1,\dots,Q_K$ such that locally around $(\lambda,(Q_1,\dots,Q_K))$, $I$ has codimension, $K\frac{(k+2)(k+1)}{2}$. More precisely, we find $(\lambda,(Q_1,\dots,Q_K))$ such that the differential of $p_2$ has kernel of dimension $K\frac{(k+2)(k+1)}{2}$ at $(\lambda,(Q_1,\dots,Q_K))$. The kernel of the differential of $p_2$ is the tangent space to the variety of $m$-dimensional linear spaces in $Q_1 \cap \cdots \cap Q_K$. This space is isomorphic to the space of global sections of the normal bundle of $\lambda$ in $Q_1 \cap \cdots \cap Q_K$, which we can compute using the sequence
+% \begin{equation}
+%   \label{eq:QuadricsNormalBundleSequence1}
+%    0 \to H^0(\sN_{\lambda/X}) \to H^0(\sN_{\lambda/\P^N}) \to H^0(\restr{\sN_{X/\P^N}}{\lambda}) \to 0
+% \end{equation}
+% Assume that $\lambda$ is defined by $x_{k+1}= \cdots = x_N = 0$. Then the $Q_i$ are defined by polynomials of the form $\sum_{j={k+1}}^N x_j f_{ij}(x_0,\dots,x_N)$, where the $f_{ij}$ are linear polynomials. Then \eqref{eq:QuadricsNormalBundleSequence1} is given by
+% \begin{equation}
+%   \label{eq:QuadricsNormalBundleSequence1}
+%    0 \to H^0(\sN_{\lambda/X}) \to H^0(\bigoplus_{j=k+1}^{N}\sO_{\lambda}(1)) \xrightarrow{\eta} H^0(\bigoplus_{i=1}^K\sO_{\lambda}(2)) \to 0
+% \end{equation}
+% Observe that the difference of dimensions between $H^0(\bigoplus_{j=k+1}^{N}\sO_{\lambda}(1))$ and $H^0(\bigoplus_{i=1}^K\sO_{\lambda}(2))$ is exactly the expected dimension. If $(\alpha_{k+1},\dots,\alpha_N) \in H^0(\bigoplus_{j=k+1}^{N}\sO_{\lambda}(1))$, then the $i$-th coordinate of $\eta$ is $\sum_{j=k+1}^N \alpha_jf_{ij}$. It is straightforward to find a particular choice $(Q_1,\dots,Q_K)$ such that $\eta$ is surjective, and hence the dimension of $H^0(\sN_{\lambda/X})$ is equal to the expected dimension. The lemma then follows.\todo{Find an elegant way of constructing an example in all dimensions}
+\end{proof}
+
+The following is a classical rationality construction for intersections of quadrics.
+\begin{proposition}
+	\label{prop:RationalFromLinearSpace}
+	Let $X_{K,N}$ be an irreducible intersection of $K$ quadrics in $\P_k^N$. If $X_{K,N}$ contains a linear space of dimension $K-1$, then $X_{K,N}$ is rational.
+\end{proposition}
+\begin{proof}
+	Let $Z \subset X_{K,N}$ be a linear space of dimension $K-1$. Projection from $Z$ gives a rational map $\phi \from X_{K,N} \dashrightarrow \P^{N-K}$, which is birational if the generic fiber consists of a single point. The fibers of $\phi$ are intersections of $K$ residual hyperplanes in a $K$-dimensional linear space containing $Z$. If the residual hyperplanes intersect transversally at a point, that fiber of the rational map is a single point. So by semicontinuity, the general fiber is a single point, and the map is birational.
+
+To study the case where the residual hyperplanes intersect nontransverally for every $K$-dimensional linear space in $\P^N$ containing $Z$, assume that $Z$ is defined by $x_{K} = \dots = X_N = 0$, so the $Q_i$ are of the form
+\[Q_i = x_0 b_{0i}(x_K,\dots,x_N) + \cdots + x_{K-1}b_{(K-1)i}(x_K,\dots,x_N) + q_i(x_K,\dots,x_N). \]
+A $K$-dimensional linear space $\lambda$ containing $Z$ is given by a choice $\alpha_{K},\dots,\alpha_N$ in the space $\P^{N-K-1}$ parametrizing such linear spaces. Furthermore, the residual hyperplane of $Q_i$ in $\lambda$ is defined by the equation
+\[x_0 b_{0i}(\alpha_K,\dots,\alpha_N) + \cdots + x_{K-1}b_{(K-1)i}(\alpha_K,\dots,\alpha_N) + \xi q_i(\alpha_K,\dots,\alpha_N) = 0, \]
+where the coordinates on $\lambda$ are $x_0,\dots,x_{K-1},\xi$. The intersection of the residual hyperplanes is not transversal if and only if
+\begin{equation*}
+  \rk
+  \begin{pmatrix}
+    b_{01}(\alpha_K,\dots,\alpha_N) & b_{01}(\alpha_K,\dots,\alpha_N) & \cdots & q_1(\alpha_K,\dots,\alpha_N) \\
+        b_{02}(\alpha_K,\dots,\alpha_N) & b_{02}(\alpha_K,\dots,\alpha_N) & \cdots & q_2(\alpha_K,\dots,\alpha_N) \\
+        \vdots & \vdots & \ddots & \vdots \\
+    b_{0K}(\alpha_K,\dots,\alpha_N) & b_{0K}(\alpha_K,\dots,\alpha_N) & \cdots & q_K(\alpha_K,\dots,\alpha_N) \\
+  \end{pmatrix}
+\leq K.
+\end{equation*}
+If this holds for all $(\alpha_K:\dots:\alpha_N) \in \P^{N-K-1}$, then one of the $Q_i$ is a linear combination of the others. In other words, $X$ is the intersection of $K-1$ quadrics. Since $X$ contains a $(K-1)$-dimensional linear space, and therefore necessarily a $(K-2)$-dimensional linear space, we can conclude by induction. The base case of this induction is the classical fact that an irreducible quadric containing a point is rational.
+\end{proof}
+
+\begin{theorem}
+  \label{thm:QuadricRationalBound}
+  Let $X_{K,N}$ be an irreducible complete intersection of $K$ quadrics in $\P_k^N$. If
+\[ \frac{K^2}{2} + \frac{3K}{2} - 1 \leq N,\]
+then $K$ is rational.
+\end{theorem}
+\begin{proof}
+By \cref{lem:ExpectedLinearSpaceQuadrics}, any such $X_{K,N}$ contains a linear space of dimension $K-1$.
+%  The simplest way to check this is using an incidence correspondence. Define
+% \[I \coloneqq \set{(\lambda, (Q_1,\dots,Q_K)) \in \Gr(K,N+1) \times \P(H^0(\sO_{\P^N}(2)))^K \vert \lambda \subset Q_i \forall i}.\]
+% For a given quadric hypersurface in $\P^N$ to contain a $K$-plane has codimension equal to $\dim H^0(\sO_{\P^K}(2))$. So the fibers of the projection $I \to \Gr(K,N+1)$ have codimension
+% \[K\binom{K+1}{2} = K\frac{(K+1)K}{2}.\]
+% We expect an intersection of $K$ quadrics to contain a $K$-plane if
+% \[K\frac{(K+1)K}{2} \leq \dim \Gr(K,N+1) = K(N+1-K).\]
+% This inequality holds if
+% \[ \frac{K^2}{2} + \frac{3K}{2} - 1 \leq N.\]
+% It remains to check that when the expected dimension of $(K-1)$-planes in $X = \bigcap_{i=1}^K Q_i$ is nonnegative, then $X$ contains $(K-1)$-planes. It suffices to find a single $X$ containing a $(K-1)$-plane that moves in a familiy of expected dimension. It is easy to check that for a fixed $(K-1)$-plane $\lambda$, a general $X$ containing $\lambda$ has this property by using that $H^0(\sN_{X/\lambda})$ parametrizes deformations of $\lambda$ in $X$, and the standard sequence of normal bundles
+% \[0 \to \sN_{X/\lambda} \to \bigoplus_{j=1}^{N-K} \sO_{\lambda}(1) \to \bigoplus_{i=1}^K \sO_{\lambda}(2) \to 0\ \]
+Now apply \cref{prop:RationalFromLinearSpace}.
+\end{proof}
+
+
+Similarly, a complete intersection of quadrics containing a linear space of sufficiently large dimension is unirational. This will give a bound on $N$ in terms of $K$ for when the intersection of $K$ quadrics in $\P_k^N$ is unirational, proving \cref{thm:QuadricsUnirationalIntroduction}. The main work in proving this is checking that the construction of Beauville in \cite[1.4.4]{Beauville}, for three quadrics in $\P^6$ containing a line, generalizes to $K$ quadrics. 
+%\footnote{and translating the construction from French into English}
+\begin{proposition}
+  \label{prop:UnirationalFromLinearSpace}
+  Let $X_{K,N}$ be an irreducible intersection of $K$ quadrics in $\P_k^N$, and assume that $2K-1 \leq N$. If $X_{K,N}$ contains a linear space of dimension $K-2$, then $X_{K,N}$ is unirational.
+\end{proposition}
+\begin{proof}
+  Write $X$ for $X_{K,N}$, let $Z \subset X$ be a linear space of dimension $K-2$, and let $\widetilde{X}$ be the blowup of $X$ in $Z$.  Let $\mathcal{Q} \simeq \P^{K-1}$ be the linear system of quadrics containing $X$. Let $\Lambda \simeq \P^{N-K+1}$ parametrize $(K-1)$-dimensional linear spaces in $\P_k^N$ containing $Z$. Consider the incidence correspondence
+\[ I \coloneqq \set{(\lambda,Q) \in \Lambda \times \mathcal{Q} \vert \lambda \subset Q}. \]
+
+We first check that $I$ is birational to $X$. In fact, we can give a resolution of the birational map as follows. Let $J$ be the incidence correspondence
+\[ J \coloneqq \set{(p,Q) \in \widetilde{X} \times \mathcal{Q} \vert \ip{p,Z} \subset Q}, \]
+where $\ip{p,Z}$ denotes the $(K-1)$-dimensional linear space spanned by $p$ and $Z$. This makes sense also for points $p$ in the exceptional divisor of $\widetilde{X}$. Since $\ip{p,Z}$ is a unique linear space, the morphism $J \to I$ defined by $(x,Q) \mapsto (\ip{x,Z},Q)$ is is well-defined.
+
+The general fiber of this morphism is a single point. To see this, pick $Q'_2,\dots,Q'_K \in \mathcal{Q}$ such that $Q\cap Q'_2\cap \dots \cap Q'_K = X$. Then $\restr{X}{\ip{x,Z}}$ consists of $Z$, and the intersection of the residual hyperplanes corresponding to $Q_2,\dots,Q_{K}$. This is the intersection of $K-1$ hyperplanes in $(K-1)$-dimensional projective space. If there exists a $(K-1)$-dimensional linear space such that the residual hyperplanes intersect transversally, we are done. Since then the residual hyperplanes intersect transversally for a general $(K-1)$-dimensional linear space containing $\lambda$, and the map is birational. If no such space exists, we can argue as in \cref{prop:RationalFromLinearSpace} that $X$ is the intersection of $(K-1)$-quadrics. Then, since $X$ contains a linear space of dimension $K-2$ by assumption, $X$ is in fact rational by \cref{prop:RationalFromLinearSpace}.
+
+ Furthermore, the first projection $p_1 \from J \to \widetilde{X}$ is generically 1:1. To see this, we must check that for a general $p \in \widetilde{X}$, there is a unique $Q \in \mathcal{Q}$ containing $\ip{p,Z}$. Since $p$ is general, we may even assume that $p \in X$. Picking coordinates such that $Z$ is defined by $x_{K-1} = \cdots = x_N = 0$ and $\ip{p,Z}$ is defined by $x_{K} = \cdots = x_N = 0$, the quadrics in $\mathcal{Q}$ are quadrics of the form
+\[Q_{(a_1:\dots:a_K)} = a_1 Q_1 + a_2 Q_2 + \cdots + a_K Q_K, \, (a_1:\dots:a_K) \in \P^{K-1}.\]
+Since $Z \subset X$, $Z \subset Q_i$ for all $i$, so each $Q_i$ is defined by a polynomial of the form
+\begin{align*}
+	x_0l_{i,0}(x_{K-1},\dots,x_N) + x_1l_{i,1}(x_{K-1},\dots,x_N) + \cdots &+ x_{K-2}l_{K-2,i}(x_{K-1},\dots,x_N) \\
+	 &+ q_i(x_{K-1},\dots,x_N),
+\end{align*}
+where the $l_i$ have degree 1, and $q_i$ has degree 2. By assumption, $p$ lies in $X$, so $Q_{(a_1:\dots:a_K)}$ contains no $x_{K-1}^2$-term. So $Q_{(a_1:\dots:a_K)}$ contains $\ip{p,Z}$ if and only if all the terms of the form $x_ix_{K-1}$ are zero for $i = 0,\dots,K-2$. This gives $K-1$ linear conditions on $(a_1:\dots:a_K)$. So for a general $\lambda$ it holds for exactly one quadric $Q_{(a_1:\dots:a_K)} \in \mathcal{Q}$. Hence $p_1 \from J \to \widetilde{X}$ is birational.
+
+The constructions so far are summarized in the following diagram:
+\begin{equation*}
+  \begin{tikzcd}
+    & J \arrow["p_1",dl] \arrow[dr]&  &\\
+  \widetilde{X} \arrow[d] & & I \arrow[d,"\beta"] &\\
+  X             & & \mathcal{Q} \arrow[r,equal] & \P^{K-1}
+  \end{tikzcd}
+\end{equation*}
+Here the morphism $\beta \from I \to \P^{K-1}$ is simply the second projection.
+
+We now check that $I$ is a quadric bundle over $\P^{K-1}$. To see that $\beta$ gives $I$ a quadric bundle structure, we fix a $Q \in \mathcal{Q}$ and study the fiber $\beta^{-1}(Q)$. $Q$ is defined by the vanishing of a polynomial of the form
+\begin{align*}
+	x_0l_0(x_{K-1},\dots,x_N) + x_1l_1(x_{K-1},\dots,x_N) + \cdots &+ x_{K-2}l_{K-2}(x_{K-1},\dots,x_N)\\
+	&+ q(x_{K-1},\dots,x_N),
+\end{align*}
+and a plane $\lambda \in \Lambda$ is parametrized by a point $(b_{K-1}:\cdots : b_N) \in \P^{N-K+1}$. In this notation $\lambda \subset Q$ if and only if 
+\[l_0(b_{K-1}:\dots : b_N) = \cdots = l_{K-2}(b_{K-1}:\dots : b_N) = q(b_{K-1}:\dots : b_N) = 0. \]
+So the fiber $\beta^{-1}(Q)$ is the intersection of $K-1$ linear spaces and a quadric in $\P^{N-K+1}$, which is a quadric hypersurface in $\P^{N-2K+2}$.
+
+Let $E \subset \widetilde{X}$ be the exceptional divisor. Since $E$ is isomorphic to a projective bundle over the linear space $Z$, $E$ is rational. Let $E' \subset I$ be the strict transform of $E$ via the birational map $\widetilde{X} \birat I$. Then $E'$ is rational and dominates $\mathcal{Q}$ via $\beta$. To see this final fact, note that for any $Q \in \mathcal{Q}$, and any $K-1$-plane $L \supset Z$ contained in $Q$, $L$ gives a normal vector to $\lambda$ in $X$, hence a point in $E$. So $I$, hence $X$, is unirational by \cref{lem:EnriquesUnirational}, which is usually attributed to Enriques.
+\end{proof}
+
+\begin{lemma}
+  \label{lem:EnriquesUnirational}
+  Let $\beta \from Y \to Z$ be a quadric bundle defined over a field $k$ of characteristic 0. Assume that $V \subset Y$ is a subvariety, rational over $k$, dominating $Z$ via $\beta$. Then $Y$ is unirational.
+\end{lemma}
+\begin{proof}
+  Let $W \coloneqq Y \times_Z V$. Then $W \to V$ is a quadric bundle admitting a section, hence rational over $k(V)$. Since $V$ is rational, $W$ is also rational over $k$. So $W \to Y$ is a dominant map from a rational variety, so $Y$ is unirational.
+\end{proof}
+
+\begin{remark}
+	The fiber over $Q_{(a_1:\dots:a_K)}$ of the unirational parametrization in \cref{prop:UnirationalFromLinearSpace} consists precisely of the $(K-1)$-planes in $Q_{(a_1:\dots:a_K)}$ that contain $Z$. One can compute that there are $2^{K-1}$ such planes, so the unirational parametrization has degree $2^{K-1}$
+\end{remark}
+
+\begin{theorem}
+  \label{thm:QuadricsUnirational}
+	Let $X_{K,N}$ be an irreducible complete intersection of $K$ quadrics in $\P_k^N$. If $\dim X_{K,N} \geq 1$ and 
+	\[\frac{K^2}{2} + K - 2 \leq N,\]
+	then $X_{K,N}$ is unirational.
+\end{theorem}
+\begin{proof}
+	Any such $X_{K,N}$ contains a linear space of dimension $K-1$ by \cref{lem:ExpectedLinearSpaceQuadrics}. Now apply \cref{prop:UnirationalFromLinearSpace}.
+\end{proof}
+
+\begin{remark}
+  One should contrast the lower bounds on the dimension here, with what is known for hypersurfaces. For hypersurfaces, the best known lower bound grows as $2^{d!}$, whereas the bounds for intersections of quadrics grows as $K^2$ in the number of quadrics, and $2^{K^2}$ in the degree of the intersection. Also, for quadrics we have \cref{thm:QuadricRationalBound}, whereas it is unknown if even a general cubic hypersurface is rational in any dimension $\geq 4$.
+\end{remark}
+
+\printbibliography[heading = subbibliography]
+\stopcontents[chapters]
