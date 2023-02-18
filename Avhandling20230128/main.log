@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.8.9)  28 JAN 2023 15:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.8.9)  13 FEB 2023 22:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2427,65 +2427,65 @@ Package cleveref Info: loaded `english' language definitions on input line 65.
  [2]
 Package hyperref Info: bookmark level for unknown question defaults to 0 on inp
 ut line 69.
-Package cleveref Info: loaded `english' language definitions on input line 92.
- [3]
 Package hyperref Info: bookmark level for unknown proposition defaults to 0 on 
-input line 92.
+input line 91.
+Package cleveref Info: loaded `english' language definitions on input line 93.
+ [3]
 Package hyperref Info: bookmark level for unknown theorem defaults to 0 on inpu
-t line 103.
-Package cleveref Info: loaded `english' language definitions on input line 126.
+t line 102.
+Package cleveref Info: loaded `english' language definitions on input line 138.
 
  [4]
 Package cleveref Info: loaded `english' language definitions on input line 167.
 
  [5]
-Package cleveref Info: loaded `english' language definitions on input line 222.
+Package cleveref Info: loaded `english' language definitions on input line 221.
 
  [6]
-Package cleveref Info: loaded `english' language definitions on input line 238.
+Package cleveref Info: loaded `english' language definitions on input line 237.
 
 
 [7]
 Underfull \vbox (badness 6078) has occurred while \output is active []
 
-Package cleveref Info: loaded `english' language definitions on input line 255.
+Package cleveref Info: loaded `english' language definitions on input line 254.
 
  [8]
-Package cleveref Info: loaded `english' language definitions on input line 273.
+Package cleveref Info: loaded `english' language definitions on input line 272.
 
 
 [9]
-Package cleveref Info: loaded `english' language definitions on input line 296.
+Package cleveref Info: loaded `english' language definitions on input line 295.
 
  [10]
-Package cleveref Info: loaded `english' language definitions on input line 321.
+Package cleveref Info: loaded `english' language definitions on input line 320.
 
  [11]
-Package cleveref Info: loaded `english' language definitions on input line 348.
+Package cleveref Info: loaded `english' language definitions on input line 347.
 
  [12]
-Package cleveref Info: loaded `english' language definitions on input line 374.
+Package cleveref Info: loaded `english' language definitions on input line 373.
 
  [13]
-Package cleveref Info: loaded `english' language definitions on input line 390.
+Package cleveref Info: loaded `english' language definitions on input line 389.
 
  [14]
-Package cleveref Info: loaded `english' language definitions on input line 404.
+Package cleveref Info: loaded `english' language definitions on input line 401.
 
  [15]
-Package cleveref Info: loaded `english' language definitions on input line 429.
+Package cleveref Info: loaded `english' language definitions on input line 427.
 
  [16]
 Package cleveref Info: loaded `english' language definitions on input line 450.
 
  [17]
-Package cleveref Info: loaded `english' language definitions on input line 475.
+Package cleveref Info: loaded `english' language definitions on input line 474.
 
  [18]
-Package cleveref Info: loaded `english' language definitions on input line 496.
+Package cleveref Info: loaded `english' language definitions on input line 494.
 
  [19]
-Package cleveref Info: loaded `english' language definitions on input line 521.
+Package cleveref Info: loaded `english' language definitions on input line 520.
 
  [20]
 Package cleveref Info: loaded `english' language definitions on input line 534.
@@ -3013,35 +3013,35 @@ Package cleveref Info: loaded `english' language definitions on input line 188.
 Package cleveref Info: loaded `english' language definitions on input line 231.
 
  [118]
-Package cleveref Info: loaded `english' language definitions on input line 272.
+Package cleveref Info: loaded `english' language definitions on input line 265.
 
  [119]
-Package cleveref Info: loaded `english' language definitions on input line 297.
+Package cleveref Info: loaded `english' language definitions on input line 291.
 
  [120]
-Package cleveref Info: loaded `english' language definitions on input line 321.
+Package cleveref Info: loaded `english' language definitions on input line 317.
 
  [121]
-Package cleveref Info: loaded `english' language definitions on input line 346.
+Package cleveref Info: loaded `english' language definitions on input line 342.
 
  [122]
-Package cleveref Info: loaded `english' language definitions on input line 401.
+Package cleveref Info: loaded `english' language definitions on input line 395.
 
  [123]
-Package cleveref Info: loaded `english' language definitions on input line 434.
+Package cleveref Info: loaded `english' language definitions on input line 430.
 
  [124]
-Package cleveref Info: loaded `english' language definitions on input line 467.
+Package cleveref Info: loaded `english' language definitions on input line 458.
 
 
 [125]
-Package cleveref Info: loaded `english' language definitions on input line 490.
+Package cleveref Info: loaded `english' language definitions on input line 480.
 
  [126]
-Package cleveref Info: loaded `english' language definitions on input line 520.
+Package cleveref Info: loaded `english' language definitions on input line 515.
 
  [127]
-Package cleveref Info: loaded `english' language definitions on input line 578.
+Package cleveref Info: loaded `english' language definitions on input line 563.
 
  [128]
 Package cleveref Info: loaded `english' language definitions on input line 592.
@@ -3177,21 +3177,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 47454 strings out of 480893
- 927343 string characters out of 5911973
- 1833204 words of memory out of 5000000
- 60751 multiletter control sequences out of 15000+600000
+ 47451 strings out of 480893
+ 927282 string characters out of 5911973
+ 1832168 words of memory out of 5000000
+ 60749 multiletter control sequences out of 15000+600000
  713810 words of font info for 314 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,18n,88p,1524b,3455s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,18n,88p,1522b,3455s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{c:/texlive/2020/te
 xmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{c:/texlive/2020/texmf-dist/fonts/enc
 /dvips/lm/lm-mathit.enc}{c:/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-rm.en
@@ -3223,10 +3220,10 @@ live/2020/texmf-dist/fonts/type1/public/rsfs/rsfs7.pfb><c:/texlive/2020/texmf-d
 ist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1
 /urw/helvetic/uhvr8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/helvetic/u
 hvro8a.pfb>
-Output written on main.pdf (160 pages, 1089336 bytes).
+Output written on main.pdf (160 pages, 1090029 bytes).
 PDF statistics:
- 3068 PDF objects out of 3580 (max. 8388607)
- 2826 compressed objects within 29 object streams
- 1028 named destinations out of 1200 (max. 500000)
+ 3066 PDF objects out of 3580 (max. 8388607)
+ 2824 compressed objects within 29 object streams
+ 1027 named destinations out of 1200 (max. 500000)
  49700 words of extra memory for PDF output out of 51595 (max. 10000000)
 

@@ -1,7 +1,7 @@
 \chapter{Introduction}
 \label{sec:intro}
 \section{Solving Equations}
-Solving systems of polynomial equations is a core goal of mathematics. Algebraic geometry is the subfield of mathematics concerned with describing the geometry of set of solutions to such systems of equations. A typical first step is to establish some qualitative facts about the space of solutions, for example to check whether it is nonempty, and if so, find its dimension.
+Solving systems of polynomial equations is a core goal of mathematics. Algebraic geometry is the subfield of mathematics concerned with describing the geometry of the set of solutions to such systems of equations. A typical first step is to establish some qualitative facts about the space of solutions, for example to check whether it is nonempty, and if so, find its dimension.
 
  After establishing that solutions to a given system of polynomial equations exist, a natural question is whether the solutions can be written in an explicit, parametric form. Ideally, such a parametrization should be by simple functions defined on a simple domain. For systems of linear equations, the solution set can always be parametrized by linear functions defined on affine space. When we consider systems of polynomial equations instead, we want to parametrize the solutions by polynomial functions on affine space, or more generally by quotients of such polynomials.
 
@@ -70,7 +70,6 @@ Stable rationality traces its roots back to the following question by Zariski.
 	\label{que:Zariski}
 	Let $K$ and $K'$ be finitely generated fields over a field $k$ such that there exists simple transcendental extensions of $K$ and $K'$ that are isomorphic. Must then $K$ and $K'$ be isomorphic?
 \end{question}
-For many varieties, including many natural moduli spaces (see \eg \cite{Ballico}, \cite{KollarSchreyer}), it is possible to check that they are stably rational, while the question of rationality remains open.
 
 There is also an associated equivalence relation, where we say that two varieties, $X,Y$, are \emph{stably birational}, or \emph{stably birationally equivalent}, if $X \times \P^n \birat Y \times \P^m$ for some $n,m$. We say that an invariant associated to a variety $X$ is a \emph{stable birational invariant} if it is preserved by stable birational equivalence.
 
@@ -153,7 +152,7 @@ Regarding the relation between rationality and stable rationality, Beauville, Co
 These examples prove that most of the implications in \cref{prop:RationalityHierarchy} are not equivalences. The following two questions remain.
 \begin{question}
 	\label{que:StableVsRetract}
-	Does there exist a retract rational variety that is not stably rational?
+	Does there exist a retract rational variety over an algebraically closed field that is not stably rational?
 \end{question}
 
 \begin{question}
@@ -239,7 +238,7 @@ The specialization method is based on the ring of stable birational types; equiv
 The specialization methods outlined above are powerful, but they all require as input some example where irrationality can be verified in another way. For this, other birational invariants are required. One such invariant is the unramified cohomology group $H_{nr}^2(k(X)/k,\mu_2^{\otimes 2})$. This stable birational invariant is closely related to torsion in $H^3(X,\Z)$ (c.f. \cref{thm:ArtinMumfordIntroduction}). In fact, for smooth varieties this particular unramified cohomology group is isomorphic to the cohomological Brauer group, which in turn is isomorphic to torsion in $H^3(X,\Z)$. A reason to use this particular birational invariant is the remarkable example found by Hassett, Pirutka and Tschinkel in \cite{HPTActa} of a quadric surface bundle $X \to \P^2$ with nontrivial unramified cohomology. This quadric surface bundle has proven to be a very useful target for specializations.
 
 \subsection{Summary of \cref{pap:23diagonal}}
-The three specialization techniques outlined above preserve different rationality properties. So comparing the three techniques can potentially shed light on how the corresponding rationality properties can differ. In light of the question of whether stable and retract rationality are equivalent (\cref{que:StableVsRetract}), it is particularly interesting if the specialization method based on decomposition of the diagonal is applicable to the examples where stable rationality was first proven in \cite{NicaiseOttem}. One such example is the complete intersection of a quadric and a cubic hypersurface in $\P^6$.
+The three specialization techniques outlined above preserve different rationality properties. So comparing the three techniques can potentially shed light on how the corresponding rationality properties can differ. In light of the question of whether stable and retract rationality are equivalent over algebraically closed fields (\cref{que:StableVsRetract}), it is particularly interesting if the specialization method based on decomposition of the diagonal is applicable to the examples where stable rationality was first proven in \cite{NicaiseOttem}. One such example is the complete intersection of a quadric and a cubic hypersurface in $\P^6$. Since these are known to be stably irrational, they are natural candiates for examples of retract rational but stably irrational varieties, the existence of which is still unknown over algebraically closed fields.
 
 In \cref{pap:23diagonal}, we use the specialization technique based on decomposition of the diagonal to prove that the very general intersection of a quadric and a cubic hypersurface in $\P^6$ is not retract rational. With this result, the cubic fourfold is the only complete intersection in dimension 4
 for which retract rationality of a very general member remains open.

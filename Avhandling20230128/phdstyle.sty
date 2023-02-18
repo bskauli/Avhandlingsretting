@@ -130,6 +130,8 @@
                 sortlocale = nb_NO,
                 style      = alphabetic,
                 refsection = chapter]{biblatex}
+\renewbibmacro{in:}{%Suppress "In:" before journal name
+  \ifentrytype{article}{}{\printtext{\bibstring{in}\intitlepunct}}}
 \DeclareNameAlias{sortname}{family-given}
 \DeclareNameAlias{default}{family-given}
 \DeclareFieldFormat[article]{volume}{\bibstring{jourvol}\addnbspace#1}

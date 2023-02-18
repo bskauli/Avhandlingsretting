@@ -266,43 +266,6 @@
       \verb https://doi.org/10.1112/plms/s3-25.1.75
       \endverb
     \endentry
-    \entry{Ballico}{article}{}
-      \name{author}{1}{}{%
-        {{hash=ebd2159de83594f6fe32313bae66f54f}{%
-           family={Ballico},
-           familyi={B\bibinitperiod},
-           given={Edoardo},
-           giveni={E\bibinitperiod}}}%
-      }
-      \strng{namehash}{ebd2159de83594f6fe32313bae66f54f}
-      \strng{fullhash}{ebd2159de83594f6fe32313bae66f54f}
-      \strng{bibnamehash}{ebd2159de83594f6fe32313bae66f54f}
-      \strng{authorbibnamehash}{ebd2159de83594f6fe32313bae66f54f}
-      \strng{authornamehash}{ebd2159de83594f6fe32313bae66f54f}
-      \strng{authorfullhash}{ebd2159de83594f6fe32313bae66f54f}
-      \field{labelalpha}{Bal84}
-      \field{sortinit}{B}
-      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{0024-6107}
-      \field{journaltitle}{J. London Math. Soc. (2)}
-      \field{number}{1}
-      \field{title}{Stable rationality for the variety of vector bundles over an algebraic curve}
-      \field{volume}{30}
-      \field{year}{1984}
-      \field{pages}{21\bibrangedash 26}
-      \range{pages}{6}
-      \verb{doi}
-      \verb 10.1112/jlms/s2-30.1.21
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1112/jlms/s2-30.1.21
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1112/jlms/s2-30.1.21
-      \endverb
-    \endentry
     \entry{KollarTrento}{proceedings}{}
       \name{editor}{3}{}{%
         {{hash=54f176879592053509ca92377404eb6b}{%
@@ -1160,48 +1123,6 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.1007/978-3-662-03276-3
-      \endverb
-    \endentry
-    \entry{KollarSchreyer}{article}{}
-      \name{author}{2}{}{%
-        {{hash=43fd239813bce49520fe61f6a161a3ed}{%
-           family={Kollár},
-           familyi={K\bibinitperiod},
-           given={János},
-           giveni={J\bibinitperiod}}}%
-        {{hash=6ef360f2062f55ecd8c9192616ebce93}{%
-           family={Schreyer},
-           familyi={S\bibinitperiod},
-           given={Frank-Olaf},
-           giveni={F\bibinithyphendelim O\bibinitperiod}}}%
-      }
-      \strng{namehash}{92f977a9fa58f74b21ef5ed9401e74bf}
-      \strng{fullhash}{92f977a9fa58f74b21ef5ed9401e74bf}
-      \strng{bibnamehash}{92f977a9fa58f74b21ef5ed9401e74bf}
-      \strng{authorbibnamehash}{92f977a9fa58f74b21ef5ed9401e74bf}
-      \strng{authornamehash}{92f977a9fa58f74b21ef5ed9401e74bf}
-      \strng{authorfullhash}{92f977a9fa58f74b21ef5ed9401e74bf}
-      \field{labelalpha}{KS84}
-      \field{sortinit}{K}
-      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{0012-7094}
-      \field{journaltitle}{Duke Math. J.}
-      \field{number}{1}
-      \field{title}{The moduli of curves is stably rational for {$g\leq 6$}}
-      \field{volume}{51}
-      \field{year}{1984}
-      \field{pages}{239\bibrangedash 242}
-      \range{pages}{4}
-      \verb{doi}
-      \verb 10.1215/S0012-7094-84-05113-5
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1215/S0012-7094-84-05113-5
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1215/S0012-7094-84-05113-5
       \endverb
     \endentry
     \entry{KontsevichTschinkelSpecialization}{article}{}
@@ -4885,6 +4806,34 @@
       \verb{url}
       \verb http://www.numdam.org/item?id=PMIHES_1971__40__5_0
       \endverb
+    \endentry
+    \entry{HuybrechtsComplexGeometry}{book}{}
+      \name{author}{1}{}{%
+        {{hash=62ef5d71962e55d1e2757e1aeb5755c8}{%
+           family={Huybrechts},
+           familyi={H\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag, New York-Heidelberg}%
+      }
+      \strng{namehash}{62ef5d71962e55d1e2757e1aeb5755c8}
+      \strng{fullhash}{62ef5d71962e55d1e2757e1aeb5755c8}
+      \strng{bibnamehash}{62ef5d71962e55d1e2757e1aeb5755c8}
+      \strng{authorbibnamehash}{62ef5d71962e55d1e2757e1aeb5755c8}
+      \strng{authornamehash}{62ef5d71962e55d1e2757e1aeb5755c8}
+      \strng{authorfullhash}{62ef5d71962e55d1e2757e1aeb5755c8}
+      \field{labelalpha}{Huy05}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{3-540-21290-6}
+      \field{series}{Universitext}
+      \field{title}{Complex geometry: an introduction}
+      \field{volume}{78}
+      \field{year}{2005}
     \endentry
     \entry{LS89}{article}{}
       \name{author}{2}{}{%
