@@ -181,12 +181,10 @@ Let $R = \Z$ or $R=\F_p[t]$ for $p \geq 3$, with field of fractions $K$. If $R=\
    \mathscr{Q} =V\left(  u \left(\sum_{i=0}^6 x_i^2 \right) + v(x_3x_6-x_4x_5) \right)  \subset \P_{R}^6
 \end{equation}
 
-\begin{equation}
+\begin{align}
   \label{eq:cubic}
-  \begin{split}
-  \mathscr{C} = V\biggl( &u \sum_{i=0}^6 x_i^3 \\ + &v\left(x_0^2x_5 + x_1^2x_4 + x_2^2x_6 + x_3(x_5^2+x_4^2+x_3^2 -2x_3(x_6 + x_5 + x_4))\right) \biggr) \subset \P_{R}^6
-  \end{split}
-\end{equation}
+  \mathscr{C} = V\biggl( u \left(\sum_{i=0}^6 x_i^3 \right) + v\biggl(x_0^2x_5 &+ x_1^2x_4 + x_2^2x_6 \nonumber \\ &+ x_3(x_5^2+x_4^2+x_3^2 -2x_3(x_6 + x_5 + x_4)) \biggr) \subset \P_{R}^6
+\end{align}
 
 \begin{lemma}
   Let $\mathscr{X}$ be as above, and let $X$ be the generic fiber of $\mathscr{X} \to \Spec R$, then $X$ is a smooth complete intersection in $\P_{K}^6$.
@@ -405,7 +403,7 @@ Using this, we can apply \cref{prop:ZSpecialization} to get the main result of t
 	Q = V\left( u \left(\sum_{i=0}^6 x_i^2 \right) + v(x_3x_6-x_4x_5)\right) 
 \end{equation*}
 \begin{align*}
-		C = V\biggl( &u \sum_{i=0}^6 x_i^3 \\ + &v\left(x_0^2x_5 + x_1^2x_4 + x_2^2x_6 + x_3(x_5^2+x_4^2+x_3^2 -2x_3(x_6 + x_5 + x_4))\right) \biggr)
+		C = V\biggl( u \sum_{i=0}^6 x_i^3 + v(x_0^2x_5 + x_1^2x_4 + &x_2^2x_6 \\ + &x_3(x_5^2+x_4^2+x_3^2 -2x_3(x_6 + x_5 + x_4))) \biggr)
 \end{align*}
 Then $X_1$ is not geometrically retract rational.
 \end{theorem}
